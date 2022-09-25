@@ -1,0 +1,28 @@
+seo: 
+  site_name: 
+  title: 
+  description:  
+  social_image: 
+  social-image-alt: 
+  twitter_card: 
+  twitter_description:  
+  author: 
+  favicon_image: 
+_comments:
+ title: 
+ social_image: 
+
+social: 
+  instagram_username:
+  facebook_url:
+  twitter_username: 
+  
+design: 
+  dark-text_color: '#453540'
+  bg-color_color: '#ffdec6'
+  light-text_color: '#fdefe6'
+  text-hover_color: '#e68e5b'
+  light-text-hover_color: '#ffc17f'
+  banner-color_color: '#ffc79e'
+  banner-color-opacity_color: '#ffc79eA6'
+  footer-color_color: '#ca713d'

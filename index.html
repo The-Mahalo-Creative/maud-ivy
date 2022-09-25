@@ -1,0 +1,200 @@
+---
+layout: default
+title: Homepage
+coming-soon: true
+header-text: dark-text
+footer-text: light-text
+header_image: /images/cover1.jpg
+header-background-position:
+banner_image: /images/cover1.jpg
+banner-background-position: bg-pos-b
+footer-logo-text: true
+footer-logo: LOGO
+footer-logo_image: /images/surf1.jpg
+footer-logo-alt:
+
+featured: 
+  - product_image:/images/cover1.jpg
+  - product_image:/images/cover1.jpg
+  - product_image:/images/cover1.jpg
+
+buybutton: 
+  name: Flowers
+  image: /images/surf1.jpg
+  description: Hello
+  price: 40
+  id: Flower1
+  note: Gift Note
+  optionname1: Bouquet size
+  option1option:
+    - size: 1
+      price: 
+    - size: 6
+      price: 15
+    - size: 12
+      price: 30
+
+buybutton2: 
+  name: Lavender
+  image: /images/cover1.jpg
+  description: Hello
+  price: 40
+  id: Flower1
+  note: Gift Note
+  optionname1: Bouquet size
+  option1option:
+    - size: 1
+      price: 
+    - size: 6
+      price: 15
+    - size: 12
+      price: 30
+---
+<!-- HEADING BANNER IMAGE -->
+<header class="" >
+  <div class="grid padded-2 padded-t-1 padded-b-1 border-b ">
+    <div class="grid col-12 capped-width">
+      <div class="col-8">
+        <h1>Sunset Bar</h1>
+      </div>
+      <div class="col-4 text-right">
+        {% include socials.html %}
+        
+        <i class="fa-solid fa-bag-shopping snipcart-checkout"></i>
+      </div>      
+    </div>
+  </div>
+
+  <div class="grid ">
+    <div class="grid col-12 border-b bg-image tall-80 {{page.header-background-position}}" style="background-image: url('{{page.header_image}}'); ">
+      <div class="col-12 padded-2 capped-width-half">
+        <h1>Milshakes and Bowls</h1>
+    </div>
+  </div>
+</header>
+
+<!--  -->
+<section class=" padded-2 ">
+  <div class="grid-center capped-width">
+    <div class="col-12-middle text-center padded-tb-10 {{page.banner-text}}">
+      <h2 class="margin-b-2 editable"> Talk About Your Brand</h2>
+      <p class="editable"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. At magni veritatis commodi illum, quae nobis ipsa obcaecati autem quaerat ea accusantium deserunt nemo odio recusandae impedit soluta optio veniam atque?</p>
+      <span class="border-b-dash"></span>
+    </div>    
+  </div>
+</section>
+
+<!--  -->
+<section>
+  <div class="grid padded padded-t-0">
+    {% for item in page.featured %}
+    <div class="grid col-4 padded-1">      
+      <div class="col-12 square bg-image {{item.product-background-position}} snipcart-add-item"
+      data-item-id="{{page.buybutton.id}}"
+      data-item-price="{{page.buybutton.price}}"
+      data-item-description="{{page.buybutton.description}}"
+      data-item-image="{{page.buybutton.image}}"
+      data-item-name="{{page.buybutton.name}}"
+      data-item-custom1-name="{{page.buybutton.optionname1}}"
+      data-item-custom1-options="{% for option in page.buybutton.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+      data-item-custom2-name="{{page.buybutton.optionname1}}"
+      data-item-custom2-options="{% for option in page.buybutton.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+      data-item-custom3-name="{{page.buybutton.note}}" style="background-image: url('/images/bnb13.jpg');"></div>
+      <div class="col-12 padded-1 text-center">
+        <h4>okay</h4>
+        <p><em>{{item.cost}}</em></p>
+      </div>      
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<button class="snipcart-add-item button"
+  data-item-id="{{page.buybutton.id}}"
+  data-item-price="{{page.buybutton.price}}"
+  data-item-description="{{page.buybutton.description}}"
+  data-item-image="{{page.buybutton.image}}"
+  data-item-name="{{page.buybutton.name}}"
+  data-item-custom1-name="{{page.buybutton.optionname1}}"
+  data-item-custom1-options="{% for option in page.buybutton.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+  data-item-custom2-name="{{page.buybutton.optionname1}}"
+  data-item-custom2-options="{% for option in page.buybutton.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+  data-item-custom3-name="{{page.buybutton.note}}">
+  
+  Add to cart
+</button>
+<!-- Unless remobes last -->
+<button class="snipcart-add-item button"
+  data-item-id="{{page.buybutton2.id}}"
+  data-item-price="{{page.buybutton2.price}}"
+  data-item-description="{{page.buybutton2.description}}"
+  data-item-image="{{page.buybutton2.image}}"
+  data-item-name="{{page.buybutton2.name}}"
+  data-item-custom1-name="{{page.buybutton2.optionname1}}"
+  data-item-custom1-options="{% for option in page.buybutton2.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+  data-item-custom2-name="{{page.buybutton2.optionname1}}"
+  data-item-custom2-options="{% for option in page.buybutton2.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+  data-item-custom3-name="{{page.buybutton2.note}}">
+  
+  Add to cart
+</button>
+<!-- BANNER SECTION -->
+<section class=" padded-2 border-b">
+  <div class="grid-center capped-width">
+    <div class="col-9_md-10_sm-11_xs-12-middle text-center padded-tb-10 {{page.banner-text}}">
+      <h2 class="margin-b-2 editable"> Go Banana's</h2>
+      <p class="editable"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. At magni veritatis commodi illum, quae nobis ipsa obcaecati autem quaerat ea accusantium deserunt nemo odio recusandae impedit soluta optio veniam atque?</p>
+    </div>    
+  </div>
+</section>
+
+<section class="bg-banner-color border-b">
+  <div class="grid-middle capped-width flex-flip-xs">
+    <div class="col-6_xs-12 padded grid">
+      <div class="col-12 bg-image tall-50 border-radius box-shadow" style="background-image: url('{{page.banner_image}}');"></div>
+    </div>
+    <div class="col-6_xs-12 grid padded padded-l-0 padded-r-0-xs padded-b-0-xs">
+      <div class="col-12 padded-10-xs ">
+        <h2 class="text-center-xs">Beach side Bar</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem aut sequi dignissimos voluptates </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem aut sequi dignissimos voluptates </p>
+<!--           <ul>
+            <li>Lorem ipsum dolor sit amet,</li>
+            <li>consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet,</li>
+          </ul>    -->     
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!--FOOTER -->
+<footer class="bg-footer-color ">
+  <div class="grid capped-width ">
+    <div class="col-12 grid-middle {{page.footer-text}}">
+      <div class="col-12 padded-2 text-center">
+        {% include footer-logo.html %}
+      </div>       
+      <nav class="col-12 padded padded-b-0 padded-t-0 text-center">
+          <a href="Tel:{{site.data.contact-info.contact_number}}" target="_blank"><span class="hide-xs">Telephone</span> <span><i class="fa-solid fa-phone"></i></span></a>    
+          <a href="{{site.data.contact-info.contact_email}}"  target="_blank"><span class="hide-xs">Email</span> <span><i class="fa-solid fa-envelope"></i></span></a>               
+          <a href="{{site.data.contact-info.contact_email}}"  target="_blank"><span class="hide-xs">Address</span> <span><i class="fa-solid fa-map-location"></i></span></a>         
+      </nav>
+      <div class="col-12 padded-1 text-center">
+        <p class=" margin-b-0">Copyright 2022 
+          <span class="hide-xs">|</span> 
+          <span class="break-xs">By <a href="https://www.themahalocreative.com" class="" target="_blank">The Mahalo Creative</a>
+          </span>
+        </p>
+      </div>
+ 
+      </div>
+    </div>     
+  </div>   
+
+</footer>
+  
