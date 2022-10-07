@@ -6,10 +6,15 @@ header-text:
 banner-text: dark-text
 text-main: 
 footer-text: light-text 
-header_image: /images/cover1.jpg
-header-background-position: bg-pos-b
+header_image: /images/flower1.jpg
+header-background-position: bg-pos-t
+curved_image: /images/event.jpg
+curved-background-position: bg-pos-l
+circle_image: /images/wedding.jpg
+circle-background-position: bg-pos-l
 banner_image: /images/socks.jpg
 banner-background-position: bg-pos-l
+
 button1: Airbnb
 button1_href:
 button2: booking.com
@@ -20,16 +25,23 @@ footer-logo_image: /images/wed3.jpg
 footer-logo-alt:
 
 selling-points:
+  - selling-point: Premium Flowers
+    icon-image: /images/icons/flower.svg
+    icon-alt:
+    more-info: And Gifts
+  - selling-point: Delivery Options
+    icon-image:
+    icon-alt:
+    more-info: Free shipping
   - selling-point: Gold Coast Area
     icon-image:
-    more-info:
-  - selling-point: Gold Coast Area
-    icon-image:
-    more-info:
-  - selling-point: Gold Coast Area
-    icon-image:
-    more-info:
-    
+    icon-alt:
+    more-info: Same day delivery
+
+notification:
+  - note: Halloween Stock out now
+  - note: See our Instagram
+
 gallery:
   - column-size: col-4_xs-12
     aspect-ratio: portrait-sm
@@ -49,44 +61,91 @@ gallery:
       
 ---
 <!-- HEADING BANNER IMAGE -->
-<header class="" >
-  <div class="grid padded-1 padded-r-2 padded-l-2 border-b ">
-    <div class="grid col-12 ">
-      <a href="/" class="col-5">
-        <h1>Maud & Ivy</h1>
-      </a>
-      <nav class="col-7 text-right">
-        <a href="/gallery">Products</a>
-        <a href="/enquiry">Enquiry</a>
-        {% include socials.html %}
-      </nav>      
-    </div>
-  </div>
-</header>
+
 <section>
-  <div class="grid ">
-    <div class="grid col-12 border-b bg-image tall-80 {{page.header-background-position}}" style="background-image: url('{{page.header_image}}'); ">
-      <div class="col-12 padded-2 capped-width-half">
-        <h1>Milshakes and Bowls</h1>
-    </div>
+  <div class="grid heading">
+    <div class="grid col-12 border-b bg-image tall-70 {{page.header-background-position}}" style="background-image: url('{{page.header_image}}'); ">
+      <div class="col-12 grid capped-width relative">
+        <div class="col-12-middle padded-2">
+          <h1>Maud and Ivy</h1>          
+        </div>    
+        <!-- Circle small -->
+        <div class="large grid-center absolute z-index">
+          <div class="col-12 bg-footer-color circle">       
+          </div>   
+          <h3 class="col-12-middle text-center light-text absolute">Events</h3>
+        </div>   
+        <!-- Circle Large -->
+        <div class="small grid-center absolute z-index">
+          <div class="col-12 bg-footer-color circle">       
+          </div>   
+          <h3 class="col-12-middle text-center light-text absolute">Weddings</h3>
+        </div> 
+      </div>
+  
   </div>  
 </section>
-<section class=" bg-banner-color">
+
+<!-- SELLING POINTS -->
+<section class=" bg-banner-color padded-t-2 padded-b-2">
    <div class="capped-width grid">
     {% for item in page.selling-points %}
-      <div class="col-4 grid">
-        <div class="col-12 bg-image square" style="background-image: url('{{item.icon_image}}');"">
-        <div class="col-12 padded-1">
-            <h4>{{item.selling-point}}</h4>
-            <p>{{item.more-info}}</p>
+      <div class="col-4_xs-12 grid-middle text-center padded-t-1 padded-b-1">
+        <div class="col-12 selling-point">
+          <img src="/images/icons/flower.svg" alt="{{item.icon-alt}}" width="50px" >
+        </div>        
+        <div class="col-12 padded-1 padded-b-0">
+            <h4 class="margin-b-0">{{item.selling-point}}</h4>
+            <p class="margin-b-0">{{item.more-info}}</p>
         </div>
       </div>
       {% endfor %}
    </div>
 </section>
 
+
+<!--Moto  -->
+<section class="bg-footer-color padded-b events relative">
+  <div class="grid flex-flip-xs">
+    <div class="col-5_xs-12-right grid-middle capped-width-half text-right light-text">
+      <h2 class="padded-t-2 relative padded-r-2" ><span class="" style="font-size: 1.5rem;">Taking</span>  <span class="break relative text-bold text-medium " style="right:-15%;"><em>thoughtful</em></span> <span class="break relative" style="right: -18%;"> to the next</span>  <span class="relative text-bold text-large " style="right:15%;" >level.</span></h2>
+<!--       <div class="col-12 padded">
+        <h2 class="editable">Launching 01 Aug 2022</h2>
+        <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?</p>       
+      </div> --> 
+
+    </div>
+    <div class="col-7_xs-12 grid">
+        <div class="col-12 bg-image border-radiusr square {{page.curved-background-position}}" style="background-image: url('{{page.curved_image}}');"></div>      
+    </div> 
+    <!-- CIRCLE EVENTS -->
+    <div class="col-3 grid-left absolute z-index hide-xs">
+      <div class="col-12 bg-image circle bg-overlay {{page.circle-background-position}}" style="background-image: url('{{page.circle_image}}');"></div>      
+    </div>       
+</section>  
+
+
+<section class="bg-footer-color grid">
+  <div class="col-12 grid-left relative">
+
+      {% include text-scroll-notifcation.html %}
+    </div>
+  </div>
+ <!--  <div class="grid capped-width light-text absolute">
+      <div class="col-12 grid padded">
+        {% for item in page.type %}
+          <div class="padded-05 col-4-middle text-center relative grid-center-middle">
+              <h3 class="border padded absolute z-index">{{item.heading}}</h3>              
+            <div class="col-12 padded-05">
+              <div class="bg-image bg-overlay portrait " style="background-image: url('{{item.type_image}}'); background-position: '{{item.bg-pos}}';"></div> 
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+  </div> -->
+</section> 
 <!-- BANNER SECTION -->
-<section class="{{page.text-main}}">
+<section class="{{page.text-main}} bg-banner-color">
   <div class="grid-middle-center padded-tb-10 capped-width">
     <div class="col-10 padded text-center">
       <h2 class="editable">Launching 01 Aug 2022</h2>
@@ -112,7 +171,7 @@ gallery:
 </section>
 
 <!-- Socials -->
-<section class="padded bg-footer-color light-text">
+<section class="padded bg-banner-color1 gold-text">
   <div class="capped-width grid-middle tall-10">
     <div class="col-12 text-center">
       <h2>Visit us here.</h2>
@@ -132,7 +191,7 @@ gallery:
 <!-- MAP SECTION -->
 <section class="grid-left flex-flip-xs {{page.text-main}} bg-banner-color">
   <div class="col-6_xs-12 grid">
-    <div class="col-12 bg-image border-radius  tall-80 {{page.banner-background-position}}" style="background-image: url('{{page.banner_image}}');"></div>
+    <div class="col-12 bg-image border-radius tall-80 {{page.banner-background-position}}" style="background-image: url('{{page.banner_image}}');"></div>
   </div>
   <div class="col-6_xs-12 grid-middle capped-width-half">
     <div class="col-12 padded-10">
