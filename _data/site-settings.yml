@@ -19,10 +19,10 @@ social:
   
 design: 
   dark-text_color: '#453540'
-  bg-color_color: '#ffdec6'
+  bg-color_color: '#f7efed'
   light-text_color: '#fdefe6'
-  text-hover_color: '#e68e5b'
+  text-hover_color: '#a84f61'
   light-text-hover_color: '#ffc17f'
-  banner-color_color: '#ffc79e'
+  banner-color_color: '#ffe5df'
   banner-color-opacity_color: '#ffc79eA6'
-  footer-color_color: '#ca713d'
+  footer-color_color: '#c28789'

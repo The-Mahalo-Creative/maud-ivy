@@ -1,0 +1,110 @@
+---
+featured: 
+  - product_image:/images/cover1.jpg
+  - product_image:/images/cover1.jpg
+  - product_image:/images/cover1.jpg
+
+buybutton: 
+  name: Flowers
+  image: /images/surf1.jpg
+  description: Hello
+  price: 40
+  id: Flower1
+  note: Gift Note
+  optionname1: Bouquet size
+  option1option:
+    - size: 1
+      price: 
+    - size: 6
+      price: 15
+    - size: 12
+      price: 30
+
+buybutton2: 
+  name: Lavender
+  image: /images/cover1.jpg
+  description: Hello
+  price: 40
+  id: Flower1
+  note: Gift Note
+  optionname1: Bouquet size
+  option1option:
+    - size: 1
+      price: 
+    - size: 6
+      price: 15
+    - size: 12
+      price: 30
+---
+<!-- IN BODY -->
+<script>
+  window.SnipcartSettings = {
+      publicApiKey: 'NDBjZTEwOTUtYTBlMC00NzZhLTg1NDctZjA0YTgxNmZjODcxNjM3OTgyMTEzNjk2MDA3Nzg0',
+      loadStrategy: 'on-user-interaction',
+  };
+
+  (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+</script>
+<!--SNIP CART!!!!!!!!!!!  -->
+<section>
+  <div class="grid padded padded-t-0">
+    {% for item in page.featured %}
+    <div class="grid col-4 padded-1">      
+      <div class="col-12 square bg-image {{item.product-background-position}} snipcart-add-item"
+      data-item-id="{{page.buybutton.id}}"
+      data-item-price="{{page.buybutton.price}}"
+      data-item-description="{{page.buybutton.description}}"
+      data-item-image="{{page.buybutton.image}}"
+      data-item-name="{{page.buybutton.name}}"
+      data-item-custom1-name="{{page.buybutton.optionname1}}"
+      data-item-custom1-options="{% for option in page.buybutton.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+      data-item-custom2-name="{{page.buybutton.optionname1}}"
+      data-item-custom2-options="{% for option in page.buybutton.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+      data-item-custom3-name="{{page.buybutton.note}}" style="background-image: url('/images/bnb13.jpg');"></div>
+      <div class="col-12 padded-1 text-center">
+        <h4>okay</h4>
+        <p><em>{{item.cost}}</em></p>
+      </div>      
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<button class="snipcart-add-item button"
+  data-item-id="{{page.buybutton.id}}"
+  data-item-price="{{page.buybutton.price}}"
+  data-item-description="{{page.buybutton.description}}"
+  data-item-image="{{page.buybutton.image}}"
+  data-item-name="{{page.buybutton.name}}"
+  data-item-custom1-name="{{page.buybutton.optionname1}}"
+  data-item-custom1-options="{% for option in page.buybutton.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+  data-item-custom2-name="{{page.buybutton.optionname1}}"
+  data-item-custom2-options="{% for option in page.buybutton.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+  data-item-custom3-name="{{page.buybutton.note}}">
+  
+  Add to cart
+</button>
+<!-- Unless remobes last -->
+<button class="snipcart-add-item button"
+  data-item-id="{{page.buybutton2.id}}"
+  data-item-price="{{page.buybutton2.price}}"
+  data-item-description="{{page.buybutton2.description}}"
+  data-item-image="{{page.buybutton2.image}}"
+  data-item-name="{{page.buybutton2.name}}"
+  data-item-custom1-name="{{page.buybutton2.optionname1}}"
+  data-item-custom1-options="{% for option in page.buybutton2.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+  data-item-custom2-name="{{page.buybutton2.optionname1}}"
+  data-item-custom2-options="{% for option in page.buybutton2.option1option %}{{option.size}}{% if option.price %}[+{{option.price}}]{% endif %}{% unless forloop.last %}|{% endunless %}{% endfor %}"
+  data-item-custom3-name="{{page.buybutton2.note}}">
+  
+  Add to cart
+</button>
+<!-- BANNER SECTION -->
+<section class=" padded-2 border-b">
+  <div class="grid-center capped-width">
+    <div class="col-9_md-10_sm-11_xs-12-middle text-center padded-tb-10 {{page.banner-text}}">
+      <h2 class="margin-b-2 editable"> Go Banana's</h2>
+      <p class="editable"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. At magni veritatis commodi illum, quae nobis ipsa obcaecati autem quaerat ea accusantium deserunt nemo odio recusandae impedit soluta optio veniam atque?</p>
+    </div>    
+  </div>
+</section>

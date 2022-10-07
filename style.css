@@ -214,6 +214,7 @@ font-family: 'Trirong', serif;
     font-family: 'Trirong', serif;
     color: var(--dark-text);
     background-color: var(--bg-color);
+    cursor:default;
   }
   h2, h3, h4, h5, h6 {
     line-height: 1.1;
@@ -288,8 +289,21 @@ a .light-text:hover, .light-text a:hover {
   padding:0rem 1.5rem;
   line-height:1.8rem;
 }
-.fab:last-child { padding-right: 0;}
 /* HEADER AND FOOTER------------------------- */
+header a {
+  margin-bottom: 0;  
+}
+nav .fab {
+  padding:unset;
+}
+nav a {
+  font-size: 1.4rem;
+  padding:0rem 1.5rem;
+
+  line-height:1.8rem;
+}
+nav a:last-child { padding-right: 0;}
+
 footer h1 {font-size: 3rem;}
 footer nav a {
   font-size: 1.2rem;
@@ -311,44 +325,74 @@ background-repeat: no-repeat;
 background-color: var(--dark);
 } 
 .box-shadow {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
-
+/* overlays ------------------------------------------------*/
+.bg-overlay { position: relative;}
+.bg-overlay::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color:rgba(83, 34, 35, 0.27);
+}
+.bg-overlay > * {
+  position: relative;
+}
+/* Aspect ratio ----------------------------------------------------- */
+.landscape-tall { padding-bottom: 86.2%;}
+/* col-8 + col-4 portrait-tall */
+.landscape-wide{ padding-bottom: 56%;  }
+/* col-8 + col-4 portrait-sm */
+.landscape     { padding-bottom: 66%;  }
+.portrait-tall { padding-bottom: 176%; }
+/* col-5 + col-7 portrait */
+.portrait      { padding-bottom: 125%; }
+/* col-6 x2 */
+.portrait-sm   { padding-bottom: 113.6%; }
+/* Col-4 x3 */
+.square        { padding-bottom: 100%; }
 /* Background Position -----------------------------------------------*/
 .bg-pos-t         { background-position: top;     }
 .bg-pos-b         { background-position: bottom;  }
 .bg-pos-l         { background-position: left;    }  
 .bg-pos-r         { background-position: right;   }
 
-/* Aspect ratio ----------------------------------------------------- */
-.landscape-wide{ padding-bottom: 56%;  }
-.landscape     { padding-bottom: 66%;  }
-.portrait-tall { padding-bottom: 175%; }
-.portrait,
-[class*=grid] .portrait      { padding-bottom: 125%; }
-.square        { padding-bottom: 100%; }
-
+.border-radius    { border-radius:0 36rem 0 0;    }
 /* BORDERS */
 .border-b { border-bottom: 2px solid;}
 .border-r { border-right: 2px solid;}
 .border-t { border-top: 2px solid;}
 .border-l { border-left: 2px solid var(--dark-text);}
 
-.border-radius {border-radius: 2rem;}
-
-.button { 
-  display: block;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  padding: 0.6rem 1.5rem;
-  width:300px;
-  background-color: var(--text-hover);
-  text-align: center;
-  border: 2px solid;
-  font-weight: 500;
-  margin: 2rem 0;
+/* .border-radius {border-radius: 2rem;} */
+ /* GALLERY ------------------------------------------------------- */
+.gallery [class*="col-"] {
+  padding: 0.5%;
+  margin-bottom: 0;
 }
+.main .gallery:hover .bg-overlay::before {
+  background-color:rgba(83, 34, 35, 0.4);
+
+}
+/* .main .gallery:hover .button {
+  color: var(--footer-color);
+}
+ */
+/* Buttons -------------------------------------------------------------*/
+.button {
+  display: inline-block;  
+  font-family: inherit;  
+  font-size: 1.5rem;  
+  font-weight: 500;  
+  border: 2px solid;
+  padding: 1rem 4.5rem;
+  margin: 0.5rem;
+  text-transform: uppercase;
+  width: unset;
+}
+
 .button:hover {
-  background-color: var(--bg-color);
   color: var(--footer-color);
 
 }

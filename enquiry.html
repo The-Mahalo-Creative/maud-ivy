@@ -1,0 +1,96 @@
+---
+layout: default
+title: Enquiry
+
+contact_image: /images/socks.jpg
+bg-pos:
+
+---
+<!-- Contact -->
+<section class="tall-90 noSelect">
+    <div class="padded contact">
+        <div class="capped-width-lg grid ">
+            <!-- Apply fog glass layer -->
+            <div class="col-12-middle grid padded">
+                <!-- HRS LEFT COLUMN-->
+                <div class="col-5_sm-12 padded border-r bg-image  text-right text-left-md " style="background-image: url('{{page.contact_image}}'); background-position: '{{page.bg-pos}}';">
+                    <h4 class="text-light text-vlittle" ><span class="text-bold padded-t-2"><em>hours</em></span><br>weekdays 9-5pm</h4>
+                    <h4 class="text-light text-vlittle text-bold  " ><span class="text-bold"><em>socials</em></span><br>@themahalocreative</h4>
+                </div>
+                <!-- RIGHT COLUMN -->
+                <div class="col-7_sm-12 padded grid">
+                    <h2>Reach Out</h2>
+                    <!-- FORM -->
+                    <form class="col-12" name="the-mahalo-creative" data-netlify="true" action="/success.html" method="post">
+                        <!-- YOUR DETAILS -->
+                        <div class="grid padded-b">    
+                            <div class="col-2_sm-12 relative">
+                                <h4 class="vertical-form-text ">Your Details.</h4>
+                            </div>
+                            <div class="col-10_sm-12">
+                                <input type="text" name="_name" placeholder="Your Name" required>
+                                <input type="email" name="_replyto" placeholder="Your Email" required="">
+                                <input type="tel" name="phone-no" placeholder="Your Number" required>
+                            </div>
+                        </div>
+                        <!-- CHECKBOXES 
+                        <div class="grid-right check-box padded-b">
+                            <div class="col-10_sm-12">
+                                <h3 class="text-little text-bold">How can we help.</h3>
+                                <label class="container">Web development
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">Social Media Management
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                
+                                <label class="container">Photograpghy
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>            
+
+                                <label class="container">Graphic Design
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>     
+                            </div>
+                        </div>-->
+                        <!-- YOUR BUSINESS -->
+                        <div class="grid padded-b">    
+                            <div class="col-2_sm-12 relative padded-t">
+                                <h4 class="vertical-form-text">Your Business.</h4>
+                            </div>
+                            <div class="col-10_sm-12 grid">
+                                <!-- Business -->
+                                <label for="about-your-brand" class="margin-t-1">Tell us a little about your business or brand.</label>
+                                <textarea name="about-your-brand" class="input-text" required></textarea>
+                                <label for="services-needed">Let us know what services you need.</label>
+                                <textarea name="services-needed" class="input-text" required></textarea>            
+                            </div>  
+                        </div>  
+                        <!-- SUBMIT -->
+                        <div class="grid-right">                        
+                            <div class="col-10_sm-12">
+                                <!-- datalist vs drop down list -->
+                                <label for="search1">How did you find us?</label>
+                                <input list="search1">
+                                <datalist id="search1">
+                                    <option>Google</option>
+                                    <option>Referal</option>
+                                    <option>Instagram</option>
+                                    <option>Facebook</option>
+                                </datalist>
+                                <button type="submit"> Submit </button>   
+                            </div>
+                        </div>        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- capped width of inner glass form -->
+ 
+</section>
