@@ -46,6 +46,11 @@
 <!--- AOS STYLESHEET--->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
 
+<!-- Lightgallery for pop-ups  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/css/lightgallery-bundle.min.css" integrity="sha512-7xAjdVc23n18sYEAZKa79271IRUS1XzylIyJ8feyXvjrbbr4oId92993EiGTAP63Ob6KplRnmbNmBOg6bpLjYw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+
+
 
 <!-- This always goes last our css stylesheet-->
 <link rel="stylesheet" href="/style.css" /> 
@@ -84,7 +89,6 @@
 </style>  
 
     <!-- HEADING BANNER IMAGE -->
-
 <section>
   <div class="grid heading">
     <div class="grid col-12 border-b bg-image tall-70 bg-pos-t" style="background-image: url('/images/flower1.jpg'); ">
@@ -149,16 +153,14 @@
 
 <!--Moto  -->
 <section class="bg-footer-color padded-b events relative">
-  <div class="grid flex-flip-xs">
-    <div class="col-5_xs-12-right grid-middle capped-width-half text-right light-text">
-      <h2 class="padded-t-2 relative padded-r-2" ><span class="" style="font-size: 1.5rem;">Taking</span>  <span class="break relative text-bold text-medium " style="right:-15%;"><em>thoughtful</em></span> <span class="break relative" style="right: -18%;"> to the next</span>  <span class="relative text-bold text-large " style="right:15%;" >level.</span></h2>
-<!--       <div class="col-12 padded">
-        <h2 class="editable">Launching 01 Aug 2022</h2>
-        <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?</p>       
-      </div> --> 
+  <div class="grid-right-middle flex-flip-sm">
+    <div class="col-7_lg-5_sm-12 text-left light-text padded-l-2 padded-2-sm capped-width-half margin-r-0">
+      <h2 class="editable">Taking <em>thoughtful</em> <br> to the next level
+      </h2>
+      <p class="editable"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati labore facilis et voluptate error aperiam harum vel architecto, iste aut laborum fuga deleniti corporis debitis repudiandae sit? Veniam, itaque nulla?</p>
 
     </div>
-    <div class="col-7_xs-12 grid">
+    <div class="col-5_lg-7_sm-12 grid-top">
         <div class="col-12 bg-image border-radiusr square bg-pos-l" style="background-image: url('/images/event.jpg');"></div>      
     </div> 
     <!-- CIRCLE EVENTS -->
@@ -209,17 +211,12 @@
 </div> 
     </div>
   </div>
- <!--  <div class="grid capped-width light-text absolute">
-      <div class="col-12 grid padded">
-        
-      </div>
-  </div> -->
 </section> 
 <!-- BANNER SECTION -->
 <section class=" bg-banner-color">
   <div class="grid-middle-center padded-tb-10 capped-width">
     <div class="col-10 padded text-center">
-      <h2 class="editable">Launching 01 Aug 2022</h2>
+      <h3 class="editable">About Us</h3>
       <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?</p>
  <!--      <a href="" target="_blank" class="button" style="margin-bottom: 0.5rem;">Airbnb</a>
 <a href="" target="_blank" class="button">booking.com</a> -->
@@ -233,17 +230,17 @@
       <a href="/gallery" class=" gallery col-12 grid-middle-center relative">
         <div class="button z-index absolute light-text"> Our Flowers</div>
         
-        <div class="col-4_xs-12">
+        <div class="col-4">
             <div class="bg-image bg-overlay portrait-sm" style="background-image: url('/images/flower-champagne.jpg'); background-position: '';">
             </div>
         </div>
         
-        <div class="col-4_xs-12">
+        <div class="col-4">
             <div class="bg-image bg-overlay portrait-sm" style="background-image: url('/images/flower3.jpg'); background-position: '';">
             </div>
         </div>
         
-        <div class="col-4_xs-12">
+        <div class="col-4">
             <div class="bg-image bg-overlay portrait-sm" style="background-image: url('/images/flower2.jpg'); background-position: '';">
             </div>
         </div>
@@ -261,7 +258,7 @@
 <section class="padded bg-banner-color1 gold-text">
   <div class="capped-width grid-middle tall-10">
     <div class="col-12 text-center">
-      <h2>Visit us here.</h2>
+      <h3>Visit us here.</h3>
       <div class="col-12-center">
         <a href="" target="_blank" class="button ">
           Instagram
@@ -277,10 +274,10 @@
 
 <!-- MAP SECTION -->
 <section class="grid-left flex-flip-xs  bg-banner-color">
-  <div class="col-6_xs-12 grid">
+  <div class="col-6_xs-12 grid-middle">
     <div class="col-12 bg-image border-radius tall-80 bg-pos-l" style="background-image: url('/images/socks.jpg');"></div>
   </div>
-  <div class="col-6_xs-12 grid-middle capped-width-half">
+  <div class="col-6_xs-12 grid-middle capped-width-half margin-l-0">
     <div class="col-12 padded-10">
       <h3>Welcome Home.</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, veritatis numquam ad illum incidunt esse, molestias, optio culpa eos rem perferendis veniam. Magnam consequatur dignissimos quaerat velit maxime, debitis labore?</p>      
@@ -306,11 +303,22 @@
                 <a href="weddings@weddingvenue.com"  target="_blank"><span class="hide-xs">Address</span> <span><i class="fa-solid fa-map-location"></i></span></a>         
             </nav>
             <div class="col-12 text-center padded-1 subtle">
-            <p class=" margin-b-0">Copyright 2022 | By <a href="https://www.themahalocreative.com" class="" target="_blank">The Mahalo Creative</a></p>
+            <p class=" margin-b-0">Copyright 2022 | By <a href="https://www.themahalocreative.com" class="subtle" target="_blank">The Mahalo Creative</a></p>
             </div>   
         </div>     
         </div>   
     </footer>
+    <!--------------------- Add jQuery -------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+<!-- AOS  -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+<!-- Lightgallery for pop-ups  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/lightgallery.min.js" defer></script>
+
+<!-------------- custom javascript files -------------->
+<script src="/scripts/script.js" defer></script> 
 </body>
 
 </html>

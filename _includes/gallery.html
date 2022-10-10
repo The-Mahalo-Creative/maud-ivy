@@ -1,6 +1,6 @@
 <div class=" gallery grid" id="lightgallery">
     {% for item in page.gallery %}
-    <a href="{{item.background_image}}" class="{{item.column-size}}">
+    <a href="{{item.background_image}}" class="{{item.column-size}}" title="{{item.title}}" alt="{{item.alt}}">
         <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}'); background-position: '{{item.bg-pos}}';">
         </div>
     </a>

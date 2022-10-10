@@ -112,7 +112,9 @@ font-family: 'Trirong', serif;
   
   .margin-t-0 { margin-top: 0;        }
   .margin-b-0 { margin-bottom: 0;     }
+  [class*=grid] .margin-l-0,
   .margin-l-0 { margin-left: 0;       }
+  [class*=grid] .margin-r-0,
   .margin-r-0 { margin-right: 0;      }
   
   .margin-tb { margin-top: 5%; margin-bottom: 5%; }
@@ -152,8 +154,14 @@ font-family: 'Trirong', serif;
   }
   .capped-width-half,
   [class*="col"].capped-width-half   {
-    max-width: 550px;
-    }
+    max-width: 550px;/* ???? */
+    margin: auto;
+  }
+  .capped-width-half.margin-r-0 {margin-right: 0;}
+  .capped-width-half.margin-l-0 {margin-left: 0;}
+
+  .events .capped-width-half,
+  .events [class*="col"].capped-width-half   { max-width: 650px;  }
   /* Position */
   .relative { position: relative; }
   .absolute { position: absolute; }
@@ -237,13 +245,13 @@ font-family: 'Trirong', serif;
     font-weight: 300;
   }
   h2 {
-    font-size: 3.5vw;
+    font-size: 2.5rem;
     font-weight: 400;
     line-height: 1.2;
   }
   h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
   }
   h2:last-child, 
   h3:last-child, 
@@ -423,6 +431,15 @@ background-color: var(--dark);
   color: var(--light-text-hover);
 }
 .main .gallery:hover .button:hover {color: white;}
+
+/* Background of gallery when active  */
+.lg-backdrop {
+  background-color: rgb(45, 34, 34);
+}
+
+.lg-backdrop.in {
+  opacity: 0.95;
+}
 /* Buttons -------------------------------------------------------------*/
 .button {
   display: inline-block;
@@ -532,21 +549,37 @@ background-color: var(--dark);
 .show-md {
 display: none;
 }
+/* ------- LG Media Query (80em / 1280px) --------------- */
+@media (max-width: 80em){
+.events .capped-width-half,
+.events [class*="col"].capped-width-half   { max-width: 450px;  }
+}
+
 /* ------- MD Media Query (64em / 1024px) ------- */ 
 @media (max-width: 64em){
   .show-md        { display: block;}
   .hide-md        { display: none;}
+
+  h2 { font-size: 1.8rem;}
+  h3 { font-size: 1.5rem;}
 }
 /* SM Media Query (48em / 768px----------------------------------------------------------*/
 @media(max-width: 48em) {
   .show-sm        { display: block;}  
   .hide-sm        { display: none;}
   .text-center-sm { text-align: center;}
-
-  .coming-soon    {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  .flex-flip-sm   { flex-wrap: wrap-reverse; }
+  
+  .padded-2-sm,
+  .grid.padded-2-sm    { padding: 2rem;     }
+  
+  .capped-width-half,
+  [class*="col"].capped-width-half   {
+    max-width: unset;
+    margin: unset;
   }
+  .events .capped-width-half,
+  .events [class*="col"].capped-width-half   { max-width: unset;  }
 
 }
 

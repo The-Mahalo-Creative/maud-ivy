@@ -1,5 +1,6 @@
 //wait until document is ready/loaded to run jquery- safety net for best practice
 $(document).ready(function() {
+  
   //LIGHT GALLERY POP UP
   lightGallery(document.getElementById('lightgallery'), {
     speed: 500,

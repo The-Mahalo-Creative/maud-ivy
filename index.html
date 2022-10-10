@@ -43,14 +43,14 @@ notification:
   - note: See our Instagram
 
 gallery:
-  - column-size: col-4_xs-12
+  - column-size: col-4
     aspect-ratio: portrait-sm
     background_image: /images/flower-champagne.jpg
-  - column-size: col-4_xs-12
+  - column-size: col-4
     aspect-ratio: portrait-sm
     background_image: /images/flower3.jpg
     bg-pos:
-  - column-size: col-4_xs-12
+  - column-size: col-4
     aspect-ratio: portrait-sm
     background_image: /images/flower2.jpg
     bg-pos:
@@ -61,7 +61,6 @@ gallery:
       
 ---
 <!-- HEADING BANNER IMAGE -->
-
 <section>
   <div class="grid heading">
     <div class="grid col-12 border-b bg-image tall-70 {{page.header-background-position}}" style="background-image: url('{{page.header_image}}'); ">
@@ -106,16 +105,14 @@ gallery:
 
 <!--Moto  -->
 <section class="bg-footer-color padded-b events relative">
-  <div class="grid flex-flip-xs">
-    <div class="col-5_xs-12-right grid-middle capped-width-half text-right light-text">
-      <h2 class="padded-t-2 relative padded-r-2" ><span class="" style="font-size: 1.5rem;">Taking</span>  <span class="break relative text-bold text-medium " style="right:-15%;"><em>thoughtful</em></span> <span class="break relative" style="right: -18%;"> to the next</span>  <span class="relative text-bold text-large " style="right:15%;" >level.</span></h2>
-<!--       <div class="col-12 padded">
-        <h2 class="editable">Launching 01 Aug 2022</h2>
-        <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?</p>       
-      </div> --> 
+  <div class="grid-right-middle flex-flip-sm">
+    <div class="col-7_lg-5_sm-12 text-left light-text padded-l-2 padded-2-sm capped-width-half margin-r-0">
+      <h2 class="editable">Taking <em>thoughtful</em> <br> to the next level
+      </h2>
+      <p class="editable"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati labore facilis et voluptate error aperiam harum vel architecto, iste aut laborum fuga deleniti corporis debitis repudiandae sit? Veniam, itaque nulla?</p>
 
     </div>
-    <div class="col-7_xs-12 grid">
+    <div class="col-5_lg-7_sm-12 grid-top">
         <div class="col-12 bg-image border-radiusr square {{page.curved-background-position}}" style="background-image: url('{{page.curved_image}}');"></div>      
     </div> 
     <!-- CIRCLE EVENTS -->
@@ -131,24 +128,12 @@ gallery:
       {% include text-scroll-notifcation.html %}
     </div>
   </div>
- <!--  <div class="grid capped-width light-text absolute">
-      <div class="col-12 grid padded">
-        {% for item in page.type %}
-          <div class="padded-05 col-4-middle text-center relative grid-center-middle">
-              <h3 class="border padded absolute z-index">{{item.heading}}</h3>              
-            <div class="col-12 padded-05">
-              <div class="bg-image bg-overlay portrait " style="background-image: url('{{item.type_image}}'); background-position: '{{item.bg-pos}}';"></div> 
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-  </div> -->
 </section> 
 <!-- BANNER SECTION -->
 <section class="{{page.text-main}} bg-banner-color">
   <div class="grid-middle-center padded-tb-10 capped-width">
     <div class="col-10 padded text-center">
-      <h2 class="editable">Launching 01 Aug 2022</h2>
+      <h3 class="editable">About Us</h3>
       <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?</p>
  <!--      {% include buttons.html %} -->
     </div>    
@@ -174,7 +159,7 @@ gallery:
 <section class="padded bg-banner-color1 gold-text">
   <div class="capped-width grid-middle tall-10">
     <div class="col-12 text-center">
-      <h2>Visit us here.</h2>
+      <h3>Visit us here.</h3>
       <div class="col-12-center">
         <a href="{{site.data.contact-info.facebook_href}}" target="_blank" class="button ">
           Instagram
@@ -190,10 +175,10 @@ gallery:
 
 <!-- MAP SECTION -->
 <section class="grid-left flex-flip-xs {{page.text-main}} bg-banner-color">
-  <div class="col-6_xs-12 grid">
+  <div class="col-6_xs-12 grid-middle">
     <div class="col-12 bg-image border-radius tall-80 {{page.banner-background-position}}" style="background-image: url('{{page.banner_image}}');"></div>
   </div>
-  <div class="col-6_xs-12 grid-middle capped-width-half">
+  <div class="col-6_xs-12 grid-middle capped-width-half margin-l-0">
     <div class="col-12 padded-10">
       <h3>Welcome Home.</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, veritatis numquam ad illum incidunt esse, molestias, optio culpa eos rem perferendis veniam. Magnam consequatur dignissimos quaerat velit maxime, debitis labore?</p>      
