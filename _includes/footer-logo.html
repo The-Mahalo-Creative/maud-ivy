@@ -1,5 +1,5 @@
-{% if page.footer-logo-text == true %}
-<h1 class="text-lg">{{page.footer-logo}}</h1>
+{% if site.data.site-settings.footer.footer-logo-text == true %}
+<h1 class="text-lg">{{site.data.site-settings.footer.footer-logo}}</h1>
 {% else %}
-<img class="" src="{{page.footer-logo_image}}" alt="{{page.footer-logo-alt}}">
+<img class="" src="{{site.data.site-settings.footer-logo_image}}" alt="{{site.data.site-settings.footer-logo-alt}}">
 {% endif %}

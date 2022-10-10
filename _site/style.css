@@ -415,10 +415,11 @@ background-color: var(--dark);
 .bg-pos-l         { background-position: left;    }  
 .bg-pos-r         { background-position: right;   }
 
-.border-radius    { border-radius:0 36rem 0 0;    }
+.border-radius     { border-radius:0 36rem 0 0;    }
 .border-radiusl    { border-radius:0 100% 0 0;    }
 .border-radiuslb   { border-radius:0 0 100% 0;    }
 .border-radiusr    { border-radius:0 0 0 100%;    }
+.border-radiusrt   { border-radius:100% 0 0 0 ;   }
 .arch { border-radius: 48% 48% 0  0;}
 .arch.bg-overlay::before {border-radius: 48% 48% 0  0; }
 /* BORDERS */

@@ -17,6 +17,13 @@ social:
   facebook_url:
   twitter_username: 
   
+footer:
+  footer-logo-text: true
+  font_color: light-text
+  footer-logo: Maud & Ivy
+  footer-logo_image: 
+  footer-logo-alt:
+
 design: 
   dark-text_color: '#453540'
   bg-color_color: '#f7efed'

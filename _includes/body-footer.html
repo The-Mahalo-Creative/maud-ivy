@@ -1,7 +1,8 @@
-    <!--FOOTER -->
+{% if page.title != success %}
+    <!--FOOTER -->    
     <footer class="bg-footer-color">
         <div class="grid capped-width ">
-        <div class="col-12 grid-middle tall-30 {{page.footer-text}}">
+        <div class="col-12 grid-middle tall-20 {{site.data.site-settings.footer.font_color}}">
             <div class="col-12 padded-2 text-center">
             {% include footer-logo.html %}
             </div>       
@@ -16,3 +17,4 @@
         </div>     
         </div>   
     </footer>
+{% endif %}
