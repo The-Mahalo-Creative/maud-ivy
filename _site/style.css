@@ -327,7 +327,7 @@ nav a:last-child { padding-right: 0;}
   top: 0;
   left: 1rem;
   right: 0;
-  z-index:2;
+  z-index:4;
 }
 .mobile-menu a {
   display: block;
@@ -347,7 +347,7 @@ nav a:last-child { padding-right: 0;}
   font-weight: 300;
   line-height: 0.9;
   cursor: pointer;
-  z-index: 2;
+  z-index: 4;
 }
 .hamburger-button:active { color:var(--text-hover); }
  /* General CSS Responsive Styles */
