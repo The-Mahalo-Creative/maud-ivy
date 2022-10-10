@@ -433,9 +433,10 @@ background-color: var(--dark);
 
 
 .events .absolute{
-  bottom: -25%;
-  width: 100%;
+  bottom: -8rem;
   left: 5%;
+  z-index: 2;
+  width: 30vw;
 }
 
 .heading .large.absolute{
