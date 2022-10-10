@@ -58,20 +58,49 @@
 
 <body>
     <header class="" >
-    <div class="grid padded-1 padded-r-2 padded-l-2 border-b ">
-      <div class="grid col-12  capped-width">
-        <a href="/" class="col-4">
-          <h1>Maud & Ivy</h1>
-        </a>
-        <nav class="col-8 text-right">
-          <a href="/gallery">Products</a>
-          <a href="/enquiry">Enquiry</a>
-          <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="" target="_blank"><i class="fab fa-facebook"></i></a>
-        </nav>      
+  <div class="grid padded-1 padded-r-2 padded-l-2 border-b ">
+    <div class="grid col-12  capped-width">
+      <a href="/" class="col-4_xs-10">
+        <h1>Maud & Ivy</h1>
+      </a>
+      <nav class="col-8 text-right hide-xs">
+        <a href="/gallery">Products</a>
+        <a href="/enquiry">Enquiry</a>
+        <a class="social" href="" target="_blank"><i class="fab fa-instagram"></i></a>
+<a class="social" href="" target="_blank"><i class="fab fa-facebook"></i></a>
+      </nav>   
+      <div class="col-2 text-right show-xs">
+        <span class="hamburger-button">&#8801;</span>
       </div>
     </div>
-  </header>
+  </div>
+</header>
+
+<div class="" >
+
+</div>
+
+<header class="mobile-menu bg-footer-color text-light padded-b border-b" >
+  <div class="grid padded-1 padded-r-2 padded-l-2 border-l ">
+    <div class="grid col-12  capped-width">
+      <a href="/" class="col-4_xs-10">
+        
+      </a>
+      <div class="col-2 text-right">
+        <span class="hamburger-button">&#215;</span>
+      </div>
+
+      <nav class="col-12 text-center">
+        <a href="/"><h1>Maud & Ivy</h1></a>
+        <a href="/gallery">Products</a>
+        <a href="/enquiry">Enquiry</a>
+        <a class="social" href="" target="_blank"><i class="fab fa-instagram"></i></a>
+<a class="social" href="" target="_blank"><i class="fab fa-facebook"></i></a>
+      </nav>  
+    </div>
+  </div>
+</header>
+
     <!-- Styles  -->
 <style> 
     :root {        
@@ -88,25 +117,35 @@
     }
 </style>  
 
-    <section class="padded-2">
-  <div class="grid capped-width">
-    <div class="col-12 text-center">
-      <img src="/images/heading.png" width="200px">
+    <!--Moto  -->
+<section class="padded-b relative range curved ">
+  <div class="grid-right-middle flex-flip-sm padded-l padded-0-sm">
+    <div class="col-7_lg-5_sm-12 text-left  padded-2-sm capped-width-half margin-r-0 padded-t">
+      <div class="text-center padded-b-2 padded-t padded-t">
+        <img src="/images/heading.png" width="200px">
+      </div>      
+      <p class="editable"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati labore facilis et voluptate error aperiam harum vel architecto, iste aut laborum fuga deleniti corporis debitis repudiandae sit? Veniam, itaque nulla?</p>   
     </div>
-  </div>
-</section>
 
-<section class="padded-2 padded-b-0">
-  <div class="grid capped-width">
-    <div class="col-12 text-center padded-1 padded-b-0">
-        <h2 class="">Our Range</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, reprehenderit nam sit quas ea voluptatum unde culpa ipsum nisi asperiores minima sunt blanditiis adipisci est aperiam, illum animi a molestias!</p>      
-    </div>
-  </div>
+    <div class="col-5_lg-7_sm-12 grid-top relative">
+      <div class="col-12 bg-image border-radiusr square " style="background-image: url('/images/flower4.jpg');"></div>              
+      <!-- CIRCLE EVENTS -->
+      <div class="grid col-12 padded-b capped-width-half margin-l-0 relative">
+        <div class="col-12 grid-middle text-center"><!-- Centers on small -->        
+          <div class="col-12 grid absolute large">
+            <div class="col-12 grid-middle text-center relative light-text  " ><!-- Centers text -->
+              <div class="col-12 bg-footer-color circle"></div>   
+              <h2 class="col-12 absolute">Our Range</h2>
+            </div>       
+          </div>  
+        </div>  
+      </div>
+    </div> 
+  </div>  
+</section>  
 
-</section>
 <!-- gallery  -->
-<section class="padded " >
+<section class="padded padded-t-0 " >
   <div class="capped-width">
     <div class=" gallery grid" id="lightgallery">
     
@@ -165,8 +204,8 @@
         </div>
     </a>
     
-    <a href="/images/flower3.jpg" class="col-12" title="Flower 1" alt="">
-        <div class="bg-image portrait-sm" style="background-image: url('/images/flower3.jpg'); background-position: '';">
+    <a href="/images/flower4.jpg" class="col-12" title="Flower 1" alt="">
+        <div class="bg-image portrait-sm" style="background-image: url('/images/flower4.jpg'); background-position: '';">
         </div>
     </a>
     

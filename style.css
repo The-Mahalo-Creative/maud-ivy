@@ -61,9 +61,9 @@ font-family: 'Trirong', serif;
   .padded-lr,
   .grid.padded-lr       { padding-left: 5%; padding-right: 5%;    }
   
-  .grid.padded-t-1,
+  [class*="grid"] .padded-t-1,
   .padded-t-1  { padding-top: 1rem;     }
-  .grid.padded-b-1,
+  [class*="grid"] .padded-b-1,
   .padded-b-1  { padding-bottom: 1rem;  }
   .grid.padded-l-1,
   .padded-l-1  { padding-left: 1rem;    }
@@ -160,8 +160,9 @@ font-family: 'Trirong', serif;
   .capped-width-half.margin-r-0 {margin-right: 0;}
   .capped-width-half.margin-l-0 {margin-left: 0;}
 
-  .events .capped-width-half,
-  .events [class*="col"].capped-width-half   { max-width: 650px;  }
+  .curved .capped-width-half, .curved [class*="col"].capped-width-half {
+    max-width: 650px;
+  }
   /* Position */
   .relative { position: relative; }
   .absolute { position: absolute; }
@@ -238,12 +239,13 @@ font-family: 'Trirong', serif;
   h1 {
     font-family: 'Noto Serif Display', serif;
     letter-spacing: 0.04em;
-    line-height:1em;
+    line-height:1.5;
     text-transform: uppercase;
     font-size: 2rem;
     opacity: 0.9;
     font-weight: 300;
   }
+  a h1 { line-height: 1.1;}
   h2 {
     font-size: 2.5rem;
     font-weight: 400;
@@ -264,7 +266,7 @@ font-family: 'Trirong', serif;
   a, p, li, ul {
     font-weight: 300;
     font-size: 1.1rem;
-    line-height: 1.6em; 
+    line-height: 1.5; 
     margin-bottom: 1rem;
   }
 ul { padding-left: 1.5rem;}
@@ -311,14 +313,46 @@ nav .fab {
   padding:unset;
   font-size: 1.2rem;
 }
-nav a {
+header nav a {
   font-size: 1.2rem;
   padding:0rem 1.2rem;
   text-transform: uppercase;
-
-  line-height:1.8rem;
+  line-height: 2;
 }
 nav a:last-child { padding-right: 0;}
+/* Mobile Menu Styles -----------------------------*/
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 1rem;
+  right: 0;
+  z-index:2;
+}
+.mobile-menu a {
+  display: block;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.mobile-menu a.social{
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.mobile-menu a:hover { color:var(--text-hover); } 
+.hamburger-button {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 0.9;
+  cursor: pointer;
+  z-index: 2;
+}
+.hamburger-button:active { color:var(--text-hover); }
+ /* General CSS Responsive Styles */
+ .mobile-menu {
+  display: none;
+}
 
 footer h1 {font-size: 3rem;}
 footer nav a {
@@ -383,6 +417,7 @@ background-color: var(--dark);
 
 .border-radius    { border-radius:0 36rem 0 0;    }
 .border-radiusl    { border-radius:0 100% 0 0;    }
+.border-radiuslb   { border-radius:0 0 100% 0;    }
 .border-radiusr    { border-radius:0 0 0 100%;    }
 .arch { border-radius: 48% 48% 0  0;}
 .arch.bg-overlay::before {border-radius: 48% 48% 0  0; }
@@ -417,6 +452,13 @@ background-color: var(--dark);
   right: unset;
   font-size: 1.1rem;
 }
+.range .large.absolute{
+  bottom: -100%; 
+  right: 10%; 
+  width: 16rem;
+}
+
+
 /* .border-radius {border-radius: 2rem;} */
  /* GALLERY ------------------------------------------------------- */
 .gallery [class*="col-"] {
@@ -541,8 +583,183 @@ background-color: var(--dark);
     color: unset;
     opacity:0.5;
 }
+/* Enquiry ---------------------------------------------*/
+.bubbles-enquiry { top: -5vw;}
+form input, form textarea {
+  display: block;
+  width:100%;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.2;  
+  color: inherit;
+  margin:1rem 0 2rem 0;
+  background-color: rgba(0,0,0,0);  
+  outline: none;  
+  border: none;
+  border-bottom: 1px solid;
+}
+::-webkit-input-placeholder { color:inherit;}
+::-moz-placeholder          { color:inherit;}
+::-ms-placeholder           { color:inherit;}
+::-webkit-input-placeholder { color:inherit;}
+::-moz-placeholder          { color:inherit;}
+:-ms-input-placeholder      { color:inherit;}
+::-ms-input-placeholder     { color:inherit;}
+::placeholder               { color:inherit;}
 
+::-webkit-input-placeholder { opacity: 1; }
+::-moz-placeholder          { opacity: 1; }
+:-ms-input-placeholder      { opacity: 1; }
+::-ms-input-placeholder     { opacity: 1; }
+::placeholder               { opacity: 1; } /* Firefox */
+textarea {
+  min-height: 4.5rem;
+  resize: none;
+}   
+form input:focus, form textarea:focus { border-bottom-color: var(--footer-color);}
+form button {
+  
+  display:block;
+  width:100%;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: inherit;  
+  border: 2px solid;
+  padding: 0.6rem 1.5rem;
+  margin: 0.5rem;
+  text-transform: uppercase;
+  width: 100%;
+  background-color:var(--bg-color);
+  text-align: center;
+}
+form button:hover {
+  color:var(--footer-color);
+}
+/* CUSTOMISE CHECK BOX */
+ /* Customize the label (the container) */
+ .container {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2;  
+  color: inherit;
+  display: block;
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+}
 
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  height: 16px;
+  width: 16px;
+  border: 1px solid ;
+  opacity: 0.8;
+  background-color: none;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  opacity: 0.5;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: -6px;
+  width: 4.5px;
+  height: 15px;
+  border: solid;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+} 
+
+/* RADIO------------------------------------ */
+ /* Customize the label (the container) */
+ .container1 {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2;  
+  color: inherit;
+  display: block;
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+}
+/* Hide the browser's default radio button */
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom radio button */
+.checkmark1 {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  height: 18px;
+  width: 18px;
+  opacity: 0.8;
+  border: 1px solid;
+  border-radius: 50%;
+}
+/* On mouse-over, add a grey background color */
+.container1:hover input ~ .checkmark1 {
+  opacity: 0.6;
+}
+/* When the radio button is checked, add a blue background */
+.container1 input:checked ~ .checkmark1 {
+  background-color: black;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.container1 input:checked ~ .checkmark1:after {
+  display: block;
+}
+/* Style the indicator (dot/circle) */
+.container1 .checkmark1:after {
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-color);
+} 
 /* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
 .show-xs, 
 .show-sm,
@@ -551,10 +768,9 @@ display: none;
 }
 /* ------- LG Media Query (80em / 1280px) --------------- */
 @media (max-width: 80em){
-.events .capped-width-half,
-.events [class*="col"].capped-width-half   { max-width: 450px;  }
-}
-
+  .curved .capped-width-half, .curved [class*="col"].capped-width-half {
+    max-width: 450px;
+  }
 /* ------- MD Media Query (64em / 1024px) ------- */ 
 @media (max-width: 64em){
   .show-md        { display: block;}
@@ -562,6 +778,8 @@ display: none;
 
   h2 { font-size: 1.8rem;}
   h3 { font-size: 1.5rem;}
+
+  .range .large.absolute{ width: 14rem; }
 }
 /* SM Media Query (48em / 768px----------------------------------------------------------*/
 @media(max-width: 48em) {
@@ -569,18 +787,45 @@ display: none;
   .hide-sm        { display: none;}
   .text-center-sm { text-align: center;}
   .flex-flip-sm   { flex-wrap: wrap-reverse; }
+
+  [class*=col] .item-left-sm,
+  .item-left-sm   { 
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: auto;
+  }
   
   .padded-2-sm,
   .grid.padded-2-sm    { padding: 2rem;     }
-  
+  .padded-l-0-sm,
+  .grid.padded-l-0-sm  { padding-left: 0    }
+  .padded-0-sm,
+  .grid.padded-0-sm    { padding: 0         }
+
+  h1            { font-size: 1.6rem;  }
+  a h1          { line-height: 1.4;}
+  header nav a  {
+    font-size: 1.1rem;
+    padding: 0rem 0.7rem;
+    line-height: 2;
+  }
+
   .capped-width-half,
   [class*="col"].capped-width-half   {
     max-width: unset;
     margin: unset;
   }
-  .events .capped-width-half,
-  .events [class*="col"].capped-width-half   { max-width: unset;  }
-
+  .curved .capped-width-half,
+  .curved [class*="col"].capped-width-half   { max-width: unset;  }
+  .enquiry .large.absolute{
+    bottom: -100%; 
+    left: 10%; 
+    width: 14rem;
+  }
+  .bubbles-enquiry { 
+    top: unset;
+    bottom: -5rem;
+  }
 }
 
 /* ------- XS Media Query (36em / 576px) ------------------------------------------------ */ 
@@ -588,27 +833,31 @@ display: none;
   .show-xs        { display: block;}
   .hide-xs        { display: none;}  
 
-  .absolute-xs    {
+  .break-xs       {display: block;}
+  .text-center-xs { text-align: center;}
+
+  .flex-flip-xs   { flex-wrap: wrap-reverse; }
+
+  .grid.padded-r-0-xs   { padding-right: 0rem;}
+  .grid.padded-b-0-xs   { padding-bottom: 0;}
+  
+  .padded-t-2-xs          { padding-top: 2rem;}
+  .range .large.absolute  { right: unset; }
+  .enquiry .large.absolute{ left: unset;  }
+/*  
+.col-12.list {
+    margin: auto;
+    max-width: 300px;
+  }
+.absolute-xs    {
     position: absolute;
     top:0;
     left:0;
     right:0;
     background-color: var(--banner-color-opacity);
   }
-  .break-xs       {display: block;}
-  .text-center-xs { text-align: center;}
-
-  .flex-flip-xs   { flex-wrap: wrap-reverse; }
-  .col-12.list {
-    margin: auto;
-    max-width: 300px;
-  }
-  .grid.padded-r-0-xs   { padding-right: 0rem;}
-  .grid.padded-b-0-xs        { padding-bottom: 0;}
-  .padded-10-xs         { padding: 10%;}
-  .padded-t-2-xs        { padding-top: 2rem;}
-
-  .bg-image-xs {
+.padded-10-xs         { padding: 10%;} 
+.bg-image-xs {
     background-image: url('https://source.unsplash.com/Sg3XwuEpybU');
     background-size: cover; 
     background-position: center; 
@@ -628,7 +877,5 @@ display: none;
   }
   .bg-overlay-xs > * {
     position: relative;
-  }
+  } */
 }
-/* SNIP CART */
-.snipcart-item-line__media--small {height: 200px;}/* Make square! */

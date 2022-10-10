@@ -58,20 +58,49 @@
 
 <body>
     <header class="" >
-    <div class="grid padded-1 padded-r-2 padded-l-2 border-b ">
-      <div class="grid col-12  capped-width">
-        <a href="/" class="col-4">
-          <h1>Maud & Ivy</h1>
-        </a>
-        <nav class="col-8 text-right">
-          <a href="/gallery">Products</a>
-          <a href="/enquiry">Enquiry</a>
-          <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="" target="_blank"><i class="fab fa-facebook"></i></a>
-        </nav>      
+  <div class="grid padded-1 padded-r-2 padded-l-2 border-b ">
+    <div class="grid col-12  capped-width">
+      <a href="/" class="col-4_xs-10">
+        <h1>Maud & Ivy</h1>
+      </a>
+      <nav class="col-8 text-right hide-xs">
+        <a href="/gallery">Products</a>
+        <a href="/enquiry">Enquiry</a>
+        <a class="social" href="" target="_blank"><i class="fab fa-instagram"></i></a>
+<a class="social" href="" target="_blank"><i class="fab fa-facebook"></i></a>
+      </nav>   
+      <div class="col-2 text-right show-xs">
+        <span class="hamburger-button">&#8801;</span>
       </div>
     </div>
-  </header>
+  </div>
+</header>
+
+<div class="" >
+
+</div>
+
+<header class="mobile-menu bg-footer-color text-light padded-b border-b" >
+  <div class="grid padded-1 padded-r-2 padded-l-2 border-l ">
+    <div class="grid col-12  capped-width">
+      <a href="/" class="col-4_xs-10">
+        
+      </a>
+      <div class="col-2 text-right">
+        <span class="hamburger-button">&#215;</span>
+      </div>
+
+      <nav class="col-12 text-center">
+        <a href="/"><h1>Maud & Ivy</h1></a>
+        <a href="/gallery">Products</a>
+        <a href="/enquiry">Enquiry</a>
+        <a class="social" href="" target="_blank"><i class="fab fa-instagram"></i></a>
+<a class="social" href="" target="_blank"><i class="fab fa-facebook"></i></a>
+      </nav>  
+    </div>
+  </div>
+</header>
+
     <!-- Styles  -->
 <style> 
     :root {        
@@ -88,111 +117,152 @@
     }
 </style>  
 
-    <section class="padded-2">
-    <div class="grid capped-width">
-      <div class="col-12 text-center">
-        <img src="/images/heading.png" width="200px">
-      </div>
-    </div>
-  </section>
-  
-  <section class="padded-2 padded-b-0">
-    <div class="grid capped-width">
-      <div class="col-12 text-center padded-1 padded-b-0">
-          <h2 class="">Our Range</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, reprehenderit nam sit quas ea voluptatum unde culpa ipsum nisi asperiores minima sunt blanditiis adipisci est aperiam, illum animi a molestias!</p>      
-      </div>
-    </div>
-  
-  </section>
+    <!--Moto  -->
+<section class="relative enquiry curved ">
+    <div class="grid-right-middle padded-r padded-0-sm">
+        <div class="col-5_lg-7_sm-12 grid-top relative">
+            <div class="col-12 bg-image border-radiuslb square " style="background-image: url('/images/flower3.jpg');"></div>  
+            <!-- CIRCLE EVENTS -->
+            <div class="grid col-12 padded-b capped-width-half margin-l-0 relative show-sm">
+                <div class="col-12 grid-middle text-center"><!-- Centers on small -->        
+                <div class="col-12 grid absolute large">
+                    <div class="col-12 grid-middle text-center relative light-text  " ><!-- Centers text -->
+                    <div class="col-12 bg-footer-color circle"></div>   
+                    <h2 class="col-12 absolute">Our Range</h2>
+                    </div>       
+                </div>  
+                </div>  
+            </div>    
+        </div>       
+      <div class="col-7_lg-5_sm-12 text-left  padded-2-sm capped-width-half margin-l-0 padded-t">
+        <div class="text-center padded-b-2 padded-t padded-t">
+          <img src="/images/heading.png" width="200px">
+        </div>      
+        <p class="editable"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati labore facilis et voluptate error aperiam harum vel architecto, iste aut laborum fuga deleniti corporis debitis repudiandae sit? Veniam, itaque nulla?</p>   
+      </div> 
+    </div>  
+</section>  
+
+ 
 <!-- Contact -->
 <section class="tall-90 noSelect">
     <div class="padded contact">
-        <div class="capped-width-lg grid ">
-            <!-- Apply fog glass layer -->
-            <div class="col-12-middle grid padded">
-                <!-- HRS LEFT COLUMN-->
-                <div class="col-5_sm-12 padded border-r bg-image  text-right text-left-md " style="background-image: url('/images/socks.jpg'); background-position: '';">
-                    <h4 class="text-light text-vlittle" ><span class="text-bold padded-t-2"><em>hours</em></span><br>weekdays 9-5pm</h4>
-                    <h4 class="text-light text-vlittle text-bold  " ><span class="text-bold"><em>socials</em></span><br>@themahalocreative</h4>
-                </div>
-                <!-- RIGHT COLUMN -->
-                <div class="col-7_sm-12 padded grid">
-                    <h2>Reach Out</h2>
-                    <!-- FORM -->
-                    <form class="col-12" name="the-mahalo-creative" data-netlify="true" action="/success.html" method="post">
-                        <!-- YOUR DETAILS -->
-                        <div class="grid padded-b">    
-                            <div class="col-2_sm-12 relative">
-                                <h4 class="vertical-form-text ">Your Details.</h4>
-                            </div>
-                            <div class="col-10_sm-12">
-                                <input type="text" name="_name" placeholder="Your Name" required>
-                                <input type="email" name="_replyto" placeholder="Your Email" required="">
-                                <input type="tel" name="phone-no" placeholder="Your Number" required>
-                            </div>
+        <div class="capped-width grid  flex-flip-sm">
+        <!-- RIGHT COLUMN -->
+            <div class="col-7_sm-12 padded grid">
+                <h2>Enquiry</h2>
+            <!-- FORM -->
+                <form class="col-12 " name="maud-and-ivy" data-netlify="true" action="/success.html" method="post">
+                <!-- YOUR DETAILS -->
+                    <div class="grid padded-b  padded-r-1 padded-0-sm">    
+                        <div class="col-12 ">
+                            <h4 class="">Your Details.</h4>
+                            <input type="text" name="_name" id="_name" placeholder="Your Name" required>
+                            <input type="email" name="_replyto" id="_replyto" placeholder="Your Email" required="">
+                            <input type="tel" name="phone-no" id="phone-no" placeholder="Your Number" required>
+                        </div>                        
+                        <div class="col-12 padded-b">
+                            <h4 class="">What is your budget</h4>
+                            <label class="container1" > < 100
+                                <input type="radio" name="budget" value="100" checked>
+                                <span class="checkmark1"></span>
+                            </label>
+                            <label class="container1">100-200
+                                <input type="radio" name="budget" value="100-200" >
+                                <span class="checkmark1"></span>
+                            </label>
+                            <label class="container1">200-500
+                                <input type="radio" name="budget" value="200-500">
+                                <span class="checkmark1"></span>
+                            </label>
+                            <label class="container1">500 >
+                                <input type="radio" name="budget"  value="500">
+                                <span class="checkmark1"></span>
+                            </label>
                         </div>
-                        <!-- CHECKBOXES 
-                        <div class="grid-right check-box padded-b">
-                            <div class="col-10_sm-12">
-                                <h3 class="text-little text-bold">How can we help.</h3>
-                                <label class="container">Web development
-                                    <input type="checkbox" checked="checked">
-                                    <span class="checkmark"></span>
-                                </label>
-                                
-                                <label class="container">Social Media Management
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>
-                                
-                                <label class="container">Photograpghy
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>            
+                        <div class="col-12 padded-b">
+                            <h4>What colours?</h4>
+                            <label class="container">Pink
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Peach
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Yellow
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Red
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>  
 
-                                <label class="container">Graphic Design
-                                    <input type="checkbox">
-                                    <span class="checkmark"></span>
-                                </label>     
-                            </div>
-                        </div>-->
-                        <!-- YOUR BUSINESS -->
-                        <div class="grid padded-b">    
-                            <div class="col-2_sm-12 relative padded-t">
-                                <h4 class="vertical-form-text">Your Business.</h4>
-                            </div>
-                            <div class="col-10_sm-12 grid">
-                                <!-- Business -->
-                                <label for="about-your-brand" class="margin-t-1">Tell us a little about your business or brand.</label>
-                                <textarea name="about-your-brand" class="input-text" required></textarea>
-                                <label for="services-needed">Let us know what services you need.</label>
-                                <textarea name="services-needed" class="input-text" required></textarea>            
-                            </div>  
+                        </div>
+                        <div class="col-12 padded-b">
+                            <label for="occasion">
+                                <h4>Occasion</h4>
+                            </label>
+                            <input list="occasion" name="type-occasion">
+                            <datalist id="occasion">
+                                <option>Wedding</option>
+                                <option>Engagement</option>
+                                <option>Anniversary</option>
+                                <option>Birthday</option>
+                                <option>Baby</option>
+                                <option>Graduation</option>
+                                <option>Condolences</option>
+                            </datalist>                            
+                        </div>
+                        <div class="col-12 padded-b">
+                            <label for="where">
+                                <h4>Where is it going?</h4>
+                            </label>
+                            <input list="where">
+                            <datalist id="where">
+                                <option>Bouquet</option>
+                                <option>Arch</option>
+                                <option>Wrist</option>
+                                <option>Wreath</option>
+                            </datalist>                            
+                        </div>
+                        <div class="col-12 padded-b">
+                            <label for="message">
+                                <h4> Do you have a message?</h4>
+                            </label>
+                            <textarea name="message" class="input-text" required></textarea>   
                         </div>  
-                        <!-- SUBMIT -->
-                        <div class="grid-right">                        
-                            <div class="col-10_sm-12">
-                                <!-- datalist vs drop down list -->
-                                <label for="search1">How did you find us?</label>
-                                <input list="search1">
-                                <datalist id="search1">
-                                    <option>Google</option>
-                                    <option>Referal</option>
-                                    <option>Instagram</option>
-                                    <option>Facebook</option>
-                                </datalist>
-                                <button type="submit"> Submit </button>   
-                            </div>
-                        </div>        
-                    </form>
-                </div>
+                        <div class="col-12 padded-tb">                            
+                            <button type="submit"  value="Send Request"> Submit </button>   
+                        </div>
+                    </div>         
+                </form>
+            </div>
+            <!-- HRS LEFT COLUMN-->
+            <div class="col-5_sm-12 grid-top padded relative bubbles-enquiry">
+                <div class="col-8_md-9_sm-5-right grid-middle text-center hide-sm">
+                    <div class="col-12 grid-middle text-center large relative light-text  " ><!-- Centers text -->
+                        <div class="col-12 bg-footer-color circle"></div>   
+                        <h2 class="col-12 absolute">Enquiry</h2>
+                    </div>  
+                </div> 
+                <div class="col-6_md-7_sm-3_xs-4-middle item-left-sm  grid-middle text-center">
+                    <div class="col-12 grid-middle text-center large relative light-text  " ><!-- Centers text -->
+                        <div class="col-12 bg-footer-color circle"></div>   
+
+                        <h4 class="col-12 absolute text-light text-little padded-1" ><span class="text-bold padded-t-2"><em>hours</em></span><br>weekdays 9-5pm</h4>
+                    </div>  
+                </div> 
             </div>
         </div>
     </div>
     <!-- capped width of inner glass form -->
  
-</section>
+</section><!--                 
+                <a href="">
+                    <h4 class="text-light text-vlittle text-bold  " ><span class="text-bold"><em>socials</em></span><br>@maud&ivy</h4>
+                </a> -->
 
         <!--FOOTER -->
     <footer class="bg-footer-color">

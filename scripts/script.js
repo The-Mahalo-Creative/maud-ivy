@@ -1,18 +1,14 @@
 //wait until document is ready/loaded to run jquery- safety net for best practice
 $(document).ready(function() {
+  $(".hamburger-button").click(function() {
+    $(this).toggleClass("active");
+    $(".mobile-menu").fadeToggle()
+});
   
   //LIGHT GALLERY POP UP
   lightGallery(document.getElementById('lightgallery'), {
     speed: 500,
     download: false
-  });
-  lightGallery(document.getElementById('lightgallery-2'), {
-    speed: 500,
-    download: false
-  });
-  lightGallery(document.getElementById('lightgallery-3'), {
-  speed: 500,
-  download: false
   });
   
   // Animate on scroll
