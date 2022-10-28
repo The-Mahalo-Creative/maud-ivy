@@ -1,16 +1,16 @@
 {% if page.title != success %}
     <!--FOOTER -->    
-    <footer class="pink-color">
+    <footer class="stone-color">
         <div class="grid capped-width padded-2 padded-b-0">
         <div class="col-12 grid-middle-center tall-20 {{site.data.site-settings.footer.font_color}}">
-            <div class="col-6_sm-10_xs-12 padded-2 text-center">                
+            <a href="/" class="col-6_sm-10_xs-12 padded-2 text-center">                
                 {% if site.data.site-settings.footer.footer-logo-img == true %}
                 <img class="" src="{{site.data.site-settings.footer.footer-logo_image}}" alt="{{site.data.site-settings.footer-logo-alt}}">
                 {% endif %}
                 <div class="logo">
                     <h1 class="text-lg">{{site.data.site-settings.footer.footer-logo}}</h1>
                 </div>                
-            </div>       
+            </a>       
             <div class="col-6_sm-12 grid text-left padded-b-2-sm">
                 <div class="col-12 hide-xs margin-b-1 text-center-sm">
                    <h3>Contact Us:</h3> 

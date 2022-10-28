@@ -320,8 +320,8 @@ a .light-text:hover, .light-text a:hover {
 }
 
 .subtle, .subtle p, .sublte a {
-  opacity: 0.9;
-  font-size: 0.9rem;
+  opacity: 1 ;
+  font-size: 1rem;
 }
 
 .fab {
