@@ -884,6 +884,10 @@ display: none;
   
   footer .show-xs       { display: inline-block;}
   footer h1 {
-    font-size: 11.5vw;
+    font-size: 11vw;
   }
+}
+@media (max-width: 24em) { 
+  .break-xxs       {display: block;}
+  .hide-xxs        { display: none;}  
 }
