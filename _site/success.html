@@ -41,7 +41,7 @@
 <!-- This our googlefonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 <!--- AOS STYLESHEET--->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
@@ -57,11 +57,11 @@
 </head>
 
 <body>
-    <header class="" >
-  <div class="grid padded-1 padded-r-2 padded-l-2 border-b ">
+    <header class="pink-color dark-gold-text" >
+  <div class="grid padded-1 padded-r-2 padded-l-2  ">
     <div class="grid col-12  capped-width">
       <a href="/" class="col-4_xs-10">
-        <h1>Maud & Ivy</h1>
+        <h1>Maud and Ivy</h1>
       </a>
       <nav class="col-8 text-right hide-xs">
         <a href="/gallery">Products</a>
@@ -104,58 +104,39 @@
     <!-- Styles  -->
 <style> 
     :root {        
-        --bg-color: #f7efed;
+        --bg-color: #fdfbf6;
         --dark-text: #453540;
         --light-text: #fdefe6;
-        --text-hover: #a84f61;
-        --text-gold: #A5946E;
+        --text-hover: #cb6475;
+        --gold-text: #A5946E;
+        --dark-gold-text: #99875E;
         --light-text-hover: #f0dcb2;
-        --banner-color: #ffe5df;
-        --banner-color1: #DFD1B9;
-        --banner-color-opacity: #ffc79eA6;
-        --footer-color: #c28789;
+        --pink-color: #f4c6c6;
+        --stone-color: #ded0b8;
+        --ivy-color: #dbd8be;
+        --banner-color-opacity: ;
     }
 </style>  
 
     <!--Moto  -->
-<section class="grid curved tall-100 bg-footer-color light-text">
-    <div class="grid col-12">
-        <div class="col-7_sm-12 grid-top " style="">
-            <div class="col-12 bg-image border-radiuslb square " style="background-image: url('/images/flower1.jpg'); max-height:40vh;"></div>   
-        </div>       
-      <div class="col-12 text-center" style="max-height:10vh;">
-        <h2>Success!</h2>
-        <p>Expect to hear back form us soon!</p>
-      </div> 
-      <div class="col-7_sm-12 grid-right " style="max-height:40vh;">
-        <div class="col-12 bg-image border-radiusrt square " style="background-image: url('/images/flower2.jpg');"></div>  
-    </div>       
-</section>  
-
+<section class="pink-color">
+  <div class="capped-width grid--middle-center tall-100 text-center">
+    <div class="grid col-8" >
+      <img src="/images/maud-and-ivy-colour.png" alt="" >
+      <div class="col-12 relative" style="top: -2rem ;">
+          <h1 class="editable">YOUR FORM HAS BEEN SENT</h1>
+          <p class="editable">We will be in touch soon.</p>
+      </div>    
+      <div class="col-12">
+        <a href="/" class="button">
+          Return to Home.
+        </a>
+      </div>  
+    </div> 
+  </div>  
+</section>
 
     
-    <!--FOOTER -->    
-    <footer class="bg-footer-color">
-        <div class="grid capped-width ">
-        <div class="col-12 grid-middle tall-20 light-text">
-            <div class="col-12 padded-2 text-center">
-            
-<h1 class="text-lg">Maud & Ivy</h1>
-
-            </div>       
-            <nav class="col-12 padded padded-b-0 padded-t-0 text-center">
-                <a href="Tel:1800 00 00" target="_blank"><span class="hide-xs">Telephone</span> <span><i class="fa-solid fa-phone"></i></span></a>    
-                <a href="weddings@weddingvenue.com"  target="_blank"><span class="hide-xs">Email</span> <span><i class="fa-solid fa-envelope"></i></span></a>               
-                <a href="weddings@weddingvenue.com"  target="_blank"><span class="hide-xs">Address</span> <span><i class="fa-solid fa-map-location"></i></span></a>         
-            </nav>
-            <div class="col-12 text-center padded-1 subtle">
-            <p class=" margin-b-0">Copyright 2022 | By <a href="https://www.themahalocreative.com" class="subtle" target="_blank">The Mahalo Creative</a></p>
-            </div>   
-        </div>     
-        </div>   
-    </footer>
-
-
     <!--------------------- Add jQuery -------------------->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 

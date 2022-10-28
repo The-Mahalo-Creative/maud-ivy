@@ -41,7 +41,7 @@
 <!-- This our googlefonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 <!--- AOS STYLESHEET--->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
@@ -57,11 +57,11 @@
 </head>
 
 <body>
-    <header class="" >
-  <div class="grid padded-1 padded-r-2 padded-l-2 border-b ">
+    <header class="pink-color dark-gold-text" >
+  <div class="grid padded-1 padded-r-2 padded-l-2  ">
     <div class="grid col-12  capped-width">
       <a href="/" class="col-4_xs-10">
-        <h1>Maud & Ivy</h1>
+        <h1>Maud and Ivy</h1>
       </a>
       <nav class="col-8 text-right hide-xs">
         <a href="/gallery">Products</a>
@@ -104,73 +104,65 @@
     <!-- Styles  -->
 <style> 
     :root {        
-        --bg-color: #f7efed;
+        --bg-color: #fdfbf6;
         --dark-text: #453540;
         --light-text: #fdefe6;
-        --text-hover: #a84f61;
-        --text-gold: #A5946E;
+        --text-hover: #cb6475;
+        --gold-text: #A5946E;
+        --dark-gold-text: #99875E;
         --light-text-hover: #f0dcb2;
-        --banner-color: #ffe5df;
-        --banner-color1: #DFD1B9;
-        --banner-color-opacity: #ffc79eA6;
-        --footer-color: #c28789;
+        --pink-color: #f4c6c6;
+        --stone-color: #ded0b8;
+        --ivy-color: #dbd8be;
+        --banner-color-opacity: ;
     }
 </style>  
 
     <!-- HEADING BANNER IMAGE -->
 <section>
-  <div class="grid heading">
-    <div class="grid col-12 border-b bg-image tall-70 bg-pos-t" style="background-image: url('/images/flower1.jpg'); ">
-      <div class="col-12 grid capped-width relative">
-        <div class="col-12-middle padded-2">
-<!--           <h1>Maud and Ivy</h1>   -->        
-        </div>    
-        <div class="large grid-center absolute z-index">
-          <div class="col-12 bg-footer-color circle">       
-          </div>   
-          <h3 class="col-12-middle text-center light-text absolute">Events</h3>
-        </div>   
-        <div class="small grid-center absolute z-index">
-          <div class="col-12 bg-footer-color circle">       
-          </div>   
-          <h3 class="col-12-middle text-center light-text absolute">Weddings</h3>
-        </div> 
-      </div>
-  
+  <div class="grid heading padded-b-2  pink-color">
+    <div class="col-12 grid-center capped-width">
+      <div class="col-8_md-9_sm-12-middle text-center padded" >
+        <img src="/images/maud-and-ivy-colour.png" alt="" >
+        <div class="logo" >
+          <h1>Maud and Ivy <br> <span class="">Flowers</span></h1>
+        </div>        
+      </div>            
+    </div>
   </div>  
 </section>
 
 <!-- SELLING POINTS -->
-<section class=" bg-banner-color padded-t-2 padded-b-2">
-   <div class="capped-width grid">
+<section class=" padded-t-2 padded-b-2 dark-gold-text">
+   <div class="capped-width grid tall-20">
     
-      <div class="col-4_xs-12 grid-middle text-center padded-t-1 padded-b-1">
+      <div class="col-4_xs-12 grid-middle text-center padded-1">
         <div class="col-12 selling-point">
-          <img src="/images/icons/flower.svg" alt="" width="50px" >
+          <img src="/images/icons/flower-watercolour.png" alt="" width="200px" >
         </div>        
-        <div class="col-12 padded-1 padded-b-0">
-            <h4 class="margin-b-0">Premium Flowers</h4>
-            <p class="margin-b-0">And Gifts</p>
+        <div class="col-12 padded-b-0 relative" style="top:-0.5rem;">
+            <h2 class="margin-b-0 text-little">Premium Flowers</h2>
+            <p class="margin-b-0"></p>
         </div>
       </div>
       
-      <div class="col-4_xs-12 grid-middle text-center padded-t-1 padded-b-1">
+      <div class="col-4_xs-12 grid-middle text-center padded-1">
         <div class="col-12 selling-point">
-          <img src="/images/icons/flower.svg" alt="" width="50px" >
+          <img src="" alt="" width="200px" >
         </div>        
-        <div class="col-12 padded-1 padded-b-0">
-            <h4 class="margin-b-0">Delivery Options</h4>
-            <p class="margin-b-0">Free shipping</p>
+        <div class="col-12 padded-b-0 relative" style="top:-0.5rem;">
+            <h2 class="margin-b-0 text-little">PERSONALISED SERVICE</h2>
+            <p class="margin-b-0"></p>
         </div>
       </div>
       
-      <div class="col-4_xs-12 grid-middle text-center padded-t-1 padded-b-1">
+      <div class="col-4_xs-12 grid-middle text-center padded-1">
         <div class="col-12 selling-point">
-          <img src="/images/icons/flower.svg" alt="" width="50px" >
+          <img src="" alt="" width="200px" >
         </div>        
-        <div class="col-12 padded-1 padded-b-0">
-            <h4 class="margin-b-0">Gold Coast Area</h4>
-            <p class="margin-b-0">Same day delivery</p>
+        <div class="col-12 padded-b-0 relative" style="top:-0.5rem;">
+            <h2 class="margin-b-0 text-little">next day delivery</h2>
+            <p class="margin-b-0"></p>
         </div>
       </div>
       
@@ -179,24 +171,114 @@
 
 
 <!--Moto  -->
-<section class="bg-footer-color padded-b  events curved  relative">
-  <div class="grid-right-middle flex-flip-sm padded-l-2 padded-0-sm overflow">
-    <div class="col-7_lg-5_sm-12 text-left light-text padded-2-sm capped-width-half margin-r-0   " data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-      <h2 class="editable">Taking <em>thoughtful</em> <br> to the next level
-      </h2>
-      <p class="editable"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati labore facilis et voluptate error aperiam harum vel architecto, iste aut laborum fuga deleniti corporis debitis repudiandae sit? Veniam, itaque nulla?</p>
-
+<section class="dark-gold-text capped-width-lg bg-image-bg padded-tb padded-b-0-sm" style="background-image: url('/images/bg-splatter2.png'); background-position: 70% 50%">
+  <div class="grid-right-middle capped-width">
+    <div class="col-6_sm-12 grid-middle text-left padded padded-r-0 padded-0-sm" >
+      <div class="col-12 sm-thoughtful"data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+        <h2 class="editable">Taking <br><em class="kontiki capitalise text-large">thoughtful</em> <br> to the next level.
+        </h2>
+        <p class="editable"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati labore facilis et voluptate error aperiam harum vel architecto, iste aut laborum fuga deleniti corporis debitis repudiandae sit? Veniam, itaque nulla?</p>
+      </div>
     </div>
-    <div class="col-5_lg-7_sm-12 grid-top">
-        <div class="col-12 bg-image border-radiusr square bg-pos-l" style="background-image: url('/images/event.jpg');"></div>      
+    <div class="col-6_sm-12 grid-top padded hide-sm">
+        <div class="col-12 bg-image bg-pos-l square" style="background-image: url('/images/event.jpg');"></div>      
     </div> 
-    <!-- CIRCLE EVENTS -->
-    <div class="col-2_lg-3 grid-left absolute z-index hide-xs">
-      <div class="col-12 bg-image circle bg-overlay bg-pos-l" style="background-image: url('/images/wedding.jpg');"></div>      
-    </div>       
 </section>  
 
-<!-- Scroll text -->
+<!--Moto  -->
+<section class="dark-gold-text padded-b" >
+  <div class="grid-right-middle flex-flip-sm capped-width">
+    <div class="col-6_sm-12 grid-top padded-l-2 padded-b-card padded-0-sm padded-sm" >
+        <div class="col-12 bg-image bg-pos-l square" style="background-image: url('/images/flower-stock.jpg');"></div>      
+    </div>     
+    <div class="relative col-6_sm-12 grid-bottom text-left" >    
+      <div class="col-12 absolute card static-sm" >
+        <div class="stone-color  grid-middle ">
+          <div class="col-12 card-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" >
+            <h3 class="editable">About Us</h3>
+            <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?</p>               
+          </div>
+     
+        </div>        
+      </div>  
+    </div>
+</section>  
+
+<!-- Socials-->
+
+<section class=" padded ivy-text padded-b-2-xs padded-t-2-xs dark-gold-text">
+  <div class="capped-width grid-middle tall-10">
+    <div class="col-12 text-center ">
+      <h3>Visit us.</h3>
+      <div class="col-12-center">
+        <a href="" target="_blank" class="button  ">
+          Instagram
+        </a>
+        <a href="" target="_blank" class="button  ">
+          Facebook
+        </a>
+      </div>         
+    </div>
+  </div>
+</section> 
+
+<!--Moto  -->
+<section class="dark-gold-text bg-image-bg padded padded-r-0-md overflow" style="background-image: url('/images/bg-splatter1.png'); background-position: 50% 60%">
+  <div class="grid capped-width">
+    <div class="col-12_sm-12 grid-right-middle text-left padded-2" >      
+      <div class="col-12 ">
+        <h2> Creative <br> <span class="editable kontiki capitalise text-large">Gallery</span> </h2>   
+      </div>
+    </div>    
+ 
+    <a href="/gallery" class=" gallery col-12 grid horizontal-scroll-md padded-b-1" >
+      
+      <div class="col-4_md-7_sm-9_xs-11">
+          <div class="bg-image bg-overlay square" style="background-image: url('/images/flower-champagne.jpg'); background-position: '';">
+          </div>
+      </div>
+      
+      <div class="col-4_md-7_sm-9_xs-11">
+          <div class="bg-image bg-overlay square" style="background-image: url('/images/flower3.jpg'); background-position: '';">
+          </div>
+      </div>
+      
+      <div class="col-4_md-7_sm-9_xs-11">
+          <div class="bg-image bg-overlay square" style="background-image: url('/images/flower1.jpg'); background-position: '';">
+          </div>
+      </div>
+      
+    </a>
+    
+</section>  
+
+<!-- gallery  
+<section class="padded main padded-b-2-xs padded-t-2-xs" >
+  <div class=" grid">      
+      <a href="/gallery" class=" gallery col-12 grid-middle-center relative">
+        <div class="button z-index absolute light-text"> Our Flowers</div>
+        
+        <div class="">
+            <div class="bg-image bg-overlay square" style="background-image: url('/images/flower-champagne.jpg'); background-position: '';">
+            </div>
+        </div>
+        
+        <div class="">
+            <div class="bg-image bg-overlay square" style="background-image: url('/images/flower3.jpg'); background-position: '';">
+            </div>
+        </div>
+        
+        <div class="">
+            <div class="bg-image bg-overlay square" style="background-image: url('/images/flower1.jpg'); background-position: '';">
+            </div>
+        </div>
+        
+      </a>
+  </div>
+</section>-->
+
+
+<!-- Scroll text
 <section class="bg-footer-color grid">
   <div class="col-12 grid-left relative">
       <div class="text-scroll col-12 ">
@@ -237,72 +319,13 @@
 </div> 
     </div>
   </div>
-</section> 
-
-<!-- BANNER SECTION -->
-<section class=" bg-banner-color">
-  <div class="grid-middle-center padded-tb-10 capped-width">
-    <div class="col-10 padded text-center " >
-      <h3 class="editable">About Us</h3>
-      <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?</p>
- <!--      <a href="" target="_blank" class="button" style="margin-bottom: 0.5rem;"></a>
-<a href="" target="_blank" class="button"></a> -->
-    </div>    
-  </div>
-</section>
-
-<!-- gallery  -->
-<section class="padded main padded-b-2-xs padded-t-2-xs" >
-  <div class="capped-width grid">      
-      <a href="/gallery" class=" gallery col-12 grid-middle-center relative">
-        <div class="button z-index absolute light-text"> Our Flowers</div>
-        
-        <div class="col-4">
-            <div class="bg-image bg-overlay portrait-sm" style="background-image: url('/images/flower-champagne.jpg'); background-position: '';">
-            </div>
-        </div>
-        
-        <div class="col-4">
-            <div class="bg-image bg-overlay portrait-sm" style="background-image: url('/images/flower3.jpg'); background-position: '';">
-            </div>
-        </div>
-        
-        <div class="col-4">
-            <div class="bg-image bg-overlay portrait-sm" style="background-image: url('/images/flower2.jpg'); background-position: '';">
-            </div>
-        </div>
-        
-        <div class="col-12">
-            <div class="bg-image bg-overlay landscape" style="background-image: url('/images/flower1.jpg'); background-position: '';">
-            </div>
-        </div>
-        
-      </a>
-  </div>
-</section>
-
-<!-- Socials -->
-<section class="padded bg-banner-color1 gold-text padded-b-2-xs padded-t-2-xs">
-  <div class="capped-width grid-middle tall-10">
-    <div class="col-12 text-center">
-      <h3>Visit us here.</h3>
-      <div class="col-12-center">
-        <a href="" target="_blank" class="button ">
-          Instagram
-        </a>
-        <a href="" target="_blank" class="button ">
-          Facebook
-        </a>
-      </div>         
-    </div>
-  </div>
-</section>
+</section>  -->
 
 
-<!-- MAP SECTION -->
+<!-- MAP SECTION 
 <section class="grid-left flex-flip-xs  bg-banner-color padded-t-2-xs overflow">
   <div class="col-6_xs-12 grid-middle">
-    <div class="col-12 bg-image border-radius tall-80 bg-pos-l" style="background-image: url('/images/socks.jpg');"></div>
+    <div class="col-12 bg-image tall-80 bg-pos-l" style="background-image: url('/images/socks.jpg');"></div>
   </div>
   <div class="col-6_xs-12 grid-middle capped-width-half margin-l-0">
     <div class="col-12 padded-10 "  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
@@ -310,34 +333,68 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, veritatis numquam ad illum incidunt esse, molestias, optio culpa eos rem perferendis veniam. Magnam consequatur dignissimos quaerat velit maxime, debitis labore?</p>      
     </div>
   </div>
-</section>
+</section>-->
 
 
 
 
     
+    
     <!--FOOTER -->    
-    <footer class="bg-footer-color">
-        <div class="grid capped-width ">
-        <div class="col-12 grid-middle tall-20 light-text">
-            <div class="col-12 padded-2 text-center">
-            
-<h1 class="text-lg">Maud & Ivy</h1>
-
+    <footer class="pink-color">
+        <div class="grid capped-width padded-2 padded-b-0">
+        <div class="col-12 grid-middle-center tall-20 dark-gold-text">
+            <div class="col-6_sm-10_xs-12 padded-2 text-center">                
+                
+                <img class="" src="/images/maud-and-ivy-colour.png" alt="">
+                
+                <div class="logo">
+                    <h1 class="text-lg">Maud and Ivy</h1>
+                </div>                
             </div>       
-            <nav class="col-12 padded padded-b-0 padded-t-0 text-center">
-                <a href="Tel:1800 00 00" target="_blank"><span class="hide-xs">Telephone</span> <span><i class="fa-solid fa-phone"></i></span></a>    
-                <a href="weddings@weddingvenue.com"  target="_blank"><span class="hide-xs">Email</span> <span><i class="fa-solid fa-envelope"></i></span></a>               
-                <a href="weddings@weddingvenue.com"  target="_blank"><span class="hide-xs">Address</span> <span><i class="fa-solid fa-map-location"></i></span></a>         
-            </nav>
-            <div class="col-12 text-center padded-1 subtle">
+            <div class="col-6_sm-12 grid text-left padded-b-2-sm">
+                <div class="col-12 hide-xs margin-b-1 text-center-sm">
+                   <h3>Contact Us:</h3> 
+                </div>
+                <nav class="col-12 grid">
+                    <div class="col-12_xs-4 grid-center">
+                        <p class="col-3_sm-3 hide-xs">
+                            <span class=" text-bold">Phone: </span>                         
+                        </p>
+                        <a class="col-9_sm-6_xs-12 text-right-xs padded-r-2-xs" href="Tel:1800 00 00" target="_blank">
+                            <span class="hide-xs">1800 00 00</span>
+                            <span class="show-xs"><i class="fa-solid fa-phone"></i></span>
+                        </a>
+                    </div>
+                    <div class="col-12_xs-4 grid-center">
+                        <p class="col-3_sm-3 hide-xs">
+                            <span class=" text-bold">Email: </span>                         
+                        </p>
+                        <a class="col-9_sm-6_xs-12  text-center-xs" href="monique@maudandivy.com" target="_blank">
+                            <span class="hide-xs" >monique@maudandivy.com</span>
+                            <span class="show-xs"><i class="fa-solid fa-envelope"></i></span>
+                        </a>                        
+                    </div>
+                    <div class="col-12_xs-4 grid-center">
+                        <p class="col-3_sm-3 hide-xs">
+                            <span class=" text-bold">Address: </span>                         
+                        </p>
+                        <a class="col-9_sm-6_xs-12 padded-l-2-xs" href="1 Smith Ave" target="_blank">
+                            <span class="hide-xs">1 Smith Ave</span>
+                            <span class="show-xs"><i class="fa-solid fa-location-dot"></i></span>
+                        </a>                        
+                    </div>
+
+                </nav>
+            </div>
+            <div class="col-12 text-center padded-b-2 subtle">
             <p class=" margin-b-0">Copyright 2022 | By <a href="https://www.themahalocreative.com" class="subtle" target="_blank">The Mahalo Creative</a></p>
             </div>   
         </div>     
         </div>   
     </footer>
 
-
+    
     <!--------------------- Add jQuery -------------------->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 

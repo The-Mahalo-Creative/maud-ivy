@@ -4,10 +4,18 @@ title: Homepage
 header-text: 
 banner-text: dark-text
 text-main: 
-header_image: /images/flower1.jpg
-header-background-position: bg-pos-t
-curved_image: /images/event.jpg
-curved-background-position: bg-pos-l
+
+header_image: /images/maud-and-ivy-colour.png
+
+thoughtful-bg_image: /images/bg-splatter2.png
+thoughtful-bg-background-position: 70% 50%
+thoughtful_image: /images/event.jpg
+thoughtful-background-position: bg-pos-l
+about-bg_image: /images/bg-splatter1.png
+about-bg-background-position: 50% 60%
+about_image: /images/flower-stock.jpg
+about-background-position: bg-pos-l
+
 circle_image: /images/wedding.jpg
 circle-background-position: bg-pos-l
 banner_image: /images/socks.jpg
@@ -15,73 +23,58 @@ banner-background-position: bg-pos-l
 
 selling-points:
   - selling-point: Premium Flowers
-    icon-image: /images/icons/flower.svg
+    icon_image: /images/icons/flower-watercolour.png
     icon-alt:
-    more-info: And Gifts
-  - selling-point: Delivery Options
-    icon-image:
+    more-info:
+  - selling-point: PERSONALISED SERVICE
+    icon_image:
     icon-alt:
-    more-info: Free shipping
-  - selling-point: Gold Coast Area
-    icon-image:
+    more-info:
+  - selling-point: next day delivery
+    icon_image:
     icon-alt:
-    more-info: Same day delivery
+    more-info: 
 
 notification:
   - note: Halloween Stock out now
   - note: See our Instagram
 
 gallery:
-  - column-size: col-4
-    aspect-ratio: portrait-sm
+  - aspect-ratio: square
     background_image: /images/flower-champagne.jpg
-  - column-size: col-4
-    aspect-ratio: portrait-sm
+  - aspect-ratio: square
     background_image: /images/flower3.jpg
     bg-pos:
-  - column-size: col-4
-    aspect-ratio: portrait-sm
-    background_image: /images/flower2.jpg
-    bg-pos:
-  - column-size: col-12
-    aspect-ratio: landscape
+  - aspect-ratio: square
     background_image: /images/flower1.jpg
     bg-pos:
+    
       
 ---
 <!-- HEADING BANNER IMAGE -->
 <section>
-  <div class="grid heading">
-    <div class="grid col-12 border-b bg-image tall-70 {{page.header-background-position}}" style="background-image: url('{{page.header_image}}'); ">
-      <div class="col-12 grid capped-width relative">
-        <div class="col-12-middle padded-2">
-<!--           <h1>Maud and Ivy</h1>   -->        
-        </div>    
-        <div class="large grid-center absolute z-index">
-          <div class="col-12 bg-footer-color circle">       
-          </div>   
-          <h3 class="col-12-middle text-center light-text absolute">Events</h3>
-        </div>   
-        <div class="small grid-center absolute z-index">
-          <div class="col-12 bg-footer-color circle">       
-          </div>   
-          <h3 class="col-12-middle text-center light-text absolute">Weddings</h3>
-        </div> 
-      </div>
-  
+  <div class="grid heading padded-b-2  pink-color">
+    <div class="col-12 grid-center capped-width">
+      <div class="col-8_md-9_sm-12-middle text-center padded" >
+        <img src="{{page.header_image}}" alt="{{item.icon-alt}}" >
+        <div class="logo" >
+          <h1>Maud and Ivy <br> <span class="">Flowers</span></h1>
+        </div>        
+      </div>            
+    </div>
   </div>  
 </section>
 
 <!-- SELLING POINTS -->
-<section class=" bg-banner-color padded-t-2 padded-b-2">
-   <div class="capped-width grid">
+<section class=" padded-t-2 padded-b-2 dark-gold-text">
+   <div class="capped-width grid tall-20">
     {% for item in page.selling-points %}
-      <div class="col-4_xs-12 grid-middle text-center padded-t-1 padded-b-1">
+      <div class="col-4_xs-12 grid-middle text-center padded-1">
         <div class="col-12 selling-point">
-          <img src="/images/icons/flower.svg" alt="{{item.icon-alt}}" width="50px" >
+          <img src="{{item.icon_image}}" alt="{{item.icon-alt}}" width="200px" >
         </div>        
-        <div class="col-12 padded-1 padded-b-0">
-            <h4 class="margin-b-0">{{item.selling-point}}</h4>
+        <div class="col-12 padded-b-0 relative" style="top:-0.5rem;">
+            <h2 class="margin-b-0 text-little">{{item.selling-point}}</h2>
             <p class="margin-b-0">{{item.more-info}}</p>
         </div>
       </div>
@@ -91,45 +84,80 @@ gallery:
 
 
 <!--Moto  -->
-<section class="bg-footer-color padded-b  events curved  relative">
-  <div class="grid-right-middle flex-flip-sm padded-l-2 padded-0-sm overflow">
-    <div class="col-7_lg-5_sm-12 text-left light-text padded-2-sm capped-width-half margin-r-0   " data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-      <h2 class="editable">Taking <em>thoughtful</em> <br> to the next level
-      </h2>
-      <p class="editable"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati labore facilis et voluptate error aperiam harum vel architecto, iste aut laborum fuga deleniti corporis debitis repudiandae sit? Veniam, itaque nulla?</p>
-
+<section class="dark-gold-text capped-width-lg bg-image-bg padded-tb padded-b-0-sm" style="background-image: url('{{page.thoughtful-bg_image}}'); background-position: {{page.thoughtful-bg-background-position}}">
+  <div class="grid-right-middle capped-width">
+    <div class="col-6_sm-12 grid-middle text-left padded padded-r-0 padded-0-sm" >
+      <div class="col-12 sm-thoughtful"data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+        <h2 class="editable">Taking <br><em class="kontiki capitalise text-large">thoughtful</em> <br> to the next level.
+        </h2>
+        <p class="editable"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati labore facilis et voluptate error aperiam harum vel architecto, iste aut laborum fuga deleniti corporis debitis repudiandae sit? Veniam, itaque nulla?</p>
+      </div>
     </div>
-    <div class="col-5_lg-7_sm-12 grid-top">
-        <div class="col-12 bg-image border-radiusr square {{page.curved-background-position}}" style="background-image: url('{{page.curved_image}}');"></div>      
+    <div class="col-6_sm-12 grid-top padded hide-sm">
+        <div class="col-12 bg-image {{page.thoughtful-background-position}} square" style="background-image: url('{{page.thoughtful_image}}');"></div>      
     </div> 
-    <!-- CIRCLE EVENTS -->
-    <div class="col-2_lg-3 grid-left absolute z-index hide-xs">
-      <div class="col-12 bg-image circle bg-overlay {{page.circle-background-position}}" style="background-image: url('{{page.circle_image}}');"></div>      
-    </div>       
 </section>  
 
-<!-- Scroll text -->
-<section class="bg-footer-color grid">
-  <div class="col-12 grid-left relative">
-      {% include text-scroll-notifcation.html %}
+<!--Moto  -->
+<section class="dark-gold-text padded-b" >
+  <div class="grid-right-middle flex-flip-sm capped-width">
+    <div class="col-6_sm-12 grid-top padded-l-2 padded-b-card padded-0-sm padded-sm" >
+        <div class="col-12 bg-image {{page.about-background-position}} square" style="background-image: url('{{page.about_image}}');"></div>      
+    </div>     
+    <div class="relative col-6_sm-12 grid-bottom text-left" >    
+      <div class="col-12 absolute card static-sm" >
+        <div class="stone-color  grid-middle ">
+          <div class="col-12 card-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" >
+            <h3 class="editable">About Us</h3>
+            <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?</p>               
+          </div>
+     
+        </div>        
+      </div>  
+    </div>
+</section>  
+
+<!-- Socials-->
+
+<section class=" padded ivy-text padded-b-2-xs padded-t-2-xs dark-gold-text">
+  <div class="capped-width grid-middle tall-10">
+    <div class="col-12 text-center ">
+      <h3>Visit us.</h3>
+      <div class="col-12-center">
+        <a href="{{site.data.contact-info.facebook_href}}" target="_blank" class="button  ">
+          Instagram
+        </a>
+        <a href="{{site.data.contact-info.instagram_href}}" target="_blank" class="button  ">
+          Facebook
+        </a>
+      </div>         
     </div>
   </div>
 </section> 
 
-<!-- BANNER SECTION -->
-<section class="{{page.text-main}} bg-banner-color">
-  <div class="grid-middle-center padded-tb-10 capped-width">
-    <div class="col-10 padded text-center " >
-      <h3 class="editable">About Us</h3>
-      <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?</p>
- <!--      {% include buttons.html %} -->
+<!--Moto  -->
+<section class="dark-gold-text bg-image-bg padded padded-r-0-md overflow" style="background-image: url('{{page.about-bg_image}}'); background-position: {{page.about-bg-background-position}}">
+  <div class="grid capped-width">
+    <div class="col-12_sm-12 grid-right-middle text-left padded-2" >      
+      <div class="col-12 ">
+        <h2> Creative <br> <span class="editable kontiki capitalise text-large">Gallery</span> </h2>   
+      </div>
     </div>    
-  </div>
-</section>
+ 
+    <a href="/gallery" class=" gallery col-12 grid horizontal-scroll-md padded-b-1" >
+      {% for item in page.gallery %}
+      <div class="col-4_md-7_sm-9_xs-11">
+          <div class="bg-image bg-overlay {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}'); background-position: '{{item.bg-pos}}';">
+          </div>
+      </div>
+      {% endfor %}
+    </a>
+    
+</section>  
 
-<!-- gallery  -->
+<!-- gallery  
 <section class="padded main padded-b-2-xs padded-t-2-xs" >
-  <div class="capped-width grid">      
+  <div class=" grid">      
       <a href="/gallery" class=" gallery col-12 grid-middle-center relative">
         <div class="button z-index absolute light-text"> Our Flowers</div>
         {% for item in page.gallery %}
@@ -140,30 +168,22 @@ gallery:
         {% endfor %}
       </a>
   </div>
-</section>
+</section>-->
 
-<!-- Socials -->
-<section class="padded bg-banner-color1 gold-text padded-b-2-xs padded-t-2-xs">
-  <div class="capped-width grid-middle tall-10">
-    <div class="col-12 text-center">
-      <h3>Visit us here.</h3>
-      <div class="col-12-center">
-        <a href="{{site.data.contact-info.facebook_href}}" target="_blank" class="button ">
-          Instagram
-        </a>
-        <a href="{{site.data.contact-info.instagram_href}}" target="_blank" class="button ">
-          Facebook
-        </a>
-      </div>         
+
+<!-- Scroll text
+<section class="bg-footer-color grid">
+  <div class="col-12 grid-left relative">
+      {% include text-scroll-notifcation.html %}
     </div>
   </div>
-</section>
+</section>  -->
 
 
-<!-- MAP SECTION -->
+<!-- MAP SECTION 
 <section class="grid-left flex-flip-xs {{page.text-main}} bg-banner-color padded-t-2-xs overflow">
   <div class="col-6_xs-12 grid-middle">
-    <div class="col-12 bg-image border-radius tall-80 {{page.banner-background-position}}" style="background-image: url('{{page.banner_image}}');"></div>
+    <div class="col-12 bg-image tall-80 {{page.banner-background-position}}" style="background-image: url('{{page.banner_image}}');"></div>
   </div>
   <div class="col-6_xs-12 grid-middle capped-width-half margin-l-0">
     <div class="col-12 padded-10 "  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
@@ -171,6 +191,6 @@ gallery:
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, veritatis numquam ad illum incidunt esse, molestias, optio culpa eos rem perferendis veniam. Magnam consequatur dignissimos quaerat velit maxime, debitis labore?</p>      
     </div>
   </div>
-</section>
+</section>-->
 
 

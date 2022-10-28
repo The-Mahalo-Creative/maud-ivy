@@ -13,18 +13,7 @@ bg-pos:
     <div class="grid-right-middle padded-r padded-0-sm">
         <div class="col-5_lg-7_sm-12 grid-top relative">
             <div class="col-12 bg-image border-radiuslb square {{page.curved-background-position}}" style="background-image: url('{{page.curved_image}}');"></div>  
-            <!-- CIRCLE EVENTS -->
-            <div class="grid col-12 padded-b capped-width-half margin-l-0 relative show-sm">
-                <div class="col-12 grid-middle text-center"><!-- Centers on small -->        
-                <div class="col-12 grid absolute large">
-                    <div class="col-12 grid-middle text-center relative light-text  " >
-                    <!-- Centers text -->
-                    <div class="col-12 bg-footer-color circle"></div>   
-                    <h2 class="col-12 absolute">Enquiry</h2>
-                    </div>       
-                </div>  
-                </div>  
-            </div>    
+  
         </div>       
       <div class="col-7_lg-5_sm-12 text-left  padded-2-sm capped-width-half margin-l-0 padded-t">
         <div class="text-center padded-b-2 padded-t padded-t">
@@ -37,62 +26,65 @@ bg-pos:
 
  
 <!-- Contact -->
-<section class="tall-90 noSelect">
-    <div class="padded contact">
+<section class="noSelect">
+    <div class="padded padded-b-0 contact">
         <div class="capped-width grid  flex-flip-sm">
         <!-- RIGHT COLUMN -->
             <div class="col-7_sm-12 padded grid">
-                <h2>Enquiry</h2>
+                <h2 class="editable">Enquiry</h2>
+                <p class="editable subtle">Use this enquiry form to give us some preliminary information about your upcoming floral needs.</p>
             <!-- FORM -->
                 <form class="col-12 " name="maud-and-ivy" data-netlify="true" action="/success.html" method="post">
                 <!-- YOUR DETAILS -->
-                    <div class="grid padded-b  padded-r-1 padded-0-sm">    
+                    <div class="grid">    
                         <div class="col-12 ">
                             <h4 class="">Your Details.</h4>
                             <input type="text" name="_name" id="_name" placeholder="Your Name" required>
-                            <input type="email" name="_replyto" id="_replyto" placeholder="Your Email" required="">
-                            <input type="tel" name="phone-no" id="phone-no" placeholder="Your Number" required>
+                            <input type="email" name="_replyto" id="_replyto" placeholder="Your Email" required="">                           
                         </div>                        
                         <div class="col-12 padded-b">
-                            <h4 class="">What is your budget</h4>
-                            <label class="container1" > < 100
-                                <input type="radio" name="budget" value="100" checked>
-                                <span class="checkmark1"></span>
+                            <label for="message">
+                                <h4>Message</h4>
                             </label>
-                            <label class="container1">100-200
-                                <input type="radio" name="budget" value="100-200" >
-                                <span class="checkmark1"></span>
-                            </label>
-                            <label class="container1">200-500
-                                <input type="radio" name="budget" value="200-500">
-                                <span class="checkmark1"></span>
-                            </label>
-                            <label class="container1">500 >
-                                <input type="radio" name="budget"  value="500">
-                                <span class="checkmark1"></span>
-                            </label>
+                            <textarea name="message" class="input-text" required></textarea>   
+                        </div>  
+                        <div class="col-12 padded-tb">                            
+                            <button type="submit"  value="Send Request"> Submit </button>   
                         </div>
-                        <div class="col-12 padded-b">
-                            <h4>What colours?</h4>
-                            <label class="container">Pink
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Peach
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Yellow
-                                <input type="checkbox" checked="checked">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Red
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>  
-
-                        </div>
-                        <div class="col-12 padded-b">
+                    </div>  
+                                        
+                </form>
+            </div>
+        </div>
+    </div> 
+</section>
+<!-- Contact -->
+<section class=" noSelect">
+    <div class="padded padded-t-0 contact">
+        <div class="capped-width grid  flex-flip-sm">
+        <!-- RIGHT COLUMN -->
+            <div class="col-12 padded grid">
+                <h2 class="editable">Order Requests</h2>
+                <p class="editable subtle">Use this form if you are ready to request an order, complete all boxes and you will then be sent a Tax Invoice for Payment prior to your order being created. Delivery Fees are charged per suburb and will be added to your requested budget.  (this wording will be honed before launch).</p>
+            <!-- FORM -->
+                <form class="col-12 " name="maud-and-ivy-order-request" data-netlify="true" action="/success.html" method="post">
+                <!-- YOUR DETAILS -->
+                    <div class="grid">    
+                        <!-- nAME eMAIL -->
+                        <div class="col-12 grid">
+                            <div class="col-12 padded-t-1">
+                                <h4 class="">Your Details.</h4>
+                            </div>
+                           
+                            <div class="col-6_sm-12 padded-r-1 padded-0-sm">
+                                <input type="text" name="_name" id="_name" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-6_sm-12 padded-l-1 padded-0-sm">
+                                <input type="email" name="_replyto" id="_replyto" placeholder="Your Email" required="">                    
+                            </div>    
+                        </div>    
+                        <!-- oCCASION -->
+                        <div class="col-6_sm-12 padded-r-1 padded-0-sm">
                             <label for="occasion">
                                 <h4>Occasion</h4>
                             </label>
@@ -107,51 +99,144 @@ bg-pos:
                                 <option>Condolences</option>
                             </datalist>                            
                         </div>
-                        <div class="col-12 padded-b">
-                            <label for="where">
-                                <h4>Where is it going?</h4>
+                        <!-- BUDGET -->
+                        <div class="col-6_sm-12 padded-l-1 padded-0-sm">
+                            <label for="budget">
+                                <h4>budget</h4>
                             </label>
-                            <input list="where">
-                            <datalist id="where">
-                                <option>Bouquet</option>
-                                <option>Arch</option>
-                                <option>Wrist</option>
-                                <option>Wreath</option>
+                            <input list="budget" name="type-budget">
+                            <datalist id="budget">
+                                <option>$80</option>
+                                <option>$100</option>
+                                <option>$120</option>
+                                <option>$150</option>
+                                <option>$200</option>                           
                             </datalist>                            
                         </div>
-                        <div class="col-12 padded-b">
-                            <label for="message">
-                                <h4> Do you have a message?</h4>
+                        <!-- COLOURS -->
+                        <div class="col-6_sm-12 padded-r-1 padded-0-sm">
+                            <label for="colour-scheme">
+                                <h4>Colour Scheme</h4>
                             </label>
-                            <textarea name="message" class="input-text" required></textarea>   
-                        </div>  
+                            <input list="colour-scheme" name="type-colour-scheme">
+                            <datalist id="colour-scheme">
+                                <option>Pink & White</option>
+                                <option>Pastels</option>
+                                <option>Green & White</option>
+                                <option>Punchy</option>                          
+                            </datalist> 
+                        </div>
+                        <!-- BLOOMS -->
+                        <div class="col-6_sm-12 padded-l-1 padded-0-sm">
+                            <label for="blooms">
+                                <h4>Blooms</h4>
+                            </label>
+                            <input list="blooms" name="type-blooms">
+                            <datalist id="blooms">
+                                <option>Seasonal</option>
+                                <option>Native</option>
+                                <option>Seasonal/Native Mix</option>
+                                <option>Dried/Preserved</option>                          
+                            </datalist> 
+                        </div>
+                        <!-- No custom / VASES-->
+                        <div class="col-6_sm-12-bottom padded-r-1 padded-0-sm" >
+                            <label for="vase">
+                                <h4>Add Vase</h4>
+                            </label>
+                            <input list="vase" name="type-vase">
+                            <datalist id="vase">
+                                <option>Glass</option>
+                                <option>White Ceramic</option>
+                                <option>Pink Ceramic</option>
+                                <option>Hat Box White</option>     
+                                <option>Hat Box Pale Pink</option>
+                                <option>Hat Box Neutral</option>
+                                <option>Cylinder Box White</option>           
+                                <option>Cylinder Box Pale Pink</option>       
+                                <option>Cylinder Box Pale Blue</option>     
+                                <option>Cylinder Box Black</option>                                 
+                            </datalist> 
+                        </div>
+                        <!-- OUR CREATIONS -->
+                        <div class="col-6_sm-12 padded-l-1 padded-0-sm">
+                            <label for="our-creations">
+                                <h4>Inspiration provided by Our Creations</h4>
+                                <p class="subtle">Choose Number you like</p>
+                            </label>
+                            <input list="our-creations" name="type-our-creations">
+                            <datalist id="our-creations">
+                                <option>Glass</option>
+                                <option>White Ceramic</option>
+                                <option>Pink Ceramic</option>
+                                <option>Hat Box White</option>     
+                                <option>Hat Box Pale Pink</option>
+                                <option>Hat Box Neutral</option>
+                                <option>Cylinder Box White</option>           
+                                <option>Cylinder Box Pale Pink</option>       
+                                <option>Cylinder Box Pale Blue</option>     
+                                <option>Cylinder Box Black</option>                                 
+                            </datalist> 
+                        </div>
+                        <!-- MESSAGE -->
+                        <div class="col-12 padded-b-2">
+                            <label for="message">
+                                <h4>Message</h4>                            
+                                <textarea class="input-text" required></textarea>
+                            </label> 
+                        </div>
+
+                        <!-- rECIPIENT DETAILS -->
+                        <div class="col-12 grid padded-t-2">
+                            <div class="col-12">
+                                <h4 class="">Recipient Details.</h4>  
+          
+                            </div>  
+                            <div class="col-6_sm-12 padded-r-1 padded-0-sm">
+                                <input type="text" name="_name1" id="_name" placeholder="Recipient Name" required>
+                            </div>
+
+                            <div class="col-6_sm-12 padded-l-1 padded-0-sm">
+                                <input type="tel" name="phone-no" id="phone-no" placeholder="Recipient Mobile Number" required>                        
+                            </div>                            
+                            <div class="col-12 m">
+                                <input  placeholder="Recipient Address" class="margin-t-0"><!-- FIX!!!!!!!! -->
+                            </div>
+
+                            <!-- delivery -->
+                            <div class="col-6_sm-12 padded-r-1 padded-0-sm">
+                                <label for="delivery">
+                                    <H4 class="subtle">Next Day Delivery or Collect </H4>
+                                </label>
+                                <input list="delivery" name="type-delivery">
+                                <datalist id="delivery">
+                                    <option>Next Day Delivery</option>
+                                    <option>Collect</option>                               
+                                </datalist> 
+                            </div>
+                            <!-- FIX -->
+                            <div class="col-6_sm-12 padded-l-1 padded-0-sm">
+                                <h4 class="">REQUEST TAX INVOICE NOW</h4>
+                                <label class="container1" > Yes
+                                    <input type="radio" name="budget" value="100" checked>
+                                    <span class="checkmark1"></span>
+                                </label>
+                            </div> 
+                            <!-- Special Requests or Delivery Instructions -->
+                            <div class="col-12 ">
+                                <label for="special-request">
+                                    <h4>Special Requests or Delivery Instructions</h4>                            
+                                    <textarea class="input-text"></textarea>
+                                </label> 
+                            </div>
+                        </div>   
+                        <!-- SUBMIT -->
                         <div class="col-12 padded-tb">                            
-                            <button type="submit"  value="Send Request"> Submit </button>   
+                            <button type="submit"  value="special-request"> Submit </button>   
                         </div>
                     </div>         
                 </form>
             </div>
-            <!-- HRS LEFT COLUMN-->
-            <div class="col-5_sm-12 grid-top padded relative bubbles-enquiry">
-                <div class="col-8_md-9_sm-5-right grid-middle text-center hide-sm">
-                    <div class="col-12 grid-middle text-center large relative light-text  " ><!-- Centers text -->
-                        <div class="col-12 bg-footer-color circle"></div>   
-                        <h2 class="col-12 absolute">Enquiry</h2>
-                    </div>  
-                </div> 
-                <div class="col-6_md-7_sm-3_xs-4-middle item-left-sm  grid-middle text-center">
-                    <div class="col-12 grid-middle text-center large relative light-text  " ><!-- Centers text -->
-                        <div class="col-12 bg-footer-color circle" ></div>   
-
-                        <h4 class="col-12 absolute text-light text-little padded-1" ><span class="text-bold padded-t-2"><em>hours</em></span><br>weekdays 9-5pm</h4>
-                    </div>  
-                </div> 
-            </div>
         </div>
-    </div>
-    <!-- capped width of inner glass form -->
- 
-</section><!--                 
-                <a href="">
-                    <h4 class="text-light text-vlittle text-bold  " ><span class="text-bold"><em>socials</em></span><br>@maud&ivy</h4>
-                </a> -->
+    </div> 
+</section>

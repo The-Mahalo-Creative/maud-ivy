@@ -1,17 +1,52 @@
 {% if page.title != success %}
     <!--FOOTER -->    
-    <footer class="bg-footer-color">
-        <div class="grid capped-width ">
-        <div class="col-12 grid-middle tall-20 {{site.data.site-settings.footer.font_color}}">
-            <div class="col-12 padded-2 text-center">
-            {% include footer-logo.html %}
+    <footer class="pink-color">
+        <div class="grid capped-width padded-2 padded-b-0">
+        <div class="col-12 grid-middle-center tall-20 {{site.data.site-settings.footer.font_color}}">
+            <div class="col-6_sm-10_xs-12 padded-2 text-center">                
+                {% if site.data.site-settings.footer.footer-logo-img == true %}
+                <img class="" src="{{site.data.site-settings.footer.footer-logo_image}}" alt="{{site.data.site-settings.footer-logo-alt}}">
+                {% endif %}
+                <div class="logo">
+                    <h1 class="text-lg">{{site.data.site-settings.footer.footer-logo}}</h1>
+                </div>                
             </div>       
-            <nav class="col-12 padded padded-b-0 padded-t-0 text-center">
-                <a href="Tel:{{site.data.contact-info.contact_number}}" target="_blank"><span class="hide-xs">Telephone</span> <span><i class="fa-solid fa-phone"></i></span></a>    
-                <a href="{{site.data.contact-info.contact_email}}"  target="_blank"><span class="hide-xs">Email</span> <span><i class="fa-solid fa-envelope"></i></span></a>               
-                <a href="{{site.data.contact-info.contact_email}}"  target="_blank"><span class="hide-xs">Address</span> <span><i class="fa-solid fa-map-location"></i></span></a>         
-            </nav>
-            <div class="col-12 text-center padded-1 subtle">
+            <div class="col-6_sm-12 grid text-left padded-b-2-sm">
+                <div class="col-12 hide-xs margin-b-1 text-center-sm">
+                   <h3>Contact Us:</h3> 
+                </div>
+                <nav class="col-12 grid">
+                    <div class="col-12_xs-4 grid-center">
+                        <p class="col-3_sm-3 hide-xs">
+                            <span class=" text-bold">Phone: </span>                         
+                        </p>
+                        <a class="col-9_sm-6_xs-12 text-right-xs padded-r-2-xs" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">
+                            <span class="hide-xs">{{site.data.contact-info.contact_number}}</span>
+                            <span class="show-xs"><i class="fa-solid fa-phone"></i></span>
+                        </a>
+                    </div>
+                    <div class="col-12_xs-4 grid-center">
+                        <p class="col-3_sm-3 hide-xs">
+                            <span class=" text-bold">Email: </span>                         
+                        </p>
+                        <a class="col-9_sm-6_xs-12  text-center-xs" href="{{site.data.contact-info.contact_email}}" target="_blank">
+                            <span class="hide-xs" >{{site.data.contact-info.contact_email}}</span>
+                            <span class="show-xs"><i class="fa-solid fa-envelope"></i></span>
+                        </a>                        
+                    </div>
+                    <div class="col-12_xs-4 grid-center">
+                        <p class="col-3_sm-3 hide-xs">
+                            <span class=" text-bold">Address: </span>                         
+                        </p>
+                        <a class="col-9_sm-6_xs-12 padded-l-2-xs" href="{{site.data.contact-info.contact_address}}" target="_blank">
+                            <span class="hide-xs">{{site.data.contact-info.contact_address}}</span>
+                            <span class="show-xs"><i class="fa-solid fa-location-dot"></i></span>
+                        </a>                        
+                    </div>
+
+                </nav>
+            </div>
+            <div class="col-12 text-center padded-b-2 subtle">
             <p class=" margin-b-0">Copyright 2022 | By <a href="https://www.themahalocreative.com" class="subtle" target="_blank">The Mahalo Creative</a></p>
             </div>   
         </div>     

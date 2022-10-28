@@ -18,20 +18,20 @@ social:
   twitter_username: 
   
 footer:
-  footer-logo-text: true
-  font_color: light-text
-  footer-logo: Maud & Ivy
-  footer-logo_image: 
+  footer-logo-img: true
+  font_color: dark-gold-text
+  footer-logo: Maud and Ivy
+  footer-logo_image: /images/maud-and-ivy-colour.png
   footer-logo-alt:
 
 design: 
   dark-text_color: '#453540'
-  bg-color_color: '#f7efed'
+  bg-color_color: '#fdfbf6'
   light-text_color: '#fdefe6'
   text-gold_color: '#A5946E'
-  text-hover_color: '#a84f61'
+  text-dark-gold_color: '#99875E'
+  text-hover_color: '#cb6475'
   light-text-hover_color: '#f0dcb2'
-  banner-color_color: '#ffe5df'
-  banner-color1_color: '#DFD1B9'
-  banner-color-opacity_color: '#ffc79eA6'
-  footer-color_color: '#c28789'
+  pink_color: '#f4c6c6'
+  stone_color: '#ded0b8'
+  ivy_color: '#dbd8be'

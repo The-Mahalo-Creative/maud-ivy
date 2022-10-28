@@ -11,8 +11,9 @@
 
     {{content}}
 
+    {% unless page.footer == false %}
     {% include body-footer.html %}
-
+    {% endunless %}
     {% include site-scripts.html %}
 </body>
 
