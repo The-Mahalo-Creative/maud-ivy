@@ -1,25 +1,19 @@
 ---
 layout: default
 title: Homepage
-header-text: 
-banner-text: dark-text
-text-main: 
-
+header_color: pink-color
 header_image: /images/maud-and-ivy-colour.png
 
 thoughtful-bg_image: /images/bg-splatter2.png
 thoughtful-bg-background-position: 70% 50%
 thoughtful_image: /images/event.jpg
 thoughtful-background-position: bg-pos-l
-about-bg_image: /images/bg-splatter1.png
-about-bg-background-position: 50% 60%
+
 about_image: /images/flower-stock.jpg
 about-background-position: bg-pos-l
 
-circle_image: /images/wedding.jpg
-circle-background-position: bg-pos-l
-banner_image: /images/socks.jpg
-banner-background-position: bg-pos-l
+gallery-bg_image: /images/bg-splatter1.png
+gallery-bg-background-position: 50% 60%
 
 selling-points:
   - selling-point: Premium Flowers
@@ -88,8 +82,8 @@ gallery:
   <div class="grid-right-middle capped-width">
     <div class="col-6_sm-12 grid-middle text-left padded padded-r-0 padded-0-sm" >
       <div class="col-12 sm-thoughtful"data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-        <h2 class="editable">Taking <br><em class="kontiki capitalise text-large">thoughtful</em> <br> to the next level.
-        </h2>
+        <h3 class="editable">Taking <br><em class="kontiki capitalise text-large">thoughtful</em> <br> to the next level.
+        </h3>
         <p class="editable"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati labore facilis et voluptate error aperiam harum vel architecto, iste aut laborum fuga deleniti corporis debitis repudiandae sit? Veniam, itaque nulla?</p>
       </div>
     </div>
@@ -98,7 +92,7 @@ gallery:
     </div> 
 </section>  
 
-<!--Moto  -->
+<!--ABOUT  -->
 <section class="dark-gold-text padded-b" >
   <div class="grid-right-middle flex-flip-sm capped-width">
     <div class="col-6_sm-12 grid-top padded-l-2 padded-b-card padded-0-sm padded-sm" >
@@ -111,7 +105,6 @@ gallery:
             <h3 class="editable">About Us</h3>
             <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?</p>               
           </div>
-     
         </div>        
       </div>  
     </div>
@@ -136,11 +129,11 @@ gallery:
 </section> 
 
 <!--Moto  -->
-<section class="dark-gold-text bg-image-bg padded padded-r-0-md overflow" style="background-image: url('{{page.about-bg_image}}'); background-position: {{page.about-bg-background-position}}">
+<section class="dark-gold-text bg-image-bg padded padded-r-0-md overflow" style="background-image: url('{{page.gallery-bg_image}}'); background-position: {{page.gallery-bg-background-position}}">
   <div class="grid capped-width">
     <div class="col-12_sm-12 grid-right-middle text-left padded-2" >      
       <div class="col-12 ">
-        <h2> Creative <br> <span class="editable kontiki capitalise text-large">Gallery</span> </h2>   
+        <h3> <span class="editable">Creative</span>  <br> <span class="editable kontiki capitalise text-large">Gallery</span> </h3>   
       </div>
     </div>    
  
@@ -152,45 +145,4 @@ gallery:
       </div>
       {% endfor %}
     </a>
-    
 </section>  
-
-<!-- gallery  
-<section class="padded main padded-b-2-xs padded-t-2-xs" >
-  <div class=" grid">      
-      <a href="/gallery" class=" gallery col-12 grid-middle-center relative">
-        <div class="button z-index absolute light-text"> Our Flowers</div>
-        {% for item in page.gallery %}
-        <div class="{{item.column-size}}">
-            <div class="bg-image bg-overlay {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}'); background-position: '{{item.bg-pos}}';">
-            </div>
-        </div>
-        {% endfor %}
-      </a>
-  </div>
-</section>-->
-
-
-<!-- Scroll text
-<section class="bg-footer-color grid">
-  <div class="col-12 grid-left relative">
-      {% include text-scroll-notifcation.html %}
-    </div>
-  </div>
-</section>  -->
-
-
-<!-- MAP SECTION 
-<section class="grid-left flex-flip-xs {{page.text-main}} bg-banner-color padded-t-2-xs overflow">
-  <div class="col-6_xs-12 grid-middle">
-    <div class="col-12 bg-image tall-80 {{page.banner-background-position}}" style="background-image: url('{{page.banner_image}}');"></div>
-  </div>
-  <div class="col-6_xs-12 grid-middle capped-width-half margin-l-0">
-    <div class="col-12 padded-10 "  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-      <h3>Live.Love.Grow.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, veritatis numquam ad illum incidunt esse, molestias, optio culpa eos rem perferendis veniam. Magnam consequatur dignissimos quaerat velit maxime, debitis labore?</p>      
-    </div>
-  </div>
-</section>-->
-
-

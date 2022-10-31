@@ -1,33 +1,25 @@
 ---
 layout: default
 title: Enquiry
-curved_image: /images/flower3.jpg
-curved-background: 
+header_color: pink-color
+header_image: /images/flower3.jpg
+header-background-position:
+header-title: Enquiry Form.
+header-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?
 
 contact_image: /images/socks.jpg
 bg-pos:
 
 ---
-<!--Moto  -->
-<section class="relative enquiry curved ">
-    <div class="grid-right-middle padded-r padded-0-sm">
-        <div class="col-5_lg-7_sm-12 grid-top relative">
-            <div class="col-12 bg-image border-radiuslb square {{page.curved-background-position}}" style="background-image: url('{{page.curved_image}}');"></div>  
-  
-        </div>       
-      <div class="col-7_lg-5_sm-12 text-left  padded-2-sm capped-width-half margin-l-0 padded-t">
-        <div class="text-center padded-b-2 padded-t padded-t">
-          <img src="/images/heading.png" width="200px">
-        </div>      
-        <p class="editable"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati labore facilis et voluptate error aperiam harum vel architecto, iste aut laborum fuga deleniti corporis debitis repudiandae sit? Veniam, itaque nulla?</p>   
-      </div> 
-    </div>  
-</section>  
 
+<!--Header  -->
+{% include header-section.html %}
+
+  
  
 <!-- Contact -->
-<section class="noSelect">
-    <div class="padded padded-b-0 contact">
+<section class="noSelect dark-gold-text">
+    <div class="padded-lr contact">
         <div class="capped-width grid  flex-flip-sm">
         <!-- RIGHT COLUMN -->
             <div class="col-7_sm-12 padded grid">
@@ -59,7 +51,7 @@ bg-pos:
     </div> 
 </section>
 <!-- Contact -->
-<section class=" noSelect">
+<section class=" noSelect dark-gold-text">
     <div class="padded padded-t-0 contact">
         <div class="capped-width grid  flex-flip-sm">
         <!-- RIGHT COLUMN -->

@@ -27,11 +27,11 @@ footer:
 design: 
   dark-text_color: '#453540'
   bg-color_color: '#ffffff'
-  light-text_color: '#fdefe6'
+  light-text_color: '#ffffff'
   text-gold_color: '#A5946E'
   text-dark-gold_color: '#99875E'
   text-hover_color: '#cb6475'
   light-text-hover_color: '#f0dcb2'
   pink_color: '#f4c6c6'
   stone_color: '#ded0b8'
-  ivy_color: '#dbd8be'
+  ivy_color: '#c6c19e'
