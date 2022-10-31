@@ -359,6 +359,7 @@ nav a:last-child {
   padding-right: 0;
   margin-right: 0;
 }
+footer nav .fab { padding: 0.2rem 0.8rem;}
 /* Mobile Menu Styles -----------------------------*/
 .mobile-menu {
   position: fixed;
