@@ -713,7 +713,8 @@ form button   {
   text-align: center;
 }
 form button:hover    { 
-  color:var(--text-hover);
+  background-color: var(--ivy-color);
+  color: white;
   cursor: pointer;
 }
 select:focus-visible {
