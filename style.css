@@ -333,7 +333,8 @@ header a {
 }
 header h1 { 
   font-size: 2.3rem;
-  color: var(--dark-gold-text)
+  color: var(--dark-gold-text);
+  text-transform: none;
 }
 .logo { 
   position: relative;
@@ -360,7 +361,7 @@ footer nav .fab { padding: 0.2rem 0.8rem;}
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: 1rem;
+  left: 0;
   right: 0;
   z-index:4;
 }
@@ -389,7 +390,7 @@ footer nav .fab { padding: 0.2rem 0.8rem;}
  .mobile-menu {
   display: none;
 }
-
+.mobile-menu h1 { font-size: 2.5rem;}
 footer h1 {font-size: 4rem;}
 footer a, footer p { margin-bottom: 0;}
 footer nav a, footer nav p {
