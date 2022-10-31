@@ -480,7 +480,7 @@ background-color: var(--dark);
   bottom: -10rem;
 }
 [class*="grid"] .padded-header-card,
-.padded-header-card  { padding-bottom: 12rem;  }
+.padded-header-card  { padding-bottom: 14rem;  }
 
 [class*="grid"] .padded-b-card,
 .padded-b-card  { padding-bottom: 7rem;  }
@@ -695,9 +695,10 @@ textarea {
   min-height: 4.5rem;
   resize: none;
 }   
-form input:focus, form textarea:focus { border-bottom-color: var(--footer-color);}
-form button {
-  
+form input:focus, 
+form textarea:focus,
+select:focus  { border-bottom-color: var(--text-hover);}
+form button   {  
   display:block;
   width:100%;
   font-family: inherit;
@@ -710,8 +711,13 @@ form button {
   background-color:var(--bg-color);
   text-align: center;
 }
-form button:hover {
-  color:var(--footer-color);
+form button:hover    { 
+  color:var(--text-hover);
+  cursor: pointer;
+}
+select:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--text-hover);
 }
 /* CUSTOMISE CHECK BOX */
  /* Customize the label (the container) */
@@ -883,6 +889,7 @@ display: none;
   .sm-thoughtful, .card-text {
     padding:6rem 3rem;
   }
+  .padded-header-card .tall-60 { min-height: 80vh;}
 }
 
 /* ------- XS Media Query (36em / 576px) ------------------------------------------------ */ 
