@@ -312,12 +312,8 @@ a {
   transition: all 0.5s;
   letter-spacing: 0.05em;
 }
-a:hover{
+a h1:hover, a:hover{
   color:var(--text-hover);
-  transition: all 0.5s;
-}
-a .light-text:hover, .light-text a:hover {
-  color:var(--light-text-hover);
   transition: all 0.5s;
 }
 
@@ -579,8 +575,8 @@ background-color: var(--dark);
 }
 
 .button:hover {
-  color: var(--footer-color);
-
+  background-color: var(--ivy-color);
+  color: white;
 }
 /* Marquee styles -----------------------------------------------------------*/
 :root {--gap: 5rem;}
