@@ -135,9 +135,9 @@ bg-pos:
                         <div class="col-6_sm-12-bottom padded-r-1 padded-0-sm" >
                             <label for="vase">
                                 <h4>Add Vase</h4>
+                                <p class="subtle">Choose a vase</p>
                             </label>
-                            <input list="vase" name="type-vase">
-                            <datalist id="vase">
+                            <select id="vase">
                                 <option>Glass</option>
                                 <option>White Ceramic</option>
                                 <option>Pink Ceramic</option>
@@ -148,27 +148,26 @@ bg-pos:
                                 <option>Cylinder Box Pale Pink</option>       
                                 <option>Cylinder Box Pale Blue</option>     
                                 <option>Cylinder Box Black</option>                                 
-                            </datalist> 
+                            </select> 
                         </div>
                         <!-- OUR CREATIONS -->
                         <div class="col-6_sm-12 padded-l-1 padded-0-sm">
                             <label for="our-creations">
                                 <h4>Inspiration provided by Our Creations</h4>
-                                <p class="subtle">Choose Number you like</p>
+                                <p class="subtle">Choose a number</p>
                             </label>
-                            <input list="our-creations" name="type-our-creations">
-                            <datalist id="our-creations">
-                                <option>Glass</option>
-                                <option>White Ceramic</option>
-                                <option>Pink Ceramic</option>
-                                <option>Hat Box White</option>     
-                                <option>Hat Box Pale Pink</option>
-                                <option>Hat Box Neutral</option>
-                                <option>Cylinder Box White</option>           
-                                <option>Cylinder Box Pale Pink</option>       
-                                <option>Cylinder Box Pale Blue</option>     
-                                <option>Cylinder Box Black</option>                                 
-                            </datalist> 
+                            <select id="our-creations">
+                                <option>One</option>
+                                <option>Two</option>
+                                <option>Three</option>
+                                <option>Four</option>     
+                                <option>Five</option>
+                                <option>Six</option>
+                                <option>Seven</option>           
+                                <option>Eight</option>       
+                                <option>Nine</option>     
+                                <option>Ten</option>                                 
+                            </select> 
                         </div>
                         <!-- MESSAGE -->
                         <div class="col-12 padded-b-2">
@@ -199,19 +198,18 @@ bg-pos:
                             <div class="col-6_sm-12 padded-r-1 padded-0-sm">
                                 <label for="delivery">
                                     <H4 class="subtle">Next Day Delivery or Collect </H4>
-                                </label>
-                                <input list="delivery" name="type-delivery">
-                                <datalist id="delivery">
+                                </label>                            
+                                <select id="delivery">
                                     <option>Next Day Delivery</option>
                                     <option>Collect</option>                               
-                                </datalist> 
+                                </select> 
                             </div>
                             <!-- FIX -->
                             <div class="col-6_sm-12 padded-l-1 padded-0-sm">
                                 <h4 class="">REQUEST TAX INVOICE NOW</h4>
-                                <label class="container1" > Yes
-                                    <input type="radio" name="budget" value="100" checked>
-                                    <span class="checkmark1"></span>
+                                <label class="container" > Yes
+                                    <input type="checkbox" name="budget" value="100" checked>
+                                    <span class="checkmark"></span>
                                 </label>
                             </div> 
                             <!-- Special Requests or Delivery Instructions -->

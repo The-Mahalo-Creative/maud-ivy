@@ -746,7 +746,7 @@ form button:hover {
   right: 2rem;
   height: 16px;
   width: 16px;
-  border: 1px solid ;
+  border: 2px solid ;
   opacity: 0.8;
   background-color: none;
 }
@@ -777,67 +777,19 @@ form button:hover {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 } 
-
-/* RADIO------------------------------------ */
- /* Customize the label (the container) */
- .container1 {
-  font-family: inherit;
+select {
+  width: 100%;
+  border: none;
   font-size: 1rem;
+  font-family: inherit;
   font-weight: 300;
-  line-height: 1.2;  
+  background-color: var(--bg-color);
   color: inherit;
-  display: block;
-  position: relative;
-  padding-left: 1rem;
-  margin-bottom: 1.2rem;
-  cursor: pointer;
+  border-bottom: 1px solid;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
-/* Hide the browser's default radio button */
-.container1 input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-/* Create a custom radio button */
-.checkmark1 {
-  position: absolute;
-  top: 0;
-  right: 2rem;
-  height: 18px;
-  width: 18px;
-  opacity: 0.8;
-  border: 1px solid;
-  border-radius: 50%;
-}
-/* On mouse-over, add a grey background color */
-.container1:hover input ~ .checkmark1 {
-  opacity: 0.6;
-}
-/* When the radio button is checked, add a blue background */
-.container1 input:checked ~ .checkmark1 {
-  background-color: black;
-}
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark1:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-/* Show the indicator (dot/circle) when checked */
-.container1 input:checked ~ .checkmark1:after {
-  display: block;
-}
-/* Style the indicator (dot/circle) */
-.container1 .checkmark1:after {
-  top: 2px;
-  left: 2px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--bg-color);
-} 
+
 /* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
 .show-xs, 
 .show-sm,
