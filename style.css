@@ -254,7 +254,6 @@ font-family: 'Raleway', sans-serif;
     color: var(--dark-text);
     background-color: var(--bg-color);
     cursor:default;
-/*     overflow-x: hidden; */
   }
   h2, h3, h4, h5, h6 {
     line-height: 1.1;
@@ -521,8 +520,8 @@ background-color: var(--dark);
   font-size: 1rem;
   font-weight: 600;
   border: 2px solid;
-  padding: 0.6rem 1.5rem;
-  margin: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  margin: 0.3rem;
   text-transform: uppercase;
   text-align: center;
   background-color: white;
@@ -852,27 +851,27 @@ display: none;
     margin-left: auto;
   }
   .padded-0-sm,
-  [class*=grid] .padded-0-sm    { padding: 0;          }  
-  .padded-b-0-sm,
-  [class*=grid] .padded-b-0-sm  { padding-bottom: 0;   }  
-  .padded-t-0-sm,
-  [class*=grid] .padded-t-0-sm  { padding-top:0;       }  
+  [class*=grid] .padded-0-sm    { padding: 0;             }  
+
   .padded-t-2-sm,
-  [class*=grid] .padded-t-1-sm  { padding-top: 1rem;   }
+  [class*=grid] .padded-t-1-sm  { padding-top: 1rem;      }
   .padded-2-sm,
-  [class*=grid] .padded-2-sm    { padding: 2rem;       }
+  [class*=grid] .padded-2-sm    { padding: 2rem;          }
   .padded-b-2-sm,
-  [class*=grid] .padded-b-2-sm  { padding-bottom: 2rem;  }
-  .padded-b-2-sm,
-  [class*=grid] .padded-b-2-sm  { padding-bottom: 2rem;  }
+  [class*=grid] .padded-b-2-sm  { padding-bottom: 2rem;   }
   [class*="grid"] .padded-b-10r,
-  .padded-b-10r                 { padding-bottom: 5rem; }
+  .padded-b-10r                 { padding-bottom: 5rem;   }
   .padded-sm,
-  [class*=grid] .padded-sm      { padding: 5%;       }
-  .padded-l-0-sm,
-  [class*=grid] .padded-l-0-sm  { padding-left: 0    }
+  [class*=grid] .padded-sm      { padding: 5%;            }
+  .padded-l-0-sm, 
+  [class*=grid] .padded-l-0-sm  { padding-left: 0         }  
+  .padded-b-0-sm,
+  [class*=grid] .padded-b-0-sm  { padding-bottom: 0;      }  
+  .padded-t-0-sm,
+  [class*=grid] .padded-t-0-sm  { padding-top:0;          }  
+
   [class*="grid"] .padded-header-card,
-  .padded-header-card           { padding-bottom: 4rem;  }
+  .padded-header-card           { padding-bottom: 4rem;   }
 
   header h1     { font-size: 1.8rem;  }
   a h1          { line-height: 1.4;   }
@@ -930,6 +929,7 @@ display: none;
   .sm-thoughtful, .card-text {
     padding:4rem 2rem;
   }
+  .gallery [class*="col"], .filterable-gallery [class*="col"] { margin-bottom: 0.5rem; }
 }
 @media (max-width: 24em) { 
   .break-xxs       {display: block;}

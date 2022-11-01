@@ -7,9 +7,56 @@ header-background-position:
 header-title: Enquiry Form.
 header-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?
 
-contact_image: /images/socks.jpg
-bg-pos:
+enquiry_image: /images/icons-flower-watercolour.png
+enquiry-background-position:
 
+occasion:
+  - option: Wedding
+  - option: Engagement
+  - option: Anniversary
+  - option: Birthday
+  - option: Baby
+  - option: Graduation
+  - option: Condolences
+
+budget:
+  - option: $80  
+  - option: $100  
+  - option: $120  
+  - option: $150  
+  - option: $200  
+
+colour-scheme:
+  - option: Pink & White
+  - option: Pastels
+  - option: Green & White
+  - option: Punchy
+
+blooms: 
+  - option: Seasonal
+  - option: Native
+  - option: Seasonal/Native Mix
+  - option: Dried/Preserved
+
+vases:
+  - option: Glass
+  - option: White Ceramic
+  - option: Pink Ceramic
+  - option: Hat Box White
+  - option: Hat Box Pale Pink
+  - option: Hat Box Neutral
+  - option: Cylinder Box White
+  - option: Cylinder Box Pale Pink
+  - option: Cylinder Box Pale Blue
+  - option: Cylinder Box Black
+ 
+our-creations:
+  - option:
+  - option:
+
+delivery:
+  - option: Next Day Delivery
+  - option: Option
 ---
 
 <!--Header  -->
@@ -20,9 +67,9 @@ bg-pos:
 <!-- Contact -->
 <section class="noSelect dark-gold-text">
     <div class="padded-lr contact">
-        <div class="capped-width grid  flex-flip-sm">
+        <div class="capped-width grid ">
         <!-- RIGHT COLUMN -->
-            <div class="col-7_sm-12 padded grid">
+            <div class="col-6_md-7_sm-12 padded padded-b-0-sm grid">
                 <h2 class="editable">Enquiry</h2>
                 <p class="editable subtle">Use this enquiry form to give us some preliminary information about your upcoming floral needs.</p>
             <!-- FORM -->
@@ -47,6 +94,11 @@ bg-pos:
                                         
                 </form>
             </div>
+        <!-- Left column -->
+            <div class="col-5_sm-7_xs-9 grid-bottom padded-1 padded-l-0 padded-2-sm padded-t-0-sm padded-l-0-sm">
+                <div class="col-12 bg-image {{page.enquiry-background-position}} square" style="background-image: url('{{page.enquiry_image}}');"></div>      
+            </div> 
+
         </div>
     </div> 
 </section>
@@ -66,7 +118,7 @@ bg-pos:
                         <!-- nAME eMAIL -->
                         <div class="col-12 grid">
                             <div class="col-12 padded-t-1">
-                                <h4 class="">Your Details.</h4>
+                                <h4 class="editable">Your Details.</h4>
                             </div>
                            
                             <div class="col-6_sm-12 padded-r-1 padded-0-sm">
@@ -79,94 +131,72 @@ bg-pos:
                         <!-- oCCASION -->
                         <div class="col-6_sm-12 padded-r-1 padded-0-sm">
                             <label for="occasion">
-                                <h4>Occasion</h4>
+                                <h4 class="editable">Occasion</h4>
                             </label>
-                            <input list="type-occasion" id="occasion" name="occasion">
+                            <input list="type-occasion" id="occasion" name="occasion" placeholder="Your Occasion">
                             <datalist id="type-occasion">
-                                <option>Wedding</option>
-                                <option>Engagement</option>
-                                <option>Anniversary</option>
-                                <option>Birthday</option>
-                                <option>Baby</option>
-                                <option>Graduation</option>
-                                <option>Condolences</option>
+                                {% for item in page.occasion %}
+                                <option>{{item.option}} one</option> 
+                                {% endfor %}  
                             </datalist>                            
                         </div>
                         <!-- BUDGET -->
                         <div class="col-6_sm-12 padded-l-1 padded-0-sm">
                             <label for="budget">
-                                <h4>budget</h4>
+                                <h4 class="editable">budget</h4>
                             </label>
-                            <input list="type-budget" name="budget" id="budget">
-                            <datalist id="type-budget">
-                                <option>$80</option>
-                                <option>$100</option>
-                                <option>$120</option>
-                                <option>$150</option>
-                                <option>$200</option>                           
+                            <input list="type-budget" name="budget" id="budget" placeholder="Your Budget">
+                            <datalist id="type-budget">                        
+                                {% for item in page.budget %}
+                                <option>{{item.option}}</option> 
+                                {% endfor %}  
                             </datalist>                            
                         </div>
                         <!-- COLOURS -->
                         <div class="col-6_sm-12 padded-r-1 padded-0-sm">
                             <label for="colour-scheme">
-                                <h4>Colour Scheme</h4>
+                                <h4 class="editable">Colour Scheme</h4>
                             </label>
-                            <input list="colour-scheme" name="type-colour-scheme">
-                            <datalist id="colour-scheme">
-                                <option>Pink & White</option>
-                                <option>Pastels</option>
-                                <option>Green & White</option>
-                                <option>Punchy</option>                          
+                            <input list="colour-scheme" name="type-colour-scheme" placeholder="Something else?" >
+                            <datalist id="colour-scheme">                      
+                            {% for item in page.colour-scheme %}
+                                <option>{{item.option}}</option>
+                            {% endfor %} 
                             </datalist> 
                         </div>
                         <!-- BLOOMS -->
                         <div class="col-6_sm-12 padded-l-1 padded-0-sm">
                             <label for="blooms">
-                                <h4>Blooms</h4>
+                                <h4 class="editable">Blooms</h4>
                             </label>
                             <select id="blooms">
-                                <option>Seasonal</option>
-                                <option>Native</option>
-                                <option>Seasonal/Native Mix</option>
-                                <option>Dried/Preserved</option>                          
-                            </select> 
+                            {% for item in page.blooms %}
+                                <option>{{item.option}}</option>
+                            {% endfor %}                                 
+                            </select>
                         </div>
                         <!-- No custom / VASES-->
                         <div class="col-6_sm-12-bottom padded-r-1 padded-0-sm" >
                             <label for="vase">
-                                <h4>Add Vase</h4>
-                                <p class="subtle">Choose a vase</p>
+                                <h4 class="editable">Add Vase</h4>
+                                <p class="subtle"><span class="editable">Choose a vase</span></p>
                             </label>
-                            <select id="vase">
-                                <option>Glass</option>
-                                <option>White Ceramic</option>
-                                <option>Pink Ceramic</option>
-                                <option>Hat Box White</option>     
-                                <option>Hat Box Pale Pink</option>
-                                <option>Hat Box Neutral</option>
-                                <option>Cylinder Box White</option>           
-                                <option>Cylinder Box Pale Pink</option>       
-                                <option>Cylinder Box Pale Blue</option>     
-                                <option>Cylinder Box Black</option>                                 
+                            <select id="vase">                            
+                            {% for item in page.vases %}
+                                <option>{{item.option}}</option>
+                            {% endfor %} 
                             </select> 
                         </div>
                         <!-- OUR CREATIONS -->
                         <div class="col-6_sm-12 padded-l-1 padded-0-sm">
                             <label for="our-creations">
-                                <h4>Inspiration provided by Our Creations</h4>
-                                <p class="subtle">Choose a number</p>
+                                <h4 class="editable">Inspiration provided by Our Creations</h4>
+                                <p class="subtle"><span class="editable">Choose a number</span></p>
                             </label>
                             <select id="our-creations">
-                                <option>One</option>
-                                <option>Two</option>
-                                <option>Three</option>
-                                <option>Four</option>     
-                                <option>Five</option>
-                                <option>Six</option>
-                                <option>Seven</option>           
-                                <option>Eight</option>       
-                                <option>Nine</option>     
-                                <option>Ten</option>                                 
+                            {% for item in page.our-creations %}
+                                <option>{{item.option}} one</option> 
+                            {% endfor %}                             
                             </select> 
                         </div>
                         <!-- MESSAGE -->
@@ -180,13 +210,11 @@ bg-pos:
                         <!-- rECIPIENT DETAILS -->
                         <div class="col-12 grid padded-t-2">
                             <div class="col-12">
-                                <h4 class="">Recipient Details.</h4>  
-          
+                                <h4 class="editable">Recipient Details.</h4>            
                             </div>  
                             <div class="col-6_sm-12 padded-r-1 padded-0-sm">
                                 <input type="text" name="_name" placeholder="Recipient Name" required>
                             </div>
-
                             <div class="col-6_sm-12 padded-l-1 padded-0-sm">
                                 <input type="tel" name="phone-no" id="phone-no" placeholder="Recipient Mobile Number" required>                        
                             </div>                            
@@ -197,16 +225,17 @@ bg-pos:
                             <!-- delivery -->
                             <div class="col-6_sm-12 padded-r-1 padded-0-sm">
                                 <label for="delivery">
-                                    <H4 class="subtle">Next Day Delivery or Collect </H4>
+                                    <h4 class="editable">Next Day Delivery or Collect </h4>
                                 </label>                            
                                 <select id="delivery">
-                                    <option>Next Day Delivery</option>
-                                    <option>Collect</option>                               
+                                    {% for item in page.delivery %}
+                                    <option>{{item.option}}</option>  
+                                    {% endfor %}                  
                                 </select> 
                             </div>
                             <!-- FIX -->
                             <div class="col-6_sm-12 padded-l-1 padded-0-sm padded-t-1-sm">
-                                <h4 class="">REQUEST TAX INVOICE NOW</h4>
+                                <h4 class="editable">REQUEST TAX INVOICE NOW</h4>
                                 <label class="container" > Yes
                                     <input type="checkbox" name="budget" value="100" checked>
                                     <span class="checkmark"></span>
@@ -215,7 +244,7 @@ bg-pos:
                             <!-- Special Requests or Delivery Instructions -->
                             <div class="col-12 padded-t-1-sm">
                                 <label for="special-request">
-                                    <h4>Special Requests or Delivery Instructions</h4>                            
+                                    <h4 class="editable">Special Requests or Delivery Instructions</h4>                            
                                     <textarea class="input-text"></textarea>
                                 </label> 
                             </div>

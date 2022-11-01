@@ -13,6 +13,14 @@ thoughtful_image: /images/event.jpg
 about-bg_image: /images/bg-splatter1.png
 about-bg-background-position: 50% 0%
 
+filter-buttons:
+  - filter-type: Seasonal
+  - filter-type: Natives
+  - filter-type: Dried/Preserved
+  - filter-type: Pink/White
+  - filter-type: Green/White
+  - filter-type: Pastels
+
 gallery:
   - number: 1
     type: dried/preserved pastels
@@ -135,14 +143,11 @@ gallery:
 
 <section class="padded bg-image-bg tall-50 capped-width-lg"style="background-image: url('{{page.about-bg_image}}'); background-position: {{page.about-bg-background-position}};">  
   <div class="capped-width">
-    <div class="portfolio-filter text-center ivy-text padded-b-1 padded-b-2-sm" id="portfolio-filter">
-      <span>ALL</span> 
-      <span>Seasonal</span> 
-      <span>Natives</span> 
-      <span>Dried/Preserved</span> 
-      <span>Pink/White</span> 
-      <span>Green/White </span> 
-      <span>Pastels</span>
+    <div class="portfolio-filter text-center ivy-text padded-b-1 padded-b-2-xs" id="portfolio-filter">
+      <span>ALL</span>
+      {% for item in page.filter-buttons %}       
+      <span>{{item.filter-type | remove: " "  }}</span> 
+      {% endfor %}
     </div>
 
     
