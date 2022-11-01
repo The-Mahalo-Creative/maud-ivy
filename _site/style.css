@@ -14,7 +14,7 @@ font-family: 'Raleway', sans-serif;
   }
   
   /* REMOVES BLUE HIGHTLIGHT ONE MOBILE */
-  .noSelect {
+  .noselect {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -22,7 +22,7 @@ font-family: 'Raleway', sans-serif;
   -ms-user-select: none;
   user-select: none;
   }
-  .noSelect:focus {
+  .noselect:focus {
   outline: none !important;
   }
   /* Optional padding to override default gridlex columns */ 
