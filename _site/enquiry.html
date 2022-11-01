@@ -187,6 +187,7 @@
                 <p class="editable subtle">Use this form if you are ready to request an order, complete all boxes and you will then be sent a Tax Invoice for Payment prior to your order being created. Delivery Fees are charged per suburb and will be added to your requested budget.  (this wording will be honed before launch).</p>
             <!-- FORM -->
                 <form class="col-12 " name="maud-and-ivy-order-request" data-netlify="true" action="/success.html" method="post">
+                    <input type="hidden" name="subject" value="Order Requests" />
                 <!-- YOUR DETAILS -->
                     <div class="grid">    
                         <!-- nAME eMAIL -->
@@ -207,8 +208,8 @@
                             <label for="occasion">
                                 <h4>Occasion</h4>
                             </label>
-                            <input list="occasion" name="type-occasion">
-                            <datalist id="occasion">
+                            <input list="type-occasion" id="occasion" name="occasion">
+                            <datalist id="type-occasion">
                                 <option>Wedding</option>
                                 <option>Engagement</option>
                                 <option>Anniversary</option>
@@ -223,8 +224,8 @@
                             <label for="budget">
                                 <h4>budget</h4>
                             </label>
-                            <input list="budget" name="type-budget">
-                            <datalist id="budget">
+                            <input list="type-budget" name="budget" id="budget">
+                            <datalist id="type-budget">
                                 <option>$80</option>
                                 <option>$100</option>
                                 <option>$120</option>
@@ -250,13 +251,12 @@
                             <label for="blooms">
                                 <h4>Blooms</h4>
                             </label>
-                            <input list="blooms" name="type-blooms">
-                            <datalist id="blooms">
+                            <select id="blooms">
                                 <option>Seasonal</option>
                                 <option>Native</option>
                                 <option>Seasonal/Native Mix</option>
                                 <option>Dried/Preserved</option>                          
-                            </datalist> 
+                            </select> 
                         </div>
                         <!-- No custom / VASES-->
                         <div class="col-6_sm-12-bottom padded-r-1 padded-0-sm" >
@@ -311,7 +311,7 @@
           
                             </div>  
                             <div class="col-6_sm-12 padded-r-1 padded-0-sm">
-                                <input type="text" name="_name1" id="_name" placeholder="Recipient Name" required>
+                                <input type="text" name="_name" placeholder="Recipient Name" required>
                             </div>
 
                             <div class="col-6_sm-12 padded-l-1 padded-0-sm">
