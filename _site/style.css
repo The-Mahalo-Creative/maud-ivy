@@ -579,7 +579,7 @@ background-color: var(--dark);
   background-color: var(--ivy-color);
   color: white;
 }
-/* Marquee styles -----------------------------------------------------------*/
+/* Marquee styles --------------------------------------------------
 :root {--gap: 5rem;}
 .marquee {
     position: relative;
@@ -634,18 +634,15 @@ background-color: var(--dark);
       transform: translateX(calc(-100% - var(--gap)));
     }
 }
-/* Enable animation  */
 .enable-animation .marquee__content {
     -webkit-animation: scroll 18s linear infinite;
     -moz-animation: scroll 18s linear infinite;
     -o-animation: scroll 18s linear infinite;
     animation: scroll 18s linear infinite;
 }
-/* Pause on hover add to enable animation div*/
 .marquee--hover-pause:hover .marquee__content {
     animation-play-state: paused;
 }
-/* TEXT ANIMATION --------------------------*/
 .text-scroll h3:last-child {margin-bottom: 0.5rem;}
 .text-scroll h3 { 
     font-size: 1.2rem;
@@ -661,7 +658,7 @@ background-color: var(--dark);
 .text-scroll a:hover {
     color: unset;
     opacity:0.5;
-}
+}---------*/
 /* Enquiry ---------------------------------------------*/
 .bubbles-enquiry { top: -5vw;}
 form input, form textarea {
@@ -860,8 +857,12 @@ display: none;
   [class*=grid] .padded-b-0-sm  { padding-bottom: 0;   }  
   .padded-t-0-sm,
   [class*=grid] .padded-t-0-sm  { padding-top:0;       }  
+  .padded-t-2-sm,
+  [class*=grid] .padded-t-1-sm  { padding-top: 1rem;   }
   .padded-2-sm,
   [class*=grid] .padded-2-sm    { padding: 2rem;       }
+  .padded-b-2-sm,
+  [class*=grid] .padded-b-2-sm  { padding-bottom: 2rem;  }
   .padded-b-2-sm,
   [class*=grid] .padded-b-2-sm  { padding-bottom: 2rem;  }
   [class*="grid"] .padded-b-10r,
