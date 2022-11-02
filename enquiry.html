@@ -147,7 +147,7 @@ delivery:
                             <label for="occasion">
                                 <h4 class="editable">Occasion</h4>
                             </label>
-                            <input list="type-occasion" id="occasion" type="text" name="occasion" placeholder="Your Occasion">
+                            <input list="type-occasion" id="occasion"  name="occasion" placeholder="Your Occasion">
                             <datalist id="type-occasion">
                                 {% for item in page.occasion %}
                                 <option>{{item.option}}</option> 
@@ -159,7 +159,7 @@ delivery:
                             <label for="budget">
                                 <h4 class="editable">budget</h4>
                             </label>
-                            <input list="type-budget" name="budget" type="text" id="budget" placeholder="Your Budget">
+                            <input list="type-budget" name="budget" id="budget" placeholder="Your Budget">
                             <datalist id="type-budget">                        
                                 {% for item in page.budget %}
                                 <option>{{item.option}}</option> 
@@ -171,7 +171,7 @@ delivery:
                             <label for="colour-scheme">
                                 <h4 class="editable">Colour Scheme</h4>
                             </label>
-                            <input list="type-colour-scheme" type="text" name="colour-scheme" id="colour-scheme" placeholder="Something else?" >
+                            <input list="type-colour-scheme" name="colour-scheme" id="colour-scheme" placeholder="Something else?" >
                             <datalist id="type-colour-scheme">                      
                             {% for item in page.colour-scheme %}
                                 <option>{{item.option}}</option>
