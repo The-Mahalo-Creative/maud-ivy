@@ -147,10 +147,10 @@ delivery:
                             <label for="occasion">
                                 <h4 class="editable">Occasion</h4>
                             </label>
-                            <input list="type-occasion" id="occasion" name="occasion" >
+                            <input list="type-occasion" id="occasion" name="occasion" placeholder="Your Occasion">
                             <datalist id="type-occasion">
                                 {% for item in page.occasion %}
-                                <option>{{item.option}} one</option> 
+                                <option>{{item.option}}</option> 
                                 {% endfor %}  
                             </datalist>                            
                         </div>
@@ -159,7 +159,7 @@ delivery:
                             <label for="budget">
                                 <h4 class="editable">budget</h4>
                             </label>
-                            <input list="type-budget" name="budget" id="budget" >
+                            <input list="type-budget" name="budget" id="budget" placeholder="Your Budget">
                             <datalist id="type-budget">                        
                                 {% for item in page.budget %}
                                 <option>{{item.option}}</option> 
