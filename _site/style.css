@@ -915,8 +915,8 @@ display: none;
     max-height:100px;
   }
   .gallery-pg.bg-image-bg   { 
-    background-position: 50% 1%;
-    background-size: 120%;
+    background-position: 50% 1.2%;
+    background-size: 125%;
   }
   /* iNDEX PAGE */
   .thoughtful-splatter.bg-image-bg {
@@ -969,6 +969,10 @@ display: none;
     background-position: 50% 22%;
     background-size: 115%;
   }
+  .gallery-pg.bg-image-bg {
+    background-position: 50% 1.5%;
+    background-size: 140%;
+  }
   .sm-thoughtful, .card-text {
     padding:4rem 2rem;
   }
@@ -979,5 +983,9 @@ display: none;
   .hide-xxs        { display: none;}  
   footer h1 {
     font-size: 10vw;
+  }
+  .gallery-pg.bg-image-bg {
+    background-position: 50% 3%;
+    background-size: 200%;
   }
 }
