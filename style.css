@@ -403,13 +403,31 @@ footer nav a, footer nav p {
 .stone-color  { background-color: var(--stone-color);   }
 /* BACKGROUND IMAGES --------------------------------------*/
 .bg-image, .bg-image-bg {
-background-size: cover; 
-background-position: center; 
-background-repeat: no-repeat;
-background-color: var(--dark);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-color: var(--dark);
 } 
 .bg-image-bg        { background-size: contain; } 
-.selling-point img  { opacity: 0.8;}
+/* gALLERY PAGE */
+.gallery-pg.bg-image-bg   { 
+  background-image: url('/images/bg-splatter1.png');
+  background-position: 50% 0%;
+}
+/* iNDEX PAGE */
+.thoughtful-splatter.bg-image-bg {
+  background-image: url('/images/bg-splatter2.png'); 
+  background-position: 70% 50%;
+}
+.gallery-index.bg-image-bg {
+  background-image: url('/images/bg-splatter1.png');
+  background-position: 50% 60%;
+}
+.selling-point { height: 150px;}
+.selling-point img  { 
+  width: auto;
+  height: 120px;
+}
 .box-shadow {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
 /* overlays ------------------------------------------------*/
 .bg-overlay { position: relative;}
@@ -816,10 +834,10 @@ display: none;
 /* ------- MD Media Query (64em / 1024px) ------- */ 
 @media (max-width: 64em){
   .show-md        { display: block;}
+  .hide-md        { display: none; }
+  .break-md       { display: block;}
 
-  .hide-md        { display: none;}
-
-  h2          { font-size: 2.4rem;}
+  h2          { font-size: 2.2rem;}
   h3          { font-size: 1.6rem;}
   .text-large { font-size: 2.2em; }
   .padded-0-md,
@@ -830,7 +848,10 @@ display: none;
   footer h1 {
     font-size: 5.7vw;
   }
-
+  .gallery-index.bg-image-bg {
+    background-position: 50% 15%;
+    background-size: 110%;
+  }
   .horizontal-scroll-md { padding-right:0;}
 }
 /* SM Media Query (48em / 768px----------------------------------------------------------*/
@@ -875,7 +896,7 @@ display: none;
 
   header h1     { font-size: 1.8rem;  }
   a h1          { line-height: 1.4;   }
-  h2            { font-size: 2.2rem;  }
+  h2            { font-size: 2rem;  }
   header nav a  {
     font-size: 1rem;
     padding: 0rem 0.4rem;
@@ -887,6 +908,21 @@ display: none;
   }
   footer nav a, footer nav p {
     margin-bottom: 0.2rem;
+  }
+
+/* Images */
+  .selling-point img  { 
+    max-height:100px;
+  }
+  .gallery-pg.bg-image-bg   { 
+    background-position: 50% 1%;
+    background-size: 120%;
+  }
+  /* iNDEX PAGE */
+  .thoughtful-splatter.bg-image-bg {
+    background-image: url('/images/bg-splatter2-sm.png'); 
+    background-position: 100% 100%;
+    background-size: cover; 
   }
   .sm-thoughtful, .card-text {
     padding:6rem 3rem;
@@ -925,7 +961,14 @@ display: none;
   footer h1 {
     font-size: 11vw;
   }
-
+  /* BG-IMAGES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  .selling-point img  { 
+    max-height:100px;
+  }
+  .gallery-index.bg-image-bg {
+    background-position: 50% 22%;
+    background-size: 115%;
+  }
   .sm-thoughtful, .card-text {
     padding:4rem 2rem;
   }

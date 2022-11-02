@@ -4,28 +4,27 @@ title: Homepage
 header_color: pink-color
 header_image: /images/maud-and-ivy-colour.png
 
-thoughtful-bg_image: /images/bg-splatter2.png
-thoughtful-bg-background-position: 70% 50%
+
 thoughtful_image: /images/event.jpg
 thoughtful-background-position: bg-pos-l
 
 about_image: /images/flower-stock.jpg
 about-background-position: bg-pos-l
 
-gallery-bg_image: /images/bg-splatter1.png
-gallery-bg-background-position: 50% 60%
-
 selling-points:
-  - selling-point: Premium Flowers
-    icon_image: /images/icons-flower-watercolour.png
+  - selling-point: PERSONALISED 
+    selling-point-line2: SERVICE
+    icon_image: /images/icons-service.png
     icon-alt:
     more-info:
-  - selling-point: PERSONALISED SERVICE
-    icon_image:
+  - selling-point: Premium 
+    selling-point-line2: Flowers
+    icon_image: /images/icons-flower-dark.png
     icon-alt:
     more-info:
-  - selling-point: next day delivery
-    icon_image:
+  - selling-point: next day 
+    selling-point-line2: delivery
+    icon_image: /images/icons-delivery.png
     icon-alt:
     more-info: 
 
@@ -60,15 +59,15 @@ gallery:
 </section>
 
 <!-- SELLING POINTS -->
-<section class=" padded-t-2 padded-b-2 dark-gold-text">
-   <div class="capped-width grid tall-20">
+<section class=" dark-gold-text padded-t">
+   <div class="capped-width grid-middle tall-20">
     {% for item in page.selling-points %}
-      <div class="col-4_xs-12 grid-middle text-center padded-1">
-        <div class="col-12 selling-point">
-          <img src="{{item.icon_image}}" alt="{{item.icon-alt}}" width="200px" >
+      <div class="col-4_xs-12 grid text-center padded-1">
+        <div class="col-12 selling-point padded-1">
+          <img src="{{item.icon_image}}" alt="{{item.icon-alt}}" >
         </div>        
-        <div class="col-12 padded-b-0 relative" style="top:-0.5rem;">
-            <h2 class="margin-b-0 text-little">{{item.selling-point}}</h2>
+        <div class="col-12 padded-t-1 padded-0-sm">
+            <h2 class="margin-b-0 text-little text-bold"><span class="break-md">{{item.selling-point}} </span><span>{{item.selling-point-line2}}</span></h2>
             <p class="margin-b-0">{{item.more-info}}</p>
         </div>
       </div>
@@ -78,7 +77,7 @@ gallery:
 
 
 <!--Moto  -->
-<section class="dark-gold-text capped-width-lg bg-image-bg padded-tb padded-b-0-sm" style="background-image: url('{{page.thoughtful-bg_image}}'); background-position: {{page.thoughtful-bg-background-position}}">
+<section class="dark-gold-text capped-width-lg thoughtful-splatter bg-image-bg padded-tb padded-0-sm">
   <div class="grid-right-middle capped-width">
     <div class="col-6_sm-12 grid-middle text-left padded padded-r-0 padded-0-sm" >
       <div class="col-12 sm-thoughtful"data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
@@ -129,14 +128,13 @@ gallery:
 </section> 
 
 <!--Moto  -->
-<section class="dark-gold-text bg-image-bg padded padded-r-0-md overflow" style="background-image: url('{{page.gallery-bg_image}}'); background-position: {{page.gallery-bg-background-position}}">
+<section class="dark-gold-text gallery-index bg-image-bg padded padded-r-0-md overflow">
   <div class="grid capped-width">
     <div class="col-12_sm-12 grid-right-middle text-left padded-2" >      
       <div class="col-12 ">
         <h3> <span class="editable">Creative</span>  <br> <span class="editable kontiki capitalise text-large">Gallery</span> </h3>   
       </div>
     </div>    
- 
     <a href="/gallery" class=" gallery col-12 grid horizontal-scroll-md padded-b-1" >
       {% for item in page.gallery %}
       <div class="col-4_md-7_sm-9_xs-11">
