@@ -423,10 +423,10 @@ footer nav a, footer nav p {
   background-image: url('/images/bg-splatter1.png');
   background-position: 50% 60%;
 }
-.selling-point { height: 150px;}
+
 .selling-point img  { 
   width: auto;
-  height: 120px;
+  height: 180px;
 }
 .box-shadow {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
 /* overlays ------------------------------------------------*/
@@ -912,7 +912,7 @@ display: none;
 
 /* Images */
   .selling-point img  { 
-    max-height:100px;
+    max-height:140px;
   }
   .gallery-pg.bg-image-bg   { 
     background-position: 50% 1.2%;
@@ -963,7 +963,7 @@ display: none;
   }
   /* BG-IMAGES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   .selling-point img  { 
-    max-height:100px;
+    max-height:130px;
   }
   .gallery-index.bg-image-bg {
     background-position: 50% 22%;
