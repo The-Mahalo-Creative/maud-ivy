@@ -171,8 +171,8 @@ delivery:
                             <label for="colour-scheme">
                                 <h4 class="editable">Colour Scheme</h4>
                             </label>
-                            <input list="colour-scheme" name="type-colour-scheme" placeholder="Something else?" >
-                            <datalist id="colour-scheme">                      
+                            <input list="type-colour-scheme" name="colour-scheme" id="colour-scheme" placeholder="Something else?" >
+                            <datalist id="type-colour-scheme">                      
                             {% for item in page.colour-scheme %}
                                 <option>{{item.option}}</option>
                             {% endfor %} 
