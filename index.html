@@ -3,7 +3,7 @@ layout: default
 title: Homepage
 header_color: pink-color
 header_image: /images/maud-and-ivy-colour.png
-
+header: hide
 
 thoughtful_image: /images/event.jpg
 thoughtful-background-position: bg-pos-l
@@ -45,10 +45,10 @@ gallery:
       
 ---
 <!-- HEADING BANNER IMAGE -->
-<section class="relative" style="top:-2px;">
-  <div class="grid heading padded-b-2  pink-color">
+<section class="relative " style="top:-2px;">
+  <div class="grid-middle heading padded-b-2 tall-70 pink-color">
     <div class="col-12 grid-center capped-width">
-      <div class="col-8_md-9_sm-12-middle text-center padded" >
+      <div class="col-8_md-9_sm-12-middle text-center padded padded-t-0" >
         <img src="{{page.header_image}}" alt="{{item.icon-alt}}" >
         <div class="logo" >
           <h1>Maud and Ivy<br><span>Flowers</span></h1>
@@ -59,7 +59,7 @@ gallery:
 </section>
 
 <!-- SELLING POINTS -->
-<section class=" dark-gold-text padded-t">
+<section class=" dark-gold-text padded padded-b-0">
    <div class="capped-width grid-middle tall-20">
     {% for item in page.selling-points %}
       <div class="col-4_xs-12 grid text-center padded-1">
@@ -122,10 +122,10 @@ gallery:
       <h3 class="editable">Visit us.</h3>
       <div class="col-12-center">
         <a href="{{site.data.contact-info.facebook_href}}" target="_blank" class="button  ">
-          Instagram
+          Facebook
         </a>
         <a href="{{site.data.contact-info.instagram_href}}" target="_blank" class="button  ">
-          Facebook
+          Instagram
         </a>
       </div>         
     </div>

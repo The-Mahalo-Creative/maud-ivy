@@ -80,6 +80,9 @@ font-family: 'Raleway', sans-serif;
   .padded-l-2  { padding-left: 2rem;    }
   [class*=grid] .padded-r-2,
   .padded-r-2  { padding-right: 2rem;   }
+
+  .grid.padded-t-5,
+  .padded-t-5  { padding-top: 5rem;     }
   
   .padded-t-0,
   [class*=grid] .padded-t-0   { padding-top: 0;    }
@@ -104,6 +107,7 @@ font-family: 'Raleway', sans-serif;
   .margin-b-1 { margin-bottom: 1rem;  }
   .margin-l-1 { margin-left: 1rem;    }
   .margin-r-1 { margin-right: 1rem;   }
+  .margin-l-05{ margin-left: 0.5rem;  }
   
   .margin-t-10 { margin-top: 10%;     }
   .margin-b-10 { margin-bottom: 10%;  }
@@ -179,7 +183,11 @@ font-family: 'Raleway', sans-serif;
   /* Position */
   .relative { position: relative; }
   .absolute { position: absolute; }
-  .fixed-p  { position: fixed;    }
+  .fixed    { 
+    position: fixed;    
+    width:100%;
+    z-index: 10;
+  }
   .z-index  { z-index: 2;         }
   .horizontal-scroll-md,
   .horizontal-scroll-md-hide-sm {
@@ -221,7 +229,7 @@ font-family: 'Raleway', sans-serif;
   /* Break --------------------------------- */
   .break {display: block;}
   /* IMG SCROLL PARALAX */  
-  .fixed      { background-attachment: fixed;}  
+/*   .fixed      { background-attachment: fixed;}   */
   .overflow   { overflow: hidden;}
 
   /* SCROLL BAR ---------------------- */
@@ -263,7 +271,7 @@ font-family: 'Raleway', sans-serif;
   }
   h1 {
     font-family:'KonTikiEnchanted', 'raleway', serif;
-    line-height:0.65;
+    line-height:0.7;
     font-size: 6rem;
     opacity: 0.9;
     font-weight: 300;
@@ -276,7 +284,7 @@ font-family: 'Raleway', sans-serif;
     font-weight: 400;
   }
 
-  a h1          { line-height: 1.1;}
+
   h2 {
     font-size: 2.8rem;
     font-weight: 300;
@@ -331,10 +339,17 @@ header a {
   margin-bottom: 0;  
 }
 header h1 { 
-  font-size: 2.3rem;
+  font-size: 2rem;
   color: var(--dark-gold-text);
   text-transform: none;
+  line-height: 1.1;
+  width: fit-content;
 }
+header h1 span { 
+  font-size: 0.6em;
+  font-weight: 500;
+}
+
 .logo { 
   position: relative;
   top: -2vh;
@@ -348,39 +363,48 @@ header nav a {
   padding:0rem 0.6rem;
   margin: 0 0.4rem;
   text-transform: uppercase;
-  line-height: 2;
+  line-height: 2.8;
   font-weight: 400;
 }
 nav a:last-child { 
   padding-right: 0;
   margin-right: 0;
 }
+footer a { font-size: 1rem;}
 footer nav .fab { padding: 0.2rem 0.8rem;}
 /* Mobile Menu Styles -----------------------------*/
+.mobile-menu a h1 { 
+  line-height: 1.1;
+  text-transform: none;
+}
 .mobile-menu {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index:4;
+  z-index:12;
 }
+
 .mobile-menu a {
   display: block;
-  font-size: 1.2rem;
-  padding: 0.5rem;
+  font-size: 1.6rem;
+  padding: 6% 0;
+  text-transform: uppercase;
+  font-weight: 400;
 }
-.mobile-menu a.social{
-  display: inline-block;
-  font-size: 1.2rem;
-  padding: 0.5rem;
+.mobile-menu a.social { display: inline-block;}
+.mobile-menu nav .fab {
+  font-size: 1.7rem;
+  padding: 0 1.5rem;
+  margin-top: 0.4rem;
 }
 .mobile-menu a:hover { color:var(--text-hover); } 
 .hamburger-button {
   display: inline-block;
   font-family: inherit;
   font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 0.9;
+  font-weight: 400;
+  line-height: 0.95;
   cursor: pointer;
   z-index: 4;
 }
@@ -390,7 +414,11 @@ footer nav .fab { padding: 0.2rem 0.8rem;}
   display: none;
 }
 .mobile-menu h1 { font-size: 2.5rem;}
-footer h1 {font-size: 4rem;}
+footer h1 {
+  font-size: 4rem;
+  line-height: 0.8;
+}
+footer h1 span {font-size: 2.8rem;}
 footer a, footer p { margin-bottom: 0;}
 footer nav a, footer nav p {
   margin-bottom: 0.4rem;
@@ -429,6 +457,13 @@ footer nav a, footer nav p {
   height: 180px;
 }
 .box-shadow {box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+
+@media (max-height: 880px) and (min-width:400px) { 
+    .heading img  { max-height: 68vh;}
+    .logo h1      { font-size: 9vh;}
+
+
+}
 /* overlays ------------------------------------------------*/
 .bg-overlay { position: relative;}
 .bg-overlay::before {
@@ -596,86 +631,7 @@ footer nav a, footer nav p {
   background-color: var(--ivy-color);
   color: white;
 }
-/* Marquee styles --------------------------------------------------
-:root {--gap: 5rem;}
-.marquee {
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    gap: var(--gap);
-}  
-.marquee__content {
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-around;
-    gap: var(--gap);
-    min-width: 100%;
-}   
-@-webkit-keyframes scroll {
-    from {
-        -webkit-transform: translateX(0);
-    }
-    to {
-        -webkit-transform: translateX(calc(-100% - var(--gap)));
-    }
-}
-@-moz-keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-100% - var(--gap)));
-    }
-}
-@-ms-keyframes scroll {
-    from {
-      -ms-transform: translateX(0);
-    }
-    to {
-      -ms-transform: translateX(calc(-100% - var(--gap)));
-    }
-}
-@-o-keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-100% - var(--gap)));
-    }
-}
-@keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-100% - var(--gap)));
-    }
-}
-.enable-animation .marquee__content {
-    -webkit-animation: scroll 18s linear infinite;
-    -moz-animation: scroll 18s linear infinite;
-    -o-animation: scroll 18s linear infinite;
-    animation: scroll 18s linear infinite;
-}
-.marquee--hover-pause:hover .marquee__content {
-    animation-play-state: paused;
-}
-.text-scroll h3:last-child {margin-bottom: 0.5rem;}
-.text-scroll h3 { 
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin: 0.5rem 0;
-}
-.marquee__content > * {
-    flex: 0 0 auto;
-    margin: 2px;
-    padding: 1rem 2rem;
-    text-align: center;
-}
-.text-scroll a:hover {
-    color: unset;
-    opacity:0.5;
-}---------*/
+
 /* Enquiry ---------------------------------------------*/
 .bubbles-enquiry { top: -5vw;}
 form input, form textarea {
@@ -827,8 +783,6 @@ display: none;
   .curved .capped-width-half, .curved [class*="col"].capped-width-half {
     max-width: 450px;
   }
-  h1          { font-size: 8.6vw; }
-  h1 span     { font-size: 5vw;  }
 
 }
 /* ------- MD Media Query (64em / 1024px) ------- */ 
@@ -836,10 +790,12 @@ display: none;
   .show-md        { display: block;}
   .hide-md        { display: none; }
   .break-md       { display: block;}
-
-  h2          { font-size: 2.2rem;}
-  h3          { font-size: 1.6rem;}
-  .text-large { font-size: 2.2em; }
+  h1              { font-size: 10vw; }
+  h1 span, 
+  footer h1 span  { font-size: 0.65em;}
+  h2              { font-size: 2.2rem;}
+  h3              { font-size: 1.6rem;}
+  .text-large     { font-size: 2.2em; }
   .padded-0-md,
   [class*=grid] .padded-0-md      { padding: 0;    }
   .padded-r-0-md,
@@ -893,26 +849,35 @@ display: none;
 
   [class*="grid"] .padded-header-card,
   .padded-header-card           { padding-bottom: 4rem;   }
-
-  header h1     { font-size: 1.8rem;  }
   a h1          { line-height: 1.4;   }
+  header h1     { 
+    font-size: 1.85rem;  
+    line-height: 1;
+  }
+
   h2            { font-size: 2rem;  }
   header nav a  {
-    font-size: 1rem;
     padding: 0rem 0.4rem;
     margin: 0rem 0.2rem;
-    line-height: 3;
+    line-height: 2.4;
   }
+  .heading h1 { font-size: 12vw;}
   footer h1 {
     font-size: 9.5vw;
+    line-height: 0.6;
   }
+  footer h1 span {
+    font-size: 0.6em;
+  }
+  .heading h1,
+  footer h1 { margin-top: 0.5rem;}
   footer nav a, footer nav p {
     margin-bottom: 0.2rem;
   }
 
 /* Images */
   .selling-point img  { 
-    max-height:140px;
+    max-height:120px;
   }
   .gallery-pg.bg-image-bg   { 
     background-position: 50% 1rem;
@@ -965,6 +930,7 @@ display: none;
   .selling-point img  { 
     max-height:130px;
   }
+
   .gallery-index.bg-image-bg {
     background-position: 50% 22%;
     background-size: 115%;
@@ -981,6 +947,8 @@ display: none;
 @media (max-width: 24em) { 
   .break-xxs       {display: block;}
   .hide-xxs        { display: none;}  
+
+  .mobile-menu a h1 { font-size: 12vw;}
   footer h1 {
     font-size: 10vw;
   }
