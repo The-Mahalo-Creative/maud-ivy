@@ -8,8 +8,11 @@ header: hide
 thoughtful_image: /images/event.jpg
 thoughtful-background-position: bg-pos-l
 
+
 about_image: /images/flower-stock.jpg
 about-background-position: bg-pos-l
+about-description: Maud and Ivy, what does it mean and who are we? <p>Maud is a nickname I have had since childhood and Ivy is my daughter’s name and also a beautiful plant I like to work with.  The name just seemed like a beautiful choice to me.</p>  <p> When you look deeper into the meanings of these names, they become more apt.  Maud is an old name signifying a “powerful battler”.  Historically Ivy wreaths were presented to couples as a sign of “fidelity and faithfulness”.   My son Nate also holds a special role with Maud and Ivy Flowers as he is in charge of quality control.  Just like me, he has a great eye for detail and he oversees all my work.  Together we are powerful, dependable and devoted to providing great service and work.</p>
+
 
 selling-points:
   - selling-point: PERSONALISED 
@@ -32,15 +35,6 @@ notification:
   - note: Halloween Stock out now
   - note: See our Instagram
 
-gallery:
-  - aspect-ratio: square
-    background_image: /images/flower-champagne.jpg
-  - aspect-ratio: square
-    background_image: /images/flower3.jpg
-    bg-pos:
-  - aspect-ratio: square
-    background_image: /images/flower1.jpg
-    bg-pos:
     
       
 ---
@@ -88,34 +82,39 @@ gallery:
           <br> 
           <span class="editable">to the next level.</span>
         </h3>
-        <p class="editable"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati labore facilis et voluptate error aperiam harum vel architecto, iste aut laborum fuga deleniti corporis debitis repudiandae sit? Veniam, itaque nulla?</p>
+        <p class="editable"> If you have a special someone or event on the Gold Coast, are interstate, overseas or lack the time to drive around, want something that is special and unique, are driven by value not price, appreciate details, like to plan ahead a little and can trust us to convey your wishes, then you're our customer.</p>
+       <p>
+        We want you to feel good about your investment so we ask a few questions to make sure we understand your needs! </p>
+        <p><strong>𝗚𝗶𝘃𝗲 𝘂𝘀 𝗮 𝗴𝗼!</strong> All the others who gave us a go, came back for more.</p>
       </div>
     </div>
-    <div class="col-6_sm-12 grid-top padded hide-sm">
+    <div class="col-6_sm-12 grid-middle padded hide-sm">
         <div class="col-12 bg-image {{page.thoughtful-background-position}} square" style="background-image: url('{{page.thoughtful_image}}');"></div>      
     </div> 
+  </div>   
 </section>  
 
 <!--ABOUT  -->
-<section class="dark-gold-text padded-b" >
+<section class="dark-gold-text padded-b-card padded-0-sm" >
   <div class="grid-right-middle flex-flip-sm capped-width">
-    <div class="col-6_sm-12 grid-top padded-l-2 padded-b-card padded-0-sm padded-sm" >
+    <div class="col-6_sm-12 grid-top padded-l-2 padded-sm" >
         <div class="col-12 bg-image {{page.about-background-position}} square" style="background-image: url('{{page.about_image}}');"></div>      
     </div>     
-    <div class="relative col-6_sm-12 grid-bottom text-left" >    
+    <div class="relative col-6_sm-12 grid-middle text-left" >    
       <div class="col-12 absolute card static-sm" >
         <div class="stone-color  grid-middle ">
           <div class="col-12 card-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" >
-            <h3 class="editable">About Us</h3>
-            <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?</p>               
+            <h3 class="editable">About Us.</h3>
+            <p class="editable">{{page.about-description | truncatewords: 65 }}</p>
+            <p class="margin-b-0"><a href="/about-us.html">Read More.</a> </p>
           </div>
         </div>        
       </div>  
     </div>
+  </div>   
 </section>  
 
 <!-- Socials-->
-
 <section class=" padded ivy-text padded-b-2-xs padded-t-2-xs dark-gold-text">
   <div class="capped-width grid-middle tall-10">
     <div class="col-12 text-center ">
@@ -132,24 +131,5 @@ gallery:
   </div>
 </section> 
 
-<!--Moto  -->
-<section class="dark-gold-text gallery-index bg-image-bg padded padded-r-0-md overflow">
-  <div class="grid capped-width">
-    <div class="col-12_sm-12 grid-right-middle text-left padded-2" >      
-      <div class="col-12 ">
-        <h3> 
-          <span class="editable">Creative</span>  
-          <br> 
-          <span class="editable kontiki capitalise text-large">Gallery</span> 
-        </h3>   
-      </div>
-    </div>    
-    <a href="/gallery" class=" gallery col-12 grid horizontal-scroll-md padded-b-1" >
-      {% for item in page.gallery %}
-      <div class="col-4_md-7_sm-9_xs-11">
-          <div class="bg-image bg-overlay {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}'); background-position: '{{item.bg-pos}}';">
-          </div>
-      </div>
-      {% endfor %}
-    </a>
-</section>  
+<!--Gallery  -->
+{% include gallery-section.html %}

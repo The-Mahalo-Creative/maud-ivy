@@ -323,7 +323,10 @@ a h1:hover, a:hover{
   color:var(--text-hover);
   transition: all 0.5s;
 }
-
+p a { 
+  border-bottom: 1px solid;
+  font-style: italic;
+}
 .subtle, .subtle p, .sublte a {
   opacity: 1 ;
   font-size: 1rem;
@@ -442,6 +445,15 @@ footer nav a, footer nav p {
   background-image: url('/images/bg-splatter1.png');
   background-position: 50% 0%;
 }
+/* about PAGE */
+.about-pg.bg-image-bg   { 
+  background-image: url('/images/bg-splatter2.png');
+  background-position: 50% 0%;
+}
+.leo-splatter.bg-image-bg   { 
+  background-image: url('/images/bg-splatter1.png');
+  background-position: 50% -50%;
+}
 /* iNDEX PAGE */
 .thoughtful-splatter.bg-image-bg {
   background-image: url('/images/bg-splatter2.png'); 
@@ -521,13 +533,20 @@ footer nav a, footer nav p {
 /* .border-radius {border-radius: 2rem;} */
 /* Card */
 .card     {
-  min-width: 105%;
+  min-width: 104%;
   right:-3rem;
   left:-3rem;
 }
+
  .card-text {
-  padding: 18% 12%;
+  padding: 12% 12%;
 } 
+/* about */
+.card-leo     {
+  min-width: 104%;
+  right:3rem;
+  left:3rem;
+}
 .header-card,
 [class*="grid"] .header-card {
   bottom: -10rem;
@@ -829,7 +848,8 @@ display: none;
   }
   .padded-0-sm,
   [class*=grid] .padded-0-sm    { padding: 0;             }  
-
+  .padded-t-sm,
+  [class*=grid] .padded-t-sm    { padding-top: 5%;        }
   .padded-t-2-sm,
   [class*=grid] .padded-t-1-sm  { padding-top: 1rem;      }
   .padded-2-sm,
@@ -884,14 +904,15 @@ display: none;
     background-size: 125%;
   }
   /* iNDEX PAGE */
-  .thoughtful-splatter.bg-image-bg {
+  .thoughtful-splatter.bg-image-bg, 
+  .about-pg.bg-image-bg{
     background-image: url('/images/bg-splatter2-sm.png'); 
     background-position: 100% 100%;
     background-size: cover; 
   }
-  .sm-thoughtful, .card-text {
-    padding:6rem 3rem;
-  }
+  .sm-thoughtful, 
+  .card-text            { padding:6rem 3rem; }
+  .card-leo .card-text  { padding:4rem 3rem; }
   .padded-header-card .tall-60 { min-height: 80vh;}
 }
 
@@ -900,7 +921,7 @@ display: none;
   .show-xs        { display: block;}
   .hide-xs        { display: none;}  
   .static-xs      { position: static;}
-  .break-xs       {display: block;}
+  .break-xs       { display: block;}
   .text-center-xs { text-align: center;}
   .text-right-xs  { text-align: right;}
   .flex-flip-xs   { flex-wrap: wrap-reverse; }

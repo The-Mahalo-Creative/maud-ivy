@@ -23,6 +23,17 @@ footer:
   footer-logo_image: /images/maud-and-ivy-colour.png
   footer-logo-alt:
 
+
+gallery:
+  - aspect-ratio: square
+    background_image: /images/flower-champagne.jpg
+  - aspect-ratio: square
+    background_image: /images/flower3.jpg
+    bg-pos:
+  - aspect-ratio: square
+    background_image: /images/flower1.jpg
+    bg-pos:
+
 design: 
   dark-text_color: '#453540'
   bg-color_color: '#ffffff'

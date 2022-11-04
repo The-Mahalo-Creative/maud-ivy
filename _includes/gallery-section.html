@@ -1,0 +1,21 @@
+<section class="dark-gold-text gallery-index bg-image-bg padded padded-r-0-md overflow">
+  <div class="grid capped-width">
+    <div class="col-12_sm-12 grid-right-middle text-left padded-2" >      
+      <div class="col-12 ">
+        <h3> 
+          <span class="editable">Creative</span>  
+          <br> 
+          <span class="editable kontiki capitalise text-large">Gallery</span> 
+        </h3>   
+      </div>
+    </div>    
+    <a href="/gallery" class=" gallery col-12 grid horizontal-scroll-md padded-b-1" >
+      {% for item in site.data.site-settings.gallery %}
+      <div class="col-4_md-7_sm-9_xs-11">
+          <div class="bg-image bg-overlay {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}'); background-position: '{{item.bg-pos}}';">
+          </div>
+      </div>
+      {% endfor %}
+    </a>
+  </div>
+</section>  
