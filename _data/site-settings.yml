@@ -26,12 +26,12 @@ footer:
 
 gallery:
   - aspect-ratio: square
-    background_image: /images/flower-champagne.jpg
+    background_image: /images/flowers-1.jpg
   - aspect-ratio: square
-    background_image: /images/flower3.jpg
+    background_image: /images/flowers-2.jpg
     bg-pos:
   - aspect-ratio: square
-    background_image: /images/flower1.jpg
+    background_image: /images/flowers-4.jpg
     bg-pos:
 
 design: 
