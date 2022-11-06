@@ -855,6 +855,8 @@ display: none;
   [class*=grid] .padded-2-sm    { padding: 2rem;          }
   .padded-b-2-sm,
   [class*=grid] .padded-b-2-sm  { padding-bottom: 2rem;   }
+  .padded-r-1-sm,
+  [class*=grid] .padded-r-1-sm  { padding-right: 1rem;    }
   [class*="grid"] .padded-b-10r,
   .padded-b-10r                 { padding-bottom: 5rem;   }
   .padded-sm,
@@ -911,7 +913,9 @@ display: none;
   }
   .sm-thoughtful, 
   .card-text            { padding:6rem 3rem; }
-  .card-leo .card-text  { padding:4rem 3rem; }
+  .card-leo .card-text,
+  .padded-4-2-sm,
+  [class*="grid"]   .padded-4-2-sm       { padding:4rem 2rem; }
   .padded-header-card .tall-60 { min-height: 80vh;}
 }
 
@@ -925,22 +929,23 @@ display: none;
   .text-right-xs  { text-align: right;}
   .flex-flip-xs   { flex-wrap: wrap-reverse; }
 
-  .grid.padded-r-0-xs   { padding-right: 0rem;}
-  .grid.padded-b-0-xs   { padding-bottom: 0;}
-
+  .padded-0-xs, 
+  [class*=grid] .padded-0-xs    { padding-right: 0rem;  }
   .grid.padded-t-2-xs,
-  .padded-t-2-xs                { padding-top: 2rem;     }
+  .padded-t-2-xs                { padding-top: 2rem;    }
   .padded-b-2-xs,
-  [class*=grid] .padded-b-2-xs  { padding-bottom: 2rem;  }
+  [class*=grid] .padded-b-2-xs  { padding-bottom: 2rem; }
   .padded-l-2-xs,
-  [class*=grid] .padded-l-2-xs  { padding-left: 2rem;  }
+  [class*=grid] .padded-l-2-xs  { padding-left: 2rem;   }
   .padded-r-2-xs,
   [class*=grid] .padded-r-2-xs  { padding-right: 2rem;  }
   [class*="grid"] .padded-header-card,
-  .padded-header-card           { padding-bottom: 2rem;  }
+  .padded-header-card           { padding-bottom: 2rem; }
+  .grid.padded-r-0-xs           { padding-right: 0rem;  }
+  .grid.padded-b-0-xs           { padding-bottom: 0;    }
 
-  h2                            { font-size: 2rem;}
-
+  h2                            { font-size: 2rem; }
+  .text-large                   { font-size: 1.8em;}
 
   footer .show-xs       { display: inline-block;}
   footer h1 {
