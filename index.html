@@ -38,7 +38,7 @@ notification:
 
 recommendations:
   - heading: GC Breeze Radio
-    review:  Wow is exactly what I said, more than once when she dropped her flowers to me. When I saw the flowers she created I was absolutely blown away. She delivered one of her bottled florals... These would be gorgeous as a corporate gift, even just one of those just-because gifts. These flowers lived on my desk for weeks... Even when they dried out and started to whither they were still absolutely beautiful.
+    review:  Wow is exactly what I said, more than once when she (Monique) dropped her flowers to me. When I saw the flowers she created I was absolutely blown away. She delivered one of her bottled florals... These would be gorgeous as a corporate gift, even just one of those just-because gifts. These flowers lived on my desk for weeks... 
     audio: true
     source: /audio/breeze-radio.mp3
     logo: /images/breeze-radio.png   
@@ -124,10 +124,10 @@ recommendations:
 </section>  
 
 <!-- RECOMMNENDATIONS -->
-<section class="stone-color">
+<section class="stone-color padded-b-2-sm">
   <div class="grid-center capped-width dark-gold-text padded">    
     {% for item in page.recommendations %}
-    <div class="col-12 padded-tb slider-container">      
+    <div class="col-12 padded-tb padded-0-sm padded-t-2-sm slider-container">      
       <div class="grid slider-item">
         <div class="grid-center col-12">
           <!-- QUOTE -->
@@ -135,7 +135,7 @@ recommendations:
               <i class="fa-sharp fa-solid fa-quote-left"></i>
             </div>
             <!-- TEXT -->
-            <div class="col-10 grid-center padded-1 padded-b-2 padded-t-2">          
+            <div class="col-10 grid-center padded-1 padded-b-2 padded-t-2 padded-0-sm">          
               <div class="col-12">
                 <h3 class="text-center-xs">{{item.heading}}</h3>
                 <p >{{item.review}}</p>            
@@ -148,7 +148,7 @@ recommendations:
             <!-- add if statement audio -->
             {% if item.audio == true %}
             <div class="col-10 grid ">
-              <div class="col-6_sm-12-middle text-right padded-r-1 text-center-sm padded-l-1">
+              <div class="col-6_sm-12-middle text-right padded-r-1 text-center-sm padded-l-1 padded-0-sm">
                   {% include audio-player.html %}   
               </div>  
               <div class="col-6_sm-12 padded-l-2 text-center-sm padded-0-sm">
