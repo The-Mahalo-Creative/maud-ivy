@@ -57,6 +57,15 @@
 <!--- AOS STYLESHEET--->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
 
+<!-- Slick slider -->
+
+<!--- Main CSS that handles all the functionality --->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'; this.onload=null;">
+
+<!--- Slick theme that handles the way everything slides. Optional but very helpful --->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'; this.onload=null;">
+
+
 <!-- Lightgallery for pop-ups  -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/css/lightgallery-bundle.min.css" integrity="sha512-7xAjdVc23n18sYEAZKa79271IRUS1XzylIyJ8feyXvjrbbr4oId92993EiGTAP63Ob6KplRnmbNmBOg6bpLjYw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
@@ -206,7 +215,7 @@
 </section>  
 
 <!--ABOUT  -->
-<section class="dark-gold-text padded-b-card padded-0-sm overflow" >
+<section class="dark-gold-text padded-b-card padded-0-sm " >
   <div class="grid-right-middle flex-flip-sm capped-width">
     <div class="col-6_sm-12 grid-top padded-l-2 padded-sm" >
         <div class="col-12 bg-image bg-pos-l square" style="background-image: url('/images/flowers-4.jpg');"></div>      
@@ -221,13 +230,92 @@
           </div>
         </div>        
       </div>  
-    </div>
-  </div>   
+    </div>  
+  </div> 
 </section>  
 
+<!-- RECOMMNENDATIONS -->
+<section class="stone-color">
+  <div class="grid-center capped-width dark-gold-text padded">    
+    
+    <div class="col-12 padded-tb slider-container">      
+      <div class="grid slider-item">
+        <div class="grid-center col-12">
+          <!-- QUOTE -->
+            <div class="col-1 quote text-right hide-sm">
+              <i class="fa-sharp fa-solid fa-quote-left"></i>
+            </div>
+            <!-- TEXT -->
+            <div class="col-10 grid-center padded-1 padded-b-2 padded-t-2">          
+              <div class="col-12">
+                <h3 class="text-center-xs">GC Breeze Radio</h3>
+                <p >Wow is exactly what I said, more than once when she dropped her flowers to me. When I saw the flowers she created I was absolutely blown away. She delivered one of her bottled florals... These would be gorgeous as a corporate gift, even just one of those just-because gifts. These flowers lived on my desk for weeks... Even when they dried out and started to whither they were still absolutely beautiful.</p>            
+              </div>
+            </div>       
+            <!-- QUOTE -->
+            <div class="col-1-bottom quote hide-sm">
+              <i class="fa-sharp fa-solid fa-quote-right"></i>
+            </div>   
+            <!-- add if statement audio -->
+            
+            <div class="col-10 grid ">
+              <div class="col-6_sm-12-middle text-right padded-r-1 text-center-sm padded-l-1">
+                  <div class="audio-player">
+    <audio src="/audio/breeze-radio.mp3">
+    </audio>
+    <div class="controls">
+        <button class="player-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#d09797">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+            </svg>
+        </button>
+        <input type="range" class="timeline" max="100" value="0">
+        <button class="sound-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#d09797">
+                <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+</div>   
+              </div>  
+              <div class="col-6_sm-12 padded-l-2 text-center-sm padded-0-sm">
+                <img src="/images/breeze-radio.png" width="180px" class="reccomended-logo">
+              </div>   
+            </div>    
+              
+          </div>                 
+        </div> 
+        
+    <div class="col-12 padded-tb slider-container">      
+      <div class="grid slider-item">
+        <div class="grid-center col-12">
+          <!-- QUOTE -->
+            <div class="col-1 quote text-right hide-sm">
+              <i class="fa-sharp fa-solid fa-quote-left"></i>
+            </div>
+            <!-- TEXT -->
+            <div class="col-10 grid-center padded-1 padded-b-2 padded-t-2">          
+              <div class="col-12">
+                <h3 class="text-center-xs">Other</h3>
+                <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat quidem, distinctio voluptate a amet laboriosam quas repellat adipisci beatae sapiente hic, voluptatum vero voluptas asperiores in voluptates tempora molestias eveniet!</p>            
+              </div>
+            </div>       
+            <!-- QUOTE -->
+            <div class="col-1-bottom quote hide-sm">
+              <i class="fa-sharp fa-solid fa-quote-right"></i>
+            </div>   
+            <!-- add if statement audio -->
+              
+          </div>                 
+        </div> 
+          
+    </div>    
+  </div>
+</section>
+
 <!-- Socials-->
-<section class=" padded ivy-text padded-b-2-xs padded-t-2-xs dark-gold-text">
-  <div class="capped-width grid-middle tall-10">
+<section class=" padded padded-t-10 ivy-text padded-b-2-xs padded-t-4-xs dark-gold-text">
+  <div class="capped-width grid-middle tall-10 padded-t-1">
     <div class="col-12 text-center ">
       <h3 class="editable">Visit us.</h3>
       <div class="col-12-center">
@@ -237,6 +325,7 @@
         <a href="https://www.instagram.com/maudandivyflowers/" target="_blank" class="button  ">
           Instagram
         </a>
+
       </div>         
     </div>
   </div>
@@ -334,6 +423,12 @@
 
 <!-- Lightgallery for pop-ups  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/lightgallery.min.js" defer></script>
+<!--------------------- Slick slider -------------------->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="/scripts/slick.js"defer></script>
+
+
 
 <!-------------- custom javascript files -------------->
 <script src="/scripts/script.js" defer></script> 

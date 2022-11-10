@@ -4,6 +4,7 @@ title: Homepage
 header_color: pink-color
 header_image: /images/maud-and-ivy-colour.png
 header: hide
+slick-slider: true
 
 thoughtful_image: /images/event.jpg
 thoughtful-background-position: bg-pos-l
@@ -35,9 +36,17 @@ notification:
   - note: Halloween Stock out now
   - note: See our Instagram
 
-    
-      
+recommendations:
+  - heading: GC Breeze Radio
+    review:  Wow is exactly what I said, more than once when she dropped her flowers to me. When I saw the flowers she created I was absolutely blown away. She delivered one of her bottled florals... These would be gorgeous as a corporate gift, even just one of those just-because gifts. These flowers lived on my desk for weeks... Even when they dried out and started to whither they were still absolutely beautiful.
+    audio: true
+    source: /audio/breeze-radio.mp3
+    logo: /images/breeze-radio.png   
+  - heading: Other
+    review:  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat quidem, distinctio voluptate a amet laboriosam quas repellat adipisci beatae sapiente hic, voluptatum vero voluptas asperiores in voluptates tempora molestias eveniet!
+    audio: false
 ---
+
 <!-- HEADING BANNER IMAGE -->
 <section class="relative " style="top:-2px;">
   <div class="grid-middle heading padded-b-2 tall-70 pink-color">
@@ -95,7 +104,7 @@ notification:
 </section>  
 
 <!--ABOUT  -->
-<section class="dark-gold-text padded-b-card padded-0-sm overflow" >
+<section class="dark-gold-text padded-b-card padded-0-sm " >
   <div class="grid-right-middle flex-flip-sm capped-width">
     <div class="col-6_sm-12 grid-top padded-l-2 padded-sm" >
         <div class="col-12 bg-image {{page.about-background-position}} square" style="background-image: url('{{page.about_image}}');"></div>      
@@ -110,13 +119,53 @@ notification:
           </div>
         </div>        
       </div>  
-    </div>
-  </div>   
+    </div>  
+  </div> 
 </section>  
 
+<!-- RECOMMNENDATIONS -->
+<section class="stone-color">
+  <div class="grid-center capped-width dark-gold-text padded">    
+    {% for item in page.recommendations %}
+    <div class="col-12 padded-tb slider-container">      
+      <div class="grid slider-item">
+        <div class="grid-center col-12">
+          <!-- QUOTE -->
+            <div class="col-1 quote text-right hide-sm">
+              <i class="fa-sharp fa-solid fa-quote-left"></i>
+            </div>
+            <!-- TEXT -->
+            <div class="col-10 grid-center padded-1 padded-b-2 padded-t-2">          
+              <div class="col-12">
+                <h3 class="text-center-xs">{{item.heading}}</h3>
+                <p >{{item.review}}</p>            
+              </div>
+            </div>       
+            <!-- QUOTE -->
+            <div class="col-1-bottom quote hide-sm">
+              <i class="fa-sharp fa-solid fa-quote-right"></i>
+            </div>   
+            <!-- add if statement audio -->
+            {% if item.audio == true %}
+            <div class="col-10 grid ">
+              <div class="col-6_sm-12-middle text-right padded-r-1 text-center-sm padded-l-1">
+                  {% include audio-player.html %}   
+              </div>  
+              <div class="col-6_sm-12 padded-l-2 text-center-sm padded-0-sm">
+                <img src="{{item.logo}}" width="180px" class="reccomended-logo">
+              </div>   
+            </div>    
+            {% endif %}  
+          </div>                 
+        </div> 
+        {% endfor %}  
+    </div>    
+  </div>
+</section>
+
 <!-- Socials-->
-<section class=" padded ivy-text padded-b-2-xs padded-t-2-xs dark-gold-text">
-  <div class="capped-width grid-middle tall-10">
+<section class=" padded padded-t-10 ivy-text padded-b-2-xs padded-t-4-xs dark-gold-text">
+  <div class="capped-width grid-middle tall-10 padded-t-1">
     <div class="col-12 text-center ">
       <h3 class="editable">Visit us.</h3>
       <div class="col-12-center">
@@ -126,6 +175,7 @@ notification:
         <a href="{{site.data.contact-info.instagram_href}}" target="_blank" class="button  ">
           Instagram
         </a>
+
       </div>         
     </div>
   </div>
