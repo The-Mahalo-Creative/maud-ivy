@@ -12,7 +12,7 @@ $(document).ready(function() {
     fade: false, // Changes the animate from slide to fade if true
     infinite: true, // When true, means that it will scroll in a circle
     pauseOnHover: true, // When true means the autoplay pauses when hovering
-    swipeToSlide: false,
+    swipeToSlide: false, //stops dragging
     pauseOnDotsHover: true // Pauses the autoplay when hovering over the dots
   });    
 });    
