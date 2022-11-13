@@ -83,8 +83,9 @@
         <a href="/about-us.html">About</a>
         <a href="/gallery">Gallery</a>
         <a href="/enquiry">Enquiry</a>
-        <a class="social" href="https://m.facebook.com/maudandivyflowers/" target="_blank"><i class="fab fa-facebook"></i></a>
-<a class="social" href="https://www.instagram.com/maudandivyflowers/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a class="social" href="https://www.instagram.com/maudandivyflowers/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a class="social" href="https://m.facebook.com/maudandivyflowers/" target="_blank"><i class="fab fa-facebook"></i></a>
+
       </nav>   
       <div class="col-2 text-right show-sm">
         <span class="hamburger-button">&#8801;</span>
@@ -106,8 +107,9 @@
           <a href="/about-us.html">About</a>
           <a href="/gallery">Gallery</a>
           <a href="/enquiry">Enquiry</a>
-          <a class="social" href="https://m.facebook.com/maudandivyflowers/" target="_blank"><i class="fab fa-facebook"></i></a>
-<a class="social" href="https://www.instagram.com/maudandivyflowers/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a class="social" href="https://www.instagram.com/maudandivyflowers/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a class="social" href="https://m.facebook.com/maudandivyflowers/" target="_blank"><i class="fab fa-facebook"></i></a>
+
         </nav>         
       </div>
  
@@ -150,22 +152,29 @@
         <!-- RIGHT COLUMN -->
             <div class="col-6_md-7_sm-12 padded padded-r-0 padded-sm padded-b-0-sm grid" id="enquiry">
                 <h2 class="editable">Enquiry</h2>
-                <p class="subtle"><span class="editable">Use this enquiry form to give us some preliminary information about your upcoming floral needs.</span></p>
+                <p class="subtle"><span class="editable">Use this use this no obligation enquiry form to give us some preliminary information about your upcoming floral needs.</span></p>
             <!-- FORM -->
                 <form class="col-12 " name="maud-and-ivy" data-netlify="true" action="/success.html" method="post">
                 <!-- YOUR DETAILS -->
                     <div class="grid">    
                         <div class="col-12 padded-t-1">
-                            <h4 class="">Your Details.</h4>
-                            <input type="text" name="_name" id="_name" placeholder="Your Name" required>
-                            <input type="email" name="_replyto" id="_replyto" placeholder="Your Email" required="">                           
+                            <h4 class="">Your Details.*</h4>
+                            <input type="text" name="_name" id="_name" placeholder="Your Name*" required>
+                            <input type="email" name="_replyto" id="_replyto" placeholder="Your Email*" required="">                           
                         </div>                        
                         <div class="col-12 padded-b">
                             <label for="message">
                                 <h4>Message</h4>
                             </label>
-                            <textarea name="message" class="input-text" required></textarea>   
+                            <textarea name="message" class="input-text"></textarea>   
                         </div>  
+                        <div class="col-12 padded-t-1 padded-b-1">                                
+                            <label class="container padded-l-0" > 
+                                <h4 class="editable">Don't add me to your mail list</h4>
+                                <input type="checkbox" name="mail-list" checked>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div> 
                         <div class="col-12 padded-tb">                            
                             <button type="submit"  value="Send Request"> Submit </button>   
                         </div>
@@ -184,11 +193,11 @@
 <!-- Contact -->
 <section class="dark-gold-text">
     <div class="padded padded-t-0 contact">
-        <div class="capped-width grid  flex-flip-sm">
+        <div class="capped-width grid ">
         <!-- RIGHT COLUMN -->
             <div class="col-12 padded grid" id="#order-request">
-                <h2 class="editable">Order Requests</h2>
-                <p class="editable subtle">Use this form if you are ready to request an order, complete all boxes and you will then be sent a Tax Invoice for Payment prior to your order being created. Delivery Fees are charged per suburb and will be added to your requested budget.  (this wording will be honed before launch).</p>
+                <h2 class="editable">Order Request</h2>
+                <p class="editable subtle">Use this form to place an <strong>Order Request.</strong> Make your selections from the drop down options OR simply type your preference into the space provided.  Complete all details and submit your request.   I will review your request and respond to you with a Tax Invoice (Square POS) for payment prior to creation of your order.  Add ons such as Cards, Vase, Delivery, Chocolates, Wine etc will be added to your budget.  Delivery Fees are charged per suburb.  Once you have reviewed and paid your Tax Invoice, your order will be fulfilled.</p>
             <!-- FORM -->
                 <form class="col-12 " name="maud-and-ivy-order-request" data-netlify="true" action="/success.html" method="post">
                     <input type="hidden" name="subject" value="Order Requests" />
@@ -197,14 +206,14 @@
                         <!-- nAME eMAIL -->
                         <div class="col-12 grid">
                             <div class="col-12 padded-t-1">
-                                <h4 class="editable">Your Details.</h4>
+                                <h4 class="editable">Your Details.*</h4>
                             </div>
                            
                             <div class="col-6_sm-12 padded-r-1 padded-0-sm">
-                                <input type="text" name="_name" id="_name" placeholder="Your Name" required>
+                                <input type="text" name="_name" id="_name" placeholder="Your Name*" required>
                             </div>
                             <div class="col-6_sm-12 padded-l-1 padded-0-sm">
-                                <input type="email" name="_replyto" id="_replyto" placeholder="Your Email" required="">                    
+                                <input type="email" name="_replyto" id="_replyto" placeholder="Your Email*" required="">                    
                             </div>    
                         </div>    
                         <!-- oCCASION -->
@@ -234,9 +243,9 @@
                         <!-- BUDGET -->
                         <div class="col-6_sm-12 padded-l-1 padded-0-sm">
                             <label for="budget">
-                                <h4 class="editable">budget</h4>
+                                <h4 class="editable">budget* (exclusive of add ons)</h4>
                             </label>
-                            <input list="type-budget" name="budget" id="budget" placeholder="Your Budget">
+                            <input list="type-budget" name="budget" id="budget" placeholder="Your Budget"  required>
                             <datalist id="type-budget">                        
                                 
                                 <option>$80</option> 
@@ -254,9 +263,9 @@
                         <!-- COLOURS -->
                         <div class="col-6_sm-12 padded-r-1 padded-0-sm">
                             <label for="colour-scheme">
-                                <h4 class="editable">Colour Scheme</h4>
+                                <h4 class="editable">Colour Scheme*</h4>
                             </label>
-                            <input list="type-colour-scheme" name="colour-scheme" id="colour-scheme" placeholder="Something else?" >
+                            <input list="type-colour-scheme" name="colour-scheme" id="colour-scheme" placeholder="Something else?"  required>
                             <datalist id="type-colour-scheme">                      
                             
                                 <option>Pink & White</option>
@@ -354,50 +363,68 @@
                         <div class="col-12 padded-b-2">
                             <label for="message">
                                 <h4>Message</h4>                            
-                                <textarea class="input-text" required></textarea>
+                                <textarea class="input-text"></textarea>
                             </label> 
                         </div>
 
                         <!-- rECIPIENT DETAILS -->
                         <div class="col-12 grid padded-t-2">
                             <div class="col-12">
-                                <h4 class="editable">Recipient Details.</h4>            
+                                <h4 class="editable">Recipient Details.*</h4>            
                             </div>  
                             <div class="col-6_sm-12 padded-r-1 padded-0-sm">
-                                <input type="text" name="_name" placeholder="Recipient Name" required>
+                                <input type="text" name="_name" placeholder="Recipient Name*" required>
                             </div>
                             <div class="col-6_sm-12 padded-l-1 padded-0-sm">
-                                <input type="tel" name="phone-no" id="phone-no" placeholder="Recipient Mobile Number" required>                        
+                                <input type="tel" name="phone-no" id="phone-no" placeholder="Recipient Number*" required>                        
                             </div>                            
                             <div class="col-12 padded-b-1">
-                                <input  placeholder="Recipient Address">
+                                <input  placeholder="Recipient Address*"  required>
                             </div>
 
                             <!-- delivery -->
-                            <div class="col-6_sm-12 padded-r-1 padded-0-sm">
-                                <label for="delivery">
-                                    <h4 class="editable">Next Day Delivery or Collect </h4>
-                                </label>                            
-                                <select id="delivery">
+                            <div class="col-12">
+                                <h4 class="editable">Next Day Delivery or Collect* </h4> 
+                                <p class="subtle"><span class="editable">We delivery Monday to Friday, Saturday by special request.</span></p> 
+                            </div>
+                            <div class="col-6_sm-12 padded-r-1 padded-t-1-2 padded-0-sm ">                        
+                                <select required>
+                                    
+                                    <option>Collection</option>  
                                     
                                     <option>Next Day Delivery</option>  
                                     
-                                    <option>Option</option>  
+                                    <option>Other</option>  
                                                       
                                 </select> 
                             </div>
+                            <div class="col-6_sm-12 padded-l-1 padded-0-sm">
+                                <label>
+                                    <h4 class="editable">Other date</h4> 
+                                    <input type="date">
+                                </label>      
+                            </div>
                             <!-- FIX -->
-                            <div class="col-6_sm-12 padded-l-1 padded-0-sm padded-t-1-sm">
-                                <h4 class="editable">REQUEST TAX INVOICE NOW</h4>
-                                <label class="container" > Yes
-                                    <input type="checkbox" name="budget" value="100" checked>
+                            <div class="col-6_sm-12 padded-1 padded-l-0 padded-r-0-sm">
+                                <label class="container padded-l-0" > 
+                                    <h4 class="editable">REQUEST TAX INVOICE NOW</h4>
+                                    <input type="checkbox" name="invoice" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div> 
+                            <div class="col-6_sm-12 padded-1 padded-r-0 padded-l-0-sm ">                                
+                                <label class="container padded-l-0" > 
+                                    <h4 class="editable">Don't add me to mail list</h4>
+                                    <input type="checkbox" name="mail-list" checked>
                                     <span class="checkmark"></span>
                                 </label>
                             </div> 
                             <!-- Special Requests or Delivery Instructions -->
-                            <div class="col-12 padded-t-1-sm">
+                            <div class="col-12 padded-t-1">
                                 <label for="special-request">
                                     <h4 class="editable">Special Requests or Delivery Instructions</h4>                            
+                                    <p class="subtle"><span class="editable">Example: you may like to add a card, chocolates or wine to your order.  </span></p>
+                                    <p class="subtle"><span class="editable">I can supply any of <a class="subtle" href="https://www.instagram.com/littlecocoa_au/">@littlecocoa_au</a>’s range. View their site<a href="https://littlecocoa.com.au/shop/"  class="subtle"> here.</a> </span></p>
                                     <textarea class="input-text"></textarea>
                                 </label> 
                             </div>
@@ -408,6 +435,12 @@
                         </div>
                     </div>         
                 </form>
+            </div>
+            <div class="col-12 padded padded-b-0">
+                <h4 class="margin-b-0 editable">Payment Options:</h4>
+                <p class="subtle editable">Bank Transfer or Credit Card</p>
+                <p class="subtle editable"><strong>Please note:</strong> our courier makes one attempt to deliver your items to the address supplied.  Should the recipient not be available and a second attempt is required, you will be charged a second delivery fee.  See full <a class="subtle" href="/forms/terms-and-conditions_maud-and-ivy.pdf" download="terms-and-conditions_maud-and-ivy">Terms and Conditions</a>
+                </p>
             </div>
         </div>
     </div> 
@@ -449,14 +482,19 @@
                         <a class="col-10_sm-6_xs-12" href="mailto:contact@maudandivyflowers.com.au" target="_blank">
                             <span class="hide-xs margin-l-05" >contact@maudandivyflowers.com.au</span>
                             <span class="show-xs"><i class="fa-solid fa-envelope"></i></span>
-                        </a>                        
+                        </a>           
                     </div>
-
+                    <div class="col-12 padded-t-1-xs">
+                        <p class="text-center-xs">
+                            <span class=" text-bold">Collection: </span>
+                            <span class="subtle margin-l-05">Southport</span>   
+                        </p>
+                    </div>
                 </nav>                    
             </div>
             <div class="col-12 text-center padded-b-2 subtle">
             <p class="padded-b-1">
-                <a href="/terms.html" >Terms and Conditions</a>
+                <a href="/forms/terms-and-conditions_maud-and-ivy.pdf" download="terms-and-conditions_maud-and-ivy">Terms and Conditions</a>
             </p>    
             <p class=" margin-b-0">Copyright 2022 <span class="hide-xxs">|</span> <span class="break-xxs">By <a href="https://www.themahalocreative.com" class="subtle" target="_blank">The Mahalo Creative</a></span> </p>
             </div>   
