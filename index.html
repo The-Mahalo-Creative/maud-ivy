@@ -42,13 +42,15 @@ recommendations:
     audio: true
     number: 1
     source: /audio/breeze-radio.mp3
-    logo: /images/breeze-radio.png   
+    logo: true
+    logo_image: /images/breeze-radio.png   
   - heading: Micheal from The Mop King
     review: A big thankyou to Monique who I think is the number one  boutique flower business on the Gold Coast. She's gone far and beyond what I need. My mum's the world and I want to say thankyou.
     audio: true
     number: 2
     source: /audio/mop-king.mp3
-    logo: 
+    logo: false
+    logo_image: 
 ---
 
 <!-- HEADING BANNER IMAGE -->
@@ -152,15 +154,21 @@ recommendations:
             </div>   
             <!-- add if statement audio -->
             {% if item.audio == true %}
-            <div class="col-10 grid ">
+            <div class="col-10 grid-center ">
+              {% unless item.logo != true %}
               <div class="col-6_sm-12-middle text-right padded-r-1 text-center-sm padded-l-1 padded-0-sm">
-                  {% include audio-player.html %}   
+              {% include audio-player.html %}   
               </div>  
               <div class="col-6_sm-12 padded-l-2 text-center-sm padded-0-sm">
-                <img src="{{item.logo}}" width="180px" class="reccomended-logo">
-              </div>   
-            </div>    
-            {% endif %}  
+                <img src="{{item.logo_image}}" width="180px" class="reccomended-logo ">
+              </div>            
+              {% else %} 
+              <div class="col-10_sm-12-middle text-right padded-r-1 text-center-sm padded-l-1 padded-0-sm">
+                {% include audio-player.html %}
+              </div>    
+              {% endunless %} 
+            </div>     
+            {% endif %}
           </div>                 
         </div> 
         {% endfor %}  
