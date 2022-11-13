@@ -818,6 +818,90 @@ select {
   padding: 0;
   cursor: pointer;
 }
+/* ACCORDIAN */
+.tab {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-left: .5rem;
+  border: 1px solid;
+  margin: 0 0 -1px;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+}  
+
+.tab input[type="checkbox"] + label::after, .tab input[type="radio"] + label::after {
+  content: "+";
+}
+.tab input[type="checkbox"]:checked + label::after, .tab input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+.tab input[type="checkbox"]:checked + label {
+  font-weight: 700;
+}
+/* CROSS BUTTON */
+.tab label::after {
+  position: absolute;
+  left: 0rem;
+  top: .3rem;
+  display: block;
+  font-size: 1.5rem;
+  width: 2.2em;
+  height: 2.2em;
+  line-height: 2;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+.tab label {
+  display: inline-block;
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 500;
+}
+/* heading and price */
+.tab p{
+  display: inline-block;
+  padding:1rem 3rem;
+  margin: 0;
+  line-height: 1.5;
+}
+.tab label span {
+  float: right;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 4;
+  padding-right: 1rem;
+}
+/* when opened */
+.tab input:checked ~ .tab-content {
+  max-height: 100em;
+  opacity: 1;
+}
+.tab .tab-content {
+  max-height: 0;
+  display: block;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .35s,padding .35s,opacity .5s;
+  -o-transition: max-height .35s,padding .35s,opacity .5s;
+  transition: max-height .35s,padding .35s,opacity .5s;
+  padding: 0 1rem;
+}
+.tab-content p.caption {
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
 
 /* audio button!!!!!!!!! */
 .audio-player {
@@ -829,13 +913,6 @@ select {
    width: 90%;
    height: 90%;
 }
-.controls {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  margin-top: 10px;
-}
 .player-button {
   background-color: transparent;
   border: 0;
@@ -844,6 +921,21 @@ select {
   cursor: pointer;
   padding: 0;
 }
+.sound-button {
+  background-color: transparent;
+  border: 0;
+  width: var(--sound-button-width);
+  height: var(--sound-button-width);
+  cursor: pointer;
+  padding: 0;
+}
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
 .timeline {
   -webkit-appearance: none;
   width: calc(100% - (var(--player-button-width) + var(--sound-button-width) + var(--space)));
@@ -851,39 +943,42 @@ select {
   background-color: var(--pink-color);
   border-radius: 5px;
   background-size: 0% 100%;
-  background-image: linear-gradient(var(--text-hover), var(--text-hover));
+  background-image: linear-gradient(var(--text-hover), var(--text-hover)); /* NOT WORKING ON SECOND ONE! */
   background-repeat: no-repeat;
   margin-right: var(--space);
 }
 .timeline::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 1em;
-  height: 1em;
+  -webkit-appearance: none; 
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   cursor: pointer;
   opacity: 0;
   transition: all .1s;
   background-color: var(--text-hover);
+  border: 1px solid var(--stone-color);
 }
 .timeline::-moz-range-thumb {
-  -webkit-appearance: none;
-  width: 1em;
-  height: 1em;
+  -webkit-appearance: none; 
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   cursor: pointer;
   opacity: 0;
   transition: all .1s;
   background-color: var(--text-hover);
+  border: 1px solid var(--stone-color);
 }
 .timeline::-ms-thumb {
-  -webkit-appearance: none;
-  width: 1em;
-  height: 1em;
+ -webkit-appearance: none; 
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   cursor: pointer;
   opacity: 0;
   transition: all .1s;
   background-color: var(--text-hover);
+  border: 1px solid var(--stone-color);
 }
 .timeline::-webkit-slider-thumb:hover {
   background-color: var(--text-hover);
@@ -920,14 +1015,6 @@ select {
   box-shadow: none;
   border: none;
   background: transparent;
-}
-.sound-button {
-  background-color: transparent;
-  border: 0;
-  width: var(--sound-button-width);
-  height: var(--sound-button-width);
-  cursor: pointer;
-  padding: 0;
 }
 /* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
 .show-xs, 

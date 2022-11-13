@@ -40,11 +40,15 @@ recommendations:
   - heading: GC Breeze Radio
     review:  Wow is exactly what I said, more than once when she (Monique) dropped her flowers to me. When I saw the flowers she created I was absolutely blown away. These would be gorgeous as a corporate gift, even just one of those just-because gifts. These flowers lived on my desk for weeks... 
     audio: true
+    number: 1
     source: /audio/breeze-radio.mp3
     logo: /images/breeze-radio.png   
-  - heading: Other
-    review:  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat quidem, distinctio voluptate a amet laboriosam quas repellat adipisci beatae sapiente hic, voluptatum vero voluptas asperiores in voluptates tempora molestias eveniet!
-    audio: false
+  - heading: Micheal from The Mop King
+    review: A big thankyou to Monique who I think is the number one  boutique flower business on the Gold Coast. She's gone far and beyond what I need. My mum's the world and I want to say thankyou.
+    audio: true
+    number: 2
+    source: /audio/mop-king.mp3
+    logo: /images/breeze-radio.png   
 ---
 
 <!-- HEADING BANNER IMAGE -->
@@ -126,10 +130,10 @@ recommendations:
 <!-- RECOMMNENDATIONS -->
 <section class="stone-color padded-b-2-sm">
   <div class="grid-center capped-width dark-gold-text padded">    
-    {% for item in page.recommendations %}
+    
     <div class="col-12 padded-tb padded-0-sm padded-t-2-sm slider-container"> 
-           
-      <div class="grid slider-item">
+      {% for item in page.recommendations %}     
+      <div class="slider-item grid">
         <div class="grid-center col-12">
           <!-- QUOTE -->
             <div class="col-1 quote text-right hide-sm">
@@ -164,6 +168,14 @@ recommendations:
   </div>
 </section>
 
+<svg class="plyrBtns" style="display:none" aria-hidden="true">
+  <symbol class="icon icon-play" id="icon-play" viewBox="0 0 20 20">
+    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+  </symbol>
+  <symbol class="icon icon-pause" id="icon-pause" viewBox="0 0 20 20">
+    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+  </symbol>
+</svg>
 <!-- Socials-->
 <section class=" padded padded-t-10 ivy-text padded-b-2-xs padded-t-4-xs dark-gold-text">
   <div class="capped-width grid-middle tall-10 padded-t-1">

@@ -240,7 +240,7 @@
     
     <div class="col-12 padded-tb padded-0-sm padded-t-2-sm slider-container"> 
            
-      <div class="grid slider-item">
+      <div class="slider-item grid">
         <div class="grid-center col-12">
           <!-- QUOTE -->
             <div class="col-1 quote text-right hide-sm">
@@ -266,18 +266,39 @@
     </audio>
     <div class="controls">
         <button class="player-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#d09797">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+            <svg viewBox="0 0 20 20" fill="#d09797">
+                <use class="useBtn" href="#icon-play" />
             </svg>
         </button>
-        <input type="range" class="timeline" max="100" value="0">
+<!--         <input type="range" class="timeline" max="100" value="0"> -->
+        <input type="range" class="timeline" min="0" max="100" step="1" value="0">
         <button class="sound-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#d09797">
                 <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
             </svg>
         </button>
     </div>
-</div>   
+</div>
+
+<!-- <div class="audio-player left">
+    <div class="icon-container">
+      <audio preload="metadata" src="/audio/breeze-radio.mp3"></audio>
+    </div>
+    <div class="controls">
+        <button class="player-button">
+            <svg viewBox="0 0 20 20" fill="#d09797">
+                <use class="useBtn" href="#icon-play" />
+            </svg>
+        </button>
+        <input type="range" class="timeline" min="0" max="100" step="1" value="0">
+        <button class="sound-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#d09797">
+                <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+</div>
+   -->   
               </div>  
               <div class="col-6_sm-12 padded-l-2 text-center-sm padded-0-sm">
                 <img src="/images/breeze-radio.png" width="180px" class="reccomended-logo">
@@ -286,10 +307,8 @@
               
           </div>                 
         </div> 
-        
-    <div class="col-12 padded-tb padded-0-sm padded-t-2-sm slider-container"> 
-           
-      <div class="grid slider-item">
+             
+      <div class="slider-item grid">
         <div class="grid-center col-12">
           <!-- QUOTE -->
             <div class="col-1 quote text-right hide-sm">
@@ -298,8 +317,8 @@
             <!-- TEXT -->
             <div class="col-10 grid-center padded-1 padded-b-2 padded-t-2 padded-0-sm">          
               <div class="col-12">
-                <h3 class="text-center-xs">Other</h3>
-                <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat quidem, distinctio voluptate a amet laboriosam quas repellat adipisci beatae sapiente hic, voluptatum vero voluptas asperiores in voluptates tempora molestias eveniet!</p>            
+                <h3 class="text-center-xs">Micheal from The Mop King</h3>
+                <p >A big thankyou to Monique who I think is the number one  boutique flower business on the Gold Coast. She's gone far and beyond what I need. My mum's the world and I want to say thankyou.</p>            
               </div>
             </div>       
             <!-- QUOTE -->
@@ -307,6 +326,52 @@
               <i class="fa-sharp fa-solid fa-quote-right"></i>
             </div>   
             <!-- add if statement audio -->
+            
+            <div class="col-10 grid ">
+              <div class="col-6_sm-12-middle text-right padded-r-1 text-center-sm padded-l-1 padded-0-sm">
+                  <div class="audio-player">
+    <audio src="/audio/mop-king.mp3">
+    </audio>
+    <div class="controls">
+        <button class="player-button">
+            <svg viewBox="0 0 20 20" fill="#d09797">
+                <use class="useBtn" href="#icon-play" />
+            </svg>
+        </button>
+<!--         <input type="range" class="timeline" max="100" value="0"> -->
+        <input type="range" class="timeline" min="0" max="100" step="1" value="0">
+        <button class="sound-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#d09797">
+                <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+<!-- <div class="audio-player left">
+    <div class="icon-container">
+      <audio preload="metadata" src="/audio/mop-king.mp3"></audio>
+    </div>
+    <div class="controls">
+        <button class="player-button">
+            <svg viewBox="0 0 20 20" fill="#d09797">
+                <use class="useBtn" href="#icon-play" />
+            </svg>
+        </button>
+        <input type="range" class="timeline" min="0" max="100" step="1" value="0">
+        <button class="sound-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#d09797">
+                <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+</div>
+   -->   
+              </div>  
+              <div class="col-6_sm-12 padded-l-2 text-center-sm padded-0-sm">
+                <img src="/images/breeze-radio.png" width="180px" class="reccomended-logo">
+              </div>   
+            </div>    
               
           </div>                 
         </div> 
@@ -315,6 +380,14 @@
   </div>
 </section>
 
+<svg class="plyrBtns" style="display:none" aria-hidden="true">
+  <symbol class="icon icon-play" id="icon-play" viewBox="0 0 20 20">
+    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+  </symbol>
+  <symbol class="icon icon-pause" id="icon-pause" viewBox="0 0 20 20">
+    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
+  </symbol>
+</svg>
 <!-- Socials-->
 <section class=" padded padded-t-10 ivy-text padded-b-2-xs padded-t-4-xs dark-gold-text">
   <div class="capped-width grid-middle tall-10 padded-t-1">

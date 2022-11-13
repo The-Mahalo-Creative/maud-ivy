@@ -91,16 +91,67 @@ gallery:
     bg-pos:
     title: Flower 2
     alt: 
-      
+
+pricing:
+  - price: 80
+    budget: Budget
+    more-info:  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dicta tenetur repudiandae tempora laboriosam quibusdam sunt inventore nihil non quo facere consequatur maxime minima reprehenderit at ad, itaque ipsum alias.
+    image:
+      - background_image: /images/flowers-1.jpg
+        alt:
+        title: flowers
+      - background_image: /images/flowers-2.jpg
+        alt:
+        title: punchy flowers
+      - background_image: /images/flowers-2.jpg
+        alt:
+        title: minimal flowers
+  - price: 100
+    budget: Middle
+    more-info:  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dicta tenetur repudiandae tempora laboriosam quibusdam sunt inventore nihil non quo facere consequatur maxime minima reprehenderit at ad, itaque ipsum alias.
+    image:
+      - background_image: /images/flowers-1.jpg
+        alt:
+        title: flowers
+      - background_image: /images/flowers-2.jpg
+        alt:
+        title: punchy flowers
+      - background_image: /images/flowers-2.jpg
+        alt:
+        title: minimal flowers
+  - price: 150
+    budget: Something
+    more-info:  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dicta tenetur repudiandae tempora laboriosam quibusdam sunt inventore nihil non quo facere consequatur maxime minima reprehenderit at ad, itaque ipsum alias.
+    image:
+      - background_image: /images/flowers-1.jpg
+        alt:
+        title: flowers
+      - background_image: /images/flowers-2.jpg
+        alt:
+        title: punchy flowers
+      - background_image: /images/flowers-2.jpg
+        alt:
+        title: minimal flowers
+  - price: 200+
+    budget: High
+    more-info:  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dicta tenetur repudiandae tempora laboriosam quibusdam sunt inventore nihil non quo facere consequatur maxime minima reprehenderit at ad, itaque ipsum alias.
+    image:
+      - background_image: /images/flowers-1.jpg
+        alt:
+        title: flowers
+      - background_image: /images/flowers-2.jpg
+        alt:
+        title: punchy flowers
+      - background_image: /images/flowers-2.jpg
+        alt:
+        title: minimal flowers
 ---
 
 <!--Header  -->
 {% include header-section.html %}
 
 
-
 <!-- gallery  -->
-
 <section class="padded gallery-pg bg-image-bg tall-50 capped-width-lg">  
   <div class="capped-width">
     <div class="portfolio-filter text-center ivy-text padded-b-1 padded-b-2-xs" id="portfolio-filter">
@@ -113,5 +164,36 @@ gallery:
     
     {% include gallery.html %}
 
+  </div>
+</section>
+
+
+<!-- Accordian -->
+<section class="padded-b">
+  <div class="grid padded capped-width dark-gold-text">
+    <div class="col-12">
+      <h3 class="text-center">Inspiration for your budget</h3>
+      {% for item in page.pricing %}
+      <div class="tab">
+        <input id="tab-{{item.price}}" name="tabs" type="checkbox">
+        <label for="tab-{{item.price}}">
+            <p>{{item.budget}}</p>
+            <span>${{item.price}}</span>
+        </label>
+        <div class="tab-content hidden-tab">
+            <div class="grid ">
+              <p class="padded-05">{{item.more-info}}</p>
+              {% for item in item.image %}
+              <div class="col-4 padded-05">
+                <div class="bg-image square" style="background-image: url('{{item.background_image}}')"></div>
+                <p class="caption">{{item.title}}</p>
+              </div>
+
+              {% endfor %}
+            </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
