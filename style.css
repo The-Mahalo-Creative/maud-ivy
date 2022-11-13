@@ -391,8 +391,8 @@ footer nav .fab { padding: 0.2rem 0.8rem;}
 
 .mobile-menu a {
   display: block;
-  font-size: 1.6rem;
-  padding: 6% 0;
+  font-size: 1.5rem;
+  padding: 4% 0;
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -1051,6 +1051,13 @@ display: none;
   [class*=grid] .padded-0-md      { padding: 0;    }
   .padded-r-0-md,
   [class*="grid"] .padded-r-0-md  { padding-right: 0;}
+
+
+  header nav a { 
+    font-size: 1.1rem;
+    padding: 0rem 0.4rem;
+    margin: 0 0.3rem;
+  }
 
   footer h1 {
     font-size: 5.7vw;
