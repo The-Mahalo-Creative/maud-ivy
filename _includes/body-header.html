@@ -35,8 +35,16 @@
           <a href="/"><h1>Maud & Ivy <span class="break">Flowers</span></h1></a>
           <a href="/about-us.html">About</a>
           <a href="/gallery">Gallery</a>
-          <a href="/enquiry">Enquiry|Order</a>
-          {% include socials.html %}
+          <a href="/enquiry" >Enquiry|Order</a>  
+          <span class="tel">  
+            <span class="padded-r-1 "><i class="fa-solid fa-phone"></i></span>           
+            <a class="" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">{{site.data.contact-info.contact_number}}</a>
+          </span>        
+          <div>
+           {% include socials.html %}            
+          </div>
+
+
         </nav>         
       </div>
  
