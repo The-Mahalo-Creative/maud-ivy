@@ -1106,6 +1106,7 @@ display: none;
 /* SM Media Query (48em / 768px----------------------------------------------------------*/
 @media(max-width: 48em) {
   .show-sm        { display: block;} 
+  .break-sm       { display: block;}
   .show-inline-sm { display: inline-block;} 
   .hide-sm        { display: none;}
   .static-sm      { 

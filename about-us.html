@@ -25,11 +25,11 @@ family:
   - portrait_image: /images/flowers-7.jpg
     bg-pos:
     name-caption: Nate - Quality Control
-
-portrait-monique_image: /images/event.jpg
-name-monique-caption: Monique
-portrait-dad_image: /images/event.jpg
-name-dad-caption: Monique
+father:
+  - portrait-monique_image: /images/event.jpg
+    name-monique-caption: Monique
+  - portrait-dad_image: /images/event.jpg
+    name-dad-caption: Monique
 ---
 
 <!--Header  -->
@@ -235,28 +235,28 @@ name-dad-caption: Monique
       </p>      
       <!-- phone and email -->
       <div class="grid  col-12">
-        <div class="col-12  hide-xxs">
-          <span class="inline-block padded-r-1">
+        <div class="col-12 ">
+          <span class="inline-block padded-r-1 break-sm">
             <p class="inline-block">
-              <span class="editable text-bold margin-r-05">Call or Text:</span> 
-              <a class="break-sm margin-b-0" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">
+              <span class="editable text-bold margin-r-05 break-xs">Call or Text:</span> 
+              <a class="subtle break-sm margin-b-0" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">
                 {{site.data.contact-info.contact_number}}</a>
             </p>        
           </span>
           <span class="inline-block ">
             <p class="inline-block">
               <span class="editable text-bold margin-r-05">Email:</span> 
-              <a class="break-sm"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">{{site.data.contact-info.contact_email}}</a> 
+              <a class="subtle break-sm"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">{{site.data.contact-info.contact_email}}</a> 
             </p>             
           </span>   
         </div>
         <!-- Direct msg -->
         <div class="col-12 padded-t-1">          
-          <span class=" show-xxs padded-b-1">
+<!--           <span class=" show-xxs padded-b-1">
               <span class="editable text-bold margin-r-05">Call, Text or Email:</span></p> 
               <a href="Tel:{{site.data.contact-info.contact_number}}" target="_blank"><i class="fa-solid fa-phone"></i></a>
               <a  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank"><i class="fa-solid fa-envelope"></i></a>  
-          </span>   
+          </span>    -->
           <p class="text-bold "> <span class="editable"></span> Direct Message via:</p>                         
             <a class="social" href="{{site.data.contact-info.instagram_href}}" target="_blank"><i class="fab fa-instagram"></i></a>   
             <a class="social" href="{{site.data.contact-info.facebook_href}}" target="_blank"><i class="fab fa-facebook"></i></a> 
