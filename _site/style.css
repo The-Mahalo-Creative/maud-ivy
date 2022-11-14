@@ -230,6 +230,7 @@ font-family: 'Raleway', sans-serif;
   .dark-gold-text   { color: var(--dark-gold-text); }
   /* Break --------------------------------- */
   .break {display: block;}
+  .inline-block { display: inline-block;}
   /* IMG SCROLL PARALAX */  
 /*   .fixed      { background-attachment: fixed;}   */
   .overflow   { overflow: hidden;}
@@ -333,11 +334,29 @@ p a {
   font-size: 1rem;
 }
 
-.fab {
+.fab, .fa-brands {
   font-size: 1.4rem;
   padding:0rem 1.5rem;
   line-height:1.8rem;
 }
+.about-social .fab,
+.about-social .fa-brands,
+.about-social .fa-solid {
+  font-size: 1.8rem;
+  padding:0.5rem 1.5rem;
+}
+.about-social a:hover{
+  color: var(--ivy-color);
+  transition: all 0.5s;
+}
+.about-social p a:hover{
+  color: var(--text-hover);
+  transition: all 0.5s;
+}
+.about-social .about-call-email .fa-solid  {
+  font-size: 1.5rem;
+  padding:0.5rem 0.5rem;
+} 
 /* HEADER AND FOOTER------------------------- */
 header a {
   margin-bottom: 0;  
@@ -358,7 +377,8 @@ header h1 span {
   position: relative;
   top: -2vh;
 }
-nav .fab {
+nav .fab,
+nav .fa-brands {
   padding:unset;
   font-size: 1.3rem;
 }
@@ -397,7 +417,8 @@ footer nav .fab { padding: 0.2rem 0.8rem;}
   font-weight: 400;
 }
 .mobile-menu a.social { display: inline-block;}
-.mobile-menu nav .fab {
+.mobile-menu nav .fab,
+.mobile-menu nav .fa-brands {
   font-size: 1.7rem;
   padding: 0 1.5rem;
   margin-top: 0.4rem;
@@ -655,13 +676,18 @@ footer nav a, footer nav p {
   text-transform: uppercase;
   width: 240px;
   text-align: center;
+  transition: all 0.35s;
 }
 
-.button:hover {
+a.button:hover {
   background-color: var(--ivy-color);
   color: white;
+  transition: all 0.35s;
 }
-
+/* .about-social .button{
+  font-size: 1.4rem;
+  width: 280px;
+} */
 /* Enquiry ---------------------------------------------*/
 .bubbles-enquiry { top: -5vw;}
 form input, form textarea {
@@ -1020,6 +1046,7 @@ input[type="checkbox"], input[type="radio"] {
 /* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
 .show-xs, 
 .show-sm,
+.show-inline-sm,
 .show-md {
 display: none;
 }
@@ -1070,7 +1097,8 @@ display: none;
 }
 /* SM Media Query (48em / 768px----------------------------------------------------------*/
 @media(max-width: 48em) {
-  .show-sm        { display: block;}  
+  .show-sm        { display: block;} 
+  .show-inline-sm { display: inline-block;} 
   .hide-sm        { display: none;}
   .static-sm      { 
     position: static;
@@ -1141,7 +1169,10 @@ display: none;
   footer nav a, footer nav p {
     margin-bottom: 0.2rem;
   }
-
+  .about-social .button {
+    font-size: 1.2rem;
+    width: 240px;
+  }
 /* Images */
   .reccomended-logo { margin: auto;}
   .selling-point img  { 

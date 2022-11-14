@@ -7,8 +7,13 @@ header_image: /images/maud-and-ivy-colour.png
 header_image: /images/flowers-9.jpg
 header-background-position: 50% 60%
 header-title: Our Creations.
-header-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?
-
+header: 
+  - sub-header: Our Creations
+    description: Stunning, breathtaking, unique, brilliant, evocative, beautiful, perfect, incredible and just WOW!
+  - sub-header: Our creator
+    description: talented, gifted, naturally beautiful, transparent, successful, particular, professional and friendly.
+  - sub-header: Our Aim
+    description: we want you and your guests to say WOW!
 thoughtful_image: /images/event.jpg
 
 filter-buttons:
@@ -148,8 +153,25 @@ pricing:
         title: minimal flowers
 ---
 
-<!--Header  -->
-{% include header-section.html %}
+<section class="dark-gold-text  padded-header-card padded-b-2-sm"  >
+  <div class="grid" >
+      <div class="col-12 bg-image tall-60" style="background-image: url('{{page.header_image}}'); background-position: {{page.header-background-position}};"></div>      
+  </div>     
+  <div class="capped-width relative grid-right">
+    <div class="col-6_md-8_sm-12 grid-bottom text-left absolute static-sm  header-card">   
+    <div class="col-12 stone-color  grid-middle ">
+      <div class="col-12 card-text">
+        <h2 class="editable">{{page.header-title}}</h2>
+        {% for item in page.header %}
+        <p>
+          <span class="uppercase text-bold editable">{{item.sub-header}}</span>
+          <span class="editable">{{item.description}}</span> 
+        </p> 
+        {% endfor %} 
+      </div>
+    </div>       
+  </div>      
+</section> 
 
 
 <!-- gallery  -->
