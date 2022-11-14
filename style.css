@@ -291,13 +291,13 @@ font-family: 'Raleway', sans-serif;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 300;
     letter-spacing: 0.05em;
     line-height: 1.2;
   }
   h3 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 400;
   }
   h2:last-child, 
@@ -362,7 +362,7 @@ p a {
 .season-list a { 
   display: inline-block;
   margin-bottom: 0.8rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 /* HEADER AND FOOTER------------------------- */
@@ -391,11 +391,11 @@ nav .fa-brands {
   font-size: 1.3rem;
 }
 header nav a {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding:0rem 0.6rem;
   margin: 0 0.4rem;
   text-transform: uppercase;
-  line-height: 2.8;
+  line-height: 3.4;
   font-weight: 400;
 }
 nav a:last-child { 
@@ -686,8 +686,8 @@ footer nav a, footer nav p {
 /* Buttons -------------------------------------------------------------*/
 .button {
   display: inline-block;
-  font-family: inherit;
-  font-size: 1.2rem;
+  font-family: 'raleway', sans-serif;
+  font-size: 1.1rem;
   font-weight: 500;
   border: 2px solid;
   padding: 0.6rem 1.5rem;
@@ -697,7 +697,7 @@ footer nav a, footer nav p {
   text-align: center;
   transition: all 0.35s;
 }
-
+.seasonal .button { width: unset;}
 a.button:hover {
   background-color: var(--ivy-color);
   color: white;
@@ -864,90 +864,7 @@ select {
   padding: 0;
   cursor: pointer;
 }
-/* ACCORDIAN */
-.tab {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  margin-left: .5rem;
-  border: 1px solid;
-  margin: 0 0 -1px;
-}
-.tab input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-input[type="checkbox"], input[type="radio"] {
-  display: inline;
-}  
 
-.tab input[type="checkbox"] + label::after, .tab input[type="radio"] + label::after {
-  content: "+";
-}
-.tab input[type="checkbox"]:checked + label::after, .tab input[type="radio"]:checked + label::after {
-  transform: rotate(135deg);
-}
-.tab input[type="checkbox"]:checked + label {
-  font-weight: 700;
-}
-/* CROSS BUTTON */
-.tab label::after {
-  position: absolute;
-  left: 0rem;
-  top: .3rem;
-  display: block;
-  font-size: 1.5rem;
-  width: 2.2em;
-  height: 2.2em;
-  line-height: 2;
-  text-align: center;
-  -webkit-transition: all .35s;
-  -o-transition: all .35s;
-  transition: all .35s;
-}
-.tab label {
-  display: inline-block;
-  position: relative;
-  display: block;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  font-weight: 500;
-}
-/* heading and price */
-.tab p{
-  display: inline-block;
-  padding:1rem 3rem;
-  margin: 0;
-  line-height: 1.5;
-}
-.tab label span {
-  float: right;
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 4;
-  padding-right: 1rem;
-}
-/* when opened */
-.tab input:checked ~ .tab-content {
-  max-height: 100em;
-  opacity: 1;
-}
-.tab .tab-content {
-  max-height: 0;
-  display: block;
-  opacity: 0;
-  overflow: hidden;
-  -webkit-transition: max-height .35s,padding .35s,opacity .5s;
-  -o-transition: max-height .35s,padding .35s,opacity .5s;
-  transition: max-height .35s,padding .35s,opacity .5s;
-  padding: 0 1rem;
-}
-.tab-content p.caption {
-  font-size: 0.9rem;
-  padding: 0.5rem 0;
-}
 
 /* audio button!!!!!!!!! */
 .audio-player {
@@ -1091,7 +1008,6 @@ display: none;
   h1              { font-size: 10vw; }
   h1 span, 
   footer h1 span  { font-size: 0.65em;}
-  h2              { font-size: 2.2rem;}
   h3              { font-size: 1.6rem;}
   .text-large     { font-size: 2.2em; }
   .padded-0-md,
@@ -1101,8 +1017,8 @@ display: none;
 
 
   header nav a { 
-    font-size: 1.1rem;
-    padding: 0rem 0.4rem;
+    font-size: 1rem;
+    padding: 0rem 0.3rem;
     margin: 0 0.3rem;
   }
 
@@ -1136,11 +1052,15 @@ display: none;
   }
   .margin-0-sm                  { margin: 0;              }
   .padded-0-sm,
-  [class*=grid] .padded-0-sm    { padding: 0;             }  
+  [class*=grid] .padded-0-sm    { padding: 0;             }
+  .padded-1-sm,
+  [class*=grid] .padded-1-sm    { padding: 1rem;             }   
   .padded-t-sm,
   [class*=grid] .padded-t-sm    { padding-top: 5%;        }
   .padded-2-sm,
   [class*=grid] .padded-2-sm    { padding: 2rem;          }
+  .padded-t-1-sm,
+  [class*=grid] .padded-t-1-sm  { padding-top: 1rem;      }
   .padded-t-2-sm,
   [class*=grid] .padded-t-2-sm  { padding-top: 2rem;      }
   .padded-b-2-sm,
@@ -1172,7 +1092,8 @@ display: none;
     line-height: 1;
   }
 
-  h2            { font-size: 2rem;  }
+  h2            { font-size: 1.6rem;  }
+  h3            { font-size: 1.4rem;  }
   header nav a  {
     padding: 0rem 0.4rem;
     margin: 0rem 0.2rem;
@@ -1188,6 +1109,7 @@ display: none;
   }
   .heading h1,
   footer h1 { margin-top: 0.5rem;}
+  footer p  { font-size: 1rem;}
   footer nav a, footer nav p {
     margin-bottom: 0.2rem;
   }
@@ -1251,8 +1173,8 @@ display: none;
   .padded-r-0-xs                { padding-right: 0rem;  }
   .padded-b-0-xs,
   [class*=grid] .padded-b-0-xs  { padding-bottom: 0;    }
-
-  h2                            { font-size: 2rem; }
+  .padded-05,
+  [class*="grid"] .padded-05    { padding: 0.2rem;   }
   .text-large                   { font-size: 1.8em;}
 
   footer .show-xs       { display: inline-block;}

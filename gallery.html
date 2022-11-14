@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Gallery
-header_color: pink-color
 header_image: /images/maud-and-ivy-colour.png
 
 header_image: /images/flowers-9.jpg
@@ -197,24 +196,18 @@ pricing:
     <div class="col-12">
       <h3 class="text-center">Inspiration for your budget</h3>
       {% for item in page.pricing %}
-      <div class="tab">
-        <input id="tab-{{item.price}}" name="tabs" type="checkbox">
-        <label for="tab-{{item.price}}">
-            <p>{{item.budget}}</p>
-            <span>${{item.price}}</span>
-        </label>
-        <div class="tab-content hidden-tab">
+
+        <div class="">
             <div class="grid ">
-              <p class="padded-05">{{item.more-info}}</p>
+              <div class="col-12 text-center padded">
+                <h4 class="text-medium text-bold">${{item.price}}</h4>
+              </div>
               {% for item in item.image %}
               <div class="col-4 padded-05">
                 <div class="bg-image square" style="background-image: url('{{item.background_image}}')"></div>
-                <p class="caption">{{item.title}}</p>
               </div>
-
               {% endfor %}
             </div>
-        </div>
       </div>
       {% endfor %}
     </div>

@@ -1,4 +1,4 @@
-<header class="{{page.header_color}} dark-gold-text " >
+<header class="pink-color dark-gold-text " >
   <div class="grid padded-1 padded-r-2 padded-l-2  ">
     <div class="grid col-12  capped-width">
       {% if page.header == hide %}
@@ -13,7 +13,8 @@
       <nav class="col-8 text-right hide-sm">
         <a href="/about">About</a>
         <a href="/gallery">Gallery</a>
-        <a href="/enquiry">Enquiry|Order</a>
+        <a href="/enquiry">Order</a>
+        <a class="" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">{{site.data.contact-info.contact_number}}</a>
         {% include socials.html %}
       </nav>   
       <div class="col-2 text-right show-sm">
