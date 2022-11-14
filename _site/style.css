@@ -1246,6 +1246,7 @@ display: none;
   footer h1 {
     font-size: 11vw;
   }
+  footer h3 { font-size: 1.3rem;}
   /* BG-IMAGES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   .selling-point img  { 
     max-height:130px;
@@ -1263,6 +1264,9 @@ display: none;
     padding:4rem 2rem;
   }
   .gallery [class*="col"], .filterable-gallery [class*="col"] { margin-bottom: 0.5rem; }
+}
+@media (max-width:370px){
+  .break-mahalo     { display: block;}
 }
 @media (max-width: 22em) { 
   .break-xxs       {display: block;}
