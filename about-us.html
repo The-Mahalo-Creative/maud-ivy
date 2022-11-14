@@ -8,18 +8,133 @@ header-description-block: false
 header-title: Enquiry Form.
 header-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?
 
-about_image: /images/flowers-7.jpg
+about_image: 
 about-background-position:
 about2_image: /images/flowers-2.jpg
 about-background-position:
 leo_image: /images/flowers-1.jpg
 about-background-position:
+
+family:
+  - portrait_image: /images/flowers-7.jpg
+    bg-pos:
+    name-caption: Ivy - Inspiration
+  - portrait_image: /images/event.jpg
+    bg-pos:
+    name-caption: Monique
+  - portrait_image: /images/flowers-7.jpg
+    bg-pos:
+    name-caption: Nate - Quality Control
+
+portrait-monique_image: /images/event.jpg
+name-monique-caption: Monique
+portrait-dad_image: /images/event.jpg
+name-dad-caption: Monique
 ---
 
 <!--Header  -->
 {% include header-section.html %}
-
  <!--DAUGHTER  -->
+ <section class="dark-gold-text capped-width-lg overflow">
+  <div class="grid-right-middle capped-width">
+    <div class="col-12 padded padded-1-5-xs">
+      <h2 class="padded-b-2 text-normal">
+        <span class="editable">Our Foundations.</span>  
+      </h2>
+      <p class="editable"><span class="kontiki text-large">Maud and Ivy,</span> <br> what does it mean and who are we?</p>
+      <p class="editable"><strong>Maud</strong> is a nickname I have had since childhood and Ivy is my daughter’s name and also a beautiful plant I like to work with.  The name just seemed like a beautiful choice to me.</p> 
+      <p class="editable"> When you look deeper into the meanings of these names, they become more apt.  Maud is an old name signifying a <strong>“powerful battler”.</strong> Historically Ivy wreaths were presented to couples as a sign of <strong>“fidelity and faithfulness”.</strong></p>
+      <p class="editable">My son Nate also holds a special role with Maud and Ivy Flowers as he is in charge of quality control.  Just like me, he has a great eye for detail and he oversees all my work.  Together we are powerful, dependable and devoted to providing great service and work.</p>        
+    </div>
+    <div class=" col-12 grid padded-1 padded-r-0-md" >
+      <div class="col-12 grid horizontal-scroll-md gallery">
+        {% for item in page.family %}
+        <div class="col-4_md-5_sm-9_xs-11">
+          <div class="bg-image bg-overlay square" style="background-image: url('{{item.portrait_image}}'); background-position: '{{item.bg-pos}}';"></div>
+          <p class="padded-t-05 margin-b-0"><em>{{item.name-caption}}</em></p>
+        </div>
+        {% endfor %}
+      </div>        
+    </div>
+  </div>
+</section> 
+
+
+<section class="dark-gold-text">
+  <div class="grid-right-middle  capped-width">
+    <div class="col-12 grid padded padded-b-0 padded-1-5-xs ">
+      <div class="col-12_sm-12" >
+          <p class="editable">My real name is Monique and I was born on the Gold Coast in 1971 and have enjoyed living here my entire life. My father who migrated from Holland was a creative man and one of the Gold Coast's leading sign writers and sign makers in the 1970s-1990s [check dates]. He loved to entertain people with his humorous sketches. </p>
+      </div> 
+      <div class="col-12" >      
+          <p class="editable">Until now, nobody has followed in his creative footsteps. I recently decided to change direction in life due to injury and believe it has been a blessing in that I have now found my vocation. Creating gives me great pleasure. Handing over beautiful work for any occasion is very satisfying. Contemplating how I can make each and every arrangement more personal is essential to my process. I pride myself on taking </p>
+        <h3 class=" padded text-center">  
+            <em class="kontiki capitalise text-large"> <span class="editable">thoughtful</span> </em> 
+            <br> 
+            <span class="editable">to the next level.</span>
+        </h3>
+      </div>
+    </div>    
+    <div class="col-12 grid padded-l-1 padded-r-1 gallery" >
+        <div class="col-6_sm-12">
+          <div class="bg-image bg-overlay square" style="background-image: url('{{page.portrait-monique_image}}'); "></div>
+          <p class="padded-t-05"><em>{{page.name-monique-caption}}</em></p>
+        </div>
+        <div class="col-6 hide-sm">
+          <div class="bg-image bg-overlay square" style="background-image: url('{{page.portrait-dad_image}}');"></div>
+          <p class="padded-t-05"><em>{{page.name-dad-caption}}</em></p>
+        </div>
+    </div>  
+      
+  </div>
+</section> 
+
+<section class="dark-gold-text padded-b-10">
+  <div class="grid-right-middle  capped-width">
+    <div class="col-12 grid padded-lr padded-1-5-xs ">
+      <div class="col-12">
+        <p class="margin-b-0 editable">Our new logo “Leo” the lion was my creation.  Leo encompasses who I am and where I want my work to go.</p>
+      </div>
+      <div class="col-12 grid-center">
+        <div class="col-12  padded-2-xs padded-b-0-xs">      
+          <h3 class="text-center">
+            <span class="editable">bold,</span>
+            <em class="kontiki capitalise text-medium"><span class="editable">unmistakable</span></em> 
+            <span class="editable padded-b-1"> and couragous. </span>
+          </h3> 
+        </div>        
+        <div class="col-6_sm-10_xs-12 padded-b-2-xs">
+          <img class="" src="/images/maud-and-ivy-white.png" > 
+        </div>        
+      </div>
+     
+      <div class="col-12">
+          <p class="editable"> The image as a whole embraces our beginnings, my beautiful Ivy and our strength, passion and charisma. My business is in its infancy with planning and development a constant work in progress. My ambitious nature doesn't allow me to settle on any one thing. I constantly want to improve every element that I present to the world.</p>
+      </div>      
+    </div>
+
+  </div>
+</section> 
+
+
+
+<section class=" stone-color dark-gold-text">
+  <div class="grid capped-width padded-2  sm-thoughtful">
+      <div class="col-12 padded padded-0-xs">
+        <h2>What We Do</h2>
+        <h4 class="text-bold text-medium">Gold Coast Retail, Wedding and Event Florist.</h4>
+          <p class="editable"> Do you have a special someone you want to surprise? Do you have an event you want to commemorate or celebrate? Are planning a wedding?  Are you interstate, overseas or lack the time to drive around to retail shops? Do you want something that is special and unique? Are you driven by value not price? Do you appreciate details and like to plan ahead a little? If you can trust us to convey your wishes, then you're our customer!</p>
+          <p class="editable padded-t-sm">We aim to provide personalised service resulting in stylish and extraordinary work for all occasions. We want you to feel good about your investment so we ask a few questions to make sure we understand your needs!</p>
+          <p class="editable"><strong>Give us a go!</strong> All the others who gave us a go, came back for more.</p>
+          <p class="kontiki text-large text-right padded-r-2 padded-0-sm text-center-sm">
+            <span class="editable">Monique, Nate & Ivy x</span>
+          </p>            
+      </div>
+
+  </div>
+</section>
+ 
+ <!--DAUGHTER 
 <section class="dark-gold-text capped-width-lg about-pg bg-image-bg padded-t padded-0-sm">
     <div class="grid-right-middle capped-width">
       <div class="col-6_sm-12 grid-middle text-left padded padded-r-0 padded-0-sm" >
@@ -35,7 +150,7 @@ about-background-position:
           <div class="col-12 bg-image {{page.about-background-position}} square" style="background-image: url('{{page.about_image}}');"></div>      
       </div> 
   </section> 
-  <!-- SON -->
+
   <section class="stone-color dark-gold-text overflow">
     <div class="capped-width grid-middle tall-30">
         <div class="col-12 padded padded-4-2-sm" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
@@ -43,9 +158,9 @@ about-background-position:
         <p class="editable">My son Nate also holds a special role with Maud and Ivy Flowers as he is in charge of quality control.  Just like me, he has a great eye for detail and he oversees all my work.  Together we are powerful, dependable and devoted to providing great service and work.</p>           
       </div>
     </div>
-  </section> 
+  </section>  -->
 
- <!--FATHER  -->
+ <!--FATHER  
  <section class="dark-gold-text capped-width-lg about-leo bg-image-bg">
     <div class="grid-right-middle capped-width">
         <div class="col-6_sm-12 grid-middle padded">
@@ -56,9 +171,9 @@ about-background-position:
             <p class="editable">My father was a creative man, being one of the Gold Coast’s leading sign writers and sign makers and an artist entertaining people with his humorous sketches.  Until now, nobody has followed in his creative footsteps.  I decided to completely change direction in life due to injury and believe it has been a blessing and I have found what I am meant to do. </p>
         </div>
     </div>
-</section> 
+</section> -->
 
-<!-- LEO -->
+<!-- LEO 
 <section class="dark-gold-text padded-b padded-0-sm">
   <div class="grid-middle capped-width ">
     <div class="col-12 padded padded-t-0" >      
@@ -72,8 +187,8 @@ about-background-position:
       </h3>
     </div>
   </div>
-</section>  
-<!--ABOUT  -->
+</section>  -->
+<!--ABOUT  
 <section class="dark-gold-text overflow" >
   <div class="grid-right-middle flex-flip-sm capped-width">
     <div class="relative col-6_sm-12 grid-middle text-left" >    
@@ -96,7 +211,7 @@ about-background-position:
   </div>   
 </section>  
 
-<!-- SIGN OFF -->
+ SIGN OFF 
 <section class="dark-gold-text">
     <div class="grid capped-width padded-t-sm">
         <div class="col-12 padded">
@@ -109,33 +224,45 @@ about-background-position:
 
     </div>
 </section>
-
+-->
 
 <!-- How to Order-->
-<section class=" padded ivy-text padded-b-2-xs padded-t-2-xs dark-gold-text">
-  <div class="capped-width grid-middle tall-10 padded about-social">
+<section class=" padded ivy-text sm-thoughtful dark-gold-text">
+  <div class="capped-width grid-middle tall-10 padded padded-b-0 padded-0-xs about-social">
     <div class="col-12 text-center ">
       <h2 class="editable">How to Order</h2>
       <p class="editable">No matter how you place your order we will require all details as set out in our online <a href="">ORDER REQUEST</a> form.  Use this form as a guide if you decide to call or text us with your order.  We find it much simpler to use the online Order Request form as often we are busy and cannot respond to you immediately.  We take time to curate and create beautiful florals and offerings and require as much notice as you can give.
-
       </p>      
+      <!-- phone and email -->
       <div class="grid  col-12">
-        <div class="col-12 about-call-email">
-          <span class="inline-block padded-r-1 padded-0-sm">
+        <div class="col-12  hide-xxs">
+          <span class="inline-block padded-r-1">
             <p class="inline-block">
               <span class="editable text-bold margin-r-05">Call or Text:</span> 
-              <a class="break-xs margin-b-0" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">
+              <a class="break-sm margin-b-0" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">
                 {{site.data.contact-info.contact_number}}</a>
             </p>        
           </span>
-          <span class="inline-block">
+          <span class="inline-block ">
             <p class="inline-block">
               <span class="editable text-bold margin-r-05">Email:</span> 
-              <a class="break-xs"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">{{site.data.contact-info.contact_email}}</a> 
+              <a class="break-sm"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">{{site.data.contact-info.contact_email}}</a> 
             </p>             
-          </span>     
-
+          </span>   
         </div>
+        <!-- Direct msg -->
+        <div class="col-12 padded-t-1">          
+          <span class=" show-xxs padded-b-1">
+              <span class="editable text-bold margin-r-05">Call, Text or Email:</span></p> 
+              <a href="Tel:{{site.data.contact-info.contact_number}}" target="_blank"><i class="fa-solid fa-phone"></i></a>
+              <a  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank"><i class="fa-solid fa-envelope"></i></a>  
+          </span>   
+          <p class="text-bold "> <span class="editable"></span> Direct Message via:</p>                         
+            <a class="social" href="{{site.data.contact-info.instagram_href}}" target="_blank"><i class="fab fa-instagram"></i></a>   
+            <a class="social" href="{{site.data.contact-info.facebook_href}}" target="_blank"><i class="fab fa-facebook"></i></a> 
+            <a class="social" href="{{site.data.contact-info.whatsapp_number}}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> 
+        </div>   
+        <!-- xxxsm -->      
         <div class="col-12-center padded-b-2 padded-t-2">
           <a href="/enquiry.html/#enquiry" target="_blank" class="button  ">
             Enquiry
@@ -143,22 +270,8 @@ about-background-position:
           <a href="/enquiry.html/#order-request" target="_blank" class="button  ">
             Order Request
           </a>
-        </div>        
-
-        <div class="col-12 padded-t-1">
-          <p class="text-bold "> <span class="editable"></span> Direct Message via:</p>
-          <span class="">
-            
-                         
-            <a class="social" href="{{site.data.contact-info.instagram_href}}" target="_blank"><i class="fab fa-instagram"></i></a>   
-            <a class="social" href="{{site.data.contact-info.facebook_href}}" target="_blank"><i class="fab fa-facebook"></i></a> 
-            <a class="social" href="{{site.data.contact-info.whatsapp_number}}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>    
-   
-          </span>
         </div>         
       </div>
-
-
     </div>
   </div>
 </section>           

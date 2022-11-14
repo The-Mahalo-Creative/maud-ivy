@@ -40,7 +40,8 @@ font-family: 'Raleway', sans-serif;
   [class*="grid"] .padded-1    { padding: 1rem;     }
   .padded-2,
   [class*="grid"] .padded-2    { padding: 2rem;     }
-  
+
+
   .padded-t,
   [class*=grid] .padded-t  { padding-top: 5%;    }
   .padded-b,
@@ -50,6 +51,8 @@ font-family: 'Raleway', sans-serif;
   .padded-r,
   [class*=grid] .padded-r  { padding-right: 5%;  }
 
+  .padded-t-05,
+  [class*=grid] .padded-t-05  { padding-top: 0.5rem; }
   .padded-t-10,
   [class*=grid] .padded-t-10  { padding-top: 10%;    }
   .padded-b-10,
@@ -353,10 +356,6 @@ p a {
   color: var(--text-hover);
   transition: all 0.5s;
 }
-.about-social .about-call-email .fa-solid  {
-  font-size: 1.5rem;
-  padding:0.5rem 0.5rem;
-} 
 /* HEADER AND FOOTER------------------------- */
 header a {
   margin-bottom: 0;  
@@ -1052,6 +1051,7 @@ input[type="checkbox"], input[type="radio"] {
   background: transparent;
 }
 /* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
+.show-xxs,
 .show-xs, 
 .show-sm,
 .show-inline-sm,
@@ -1192,8 +1192,7 @@ display: none;
     background-size: 125%;
   }
   /* iNDEX PAGE */
-  .thoughtful-splatter.bg-image-bg, 
-  .about-pg.bg-image-bg{
+  .thoughtful-splatter.bg-image-bg{
     background-image: url('/images/bg-splatter2-sm.png'); 
     background-position: 100% 100%;
     background-size: cover; 
@@ -1217,7 +1216,11 @@ display: none;
   .flex-flip-xs   { flex-wrap: wrap-reverse; }
 
   .padded-0-xs, 
-  [class*=grid] .padded-0-xs    { padding-right: 0rem;  }
+  [class*=grid] .padded-0-xs    { padding: 0rem;  }
+  .padded-1-5-xs, 
+  [class*=grid] .padded-1-5-xs    { padding: 1.5rem;  }
+  .padded-2-xs, 
+  [class*=grid] .padded-2-xs    { padding: 2rem;  }
   [class*=grid] .padded-t-1-xs,
   .padded-t-1-xs                { padding-top: 1rem;    }
   [class*=grid] .padded-t-2-xs,
@@ -1232,7 +1235,8 @@ display: none;
   .padded-header-card           { padding-bottom: 2rem; }
   [class*=grid] .padded-r-0-xs,
   .padded-r-0-xs                { padding-right: 0rem;  }
-  .grid.padded-b-0-xs           { padding-bottom: 0;    }
+  .padded-b-0-xs,
+  [class*=grid] .padded-b-0-xs  { padding-bottom: 0;    }
 
   h2                            { font-size: 2rem; }
   .text-large                   { font-size: 1.8em;}
@@ -1262,7 +1266,8 @@ display: none;
 @media (max-width: 24em) { 
   .break-xxs       {display: block;}
   .hide-xxs        { display: none;}  
-
+  .show-xxs        {display: block;}
+  .flex-flip-xxs   { flex-wrap: wrap-reverse; }
   .mobile-menu a h1 { font-size: 12vw;}
   footer h1 {
     font-size: 10vw;
