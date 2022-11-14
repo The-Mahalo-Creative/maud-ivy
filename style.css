@@ -1264,7 +1264,7 @@ display: none;
   }
   .gallery [class*="col"], .filterable-gallery [class*="col"] { margin-bottom: 0.5rem; }
 }
-@media (max-width: 24em) { 
+@media (max-width: 22em) { 
   .break-xxs       {display: block;}
   .hide-xxs        { display: none;}  
   .show-xxs        {display: block;}

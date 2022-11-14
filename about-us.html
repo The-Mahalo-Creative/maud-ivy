@@ -26,10 +26,10 @@ family:
     bg-pos:
     name-caption: Nate - Quality Control
 father:
-  - portrait-monique_image: /images/event.jpg
-    name-monique-caption: Monique
-  - portrait-dad_image: /images/event.jpg
-    name-dad-caption: Monique
+  - portrait_image: /images/event.jpg
+    name-caption: Monique
+  - portrait_image: /images/event.jpg
+    name-caption: Monique
 ---
 
 <!--Header  -->
@@ -75,15 +75,13 @@ father:
         </h3>
       </div>
     </div>    
-    <div class="col-12 grid padded-l-1 padded-r-1 gallery" >
-        <div class="col-6_sm-12">
-          <div class="bg-image bg-overlay square" style="background-image: url('{{page.portrait-monique_image}}'); "></div>
-          <p class="padded-t-05"><em>{{page.name-monique-caption}}</em></p>
+    <div class="col-12 grid padded-l-1 horizontal-scroll-md padded-r-1 padded-r-0-md gallery" >
+      {% for item in page.father %}
+        <div class="col-6_sm-9_xs-11">
+          <div class="bg-image bg-overlay square" style="background-image: url('{{item.portrait_image}}'); "></div>
+          <p class="padded-t-05"><em>{{item.name-caption}}</em></p>
         </div>
-        <div class="col-6 hide-sm">
-          <div class="bg-image bg-overlay square" style="background-image: url('{{page.portrait-dad_image}}');"></div>
-          <p class="padded-t-05"><em>{{page.name-dad-caption}}</em></p>
-        </div>
+        {% endfor %}
     </div>  
       
   </div>
@@ -235,7 +233,7 @@ father:
       </p>      
       <!-- phone and email -->
       <div class="grid  col-12">
-        <div class="col-12 ">
+        <div class="col-12 hide-xxs ">
           <span class="inline-block padded-r-1 break-sm">
             <p class="inline-block">
               <span class="editable text-bold margin-r-05 break-xs">Call or Text:</span> 
@@ -249,6 +247,13 @@ father:
               <a class="subtle break-sm"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">{{site.data.contact-info.contact_email}}</a> 
             </p>             
           </span>   
+        </div>
+        <div class="col-12 show-xxs">
+          <p class="text-bold margin-b-0">
+            <a class="text-bold" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">Call,</a>
+            <a class="text-bold " href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">Text</a> or
+            <a class="text-bold"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">Email</a> 
+          </p>
         </div>
         <!-- Direct msg -->
         <div class="col-12 padded-t-1">          
