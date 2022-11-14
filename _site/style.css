@@ -599,7 +599,7 @@ footer nav a, footer nav p {
 .padded-b-card  { padding-bottom: 7rem;  }
  /* GALLERY ------------------------------------------------------- */
  /* gallery section */
-.gallery .bg-image:hover    { background-size:105%;}
+.gallery-size .bg-image:hover    { background-size:105%;}
 /* Background of gallery when active  */
 .lg-backdrop                { background-color: rgba(222, 208, 184, 1);}
 .lg-backdrop.in { opacity: 0.95;}

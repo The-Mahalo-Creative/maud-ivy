@@ -1,4 +1,4 @@
-<div class="grid-center filterable-gallery dark-gold-text" id="lightgallery">    
+<div class="gallery-size grid-center filterable-gallery dark-gold-text" id="lightgallery">    
     {% for item in page.gallery %}
     <div href="{{item.background_image}}" class="gallery-item col-4_md-6_xs-12 {{item.type | downcase }} relative" title="{{item.title}}" alt="{{item.alt}}">
         <div class="bg-image" style="background-image: url('{{item.background_image}}'); background-position: '{{item.bg-pos}}';">
