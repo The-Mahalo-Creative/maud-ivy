@@ -316,6 +316,9 @@ font-family: 'Raleway', sans-serif;
   }
 ul { padding-left: 1.5rem;}
 li { padding-left: 1rem; }
+
+
+
 a {
   text-decoration:none;
   color: inherit;
@@ -355,6 +358,12 @@ p a {
 .about-social p a:hover{
   color: var(--text-hover);
   transition: all 0.5s;
+}
+.season-list a { 
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 /* HEADER AND FOOTER------------------------- */
 header a {
@@ -534,7 +543,7 @@ footer nav a, footer nav p {
 /* Aspect ratio ----------------------------------------------------- */
 .landscape-tall { padding-bottom: 86.2%;}
 /* col-8 + col-4 portrait-tall */
-.landscape-wide{ padding-bottom: 56%;  }
+.landscape-wide{ padding-bottom: 49%;  }
 /* col-8 + col-4 portrait-sm */
 .landscape     { padding-bottom: 66%;  }
 .portrait-tall { padding-bottom: 176%; }

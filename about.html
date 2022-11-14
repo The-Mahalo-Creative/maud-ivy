@@ -4,9 +4,6 @@ title: About Us
 header_color: pink-color
 header_image: /images/flowers-1.jpg
 header-background-position:
-header-description-block: false
-header-title: Enquiry Form.
-header-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptates cum ipsa explicabo, quos temporibus neque nisi eveniet ad ex voluptatibus, alias dolores voluptas! Qui amet sapiente cum tempora. Eveniet?
 
 about_image: 
 about-background-position:
@@ -135,6 +132,65 @@ father:
 
   </div>
 </section>
+
+<!-- How to Order-->
+<section class=" padded ivy-text sm-thoughtful dark-gold-text">
+  <div class="capped-width grid-middle tall-10 padded padded-b-0 padded-0-xs about-social">
+    <div class="col-12 text-center ">
+      <h2 class="editable">How to Order</h2>
+      <p class="editable">No matter how you place your order we will require all details as set out in our online <a href="/enquiry/#order-request">ORDER REQUEST</a> form.  Use this form as a guide if you decide to call or text us with your order.  We find it much simpler to use the online Order Request form as often we are busy and cannot respond to you immediately.  We take time to curate and create beautiful florals and offerings and require as much notice as you can give.
+      </p>      
+      <!-- phone and email -->
+      <div class="grid  col-12">
+        <div class="col-12 hide-xxs ">
+          <span class="inline-block padded-r-1 padded-0-sm break-sm">
+            <p class="inline-block">
+              <span class="editable text-bold margin-r-05 break-xs">Call or Text:</span> 
+              <a class="subtle break-sm margin-b-0" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">
+                {{site.data.contact-info.contact_number}}</a>
+            </p>        
+          </span>
+          <span class="inline-block ">
+            <p class="inline-block">
+              <span class="editable text-bold margin-r-05">Email:</span> 
+              <a class="subtle break-sm"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">{{site.data.contact-info.contact_email}}</a> 
+            </p>             
+          </span>   
+        </div>
+        <div class="col-12 show-xxs">
+          <p class="text-bold margin-b-0">
+            <a class="text-bold" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">Call,</a>
+            <a class="text-bold " href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">Text</a> or
+            <a class="text-bold"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">Email</a> 
+          </p>
+        </div>
+        <!-- Direct msg -->
+        <div class="col-12 padded-t-1">          
+<!--           <span class=" show-xxs padded-b-1">
+              <span class="editable text-bold margin-r-05">Call, Text or Email:</span></p> 
+              <a href="Tel:{{site.data.contact-info.contact_number}}" target="_blank"><i class="fa-solid fa-phone"></i></a>
+              <a  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank"><i class="fa-solid fa-envelope"></i></a>  
+          </span>    -->
+          <p class="text-bold "> <span class="editable"></span> Direct Message via:</p>                         
+            <a class="social" href="{{site.data.contact-info.instagram_href}}" target="_blank"><i class="fab fa-instagram"></i></a>   
+            <a class="social" href="{{site.data.contact-info.facebook_href}}" target="_blank"><i class="fab fa-facebook"></i></a> 
+            <a class="social" href="{{site.data.contact-info.whatsapp_number}}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> 
+        </div>   
+        <!-- xxxsm -->      
+        <div class="col-12-center padded-b-2 padded-t-2">
+          <a href="/enquiry/#enquiry" target="_blank" class="button  ">
+            Enquiry
+          </a>
+          <a href="/enquiry/#order-request" target="_blank" class="button  ">
+            Order Request
+          </a>
+        </div>         
+      </div>
+    </div>
+  </div>
+</section>           
+<!--Gallery  -->
+{% include gallery-section.html %}
  
  <!--DAUGHTER 
 <section class="dark-gold-text capped-width-lg about-pg bg-image-bg padded-t padded-0-sm">
@@ -227,62 +283,3 @@ father:
     </div>
 </section>
 -->
-
-<!-- How to Order-->
-<section class=" padded ivy-text sm-thoughtful dark-gold-text">
-  <div class="capped-width grid-middle tall-10 padded padded-b-0 padded-0-xs about-social">
-    <div class="col-12 text-center ">
-      <h2 class="editable">How to Order</h2>
-      <p class="editable">No matter how you place your order we will require all details as set out in our online <a href="">ORDER REQUEST</a> form.  Use this form as a guide if you decide to call or text us with your order.  We find it much simpler to use the online Order Request form as often we are busy and cannot respond to you immediately.  We take time to curate and create beautiful florals and offerings and require as much notice as you can give.
-      </p>      
-      <!-- phone and email -->
-      <div class="grid  col-12">
-        <div class="col-12 hide-xxs ">
-          <span class="inline-block padded-r-1 padded-0-sm break-sm">
-            <p class="inline-block">
-              <span class="editable text-bold margin-r-05 break-xs">Call or Text:</span> 
-              <a class="subtle break-sm margin-b-0" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">
-                {{site.data.contact-info.contact_number}}</a>
-            </p>        
-          </span>
-          <span class="inline-block ">
-            <p class="inline-block">
-              <span class="editable text-bold margin-r-05">Email:</span> 
-              <a class="subtle break-sm"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">{{site.data.contact-info.contact_email}}</a> 
-            </p>             
-          </span>   
-        </div>
-        <div class="col-12 show-xxs">
-          <p class="text-bold margin-b-0">
-            <a class="text-bold" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">Call,</a>
-            <a class="text-bold " href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">Text</a> or
-            <a class="text-bold"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">Email</a> 
-          </p>
-        </div>
-        <!-- Direct msg -->
-        <div class="col-12 padded-t-1">          
-<!--           <span class=" show-xxs padded-b-1">
-              <span class="editable text-bold margin-r-05">Call, Text or Email:</span></p> 
-              <a href="Tel:{{site.data.contact-info.contact_number}}" target="_blank"><i class="fa-solid fa-phone"></i></a>
-              <a  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank"><i class="fa-solid fa-envelope"></i></a>  
-          </span>    -->
-          <p class="text-bold "> <span class="editable"></span> Direct Message via:</p>                         
-            <a class="social" href="{{site.data.contact-info.instagram_href}}" target="_blank"><i class="fab fa-instagram"></i></a>   
-            <a class="social" href="{{site.data.contact-info.facebook_href}}" target="_blank"><i class="fab fa-facebook"></i></a> 
-            <a class="social" href="{{site.data.contact-info.whatsapp_number}}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> 
-        </div>   
-        <!-- xxxsm -->      
-        <div class="col-12-center padded-b-2 padded-t-2">
-          <a href="/enquiry.html/#enquiry" target="_blank" class="button  ">
-            Enquiry
-          </a>
-          <a href="/enquiry.html/#order-request" target="_blank" class="button  ">
-            Order Request
-          </a>
-        </div>         
-      </div>
-    </div>
-  </div>
-</section>           
-<!--Gallery  -->
-{% include gallery-section.html %}
