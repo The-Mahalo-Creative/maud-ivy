@@ -606,7 +606,10 @@ footer nav a, footer nav p {
 
 /* Filterable Gallery Styles   */
 .filterable-gallery .bg-image { padding-bottom: 100%;}
-
+.seasonal-gallery [class*=col] {
+  padding: 0.8%;
+  margin-bottom: 0; 
+}
 .gallery [class*=col], 
 .filterable-gallery [class*=col] {
   padding: 1%;

@@ -1,0 +1,31 @@
+collections:
+  seasons:
+    output: true
+    permalink: /seasons/:slug/
+
+_select_data:
+  aspect-ratios:
+    - square
+    - portrait-sm 
+    - portrait
+    - portrait-tall
+    - landscape
+    - landscape-wide    
+    - landscape-tall
+
+  column-sizes:
+    col-6: One Half
+    col-12: Full Width
+    col-4: One Third
+    col-3: One Quarter
+    col-6_sm-12: One Half (Stacked)
+    col-4_sm-12: One Third (Stacked)
+    col-3_sm-12: One Quarter (Stacked)
+    
+_comments:
+ title: Max 70 characters
+ social_image: Landscape 1200 x 627px
+
+url: "https://maudandivy.com/"
+plugins:
+ - jekyll-sitemap

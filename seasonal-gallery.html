@@ -1,0 +1,66 @@
+---
+layout: default
+title: Seasonal Gallery
+header-background-position:
+terms-conditons: Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit exercitationem officiis, voluptates at tempora eveniet repellendus natus quos nostrum labore dolorem illum voluptate. Incidunt perferendis veritatis saepe, eius eligendi fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit exercitationem officiis, voluptates at tempora eveniet repellendus natus quos nostrum labore dolorem illum voluptate. Incidunt perferendis veritatis saepe, eius eligendi fuga?
+xmas:
+  - type: dried/preserved pastels
+    background_image: /images/flowers-1.jpg
+    aspect: square
+    col: col-4 
+    title: Flower 1    
+    alt: 
+  - type: Seasonal
+    background_image: /images/flowers-2.jpg
+    bg-pos:
+    aspect: square
+    col: col-4 
+    title: Flower 1
+    alt: 
+  - type: pastels
+    background_image: /images/flowers-3.jpg
+    bg-pos:
+    aspect: square
+    col: col-4 
+    title: Flower 2
+    alt: 
+  - type: pastels
+    background_image: /images/flowers-4.jpg
+    bg-pos:
+    aspect: square
+    col: col-4
+    title: Flower 2
+    alt: 
+  - type: pastels
+    background_image: /images/flowers-5.jpg
+    bg-pos:
+    aspect: landscape-wide
+    col: col-8 
+    title: Flower 1
+    alt: 
+
+---
+{% for season in site.seasons %}
+<section class="padded-lr padded-2  dark-gold-text">
+    <div class="capped-width grid">
+        
+        <div class="col-12 grid" id="{{season.title | slugify}}">
+            <div class="col-5_sm-12-middle">
+                <h3>{{season.title}}</h3>
+            </div>
+            <div class="col-7_sm-12 grid">
+                <div class="gallery-size col-12 grid-center seasonal-gallery dark-gold-text" id="xmas">    
+                    {% for item in season.gallery %}
+                    <div href="{{item.background_image}}" class="gallery-item {{item.col}}{{item.type | downcase }} relative" title="{{item.title}}" alt="{{item.alt}}">
+                        <div class="bg-image {{item.aspect}}" style="background-image: url('{{item.background_image}}'); background-position: '{{item.bg-pos}}';">
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+{% endfor %}
