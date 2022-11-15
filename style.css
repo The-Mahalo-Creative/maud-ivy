@@ -264,7 +264,7 @@ font-family: 'Raleway', sans-serif;
  }
  .kontiki { font-family: 'KonTikiEnchanted';}
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'raleway', sans-serif;
     color: var(--dark-text);
     background-color: var(--bg-color);
     cursor:default;
@@ -333,7 +333,7 @@ a h1:hover, a:hover{
 }
 p a { 
   border-bottom: 1px solid;
-  font-style: italic;
+  font-weight: 400;
 }
 .subtle, .subtle p, .sublte a {
   opacity: 1 ;
@@ -391,6 +391,7 @@ nav .fa-brands {
   font-size: 1.3rem;
 }
 header nav a {
+  font-family: 'raleway';
   font-size: 1rem;
   padding:0rem 0.6rem;
   margin: 0 0.4rem;
@@ -405,8 +406,7 @@ nav a:last-child {
 footer a { font-size: 1rem;}
 footer nav .fab { padding: 0.2rem 0.8rem;}
 .head-about h2 {
-    font-size: 2.6rem;
-    text-transform: uppercase;
+    font-size: 1.8rem;
     line-height: 1.3;
     font-weight: 400;
 }

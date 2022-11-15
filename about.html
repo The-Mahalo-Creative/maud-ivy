@@ -31,7 +31,7 @@ father:
       <div class="col-12 grid bg-image  " style="background-image: url('{{page.header_image}}');">   
         <div class="col-12 capped-width grid-middle-center tall-60">
           <div class="col-12 padded text-center-sm">
-            <h2 class="text-bold capitalise ">Gold Coast Retail, <br> Wedding and <br>Event Florist.</h2>
+            <h2 class="text-bold capitalise "> Retail, Wedding and Event Florist <br><span class="kontiki text-medium" style="font-size:2.8rem">Gold Coast</span> </h2>
           </div>
           
         </div> 
@@ -58,7 +58,7 @@ father:
     <div class=" col-12 grid padded-1 padded-r-0-md" >
       <div class="col-12 grid horizontal-scroll-md gallery">
         {% for item in page.family %}
-        <div class="col-4_md-5_sm-9_xs-11">
+        <div class="col-4_sm-9_xs-11">
           <div class="bg-image bg-overlay square" style="background-image: url('{{item.portrait_image}}'); background-position: '{{item.bg-pos}}';"></div>
           <p class="padded-t-05 margin-b-0"><em>{{item.name-caption}}</em></p>
         </div>
@@ -111,7 +111,10 @@ father:
       <div class="col-12 show-sm">
         <p class="margin-b-0 editable">Our new logo “Leo” the lion was my creation.  Leo encompasses who I am and where I want my work to go. The image as a whole embraces our beginnings, my beautiful Ivy and our strength, passion and charisma. My business is in its infancy with planning and development a constant work in progress. My ambitious nature doesn't allow me to settle on any one thing. I constantly want to improve every element that I present to the world.</p>
       </div>      
-      <div class="col-12 grid-center">
+      <div class="col-12 grid-center">        
+        <div class="col-6_sm-10_xs-12 ">
+          <img class="" src="/images/maud-and-ivy-white.png" > 
+        </div>     
         <div class="col-12  padded-2-xs padded-b-0-xs">      
           <h3 class="text-center">
             <span class="editable">bold</span>
@@ -119,9 +122,7 @@ father:
             <span class="editable padded-b-1"> courageous </span>
           </h3> 
         </div>        
-        <div class="col-6_sm-10_xs-12 ">
-          <img class="" src="/images/maud-and-ivy-white.png" > 
-        </div>        
+   
       </div>      
     </div>
 
@@ -157,17 +158,17 @@ father:
       <div class="grid  col-12">
         <div class="col-12 hide-xxs ">
           <span class="inline-block padded-r-1 padded-0-sm break-sm">
-            <p class="inline-block">
-              <span class="editable text-bold margin-r-05 break-xs">Call or Text:</span> 
-              <a class="subtle break-sm margin-b-0" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">
-                {{site.data.contact-info.contact_number}}</a>
-            </p>        
+            <p class="inline-block margin-b-0">
+              <span class="editable margin-r-05 break-xs">Call or Text:</span> 
+              
+            </p>    <a class="subtle text-bold break-sm margin-b-0" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">
+                {{site.data.contact-info.contact_number}}</a>    
           </span>
-          <span class="inline-block ">
-            <p class="inline-block">
-              <span class="editable text-bold margin-r-05">Email:</span> 
-              <a class="subtle break-sm"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">{{site.data.contact-info.contact_email}}</a> 
-            </p>             
+          <span class="inline-block padded-t-1 ">
+            <p class="inline-block  margin-b-0">
+              <span class="editable margin-r-05">Email:</span> 
+               
+            </p> <a class="subtle break-sm text-bold"  href="mailto:{{site.data.contact-info.contact_email}}" target="_blank">{{site.data.contact-info.contact_email}}</a>            
           </span>   
         </div>
         <div class="col-12 show-xxs">
