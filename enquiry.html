@@ -3,10 +3,8 @@ layout: default
 title: Enquiry
 header_image: /images/flowers-8.jpg
 header-background-position:
-
 enquiry_image: /images/icons-flower-watercolour.png
 enquiry-background-position:
-
 occasion:
   - option: Wedding
   - option: Engagement
@@ -15,26 +13,23 @@ occasion:
   - option: Baby
   - option: Graduation
   - option: Condolences
-
 budget:
-  - option: $80  
-  - option: $100  
-  - option: $120  
-  - option: $150  
-  - option: $200  
-
+  - option: $80
+  - option: $100
+  - option: $120
+  - option: $150
+  - option: $200
+  - option: $300
 colour-scheme:
   - option: Pink & White
   - option: Pastels
   - option: Green & White
   - option: Punchy
-
-blooms: 
+blooms:
   - option: Seasonal
   - option: Native
   - option: Seasonal/Native Mix
   - option: Dried/Preserved
-
 vases:
   - option: Glass
   - option: White Ceramic
@@ -46,7 +41,6 @@ vases:
   - option: Cylinder Box Pale Pink
   - option: Cylinder Box Pale Blue
   - option: Cylinder Box Black
- 
 our-creations:
   - option: one
   - option: two
@@ -60,13 +54,11 @@ our-creations:
   - option: ten
   - option: eleven
   - option: twelve
-
 delivery:
   - option: Collection
   - option: Next Day Delivery
   - option: Other
 ---
-
 <!--Header  -->
 {% include header-section.html %}
 
@@ -107,12 +99,12 @@ delivery:
                 </form>
             </div>
             <div class="col-5_sm-7_xs-9 grid-bottom padded-1 padded-l-0 padded-2-sm padded-t-0-sm padded-l-0-sm">
-                <div class="col-12 bg-image {{page.enquiry-background-position}} square" style="background-image: url('{{page.enquiry_image}}');"></div>      
-            </div> 
+                <div class="col-12 bg-image {{page.enquiry-background-position}} square" style="background-image: url('{{page.enquiry_image}}');">      
+             
 
-        </div>
-    </div> 
-</section>-->
+        
+     
+-->
 <!-- Contact -->
 <section class="dark-gold-text">
     <div class="padded contact">
@@ -133,10 +125,10 @@ delivery:
                             </div>
                            
                             <div class="col-6_sm-12 padded-r-1 padded-0-sm">
-                                <input type="text" name="_name" id="_name" placeholder="Your Name*" required>
+                                <input type="text" name="_name" id="_name" placeholder="Your Name*" required />
                             </div>
                             <div class="col-6_sm-12 padded-l-1 padded-0-sm">
-                                <input type="email" name="_replyto" id="_replyto" placeholder="Your Email*" required="">                    
+                                <input type="email" name="_replyto" id="_replyto" placeholder="Your Email*" required="" />                    
                             </div>    
                         </div>    
                         <!-- oCCASION -->
@@ -144,7 +136,7 @@ delivery:
                             <label for="occasion">
                                 <h4 class="editable">Occasion</h4>
                             </label>
-                            <input list="type-occasion" id="occasion"  name="occasion" placeholder="Your Occasion">
+                            <input list="type-occasion" id="occasion" name="occasion" placeholder="Your Occasion" />
                             <datalist id="type-occasion">
                                 {% for item in page.occasion %}
                                 <option>{{item.option}}</option> 
@@ -156,7 +148,7 @@ delivery:
                             <label for="budget">
                                 <h4 class="editable">budget* (exclusive of add ons)</h4>
                             </label>
-                            <input list="type-budget" name="budget" id="budget" placeholder="Your Budget"  required>
+                            <input list="type-budget" name="budget" id="budget" placeholder="Your Budget" required />
                             <datalist id="type-budget">                        
                                 {% for item in page.budget %}
                                 <option>{{item.option}}</option> 
@@ -168,7 +160,7 @@ delivery:
                             <label for="colour-scheme">
                                 <h4 class="editable">Colour Scheme*</h4>
                             </label>
-                            <input list="type-colour-scheme" name="colour-scheme" id="colour-scheme" placeholder="Something else?"  required>
+                            <input list="type-colour-scheme" name="colour-scheme" id="colour-scheme" placeholder="Something else?" required />
                             <datalist id="type-colour-scheme">                      
                             {% for item in page.colour-scheme %}
                                 <option>{{item.option}}</option>
@@ -187,7 +179,7 @@ delivery:
                             </select>
                         </div>
                         <!-- No custom / VASES-->
-                        <div class="col-6_sm-12-bottom padded-r-1 padded-0-sm" >
+                        <div class="col-6_sm-12-bottom padded-r-1 padded-0-sm">
                             <label for="vase">
                                 <h4 class="editable">Add Vase</h4>
                                 <p class="subtle"><span class="editable">Choose a vase</span></p>
@@ -224,13 +216,13 @@ delivery:
                                 <h4 class="editable">Recipient Details.*</h4>            
                             </div>  
                             <div class="col-6_sm-12 padded-r-1 padded-0-sm">
-                                <input type="text" name="_name" placeholder="Recipient Name*" required>
+                                <input type="text" name="_name" placeholder="Recipient Name*" required />
                             </div>
                             <div class="col-6_sm-12 padded-l-1 padded-0-sm">
-                                <input type="tel" name="phone-no" id="phone-no" placeholder="Recipient Number*" required>                        
+                                <input type="tel" name="phone-no" id="phone-no" placeholder="Recipient Number*" required />                        
                             </div>                            
                             <div class="col-12 padded-b-1">
-                                <input  placeholder="Recipient Address*"  required>
+                                <input placeholder="Recipient Address*" required />
                             </div>
 
                             <!-- delivery -->
@@ -248,21 +240,21 @@ delivery:
                             <div class="col-6_sm-12 padded-l-1 padded-0-sm">
                                 <label>
                                     <h4 class="editable">Other date</h4> 
-                                    <input type="date">
+                                    <input type="date" />
                                 </label>      
                             </div>
                             <!-- FIX -->
                             <div class="col-6_sm-12 padded-1 padded-l-0 padded-r-0-sm">
-                                <label class="container padded-l-0" > 
+                                <label class="container padded-l-0"> 
                                     <h4 class="editable">REQUEST TAX INVOICE NOW</h4>
-                                    <input type="checkbox" name="invoice" checked>
+                                    <input type="checkbox" name="invoice" checked />
                                     <span class="checkmark"></span>
                                 </label>
                             </div> 
                             <div class="col-6_sm-12 padded-1 padded-r-0 padded-l-0-sm ">                                
-                                <label class="container padded-l-0" > 
+                                <label class="container padded-l-0"> 
                                     <h4 class="editable">Don't add me to mail list</h4>
-                                    <input type="checkbox" name="mail-list" >
+                                    <input type="checkbox" name="mail-list" />
                                     <span class="checkmark"></span>
                                 </label>
                             </div> 
@@ -271,14 +263,14 @@ delivery:
                                 <label for="special-request">
                                     <h4 class="editable">Special Requests or Delivery Instructions</h4>                            
                                     <p class="subtle"><span class="editable">Example: you may like to add a card, chocolates or wine to your order.  </span></p>
-                                    <p class="subtle"><span class="editable">I can supply any of <a class="subtle" href="https://www.instagram.com/littlecocoa_au/">@littlecocoa_au</a>’s range. View their site<a href="https://littlecocoa.com.au/shop/"  class="subtle"> here.</a> </span></p>
+                                    <p class="subtle"><span class="editable">I can supply any of <a class="subtle" href="https://www.instagram.com/littlecocoa_au/">@littlecocoa_au</a>’s range. View their site<a href="https://littlecocoa.com.au/shop/" class="subtle"> here.</a> </span></p>
                                     <textarea class="input-text"></textarea>
                                 </label> 
                             </div>
                         </div>   
                         <!-- SUBMIT -->
                         <div class="col-12 padded-tb">                            
-                            <button type="submit"  value="special-request"> Submit </button>   
+                            <button type="submit" value="special-request"> Submit </button>   
                         </div>
                     </div>         
                 </form>
