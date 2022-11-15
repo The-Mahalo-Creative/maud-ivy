@@ -1,29 +1,25 @@
-seo: 
-  site_name: Maud and Ivy
-  title:  Maud and Ivy
-  description:  Gold Coast Florist
+seo:
+  site_name: Maud and Ivy Flowers
+  title: Maud and Ivy Flowers
+  description: Gold Coast Florist
   social_image: /images/maud-and-ivy-logo-fb.jpg
-  social-image-alt: 
-  twitter_card: 
-  twitter_description:  
-  author: 
-  favicon_image: 
+  social-image-alt:
+  twitter_card:
+  twitter_description:
+  author:
+  favicon_image:
 _comments:
- title: 
- social_image: 
-
-social: 
+  title:
+  social_image:
+social:
   instagram_username:
   facebook_url:
-  twitter_username: 
-  
+  twitter_username:
 footer:
   footer-logo-img: true
   font_color: dark-gold-text
   footer-logo_image: /images/maud-and-ivy-colour.png
   footer-logo-alt:
-
-
 gallery:
   - aspect-ratio: square
     background_image: /images/flowers-1.jpg
@@ -33,8 +29,7 @@ gallery:
   - aspect-ratio: square
     background_image: /images/flowers-4.jpg
     bg-pos:
-
-design: 
+design:
   dark-text_color: '#453540'
   bg-color_color: '#ffffff'
   light-text_color: '#ffffff'
