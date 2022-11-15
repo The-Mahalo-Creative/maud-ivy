@@ -7,7 +7,7 @@ slick-slider: true
 
 thoughtful_image: /images/event.jpg
 thoughtful-background-position: bg-pos-l
-
+enquiry_image: /images/icons-flower-watercolour.png
 
 about_image: /images/flowers-4.jpg
 about-background-position: bg-pos-l
@@ -64,7 +64,7 @@ recommendations:
 </section>
 
 <!-- SELLING POINTS -->
-<section class=" dark-gold-text padded padded-b-0">
+<section class=" dark-gold-text padded ">
    <div class="capped-width grid-middle tall-20">
     {% for item in page.selling-points %}
       <div class="col-4_xs-12 grid text-center padded-1">
@@ -99,13 +99,13 @@ recommendations:
         <p class="margin-b-0"><a href="/about.html">Our Foundations.</a> </p>
       </div>
     </div>
-    <div class="col-6_sm-12 grid-middle padded hide-sm">
+    <div class="col-6_sm-12 grid-middle padded ">
         <div class="col-12 bg-image {{page.thoughtful-background-position}} square" style="background-image: url('{{page.thoughtful_image}}');"></div>      
     </div> 
   </div>   
 </section>  
 
-<!--ABOUT  -->
+<!--ABOUT 
 <section class="dark-gold-text padded-b-card padded-0-sm " >
   <div class="grid-right-middle flex-flip-sm capped-width">
     <div class="col-6_sm-12 grid-top padded-l-2 padded-sm" >
@@ -123,11 +123,11 @@ recommendations:
       </div>  
     </div>  
   </div> 
-</section>  
+</section>   -->
 {% assign featured_post = site.seasons | where: 'display', 'true' %}
 {% for season in featured_post %}
 <section class="padded seasonal dark-gold-text">
-  <div class="capped-width grid">
+  <div class="capped-width grid padded-b">
     <div class="col-12 grid" id="{{season.title | slugify}}">
       <div class="col-12-middle text-center-sm">
         <h3>{{season.title}}</h3>
@@ -217,3 +217,50 @@ recommendations:
 
 <!--Gallery  -->
 {% include gallery-section.html %}
+
+ 
+<!-- Contact -->
+<section class="dark-gold-text">
+  <div class="padded padded-t-0 contact">
+      <div class="capped-width grid ">
+      <!-- RIGHT COLUMN -->
+          <div class="col-6_md-7_sm-12 padded padded-r-0 padded-sm padded-b-0-sm grid" id="enquiry">
+              <h2 class="editable">Enquiry</h2>
+              <p class="subtle"><span class="editable">Use this use this no obligation enquiry form to give us some preliminary information about your upcoming floral needs.</span></p>
+          <!-- FORM -->
+              <form class="col-12 " name="maud-and-ivy" data-netlify="true" action="/success.html" method="post">
+              <!-- YOUR DETAILS -->
+                  <div class="grid">    
+                      <div class="col-12 padded-t-1">
+                          <h4 class="">Your Details.*</h4>
+                          <input type="text" name="_name" id="_name" placeholder="Your Name*" required>
+                          <input type="email" name="_replyto" id="_replyto" placeholder="Your Email*" required="">                           
+                      </div>                        
+                      <div class="col-12 padded-b">
+                          <label for="message">
+                              <h4>Message</h4>
+                          </label>
+                          <textarea name="message" class="input-text"></textarea>   
+                      </div>  
+                      <div class="col-12 padded-t-1 padded-b-1">                                
+                          <label class="container padded-l-0" > 
+                              <h4 class="editable">Don't add me to your mail list</h4>
+                              <input type="checkbox" name="mail-list" >
+                              <span class="checkmark"></span>
+                          </label>
+                      </div> 
+                      <div class="col-12 padded-tb">                            
+                          <button type="submit"  value="Send Request"> Submit </button>   
+                      </div>
+                  </div>  
+                                      
+              </form>
+          </div>
+      <!-- Left column -->
+          <div class="col-5_sm-7_xs-9 grid-bottom padded-1 padded-l-0 padded-2-sm padded-t-0-sm padded-l-0-sm">
+              <div class="col-12 bg-image square" style="background-image: url('{{page.enquiry_image}}');"></div>      
+          </div> 
+
+      </div>
+  </div> 
+</section>

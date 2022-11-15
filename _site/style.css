@@ -1057,6 +1057,8 @@ display: none;
   [class*=grid] .padded-1-sm    { padding: 1rem;             }   
   .padded-t-sm,
   [class*=grid] .padded-t-sm    { padding-top: 5%;        }
+  .padded-b-sm,
+  [class*=grid] .padded-b-sm    { padding-bottom: 5%;        }
   .padded-2-sm,
   [class*=grid] .padded-2-sm    { padding: 2rem;          }
   .padded-t-1-sm,
@@ -1128,9 +1130,7 @@ display: none;
   }
   /* iNDEX PAGE */
   .thoughtful-splatter.bg-image-bg{
-    background-image: url('/images/bg-splatter2-sm.png'); 
-    background-position: 100% 100%;
-    background-size: cover; 
+    background-position: 100% 50%;
   }
   .sm-thoughtful, 
   .card-text            { padding:6rem 3rem; }
@@ -1186,7 +1186,10 @@ display: none;
   .selling-point img  { 
     max-height:130px;
   }
-
+  /* iNDEX PAGE */
+  .thoughtful-splatter.bg-image-bg{
+    background-position: 100% 55%;
+  }
   .gallery-index.bg-image-bg {
     background-position: 50% 22%;
     background-size: 115%;
@@ -1194,6 +1197,9 @@ display: none;
   .gallery-pg.bg-image-bg {
     background-position: 50% 5rem;
     background-size: 140%;
+  }
+  .thoughtful-splatter .sm-thoughtful, .card-text {
+    padding-bottom: 2rem;
   }
   .sm-thoughtful, .card-text {
     padding:4rem 2rem;
@@ -1206,6 +1212,10 @@ display: none;
     mobile-menu a h1  { font-size: 12vw;}
     footer h1         { font-size: 10vw;}
   .gallery-pg.bg-image-bg { background-size: 180%;}
+    /* iNDEX PAGE */
+    .thoughtful-splatter.bg-image-bg{
+      background-position: 100% 65%;
+    }
 }
 @media (max-width: 22em) { 
   .break-xxs       {display: block;}
