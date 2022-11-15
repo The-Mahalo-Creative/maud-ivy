@@ -404,6 +404,12 @@ nav a:last-child {
 }
 footer a { font-size: 1rem;}
 footer nav .fab { padding: 0.2rem 0.8rem;}
+.head-about h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1.4;
+    font-weight: 400;
+}
 /* Mobile Menu Styles -----------------------------*/
 .mobile-menu a h1 { 
   line-height: 1.1;
