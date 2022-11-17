@@ -1,0 +1,42 @@
+---
+layout: default
+title: linktree
+header: false
+footer: false
+
+button-links:
+    - title: Enquiry
+      button_href: 
+    - title: Order Request
+      button_href: 
+    - title: Gallery
+      button_href: 
+---
+<section class="pink-color dark-gold-text tall-100 short-cut">
+    <div class="grid capped-width padded-t-2 padded-b-2">
+        <div class="col-12 grid text-center">
+            <div class="col-12">
+                <img src="/images/maud-and-ivy-colour.png" width="250px">
+                <h1 class="">Maud and Ivy<span class="break text-center">Flowers</span></h1>
+            </div>
+            <div class="col-12 light-text">
+                <a href="/" class="button">Website</a>
+            </div>
+            {% assign featured_post = site.seasons | where: 'display', 'true' %}
+            {% for season in featured_post %}
+            <div class="col-12">
+                <a href="/seasonal-gallery/#{{season.title | slugify }}" class="button">{{season.title}}</a>
+            </div>
+            {% endfor %}
+            {% for item in page.button-links %}
+            <div class="col-12">
+                <a href="{{item.button_href}}" class="button">{{item.title}}</a>
+            </div>
+            {% endfor %}
+            <div class="col-12 padded-t-1">
+                {% include socials.html %}<!-- 
+                <a class="social" href="{{site.data.contact-info.facebook_href}}" target="_blank"><i class="fab fa-facebook"></i></a> -->
+            </div>
+        </div> 
+    </div>
+</section>

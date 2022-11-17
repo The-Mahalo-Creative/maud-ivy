@@ -1,15 +1,14 @@
 <header class="pink-color dark-gold-text " >
   <div class="grid padded-1 padded-r-2 padded-l-2  ">
     <div class="grid col-12  capped-width">
-      {% if page.header == hide %}
-      <a href="/" class="col-4_sm-10 ">
-          <h1 class="">Maud and Ivy<span class="break text-center">Flowers</span></h1>
+      <div class="col-4_sm-10">
+      {% unless page.header-logo != hide %}
+      <a href="/">
+          <h1 >Maud and Ivy<span class="break text-center">Flowers</span></h1>
       </a>
-      {% else %}
-      <a href="/" class="col-4_sm-10 ">
-        <h1 class="hide-sm">Maud and Ivy<span class="break text-center">Flowers</span></h1>
-      </a>
-      {% endif %}
+      {% endunless %}        
+      </div>
+
       <nav class="col-8 text-right hide-sm">
         <a href="/about">About</a>
         <a href="/gallery">Gallery</a>
@@ -36,12 +35,12 @@
           <a href="/"><h1>Maud & Ivy <span class="break">Flowers</span></h1></a>
           <a href="/about">About</a>
           <a href="/gallery">Gallery</a>
-          <a href="/enquiry" >Enquiry|Order</a>  
+          <a href="/enquiry" >Order</a>  
 <!--           <span class="tel">  
             <span class="padded-r-1 "><i class="fa-solid fa-phone"></i></span>           
             <a class="" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">{{site.data.contact-info.contact_number}}</a>
           </span>   -->      
-          <div>
+          <div class="padded-t-1">
            {% include socials.html %}            
           </div>
 

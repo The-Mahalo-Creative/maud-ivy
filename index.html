@@ -2,7 +2,7 @@
 layout: default
 title: Homepage
 header_image: /images/maud-and-ivy-colour.png
-header: hide
+header-logo: hide
 slick-slider: true
 
 thoughtful_image: /images/event.jpg
@@ -64,7 +64,7 @@ recommendations:
 </section>
 
 <!-- SELLING POINTS -->
-<section class=" dark-gold-text padded ">
+<section class=" dark-gold-text padded padded-b-1">
    <div class="capped-width grid-middle tall-20">
     {% for item in page.selling-points %}
       <div class="col-4_xs-12 grid text-center padded-1">
@@ -80,18 +80,17 @@ recommendations:
    </div>
 </section>
 
-
 <!--Moto  -->
-<section class="dark-gold-text capped-width-lg thoughtful-splatter bg-image-bg padded-tb padded-0-sm overflow">
+<section class="dark-gold-text capped-width-lg thoughtful-splatter bg-image-bg padded-t-2 padded-b-2 padded-0-sm overflow">
   <div class="grid-right-middle capped-width">
-    <div class="col-6_sm-12 grid-middle text-left padded padded-r-0 padded-0-sm" >
-      <div class="col-12 sm-thoughtful"data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-        <h3>
+    <div class="col-6_sm-12 grid-middle text-left padded padded-r-0 " >
+      <div class="col-12"data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+        <h3 >
           <span class="editable">Taking</span>  
           <br>
           <em class="kontiki capitalise text-large"> <span class="editable">thoughtful</span> </em> 
           <br> 
-          <span class="editable">to the next level.</span>
+          <span class="editable"  style="line-height: 1.6;">to the next level.</span>
         </h3>
         <p class="editable"> Your elevator pitch is currently the same as what we do.
           Maybe move here or have small sharp intro so your clients can get to like, know and trust you. Lead to about page
@@ -104,45 +103,26 @@ recommendations:
     </div> 
   </div>   
 </section>  
-
-<!--ABOUT 
-<section class="dark-gold-text padded-b-card padded-0-sm " >
-  <div class="grid-right-middle flex-flip-sm capped-width">
-    <div class="col-6_sm-12 grid-top padded-l-2 padded-sm" >
-        <div class="col-12 bg-image {{page.about-background-position}} square" style="background-image: url('{{page.about_image}}');"></div>      
-    </div>     
-    <div class="relative col-6_sm-12 grid-middle text-left" >    
-      <div class="col-12 absolute card static-sm" >
-        <div class="stone-color  grid-middle ">
-          <div class="col-12 card-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" >
-            <h3 class="editable">Order Here</h3>
-            <p class="editable">{{page.about-description | truncatewords: 65 }}</p>
-            
-          </div>
-        </div>        
-      </div>  
-    </div>  
-  </div> 
-</section>   -->
+<!-- seasonal calender -->
 {% assign featured_post = site.seasons | where: 'display', 'true' %}
 {% for season in featured_post %}
-<section class="padded seasonal dark-gold-text">
-  <div class="capped-width grid padded-b">
+<section class="padded-lr padded-t-1-sm padded-b-2  seasonal dark-gold-text">
+  <div class="capped-width grid padded-b-1">
     <div class="col-12 grid" id="{{season.title | slugify}}">
       <div class="col-12-middle text-center-sm">
         <h3>{{season.title}}</h3>
-        <p> {{season.display-description}}  </p>
+        <p class="editable"> Have you thought about {{season.title}}?  </p>
       </div>
       <div class="col-12 grid">
-        <div class="col-12 grid-center seasonal-gallery dark-gold-text" id="xmas">    
+        <div class="col-12 grid-center seasonal-gallery dark-gold-text" >    
         {% for item in season.gallery limit: 4 %}
-          <div href="{{item.background_image}}" class="gallery-item col-3_sm-6 relative" title="{{item.title}}" alt="{{item.alt}}">
-            <div class="bg-image {{item.aspect}}" style="background-image: url('{{item.background_image}}'); background-position: '{{item.bg-pos}}';"></div>
+          <div class="gallery-item col-3_sm-6 relative">
+            <div class="bg-image square" style="background-image: url('/images/{{season.title | truncatewords: 1 | slugify}}/{{item.background_image}}'); background-position: '{{item.bg-pos}}';"></div>
           </div>
         {% endfor %}
         </div>
-        <div class="col-12 text-center padded-t-1">
-          <a class="button" href="/seasonal-gallery">View our Seasonal Catalogue</a>
+        <div class="col-12 text-center padded-t-2">
+          <a class="button" href="gallery/#seasonal-gallery">View our Seasonal Catalogue</a>
         </div>
       </div>
     </div>
@@ -151,10 +131,11 @@ recommendations:
 {% endfor %}
 
 <!-- RECOMMNENDATIONS -->
-<section class="stone-color padded-b-2-sm">
+<section class="stone-color padded-b-2-sm padded-t-1-sm">
   <div class="grid-center capped-width dark-gold-text padded">    
-    
-    <div class="col-12 padded-tb padded-0-sm padded-t-2-sm slider-container"> 
+    <h2 class="kontiki">Reviews</h2>
+    <div class="col-12 slider-container padded-t-1-sm"> 
+      
       {% for item in page.recommendations %}     
       <div class="slider-item grid ">
         <div class="grid-center-middle tall-30 col-12">
@@ -198,9 +179,9 @@ recommendations:
 </section>
 
 <!-- Socials-->
-<section class=" padded padded-t-10 ivy-text padded-b-2-xs padded-t-4-xs dark-gold-text">
-  <div class="capped-width grid-middle tall-10 padded-t-1">
-    <div class="col-12 text-center ">
+<section class="padded ivy-text dark-gold-text">
+  <div class="capped-width grid-middle padded-2 padded-l-0-sm padded-r-0-sm">
+    <div class="col-12 text-center padded-t-2 padded-b-2">
       <h3 class="editable">Visit us on socials</h3>
       <div class="col-12-center">
         <a href="{{site.data.contact-info.facebook_href}}" target="_blank" class="button  ">
@@ -215,53 +196,69 @@ recommendations:
   </div>
 </section> 
 
-<!--Gallery  
-{% include gallery-section.html %}-->
-
  
 <!-- Contact -->
 <section class="dark-gold-text">
   <div class="padded padded-t-0 contact">
-      <div class="capped-width grid ">
-
+    <div class="capped-width grid ">
       <!-- RIGHT COLUMN -->
-          <div class="col-6_sm-12 padded padded-sm padded-b-0-sm grid" id="enquiry">
-              <h2 class="editable">Enquiry</h2>
-              <p class="subtle"><span class="editable">Use this use this no obligation enquiry form to give us some preliminary information about your upcoming floral needs.</span></p>
+      <div class="grid-middle col-6_sm-12 " id="enquiry">
+        <div class="col-12 padded-r-1-sm padded-l-1-sm">
+          <h2 class="editable">Enquiry</h2>
+          <p class="subtle"><span class="editable">Use this use this no obligation enquiry form to give us some preliminary information about your upcoming floral needs.</span></p>
           <!-- FORM -->
-              <form class="col-12 " name="maud-and-ivy" data-netlify="true" action="/success.html" method="post">
-              <!-- YOUR DETAILS -->
-                  <div class="grid">    
-                      <div class="col-12 padded-t-1">
-                          <h4 class="">Your Details.*</h4>
-                          <input type="text" name="_name" id="_name" placeholder="Your Name*" required>
-                          <input type="email" name="_replyto" id="_replyto" placeholder="Your Email*" required="">                           
-                      </div>                        
-                      <div class="col-12 padded-b">
-                          <label for="message">
-                              <h4>Message</h4>
-                          </label>
-                          <textarea name="message" class="input-text"></textarea>   
-                      </div>  
-                      <div class="col-12 padded-t-1 padded-b-1">                                
-                          <label class="container padded-l-0" > 
-                              <h4 class="editable">Don't add me to your mail list</h4>
-                              <input type="checkbox" name="mail-list" >
-                              <span class="checkmark"></span>
-                          </label>
-                      </div> 
-                      <div class="col-12 padded-tb">                            
-                          <button type="submit"  value="Send Request"> Submit </button>   
-                      </div>
+          <form name="maud-and-ivy" data-netlify="true" action="/success.html" method="post">
+          <!-- YOUR DETAILS -->
+              <div class="grid">    
+                  <div class="col-12 padded-t-1">
+                      <h4 class="">Your Details.*</h4>
+                      <input type="text" name="_name" id="_name" placeholder="Your Name*" required>
+                      <input type="email" name="_replyto" id="_replyto" placeholder="Your Email*" required="">                           
+                  </div>                        
+                  <div class="col-12">
+                      <label for="message">
+                          <h4>Message</h4>
+                      </label>
+                      <textarea name="message" class="input-text"></textarea>   
                   </div>  
-                                      
-              </form>
-          </div>              <!-- Left column -->
-              <div class="col-6_sm-7_xs-9 grid-middle padded-1 padded-l-0 padded-2-sm padded-t-0-sm padded-l-0-sm">
-                <div class="col-12 bg-image portrait-tall" style="background-image: url('{{page.enquiry_image}}');"></div>      
-            </div> 
-
-
-      </div>
-  </div> 
+                  <div class="col-12">                                
+                      <label class="container padded-l-0" > 
+                          <h4 class="editable">Don't add me to <span class="break-xxs">your mail list</span></h4>
+                          <input type="checkbox" name="mail-list" >
+                          <span class="checkmark"></span>
+                      </label>
+                  </div> 
+                  <div class="col-12 padded-tb">                            
+                      <button type="submit"  value="Send Request"> Enquire </button>   
+                  </div>
+              </div>              
+          </form>
+        </div>  
+      </div>            
+      <!-- Left column -->
+      <div class="col-6_sm-12 grid-middle padded-l-2 padded-0-sm padded-t-1-sm">
+        <div class="col-12 bg-image portrait-tall square-sm" style="background-image: url('{{page.enquiry_image}}');"></div>      
+    </div> 
+  </div>
 </section>
+
+
+<!--ABOUT 
+<section class="dark-gold-text padded-b-card padded-0-sm " >
+  <div class="grid-right-middle flex-flip-sm capped-width">
+    <div class="col-6_sm-12 grid-top padded-l-2 padded-sm" >
+        <div class="col-12 bg-image {{page.about-background-position}} square" style="background-image: url('{{page.about_image}}');"></div>      
+    </div>     
+    <div class="relative col-6_sm-12 grid-middle text-left" >    
+      <div class="col-12 absolute card static-sm" >
+        <div class="stone-color  grid-middle ">
+          <div class="col-12 card-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" >
+            <h3 class="editable">Order Here</h3>
+            <p class="editable">{{page.about-description | truncatewords: 65 }}</p>
+            
+          </div>
+        </div>        
+      </div>  
+    </div>  
+  </div> 
+</section>   -->

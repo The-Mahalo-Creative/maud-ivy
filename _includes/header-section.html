@@ -1,5 +1,16 @@
 <section class="dark-gold-text"  >
   <div class="grid" >
-      <div class="col-12 bg-image {{page.header-background-position}} tall-60" style="background-image: url('{{page.header_image}}');"></div>      
+      <div class="col-12 bg-image {{page.header-background-position}} tall-60" style="background-image: url('{{page.banner_image}}');"></div>      
   </div>    
 </section>  
+<style> 
+  .home-banner-image {
+     background-image: url('{{page.banner_image}}');
+  }
+
+  @media(max-width:36em) {
+     .home-banner-image {
+         background-image: url('{{page.banner-mobile_image}}');
+  }
+}
+</style> 
