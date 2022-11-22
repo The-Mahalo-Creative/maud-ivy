@@ -23,7 +23,7 @@ filter-buttons:
   - filter-type: Green/White
   - filter-type: Pastels
   - filter-type: Bold/Punchy
-
+  - filter-type: Vases/Boxes
 gallery:
   - number: 1
     type: dried/preserved pastels
@@ -144,8 +144,8 @@ gallery:
       <div class="col-7_sm-12 grid">
           <div class="col-12 grid-center seasonal-gallery dark-gold-text" id="xmas">    
               {% for item in season.gallery %}
-              <div href="/images/{{season.title | truncatewords: 1 | slugify}}/{{item.background_image}}" class="gallery-item {{item.col}} relative">
-                  <div class="bg-image {{item.aspect}}" style="background-image: url('/images/{{season.title | truncatewords: 1 | slugify}}/{{item.background_image}}'); background-position: '{{item.bg-pos}}';">
+              <div href="/images/{{season.title | truncatewords: 1 | slugify | remove: '-' }}/{{item.background_image}}" class="gallery-item {{item.col}} relative">
+                  <div class="bg-image {{item.aspect}}" style="background-image: url('/images/{{season.title | truncatewords: 1 | slugify | remove: '-' }}/{{item.background_image}}'); background-position: '{{item.bg-pos}}';">
                   </div>
               </div>
               {% endfor %}
