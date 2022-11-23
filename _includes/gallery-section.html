@@ -1,5 +1,31 @@
-
 <!--  calender -->
+<section class="gallery-index bg-image-bg dark-gold-text">
+  <div class="capped-width">
+    <div class="grid padded padded-2-sm ">
+      <div class="col-12 grid">
+        <div class="col-12-middle text-center-sm padded-b-1">
+          <h2>Gallery <span class="kontiki capitalise">Collection</span></h2>
+        </div>
+        <div class="col-12 grid">
+          <div class="col-12 grid-center seasonal-gallery dark-gold-text" >   
+            {% assign gallery-page = site.pages | where: "path", "gallery.html" | first %} 
+          {% for item in gallery-page.gallery limit: 4 %}
+            <div class="gallery-item col-3_sm-6 relative">
+              <div class="bg-image square" style="background-image: url('/images/creative/{{item.background_image}}'); background-position: '{{item.bg-pos}}';"></div>
+            </div>
+          {% endfor %}
+          </div>
+          <div class="col-12 text-center padded-t-2 padded-b-1">
+            <a class="button" href="/gallery">View our Gallery</a>
+          </div>
+        </div>
+      </div>      
+    </div>
+
+  </div>
+</section>
+
+<!--  calender
 <section class="padded-lr padded-t-2 padded-b-2  gallery-index bg-image-bg dark-gold-text">
   <div class="capped-width grid padded-b-1">
     <div class="col-12 grid">
@@ -21,4 +47,4 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->

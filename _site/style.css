@@ -481,6 +481,7 @@ footer nav a, footer nav p {
   opacity: 0.6;
 }
 .quote          { font-size: 2.4rem;}
+.quote i        { margin: 0.3rem;   }
 .fa-quote-left  { text-align: right;}
 
 @media (max-height: 880px) and (min-width:400px) { 
@@ -898,6 +899,8 @@ select {
   border: none;
   background: transparent;
 }
+.seasonal-gallery [class*="col"]:first-child { padding-left: 0rem;  }
+.seasonal-gallery [class*="col"]:last-child  { padding-right: 0rem; }
 /* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
 .show-xxs,
 .show-xs, 
@@ -925,11 +928,17 @@ display: none;
   .hide-md        { display: none; }
   .break-md       { display: block;}
   .text-center-md { text-align: center;}  
-  
+  .portrait-tall-md,
+  [class*="grid"] .portrait-tall-md    { padding-bottom: 175%; }
+
   .padded-0-md,
   [class*=grid] .padded-0-md      { padding: 0;           }
   .padded-md,
   [class*=grid] .padded-md        { padding: 5%;          }
+  .padded-1-md,
+  [class*=grid] .padded-1-md      { padding: 1rem;        }
+  .padded-l-1-md,
+  [class*=grid] .padded-l-1-md    { padding-left: 1rem;   }
   .padded-r-0-md,
   [class*="grid"] .padded-r-0-md  { padding-right: 0;     }
   .padded-tb-2-md,
@@ -973,7 +982,8 @@ display: none;
   }
   .text-center-sm { text-align: center;}
   .flex-flip-sm   { flex-wrap: wrap-reverse; }
-
+  .square-sm,
+  [class*="grid"] .square-sm  { padding-bottom: 100%; }
   [class*=col] .item-left-sm,
   .item-left-sm   { 
     justify-content: flex-end;
@@ -1019,7 +1029,7 @@ display: none;
   .padded-b-0-sm,
   [class*=grid] .padded-b-0-sm  { padding-bottom: 0;      }  
   .padded-t-0-sm,
-  [class*=grid] .padded-t-0-sm  { padding-top:0;          }  
+  [class*=grid] .padded-t-0-sm  { padding-top: 0;         }  
 
   [class*="grid"] .padded-header-card,
   .padded-header-card           { padding-bottom: 4rem;   }
@@ -1091,10 +1101,14 @@ display: none;
   [class*=grid] .padded-0-xs    { padding: 0rem;        }
   .padded-1-5-xs, 
   [class*=grid] .padded-1-5-xs  { padding: 1.5rem;      }
+  .padded-1-xs,
+  [class*=grid] .padded-1-xs    { padding: 1rem;        } 
   .padded-2-xs, 
   [class*=grid] .padded-2-xs    { padding: 2rem;        }
   [class*=grid] .padded-t-1-xs,
   .padded-t-1-xs                { padding-top: 1rem;    }
+  .padded-b-1-xs,
+  [class*=grid] .padded-b-1-xs  { padding-bottom: 1rem;   }
   [class*=grid] .padded-t-2-xs,
   .padded-t-2-xs                { padding-top: 2rem;    }
   .padded-b-2-xs,
@@ -1109,6 +1123,8 @@ display: none;
   .padded-r-0-xs                { padding-right: 0rem;  }
   [class*=grid] .padded-l-0-xs,
   .padded-l-0-xs                { padding-left: 0rem;   }
+  .padded-t-0-xs,
+  [class*=grid] .padded-t-0-xs  { padding-top: 0;       }
   .padded-b-0-xs,
   [class*=grid] .padded-b-0-xs  { padding-bottom: 0;    }
   .padded-05,
