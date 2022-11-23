@@ -3,8 +3,10 @@ layout: default
 top-arrow: true
 title: Gallery
 
-header_image: /images/creative/maud-and-ivy-flowers-9.jpg
-header-background-position: 50% 60%
+banner_image: /images/maud-and-ivy-gallery-header.jpg
+banner-background-position: 50% 60%
+banner-landscape_image: /images/maud-and-ivy-gallery-header-landscape.jpg
+banner-landscape-background-position: 50% 60%
 
 header-title: Creative Gallery
 header: 
@@ -77,7 +79,7 @@ gallery:
 
 <section class="dark-gold-text  padded-header-card"  >
   <div class="grid" >
-      <div class="col-12 bg-image tall-60" style="background-image: url('{{page.header_image}}'); background-position:{{page.header-background-position}};"></div>      
+      <div class="col-12 bg-image tall-60 gallery-banner-image "></div>      
   </div>    
   <!-- Creative gallery -->
   <div class="capped-width relative grid-right">
@@ -95,7 +97,18 @@ gallery:
     </div>       
   </div>      
 </section> 
-
+<style> 
+  .gallery-banner-image     { 
+    background-image: url('{{page.banner_image}}'); 
+    background-position: {{page.header-background-position}}; 
+  }
+  @media(orientation: landscape)  {
+     .gallery-banner-image  { 
+      background-image: url('{{page.banner-landscape_image}}');
+      background-position: {{page.header-landscape-background-position}}; 
+    } 
+  }
+</style> 
 
 <!-- gallery  -->
 <section class="padded-lr gallery-pg bg-image-bg tall-50 capped-width-lg">  
@@ -115,7 +128,7 @@ gallery:
 
 
 <!-- SEASONAL CATALOGUE -->
-{% assign sorted-seasons = site.seasons | sort:"title"  %}
+{% assign sorted-seasons = site.seasons | sort: "title"  %}
 <!-- Menu -->
 <section class="stone-color dark-gold-text" id="seasonal-gallery">
   <div class="grid capped-width padded-tb">
@@ -126,7 +139,7 @@ gallery:
           <div class="col-12 grid">
             {% for season in sorted-seasons  %}
             <div class="col-4_sm-6_xs-12 season-list">
-            <a class="" href="/seasonal-gallery/#{{season.title | slugify }}"><span class="padded-r-1 capitalise">&#8226;</span> {{season.title | capitalize }}</a>
+            <a class="capitalise" href="/seasonal-gallery/#{{season.title | slugify }}"><span class="padded-r-1 ">&#8226;</span> {{season.title }}</a>
             </div>
             {% endfor %}
           </div>
@@ -144,8 +157,8 @@ gallery:
       <div class="col-7_sm-12 grid">
           <div class="col-12 grid-center seasonal-gallery dark-gold-text" id="xmas">    
               {% for item in season.gallery %}
-              <div href="/images/{{season.title | truncatewords: 1 | slugify | remove: '-' }}/{{item.background_image}}" class="gallery-item {{item.col}} relative">
-                  <div class="bg-image {{item.aspect}}" style="background-image: url('/images/{{season.title | truncatewords: 1 | slugify | remove: '-' }}/{{item.background_image}}'); background-position: '{{item.bg-pos}}';">
+              <div href="/images/{{season.title | truncatewords: 1 | slugify | remove: '-' }}/{{item.background_image}}" class="gallery-item {{item.col}}  relative">
+                  <div class="bg-image {{item.aspect}} " style="background-image: url('/images/{{season.title | truncatewords: 1 | slugify | remove: '-' }}/{{item.background_image}}'); background-position: {{item.bg-pos}};">
                   </div>
               </div>
               {% endfor %}

@@ -143,7 +143,9 @@ font-family: 'Raleway', sans-serif;
   .text-left    { text-align: left;   }
   .text-right   { text-align: right;  }
   .text-center  { text-align: center; }
-
+  @media (orientation: portrait) {
+    .text-center-portrait { text-align: center;}
+  }
   .text-small    { font-size: 0.8em;   }
   .text-little   { font-size: 1.2rem;  }
   .text-medium   { font-size: 1.5em;   }
@@ -488,6 +490,7 @@ footer nav a, footer nav p {
     .heading img  { max-height: 68vh;}
     .logo h1      { font-size: 9vh;}
 }
+
 /* overlays ------------------------------------------------*/
 .bg-overlay { position: relative;}
 .bg-overlay::before {
