@@ -1149,7 +1149,7 @@ display: none;
   [class*="grid"] .padded-05    { padding: 0.2rem;      }
 
   .text-large                   { font-size: 2em;       }
-
+  .text-xs                      { font-size: 1.7rem;    }
   footer .show-xs               { display: inline-block;}
 
   footer h3                     { font-size: 1.3rem;    }
@@ -1198,4 +1198,7 @@ display: none;
   .show-xxs        { display: block;          }
   .flex-flip-xxs   { flex-wrap: wrap-reverse; }
 
+}
+@media (max-width: 321px) { 
+  .break-xxxs          { display: block; }
 }
