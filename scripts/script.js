@@ -3,12 +3,8 @@ $(document).ready(function() {
   $(".hamburger-button").click(function() {
     $(this).toggleClass("active");
     $(".mobile-menu").fadeToggle()
-});
-$(document).ready(function() {
-  $(".stock-close").click(function() {
-    $(this).toggleClass("active");
-    $(".stock").fadeToggle()
-});
+  });
+
   
   //LIGHT GALLERY POP UP
   lightGallery(document.getElementById('lightgallery'), {
