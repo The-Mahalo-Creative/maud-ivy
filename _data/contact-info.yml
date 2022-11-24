@@ -19,7 +19,7 @@ break-on:  true
 break:
   title: Notice
   date: (date to be entered)
-  description: We are currently on a project and will be back to regular orders on
+  description: We are currently working on a project and will be available for regular orders again on
   emergency-description: For emergency requests please contact
   images: 
     - break_image: 
