@@ -445,9 +445,13 @@ footer a, footer p { margin-bottom: 0;}
 footer nav a, footer nav p {
   margin-bottom: 0.4rem;
 }
+.stock { padding: 1.5rem 2rem;}
 .stock-close {
   font-size: 2rem;
-  line-height: 0.5;
+  line-height: 0;
+  cursor: pointer;
+  top: -0.5rem;
+  right: -1rem;
 }
 /* ------ background-------------------------------------- */
 .pink-color   { background-color: var(--pink-color);    }
