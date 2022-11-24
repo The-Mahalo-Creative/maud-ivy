@@ -15,3 +15,8 @@ youtube_href:
 pinterest:
 pinterest_href: 
 google-map_href: https://www.google.com/maps
+break:
+  on: true
+  date: (date to be entered)
+  description: We are taking a short break and will be taking orders again from
+  emergency-description: For emergency requests please contact

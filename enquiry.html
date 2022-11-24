@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Enquiry
+break: true
 header_image: /images/flowers-8.jpg
 header-background-position:
 enquiry_image: /images/icons-flower-watercolour.png
@@ -61,7 +62,7 @@ delivery:
   - option: Next Day Delivery
   - option: Other
 ---
-
+{% include stock.html %}
 <!--Header 
 {% include header-section.html %} -->
 <!-- Contact 
@@ -112,7 +113,7 @@ delivery:
         <!-- RIGHT COLUMN -->
             <div class="col-12 padded-1 padded-0-xs grid" id="order-request">
                 <h2 class="editable">Order Request</h2>
-                <p class="editable subtle">Use this form to place an <strong>Order Request.</strong> Make your selections from the drop down options OR simply type your preference into the space provided.  Complete all details and submit your request.   I will review your request and respond to you with a Tax Invoice (Square POS) for payment prior to creation of your order.  Add ons such as Cards, Vase, Delivery, Chocolates, Wine etc will be added to your budget.  Delivery Fees are charged per suburb.  Once you have reviewed and paid your Tax Invoice, your order will be fulfilled.</p>
+                <p class="editable subtle">Use this form to place an <strong>Order Request.</strong> Make your selections from the drop down options OR simply type your preference into the space provided.  Complete all details and submit your request.   I will review your request and respond to you with a Tax Invoice (Square POS) for payment prior to creation of your order.  Add ons such as Cards, Vase, Delivery, Chocolates, Wine etc will be added to your budget.  Delivery Fees are charged per suburb.  Once you have reviewed and paid your Tax Invoice, your order will be fulfilled. Orders will be accepted on a first in first served basis.</p>
             <!-- FORM -->
                 <form class="col-12 " name="maud-and-ivy-order-request" data-netlify="true" action="/success.html" method="post">
                     <input type="hidden" name="subject" value="Order Requests" />

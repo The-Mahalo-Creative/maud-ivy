@@ -1,13 +1,14 @@
 ---
 layout: default
 title: Homepage
+break: true
 header_image: /images/maud-and-ivy-colour.png
 header-logo: hide
 slick-slider: true
 
 thoughtful_image: /images/event.jpg
 thoughtful-background-position: bg-pos-l
-enquiry_image: /images/maud-and-ivy-enquiry.jpg
+enquiry_image: /images/maud-and-ivy-events.jpg
 
 selling-points:
   - selling-point: PERSONALISED 
@@ -108,21 +109,21 @@ recommendations:
 <section class="seasonal dark-gold-text">
   <div class="capped-width grid">
     <div class="grid col-12 padded padded-2-xs">
-      <div class="col-12 grid padded-1 padded-t-0 padded-0-xs" id="{{season.title | slugify}}">
-        <div class="col-12-middle text-center-sm">
+      <div class="col-12 grid padded-05 padded-0-xs padded-1-sm padded-t-0-sm" id="{{season.title | slugify}}">
+        <div class="col-12-middle text-center-sm padded-l-05 padded-0-sm">
           <h3>{{season.title}}</h3>
           <p class="editable"> Have you thought about {{season.title}}?  </p>
         </div>
         <div class="col-12 grid">
-          <div class="col-12 grid-center seasonal-gallery dark-gold-text" >    
+          <a class="col-12 grid-center seasonal-gallery gallery-seaction dark-gold-text" href="/gallery/#{{season.title | slugify }}">    
           {% for item in season.gallery limit: 4 %}
             <div class="gallery-item col-3_sm-6 relative">
               <div class="bg-image square" style="background-image: url('/images/{{season.title | truncatewords: 1 | slugify}}/{{item.background_image}}'); background-position: '{{item.bg-pos}}';"></div>
             </div>
           {% endfor %}
-          </div>
+          </a>
           <div class="col-12 text-center padded-t-2 padded-b-1-xs">
-            <a class="button" href="gallery/#seasonal-gallery"><span class="editable">View our Events Catalogue</span></a>
+            <a class="button" href="gallery/#events-gallery"><span class="editable">View our Events Catalogue</span></a>
           </div>
         </div>      
     </div>
@@ -131,33 +132,6 @@ recommendations:
   </div>
 </section>
 {% endfor %}
-
-<!-- seasonal calender
-{% assign featured_post = site.seasons | where: 'display', 'true' %}
-{% for season in featured_post %}
-<section class="padded-lr padded-t-1-sm padded-b-2  seasonal dark-gold-text">
-  <div class="capped-width grid padded-b-1">
-    <div class="col-12 grid" id="{{season.title | slugify}}">
-      <div class="col-12-middle text-center-sm">
-        <h3>{{season.title}}</h3>
-        <p class="editable"> Have you thought about {{season.title}}?  </p>
-      </div>
-      <div class="col-12 grid">
-        <div class="col-12 grid-center seasonal-gallery dark-gold-text" >    
-        {% for item in season.gallery limit: 4 %}
-          <div class="gallery-item col-3_sm-6 relative">
-            <div class="bg-image square" style="background-image: url('/images/{{season.title | truncatewords: 1 | slugify}}/{{item.background_image}}'); background-position: '{{item.bg-pos}}';"></div>
-          </div>
-        {% endfor %}
-        </div>
-        <div class="col-12 text-center padded-t-2">
-          <a class="button" href="gallery/#seasonal-gallery">View our Seasonal Catalogue</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{% endfor %} -->
 
 <!-- RECOMMNENDATIONS -->
 <section class="stone-color dark-gold-text padded-b-1-sm padded-t-1-sm">
@@ -264,6 +238,18 @@ recommendations:
                   <div class="col-12 padded-tb">                            
                       <button type="submit"  value="Send Request"> Enquire </button>   
                   </div>
+                  <div class="col-12 padded-t-1 padded-b-1-xs">
+                    <p class="margin-b-0 subtle"> 
+                      <em>*
+                        <span class="editable">{{site.data.contact-info.break.description}}</span> 
+                        {{site.data.contact-info.break.date}}. 
+                        <span class="editable">{{site.data.contact-info.break.emergency-description}}</span> 
+                        <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block"  target="_blank">{{site.data.contact-info.contact_number}}</a>.
+                      </em>                      
+                    </p> 
+                  </div><!-- 
+                  {% if site.data.contact-info.break.on == true %} -->
+                 <!--  {% endif %} -->
               </div>              
           </form>
         </div>  
@@ -272,5 +258,6 @@ recommendations:
       <div class="col-6_sm-12 grid-middle padded-1 padded-0-xs">
         <div class="col-12 bg-image portrait-tall square-sm" style="background-image: url('{{page.enquiry_image}}');"></div>      
     </div> 
+
   </div>
 </section>

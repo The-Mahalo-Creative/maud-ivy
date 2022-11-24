@@ -71,8 +71,9 @@
 </head>
 
 <body class="noselect">
+
     
-    <header class="pink-color dark-gold-text " >
+        <header class="pink-color dark-gold-text " >
   <div class="grid padded-1 padded-r-2 padded-l-2  ">
     <div class="grid col-12  capped-width">
       <div class="col-4_sm-10">
@@ -149,7 +150,26 @@
 </style>  
 
     
-    <!--Header 
+    <div id="stock" class="fixed stone-color dark-gold-text z-index">
+    <div class="capped-width ">
+        <div class="grid padded-2 text-center">
+            <div class="col-12">
+                <p class="margin-b-0"> 
+                  <span class="editable">We are taking a short break and will be taking orders again from</span> 
+                  (date to be entered). 
+                  <br> <span class="editable">For emergency requests please contact</span> 
+                  <a href="tel:0468 329 998" class="inline-block"  target="_blank">0468 329 998</a>.
+                </p> 
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<!--Header 
 <section class="dark-gold-text"  >
   <div class="grid" >
       <div class="col-12 bg-image  tall-60" style="background-image: url('');"></div>      
@@ -214,7 +234,7 @@
         <!-- RIGHT COLUMN -->
             <div class="col-12 padded-1 padded-0-xs grid" id="order-request">
                 <h2 class="editable">Order Request</h2>
-                <p class="editable subtle">Use this form to place an <strong>Order Request.</strong> Make your selections from the drop down options OR simply type your preference into the space provided.  Complete all details and submit your request.   I will review your request and respond to you with a Tax Invoice (Square POS) for payment prior to creation of your order.  Add ons such as Cards, Vase, Delivery, Chocolates, Wine etc will be added to your budget.  Delivery Fees are charged per suburb.  Once you have reviewed and paid your Tax Invoice, your order will be fulfilled.</p>
+                <p class="editable subtle">Use this form to place an <strong>Order Request.</strong> Make your selections from the drop down options OR simply type your preference into the space provided.  Complete all details and submit your request.   I will review your request and respond to you with a Tax Invoice (Square POS) for payment prior to creation of your order.  Add ons such as Cards, Vase, Delivery, Chocolates, Wine etc will be added to your budget.  Delivery Fees are charged per suburb.  Once you have reviewed and paid your Tax Invoice, your order will be fulfilled. Orders will be accepted on a first in first served basis.</p>
             <!-- FORM -->
                 <form class="col-12 " name="maud-and-ivy-order-request" data-netlify="true" action="/success.html" method="post">
                     <input type="hidden" name="subject" value="Order Requests" />

@@ -43,7 +43,7 @@ font-family: 'Raleway', sans-serif;
   [class*=grid] .padded-l       { padding-left: 5%;   }
   .padded-r,
   [class*=grid] .padded-r       { padding-right: 5%;  }
-  
+
   .padded-tb,
   [class*="grid"] .padded-tb    { padding-top: 5%; padding-bottom: 5%;    }
   .padded-lr,
@@ -68,7 +68,10 @@ font-family: 'Raleway', sans-serif;
   .padded-r-2                   { padding-right: 2rem;   }
   /* enquiry */
   .padded-t-1-2                 { padding-top: 1.2rem;   }
-  
+  /* event gallery section */
+  .padded-l-05,
+  [class*="grid"] .padded-l-05  { padding-left: 0.5rem;   }
+
   .padded-t-0,
   [class*=grid] .padded-t-0    { padding-top: 0;         }
   .padded-b-0,
@@ -131,9 +134,15 @@ font-family: 'Raleway', sans-serif;
   .capped-width-half.margin-l-0 {margin-left: 0;}
 */
   /* Position */
-  .relative { position: relative; }
-  .absolute { position: absolute; }
-  .z-index  { z-index: 2;         }
+  .relative     { position: relative;     }
+  .absolute     { position: absolute;     }
+  .fixed        { 
+    position: sticky; 
+    top: 0;
+    width: 100%;
+  }
+  .inline-block { display: inline-block;  }
+  .z-index      {  z-index: 2;            }
   .horizontal-scroll-md,
   .horizontal-scroll-md-hide-sm {
     overflow-x: auto;
@@ -143,7 +152,7 @@ font-family: 'Raleway', sans-serif;
   .text-left    { text-align: left;   }
   .text-right   { text-align: right;  }
   .text-center  { text-align: center; }
-  @media (orientation: portrait) {
+  @media (orientation: portrait) and (max-width: 64em)  {
     .text-center-portrait { text-align: center;}
   }
   .text-small    { font-size: 0.8em;   }
@@ -296,6 +305,7 @@ a h1:hover, a:hover{
 p a { 
   border-bottom: 1px solid;
   font-weight: 400;
+  margin-bottom: 0;
 }
 .subtle, .subtle p, .sublte a {
   opacity: 1 ;
@@ -390,7 +400,7 @@ footer nav .fab { padding: 0.2rem 0.8rem;}
 
 .mobile-menu a {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 4% 0;
   text-transform: uppercase;
   font-weight: 400;
@@ -518,13 +528,11 @@ footer nav a, footer nav p {
 .bg-pos-r         { background-position: right;   }
 
 /* BORDERS */
-.border-b   { border-bottom: 1px solid; }
-.border-r   { border-right: 1px solid;  }
-.border-t   { border-top: 1px solid;    }
-.border-l   { border-left: 1px solid    }
-.border-b-2 { border-bottom: 2px solid; }
-.border-t-2 { border-top: 2px solid;    }
-
+.border-b     { border-bottom: 1px solid; }
+.border-r     { border-right: 1px solid;  }
+.border-t     { border-top: 1px solid;    }
+.border-l     { border-left: 1px solid    }
+.border-none  { border: none;             }
 /* Card */
  .card-text { padding: 12% 12%; } 
 .header-card,
@@ -544,6 +552,7 @@ footer nav a, footer nav p {
   padding: 0.8%;
   margin-bottom: 0; 
 }
+.gallery-section:hover { opacity:0.8;}
 .gallery [class*=col], 
 .filterable-gallery [class*=col] {
   padding: 1%;
@@ -902,8 +911,8 @@ select {
   border: none;
   background: transparent;
 }
-.seasonal-gallery [class*="col"]:first-child { padding-left: 0rem;  }
-.seasonal-gallery [class*="col"]:last-child  { padding-right: 0rem; }
+/* .seasonal-gallery [class*="col"]:first-child { padding-left: 0rem;  }
+.seasonal-gallery [class*="col"]:last-child  { padding-right: 0rem; } */
 /* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
 .show-xxs,
 .show-xs, 
@@ -913,7 +922,7 @@ select {
 display: none;
 }
 /* ------- LG Media Query (80em / 1280px) --------------- */
-@media (max-width: 1100px){
+@media (max-width: 1190px){
   .header-card {
     right:5%;
   }

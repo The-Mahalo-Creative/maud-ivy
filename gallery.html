@@ -102,7 +102,7 @@ gallery:
     background-image: url('{{page.banner_image}}'); 
     background-position: {{page.header-background-position}}; 
   }
-  @media(orientation: landscape)  {
+  @media(orientation: landscape) {
      .gallery-banner-image  { 
       background-image: url('{{page.banner-landscape_image}}');
       background-position: {{page.header-landscape-background-position}}; 
@@ -128,9 +128,9 @@ gallery:
 
 
 <!-- SEASONAL CATALOGUE -->
-{% assign sorted-seasons = site.seasons | sort: "title"  %}
+{% assign sorted-seasons = site.seasons | sort: "title" %}
 <!-- Menu -->
-<section class="stone-color dark-gold-text" id="seasonal-gallery">
+<section class="stone-color dark-gold-text" id="events-gallery">
   <div class="grid capped-width padded-tb">
       <div class="col-12 grid-middle padded">
           <div class="col-12 text-center padded-b-2">
@@ -139,7 +139,7 @@ gallery:
           <div class="col-12 grid">
             {% for season in sorted-seasons  %}
             <div class="col-4_sm-6_xs-12 season-list">
-            <a class="capitalise" href="/seasonal-gallery/#{{season.title | slugify }}"><span class="padded-r-1 ">&#8226;</span> {{season.title }}</a>
+            <a class="capitalise" href="/gallery/#{{season.title | slugify }}"><span class="padded-r-1 ">&#8226;</span> {{season.title }}</a>
             </div>
             {% endfor %}
           </div>

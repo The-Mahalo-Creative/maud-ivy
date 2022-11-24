@@ -45,17 +45,10 @@ self-portrait:
 </section>
 <style> 
   .about-banner-image  { background-image: url('{{page.banner_image}}');  }
-  @media (orientation: portrait)  {
+  @media (orientation: portrait) and (max-width: 64em)   {
      .about-banner-image  { background-image: url('{{page.banner-portrait_image}}');}   
   }
 </style> 
-
-<!-- <style> 
-  .about-banner-image     { background-image: url('{{page.banner_image}}');  }
-  @media(max-width:64em)  {
-     .about-banner-image  { background-image: url('{{page.banner-mobile_image}}');}
-  }
-</style>  -->
 
 <!--our foundations -->
 <section class="dark-gold-text">
@@ -141,12 +134,12 @@ self-portrait:
 <section class=" ivy-text  dark-gold-text">
   <div class="capped-width about-social">
     <div class="grid-middle padded padded-2-sm">
-      <div class="col-12 text-center padded-t-1">
+      <div class="col-12 text-center padded-1 padded-0-xs">
         <h2 class="editable">How to Order</h2>
         <p class="editable">No matter how you place your order we will require all details as set out in our online <a href="/enquiry/#order-request">ORDER REQUEST</a> form.  Use this form as a guide if you decide to call or text us with your order.  We find it much simpler to use the online Order Request form as often we are busy and cannot respond to you immediately.  We take time to curate and create beautiful florals and offerings and require as much notice as you can give.
         </p>      
         <!-- phone and email -->
-        <div class="grid  col-12">
+        <div class="grid col-12 padded-05 padded-0-xs">
           <div class="col-12 hide-xxs ">
             <span class="inline-block padded-r-1 padded-0-sm break-sm">
               <p class="inline-block margin-b-0">
@@ -191,6 +184,7 @@ self-portrait:
       
     </div>
   </div>
-</section>           
+</section>    
+
 <!--Gallery  -->
 {% include gallery-section.html %}
