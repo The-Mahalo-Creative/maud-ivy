@@ -1115,6 +1115,8 @@ display: none;
   [class*=grid] .margin-0-xs    { margin: 0rem;         }
   .padded-0-xs, 
   [class*=grid] .padded-0-xs    { padding: 0rem;        }
+  .padded-05-xs, 
+  [class*=grid] .padded-05-xs   { padding: 0.5rem;      }
   .padded-1-5-xs, 
   [class*=grid] .padded-1-5-xs  { padding: 1.5rem;      }
   .padded-1-xs,
