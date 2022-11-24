@@ -992,6 +992,7 @@ select {
   font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.06em;
+  margin-bottom: 0;
 }
 .text-scroll h3:last-child {margin-bottom: 0.5rem;}
 

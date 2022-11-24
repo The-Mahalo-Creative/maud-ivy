@@ -111,7 +111,7 @@ recommendations:
       <div class="marquee enable-animation marquee--hover-pause">
         {% if site.data.contact-info.break-on == true %}
           <div class="marquee__content">
-            <p class="margin-b-0 "> 
+            <p> 
               <span class="editable">{{site.data.contact-info.break.description}}</span> 
               {{site.data.contact-info.break.date}}. 
               <span class="editable">{{site.data.contact-info.break.emergency-description}}</span> 
@@ -119,7 +119,7 @@ recommendations:
             </p> 
           </div>
           <div class="marquee__content" aria-hidden="true">
-            <p class="margin-b-0 "> 
+            <p> 
               <span class="editable">{{site.data.contact-info.break.description}}</span> 
               {{site.data.contact-info.break.date}}. 
               <span class="editable">{{site.data.contact-info.break.emergency-description}}</span> 
@@ -130,7 +130,7 @@ recommendations:
           {% assign featured_post = site.seasons | where: 'display', 'true' %}
           {% for season in featured_post %}
           <div class="marquee__content">
-            <p><span class="editable">Have you thought about</span>  {{season.title | capitalize}} <span class="editable">florals? </span> </p>
+            <p ><span class="editable">Have you thought about</span>  {{season.title | capitalize}} <span class="editable">florals? </span> </p>
           </div>
           <div class="marquee__content" aria-hidden="true">
             <p><span class="editable">Have you thought about</span>  {{season.title | capitalize}} <span class="editable">florals? </span> </p>
