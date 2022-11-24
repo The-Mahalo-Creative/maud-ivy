@@ -919,6 +919,91 @@ select {
   border: none;
   background: transparent;
 }
+/* Marquee styles -----------------------------------------------------------*/
+
+:root {--gap: 5rem;}
+.marquee {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  gap: var(--gap);
+}  
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}   
+@-webkit-keyframes scroll {
+  from {
+      -webkit-transform: translateX(0);
+  }
+  to {
+      -webkit-transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+@-moz-keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+@-ms-keyframes scroll {
+  from {
+    -ms-transform: translateX(0);
+  }
+  to {
+    -ms-transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+@-o-keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+/* Enable animation  */
+.enable-animation .marquee__content {
+  -webkit-animation: scroll 28s linear infinite;
+  -moz-animation: scroll 28s linear infinite;
+  -o-animation: scroll 28s linear infinite;
+  animation: scroll 28s linear infinite;
+}
+/* Pause on hover add to enable animation div*/
+.marquee--hover-pause:hover .marquee__content {
+  animation-play-state: paused;
+}
+/* TEXT ANIMATION --------------------------*/
+.text-scroll p, 
+.text-scroll a {
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+.text-scroll h3:last-child {margin-bottom: 0.5rem;}
+
+.marquee__content > * {
+  flex: 0 0 auto;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.text-scroll a:hover {
+  color: unset;
+  opacity:0.5;
+}
 /* .seasonal-gallery [class*="col"]:first-child { padding-left: 0rem;  }
 .seasonal-gallery [class*="col"]:last-child  { padding-right: 0rem; } */
 /* General CSS Responsive Styles (Apply everywhere unless overridden) */ 

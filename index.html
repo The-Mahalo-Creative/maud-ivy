@@ -104,71 +104,67 @@ recommendations:
   </div>   
 </section>  
 
-<!-- <section class="dark-gold-text ">
-  <div class=" capped-width">
-    <div class="grid-right-middle padded padded-t-0 padded-2-xs flex-flip-sm"> 
-      <div class="col-6_sm-12 grid-middle padded-1 padded-0-xs padded-t-2-xs">
-          <div class="col-12 bg-image {{page.thoughtful-background-position}} square portrait-tall-md square-sm" style="background-image: url('/images/events/maud-and-ivy-events-5.jpg');"></div>      
-      </div>     
-      {% if site.data.contact-info.break-on == true %}
-      <div class="col-6_sm-12-middle padded-1 padded-0-xs padded-t-0-sm">
-        <h4> Notice</h4>
-        <p class="margin-b-0 "> 
-            <span class="editable">{{site.data.contact-info.break.description}}</span> 
-            {{site.data.contact-info.break.date}}. 
-            <span class="editable">{{site.data.contact-info.break.emergency-description}}</span> 
-            <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block"  target="_blank">{{site.data.contact-info.contact_number}}</a>.                   
-        </p> 
-      </div>
-    {% endif %}  
-       
-    </div>
 
-  </div>   
-</section> -->
-<!-- <section class="dark-gold-text pink-color">
-  <div class="capped-width grid">
-    <div class="grid col-12 padded padded-2-xs text-center">
-      <div class="col-12 ">
-        <h3 class="editable kontiki capitalise">Notice</h3>
-      </div>
-      <div class="col-12 grid flex-flip-xs">
-        {% if site.data.contact-info.break-on == true %}
-        <div class="col-12 padded-1 padded-0-xs padded-b-1-xs">
-          <p class="margin-b-0 "> 
-              <span class="editable">{{site.data.contact-info.break.description}}</span> 
-              {{site.data.contact-info.break.date}}. 
-              <span class="editable">{{site.data.contact-info.break.emergency-description}}</span> 
-              <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block"  target="_blank">{{site.data.contact-info.contact_number}}</a>.                   
-          </p> 
-        </div>
-      {% endif %}        
-      </div>
-    </div>
-  </div>
-</section>  -->
-  
 <section class="pink-color padded-t-2 padded-b-2 dark-gold-text">
-  <div class="">
-    <div class="grid ">
-      <div class="col-12 ">
+  <div class="grid uppercase">
+    <div class="col-12  text-scroll ">
+      <div class="marquee enable-animation marquee--hover-pause">
         {% if site.data.contact-info.break-on == true %}
-          <div class="col-12 padded-b-1 capitalise">
+          <div class="marquee__content">
             <p class="margin-b-0 "> 
               <span class="editable">{{site.data.contact-info.break.description}}</span> 
               {{site.data.contact-info.break.date}}. 
               <span class="editable">{{site.data.contact-info.break.emergency-description}}</span> 
-              <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block"  target="_blank">{{site.data.contact-info.contact_number}}</a>.                   
+              <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block border-none"  target="_blank">{{site.data.contact-info.contact_number}}</a>.                   
             </p> 
           </div>
-        {% else %}
-          <p><span class="editable">Have you thought about</span>  {{season.title | capitalize}} <span class="editable">florals? </span> </p>
-        {% endif %}           
+          <div class="marquee__content" aria-hidden="true">
+            <p class="margin-b-0 "> 
+              <span class="editable">{{site.data.contact-info.break.description}}</span> 
+              {{site.data.contact-info.break.date}}. 
+              <span class="editable">{{site.data.contact-info.break.emergency-description}}</span> 
+              <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block border-none"  target="_blank">{{site.data.contact-info.contact_number}}</a>.                   
+            </p> 
+          </div>
+          {% else %}
+          {% assign featured_post = site.seasons | where: 'display', 'true' %}
+          {% for season in featured_post %}
+          <div class="marquee__content">
+            <p><span class="editable">Have you thought about</span>  {{season.title | capitalize}} <span class="editable">florals? </span> </p>
+          </div>
+          <div class="marquee__content" aria-hidden="true">
+            <p><span class="editable">Have you thought about</span>  {{season.title | capitalize}} <span class="editable">florals? </span> </p>
+          </div>
+          {% endfor %}
+          {% endif %}           
         </div>        
     </div>
   </div>
 </section>
-
+<!-- <div class="col-12 ">
+  <div class="bg-light border-b border-t ">   
+      <div class="marquee enable-animation marquee--hover-pause ">
+          <div class="marquee__content">
+              {% for item in page.notification %}
+             <a href="{{item.page_href}}">
+                <h3 class="">
+                  {{item.note}}
+                </h3>                
+             </a>
+              {% endfor %}
+          </div>   
+          <div class="marquee__content" aria-hidden="true">
+              {% for item in page.notification %}
+              <a href="{{item.page_href}}">
+                <h3 class="">
+                  {{item.note}}
+                </h3>                
+              </a>
+              {% endfor %}
+          </div>
+      </div>         
+  </div>     
+</div>  -->
 <!-- seasonal calender -->
 {% assign featured_post = site.seasons | where: 'display', 'true' %}
 {% for season in featured_post %}
