@@ -17,6 +17,12 @@ pinterest_href:
 google-map_href: https://www.google.com/maps
 break-on:  true
 break:
+  title: Notice
   date: (date to be entered)
-  description: We are taking a short break and will be taking orders again from
+  description: We are currently on a project and will be back to regular orders on
   emergency-description: For emergency requests please contact
+  images: 
+    - break_image: 
+    - break_image:
+    - break_image:
+    - break_image:

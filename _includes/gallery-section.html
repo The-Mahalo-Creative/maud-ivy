@@ -8,7 +8,7 @@
         </div>
         <div class="col-12 grid">
           <div class="col-12 grid-center seasonal-gallery dark-gold-text" >   
-            {% assign gallery-page = site.pages | where: "path", "gallery.html" | first %} 
+          {% assign gallery-page = site.pages | where: "path", "gallery.html" | first %} 
           {% for item in gallery-page.gallery limit: 4 %}
             <div class="gallery-item col-3_sm-6 relative">
               <div class="bg-image square" style="background-image: url('/images/creative/{{item.background_image}}'); background-position: '{{item.bg-pos}}';"></div>
