@@ -989,7 +989,7 @@ select {
 /* TEXT ANIMATION --------------------------*/
 .text-scroll p, 
 .text-scroll a {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.06em;
   margin-bottom: 0;
@@ -998,7 +998,7 @@ select {
 
 .marquee__content > * {
   flex: 0 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   text-align: center;
 }
 .text-scroll a:hover {
