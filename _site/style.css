@@ -1188,7 +1188,8 @@ display: none;
   }
   /* iNDEX PAGE */
   .thoughtful-splatter.bg-image-bg{
-    background-position: 100% 40%;
+    background-image: url('/images/bg-splatter2-sm.png');
+    background-position: 100% 100%;
   }
   .card-text                          { padding:3rem 2rem; }
   .padded-header-card .tall-60        { min-height: 80vh;}/* ?????? */
@@ -1261,9 +1262,7 @@ display: none;
     max-height:130px;
   }
   /* iNDEX PAGE */
-  .thoughtful-splatter.bg-image-bg{
-    background-position: 100% 50%;
-  }
+
   .gallery-index.bg-image-bg {
     background-position: 50% 22%;
     background-size: 115%;
@@ -1280,10 +1279,7 @@ display: none;
     .head-about h2      { font-size: 7vw; }
 /*     footer h1         { font-size: 10vw;} */
   .gallery-pg.bg-image-bg { background-size: 180%;}
-    /* iNDEX PAGE */
-    .thoughtful-splatter.bg-image-bg  {
-      background-position: 100% 60%;
-    }  
+
 }
 @media (max-width: 22em) { 
   .hide-xxs        { display: none;           }  
