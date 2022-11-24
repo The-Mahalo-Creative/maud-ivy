@@ -62,7 +62,9 @@ delivery:
   - option: Next Day Delivery
   - option: Other
 ---
+{% if site.data.contact-info.break-on == true %}
 {% include stock.html %}
+{% endif %}
 <!--Header 
 {% include header-section.html %} -->
 <!-- Contact 

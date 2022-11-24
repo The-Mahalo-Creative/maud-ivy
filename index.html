@@ -238,6 +238,7 @@ recommendations:
                   <div class="col-12 padded-tb">                            
                       <button type="submit"  value="Send Request"> Enquire </button>   
                   </div>
+                  {% if site.data.contact-info.break-on == true %}
                   <div class="col-12 padded-t-1 padded-b-1-xs">
                     <p class="margin-b-0 subtle"> 
                       <em>*
@@ -247,9 +248,8 @@ recommendations:
                         <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block"  target="_blank">{{site.data.contact-info.contact_number}}</a>.
                       </em>                      
                     </p> 
-                  </div><!-- 
-                  {% if site.data.contact-info.break.on == true %} -->
-                 <!--  {% endif %} -->
+                  </div>
+                {% endif %}
               </div>              
           </form>
         </div>  
