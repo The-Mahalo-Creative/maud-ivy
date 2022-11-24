@@ -953,6 +953,8 @@ display: none;
   [class*=grid] .padded-1-md      { padding: 1rem;        }
   .padded-l-1-md,
   [class*=grid] .padded-l-1-md    { padding-left: 1rem;   }
+  .padded-t-0-md,
+  [class*=grid] .padded-t-0-md    { padding-top: 0;       }
   .padded-r-0-md,
   [class*="grid"] .padded-r-0-md  { padding-right: 0;     }
   .padded-tb-2-md,
