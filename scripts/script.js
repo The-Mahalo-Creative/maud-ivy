@@ -4,7 +4,10 @@ $(document).ready(function() {
     $(this).toggleClass("active");
     $(".mobile-menu").fadeToggle()
   });
-
+  $(".stock-close").click(function() {
+    $(this).addClass("hidden");
+    $(".stock").fadeToggle()
+  });
   
   //LIGHT GALLERY POP UP
   lightGallery(document.getElementById('lightgallery'), {
