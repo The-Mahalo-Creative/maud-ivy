@@ -29,51 +29,51 @@ filter-buttons:
   - filter-type: Vases/Boxes
 gallery:
   - number: 1
-    type: dried/preserved pastels
+    type: Dried/Preserved Pink/White vases
     background_image: maud-and-ivy-flowers-1.jpg
     bg-pos:
   - number: 2
-    type: Seasonal
+    type: Pink/White vases pastels
     background_image: maud-and-ivy-flowers-2.jpg
     bg-pos:
   - number: 3
-    type: pastels
+    type: Bold/Punchy vases Pink/White
     background_image: maud-and-ivy-flowers-3.jpg
     bg-pos:
   - number: 4
-    type: pastels
+    type: natives Vases/Boxes
     background_image: maud-and-ivy-flowers-4.jpg
     bg-pos:
   - number: 5
-    type: pastels
+    type: Dried/Preserved pink pastels
     background_image: maud-and-ivy-flowers-5.jpg
     bg-pos:
   - number: 6
-    type: pastels
+    type: Green/White
     background_image: maud-and-ivy-flowers-6.jpg
     bg-pos:
   - number: 7
-    type: pastels
+    type: Blue/White Green/White Vases/Boxes
     background_image: maud-and-ivy-flowers-7.jpg
     bg-pos:
   - number: 8
-    type: dried/preserved green/white
+    type: natives
     background_image: maud-and-ivy-flowers-8.jpg
     bg-pos:
   - number: 9
-    type: dried/preserved pink/white
+    type: pastels Green/White Vases/Boxes
     background_image: maud-and-ivy-flowers-9.jpg
     bg-pos:
   - number: 10
-    type: natives pastels
+    type: Pink/White pastels
     background_image: maud-and-ivy-flowers-10.jpg
     bg-pos:
   - number: 11
-    type: natives pastels
+    type: Bold/Punchy Vases/Boxes
     background_image: maud-and-ivy-flowers-11.jpg
     bg-pos:
   - number: 12
-    type: natives pastels
+    type: Pink/White pastels Vases/Boxes
     background_image: maud-and-ivy-flowers-12.jpg
     bg-pos:
 ---
@@ -118,7 +118,7 @@ gallery:
       <div class="portfolio-filter text-center ivy-text padded-b-2" id="portfolio-filter">
         <h3>Gallery options</h3>
         {% for item in page.filter-buttons %}       
-        <span>{{item.filter-type | remove: " "  }}</span> 
+        <span>{{item.filter-type | remove: " " }}</span> 
         {% endfor %}
       </div>
  {% include gallery-images.html %}      
