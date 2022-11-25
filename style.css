@@ -468,7 +468,8 @@ footer nav a, footer nav p {
 /* gALLERY PAGE */
 .gallery-pg.bg-image-bg   { 
   background-image: url('/images/bg-splatter1.png');
-  background-position: 50% 0%;
+  background-position: top;
+  background-size: 100%;
 }
 /* about PAGE */
 .head-about .bg-image {
@@ -546,7 +547,7 @@ footer nav a, footer nav p {
 .header-card,
 [class*="grid"] .header-card { bottom: -10rem;}
 [class*="grid"] .padded-header-card,
-.padded-header-card  { padding-bottom: 14rem;  }
+.padded-header-card  { padding-bottom: 12rem;  }
  /* GALLERY ------------------------------------------------------- */
  /* gallery section */
 .gallery-size .bg-image:hover    { background-size:105%;}

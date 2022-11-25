@@ -24,7 +24,6 @@ $(document).ready(function() {
 
   //filterable gallery
   $('#portfolio-filter span').click(function(){
-    
     // Remove class 'active' from any <span> that is currently active 
     $('#portfolio-filter .active').removeClass('active');
       

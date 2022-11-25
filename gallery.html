@@ -18,6 +18,7 @@ header:
     description: is to make you and your guests say WOW!
 
 filter-buttons:
+  - filter-type: All
   - filter-type: Natives
   - filter-type: Dried/Preserved
   - filter-type: Pink/White
@@ -111,21 +112,20 @@ gallery:
 </style> 
 
 <!-- gallery  -->
-<section class="padded-lr gallery-pg bg-image-bg tall-50 capped-width-lg">  
+<section class="padded-lr padded-0-xs gallery-pg bg-image-bg capped-width-lg">  
   <div class="capped-width">
-    <div class="portfolio-filter text-center ivy-text padded-b-1 padded-b-2-xs" id="portfolio-filter">
-      <span>ALL</span>
-      {% for item in page.filter-buttons %}       
-      <span>{{item.filter-type | remove: " "  }}</span> 
-      {% endfor %}
+    <div class=" padded-t padded-b padded-2-xs">
+      <div class="portfolio-filter text-center ivy-text padded-b-2" id="portfolio-filter">
+        <h3>Gallery options</h3>
+        {% for item in page.filter-buttons %}       
+        <span>{{item.filter-type | remove: " "  }}</span> 
+        {% endfor %}
+      </div>
+ {% include gallery-images.html %}      
     </div>
-    {% include gallery-images.html %}
+
   </div>
 </section>
-
-<!-- Order-->
-{% include request-order.html %}
-
 
 <!-- SEASONAL CATALOGUE -->
 {% assign sorted-seasons = site.seasons | sort: "title" %}

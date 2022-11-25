@@ -1,6 +1,6 @@
-<div class="gallery-size grid-center filterable-gallery dark-gold-text" id="lightgallery">    
+<div class=" gallery-size grid-center filterable-gallery dark-gold-text" id="lightgallery">    
     {% for item in page.gallery %}
-    <div href="/images/creative/{{item.background_image}}" class="gallery-item col-4_md-6_xs-12 {{item.type | downcase }} relative">
+    <div href="/images/creative/{{item.background_image}}" class="hidden gallery-item col-4_md-6_xs-12 {{item.type | downcase }} relative">
         <div class="bg-image lazy" style="background-image: url('/images/creative/{{item.background_image}}'); background-position: '{{item.bg-pos}}';">
         </div>
         <div class="numbers text-center">
