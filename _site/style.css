@@ -978,10 +978,10 @@ select {
 }
 /* Enable animation  */
 .enable-animation .marquee__content {
-  -webkit-animation: scroll 28s linear infinite;
-  -moz-animation: scroll 28s linear infinite;
-  -o-animation: scroll 28s linear infinite;
-  animation: scroll 28s linear infinite;
+  -webkit-animation: scroll 20s linear infinite;
+  -moz-animation: scroll 20s linear infinite;
+  -o-animation: scroll 20s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 /* Pause on hover add to enable animation div*/
 .marquee--hover-pause:hover .marquee__content {
