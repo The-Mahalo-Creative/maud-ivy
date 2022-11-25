@@ -15,7 +15,7 @@ youtube_href:
 pinterest:
 pinterest_href: 
 google-map_href: https://www.google.com/maps
-break-on:  true
+break-on:  
 break:
   title: Notice
   date: (date to be entered)
