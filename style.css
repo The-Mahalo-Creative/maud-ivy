@@ -769,19 +769,27 @@ select:focus-visible {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 } 
-datalist, select {
+select {
+  -moz-appearance: none; 
+	-webkit-appearance: none; 
+	appearance: none;
   width: 100%;
   border: none;
   font-size: 1rem;
   font-family: inherit;
   font-weight: 300;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color); 
   color: inherit;
   border-bottom: 1px solid;
   margin-bottom: 2rem;
   margin-top: 1rem;
+  background: url(/icons/arrow/arrow.png) no-repeat;
+  background-position: right 5px bottom 5px;
+  background-size: 15px;
 }
-/* SLIDER0 */
+option          { background-color: var(--bg-color);}
+
+/* SLIDER */
 .slick-dots li button::before {
 	font-family: 'raleway', sans-serif;
 	font-size: 2rem;
@@ -1257,9 +1265,6 @@ display: none;
     font-size: 1.8rem;
     line-height: 1.2;
   }
-/*   footer h1 {
-    font-size: 11vw;
-  } */
   /* BG-IMAGES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
   .gallery-pg.bg-image-bg   { 
     background-position: center top 210px;
@@ -1272,7 +1277,6 @@ display: none;
     background-position: 100% 70%;
   }
   /* iNDEX PAGE */
-
   .gallery-index.bg-image-bg {
     background-position: 50% 22%;
     background-size: 115%;
@@ -1282,10 +1286,11 @@ display: none;
   .gallery [class*="col"], .filterable-gallery [class*="col"] { margin-bottom: 0.5rem; }
 }
 @media (max-width: 24em) { 
-    .break-xxs          { display: block; }
-    .mobile-menu a h1   { font-size: 12vw;}
-    .head-about h2      { font-size: 7vw; }
-/*     footer h1         { font-size: 10vw;} */
+    .break-xxs                     { display: block; }
+    .padded-0-xxs,
+    [class*="grid"] .padded-0-xxs  { padding: 0;     }
+    .mobile-menu a h1              { font-size: 12vw;}
+    .head-about h2                 { font-size: 7vw; }
   .gallery-pg.bg-image-bg { 
     background-position: center top 400px;
     background-size: 160%;
@@ -1296,6 +1301,7 @@ display: none;
   .hide-xxs        { display: none;           }  
   .show-xxs        { display: block;          }
   .flex-flip-xxs   { flex-wrap: wrap-reverse; }
+  
 
 }
 @media (max-width: 321px) { 
