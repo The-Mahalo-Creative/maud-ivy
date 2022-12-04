@@ -1124,6 +1124,30 @@ display: none;
     position: static;
     min-width:100%;
   }
+  select {
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 300;
+    background-color: var(--bg-color); 
+    color: inherit;
+    border-bottom: 1px solid;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    background: url(/icons/arrow/arrow.png) no-repeat;
+    background-position: right 5px bottom 5px;
+    background-size: 15px;
+  }
   .text-center-sm { text-align: center;}
   .flex-flip-sm   { flex-wrap: wrap-reverse; }
   .square-sm,
