@@ -684,9 +684,6 @@ textarea {
   min-height: 4.5rem;
   resize: none;
 }   
-form input:focus, 
-form textarea:focus,
-select:focus  { border-bottom-color: var(--text-hover);}
 form button   {  
   display:block;
   width:240px;
@@ -710,6 +707,13 @@ select:focus-visible {
   outline: none;
   border-bottom: 1px solid var(--text-hover);
 }
+select:focus {
+  outline: none;
+  border-bottom: 1px solid var(--text-hover);
+}
+form input:focus, 
+form textarea:focus,
+select:focus  { border-bottom-color: var(--text-hover);}
 /* CUSTOMISE CHECK BOX */
  /* Customize the label (the container) */
  .container {
@@ -773,6 +777,12 @@ select {
   -moz-appearance: none; 
 	-webkit-appearance: none; 
 	appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  border: none;
   width: 100%;
   border: none;
   font-size: 1rem;
@@ -1280,8 +1290,6 @@ display: none;
   .gallery-index.bg-image-bg {
     background-position: 50% 22%;
     background-size: 115%;
-  }
-  .gallery-pg.bg-image-bg {
   }
   .gallery [class*="col"], .filterable-gallery [class*="col"] { margin-bottom: 0.5rem; }
 }
