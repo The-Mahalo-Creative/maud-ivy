@@ -55,6 +55,9 @@ $(document).ready(function() {
 
 });
 
+
+//Smooth scroll functionality for anchor links animates the scroll rather than a sudden jump in the page
+
 // MUSIC PLAYER
 let audioPlayers = document.querySelectorAll(".audio-player");
 if (audioPlayers.length) {

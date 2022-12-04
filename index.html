@@ -1,10 +1,9 @@
 ---
 layout: default
 title: Homepage
-break: true
 header_image: /images/maud-and-ivy-colour.png
 header-logo: hide
-slick-slider: true
+_slick-slider: true
 
 thoughtful_image: /images/event.jpg
 thoughtful-background-position: bg-pos-l
@@ -23,18 +22,15 @@ selling-points:
   - selling-point: PERSONALISED 
     selling-point-line2: SERVICE
     icon_image: /images/icons-service.png
-    icon-alt:
-    more-info:
+    icon-alt: Maud and Ivy service icon
   - selling-point: Premium 
     selling-point-line2: Flowers
     icon_image: /images/icons-flower-dark.png
-    icon-alt:
-    more-info:
+    icon-alt: Maud and Ivy flower icon
   - selling-point: next day 
     selling-point-line2: delivery
     icon_image: /images/icons-delivery.png
-    icon-alt:
-    more-info: 
+    icon-alt: Maud and Ivy delivery icon
 
 
 recommendations:
@@ -79,7 +75,6 @@ recommendations:
         </div>        
         <div class="col-12 padded-t-1 padded-0-sm">
             <h2 class="margin-b-0 text-little text-bold"><span class="break-md">{{item.selling-point}} </span><span>{{item.selling-point-line2}}</span></h2>
-            <p class="margin-b-0">{{item.more-info}}</p>
         </div>
       </div>
       {% endfor %}      
@@ -118,6 +113,7 @@ recommendations:
     </div>
   </div>   
 </section>  
+
 <!-- Moving text -->
 {% unless site.data.contact-info.scroll-text-off == true %}
 <section class="pink-color padded-t-2 padded-b-2 dark-gold-text">
@@ -164,13 +160,14 @@ recommendations:
   </div>
 </section>
 {% endunless %} 
+
 <!-- seasonal calender -->
 {% assign featured_post = site.seasons | where: 'display', 'true' %}
 {% for season in featured_post %}
 <section class="seasonal dark-gold-text">
   <div class="capped-width grid">
     <div class="grid col-12 padded padded-2-xs">
-      <div class="col-12 grid padded-05 padded-0-xs padded-1-sm" id="{{season.title | slugify}}">        
+      <div class="col-12 grid padded-05 padded-0-xs padded-1-sm" >        
         <div class="col-12-middle text-center-sm padded-l-05 padded-0-sm padded-b-1 padded-b-1-sm">
           <h3>{{season.title}}</h3>
         </div>
@@ -183,7 +180,7 @@ recommendations:
             {% endfor %}
           </a>
           <div class="col-12 text-center padded-t-2 padded-b-1-xs">
-            <a class="button" href="/gallery.html/#events-gallery"><span class="editable">View Events Catalogue</span></a>
+            <a class="button" href="/gallery/#events-gallery"><span class="editable">View Events Catalogue</span></a>
           </div>
         </div>      
     </div>

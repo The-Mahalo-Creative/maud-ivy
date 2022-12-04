@@ -2,7 +2,8 @@ seo:
   site_name: Maud and Ivy Flowers
   hide-from-google: true
   title: Maud and Ivy Flowers
-  description: Gold Coast Florist
+  seo-description: Gold Coast Florist
+  social-description: 
   social_image: /images/maud-and-ivy-logo-fb.jpg
   social-image-alt:
   twitter_card:

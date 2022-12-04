@@ -6,11 +6,11 @@ footer: false
 
 button-links:
     - title: Enquiry
-      button_href: 
+      button_href: /#enquiry
     - title: Order Request
-      button_href: 
+      button_href: /order/#order-request
     - title: Gallery
-      button_href: 
+      button_href: /gallery/#creative-gallery
 ---
 <section class="pink-color dark-gold-text tall-100 short-cut">
     <div class="grid capped-width padded-t-2 padded-b-2">
@@ -25,7 +25,7 @@ button-links:
             {% assign featured_post = site.seasons | where: 'display', 'true' %}
             {% for season in featured_post %}
             <div class="col-12">
-                <a href="/seasonal-gallery/#{{season.title | slugify }}" class="button">{{season.title}}</a>
+                <a href="/gallery/#{{season.title | slugify }}" class="button">{{season.title}}</a>
             </div>
             {% endfor %}
             {% for item in page.button-links %}
@@ -34,8 +34,7 @@ button-links:
             </div>
             {% endfor %}
             <div class="col-12 padded-t-1">
-                {% include socials.html %}<!-- 
-                <a class="social" href="{{site.data.contact-info.facebook_href}}" target="_blank"><i class="fab fa-facebook"></i></a> -->
+                {% include socials.html %}
             </div>
         </div> 
     </div>

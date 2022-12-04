@@ -27,6 +27,7 @@ filter-buttons:
   - filter-type: Pastels
   - filter-type: Bold/Punchy
   - filter-type: Vases/Boxes
+  
 gallery:
   - number: 1
     type: Dried/Preserved Pink/White vases
@@ -83,7 +84,7 @@ gallery:
       <div class="col-12 bg-image tall-60 gallery-banner-image "></div>      
   </div>    
   <!-- Creative gallery -->
-  <div class="capped-width relative grid-right">
+  <div class="capped-width relative grid-right" id="creative-gallery">
     <div class="col-7_md-9_sm-12 grid-bottom text-left absolute static-sm  header-card">   
     <div class="col-12 stone-color  grid-middle ">
       <div class="col-12 card-text">
@@ -146,7 +147,7 @@ gallery:
           <div class="col-12 grid padded-2-sm padded-b-0-sm">
             {% for season in sorted-seasons  %}
             <div class="col-4_sm-6_xs-12 season-list">
-            <a class="capitalise" href="/gallery/#{{season.title | slugify }}"><span class="padded-r-1 ">&#8226;</span> {{season.title }}</a>
+            <a class="capitalise" href="#{{season.title | slugify }}"><span class="padded-r-1">&#8226;</span> {{season.title }}</a>
             </div>
             {% endfor %}
           </div>
@@ -162,12 +163,12 @@ gallery:
           <h3 class="text-medium">{{season.title}}</h3>
       </div>
       <div class="col-7_sm-12 grid">
-          <div class="col-12 grid-center seasonal-gallery dark-gold-text" id="xmas">    
+          <div class="col-12 grid-center seasonal-gallery dark-gold-text">    
               {% for item in season.gallery %}
-              <div href="/images/{{season.title | truncatewords: 1 | slugify | remove: '-' }}/{{item.background_image}}" class="gallery-item {{item.col}}  relative">
+              <div class="gallery-item {{item.col}} relative">
                   <div class="lazy bg-image {{item.aspect}} " style="background-image: url('/images/{{season.title | truncatewords: 1 | slugify | remove: '-' }}/{{item.background_image}}'); background-position: {{item.bg-pos}};">
                   </div>
-              </div>
+                </div>
               {% endfor %}
               </div>
           </div>

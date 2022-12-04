@@ -23,8 +23,22 @@ _select_data:
     col-3_sm-12: One Quarter (Stacked)
     
 _comments:
- title: Max 70 characters
+ header-logo: Hides logo on front page - leave as hide
+ seo-description: Max 160 characters
  social_image: Landscape 1200 x 627px
+ bg-pos: Adjust your image into position - horizontal -left/right%, vertical -top/bottom%
+ icon-alt: small paragraph of text describing image
+ filter-buttons: Gallery filters
+ top-arrow: takes you to top of page on desktop
+ banner-portrait_image: For mobile image
+ occasion: Add in any occasions to auto-fill
+ budget: Add in budget to autofill
+ colour-scheme: Add in colour-scheme to autofill
+ blooms: Add blooms to dropdown list
+ vases: Add vases to dropdown list
+ our-creations: Add our-creations to dropdown list
+ delivery: Add delivery option to dropdown list
+ button-links: Links to appear in your linktree
 
 url: "https://maudandivy.com/"
 plugins:
