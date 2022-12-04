@@ -653,6 +653,9 @@ a.button:hover {
 /* Enquiry ---------------------------------------------*/
 .bubbles-enquiry { top: -5vw;}
 form input, form textarea {
+  -moz-appearance: none; 
+  -webkit-appearance: none; 
+  appearance: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -802,14 +805,14 @@ select {
   background-size: 15px;
 }
 option          { background-color: var(--bg-color);}
-/* textarea,
+textarea,
 input.text,
 input[type="text"],
 input[type="button"],
 input[type="submit"],
 .input-checkbox {
 -webkit-appearance: none;
-}  */
+}  
 /* SLIDER */
 .slick-dots li button::before {
 	font-family: 'raleway', sans-serif;
@@ -1129,6 +1132,9 @@ display: none;
     min-width:100%;
   }
   form input, form textarea {
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
