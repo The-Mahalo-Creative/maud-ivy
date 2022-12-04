@@ -677,7 +677,7 @@ form input, form textarea {
   background-color: rgba(0,0,0,0);  
 }
 /* Removie arrows */
-input::-webkit-calendar-picker-indicator, 
+[list]::-webkit-calendar-picker-indicator, 
 input::-webkit-list-button {
   display: none !important;
 }
