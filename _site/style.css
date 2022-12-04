@@ -653,6 +653,13 @@ a.button:hover {
 /* Enquiry ---------------------------------------------*/
 .bubbles-enquiry { top: -5vw;}
 form input, form textarea {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;  
+  border: none;
+  border-bottom: 1px solid;
   display: block;
   width:100%;
   font-family: inherit;
@@ -662,9 +669,6 @@ form input, form textarea {
   color: inherit;
   margin:1rem 0 2rem 0;
   background-color: rgba(0,0,0,0);  
-  outline: none;  
-  border: none;
-  border-bottom: 1px solid;
 }
 ::-webkit-input-placeholder { color:inherit;}
 ::-moz-placeholder          { color:inherit;}
@@ -798,14 +802,14 @@ select {
   background-size: 15px;
 }
 option          { background-color: var(--bg-color);}
-textarea,
+/* textarea,
 input.text,
 input[type="text"],
 input[type="button"],
 input[type="submit"],
 .input-checkbox {
 -webkit-appearance: none;
-} 
+}  */
 /* SLIDER */
 .slick-dots li button::before {
 	font-family: 'raleway', sans-serif;
@@ -1123,6 +1127,24 @@ display: none;
   .static-sm      { 
     position: static;
     min-width:100%;
+  }
+  form input, form textarea {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;  
+    border: none;
+    border-bottom: 1px solid;
+    display: block;
+    width:100%;
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.2;  
+    color: inherit;
+    margin:1rem 0 2rem 0;
+    background-color: rgba(0,0,0,0);  
   }
   select {
     -moz-appearance: none; 
