@@ -1,0 +1,53 @@
+<header class="pink-color dark-gold-text " >
+  <div class="grid padded-1 padded-r-2 padded-l-2  ">
+    <div class="grid col-12  capped-width">
+      <div class="col-4_sm-10">
+      {% unless page.header-logo != hide %}
+      <a href="/">
+          <h1 >Maud and Ivy<span class="break text-center">Flowers</span></h1>
+      </a>
+      {% endunless %}        
+      </div>
+
+      <nav class="col-8 text-right hide-sm">
+        <a href="/about">About</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/order">Order</a>
+<!--         <a class="" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">{{site.data.contact-info.contact_number}}</a> -->
+        {% include socials.html %}
+      </nav>   
+      <div class="col-2 text-right show-sm">
+        <span class="hamburger-button">&#8801;</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu pink-color dark-gold-text padded-b border-b" >
+  <div class="grid-right padded-1 padded-r-2 padded-l-2">
+    <div class="grid-right col-12  capped-width">
+
+      <div class="col-2 text-right">
+        <span class="hamburger-button">&#215;</span>
+      </div>
+      <div class="tall-70 grid-middle col-12">
+        <nav class="col-12 text-center">
+          <a href="/"><h1>Maud & Ivy <span class="break">Flowers</span></h1></a>
+          <a href="/about">About</a>
+          <a href="/gallery">Gallery</a>
+          <a href="/order" >Order</a>  
+<!--           <span class="tel">  
+            <span class="padded-r-1 "><i class="fa-solid fa-phone"></i></span>           
+            <a class="" href="Tel:{{site.data.contact-info.contact_number}}" target="_blank">{{site.data.contact-info.contact_number}}</a>
+          </span>   -->      
+          <div class="padded-t-1">
+           {% include socials.html %}            
+          </div>
+
+
+        </nav>         
+      </div>
+ 
+    </div>
+  </div>
+</div>

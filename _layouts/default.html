@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    {% include site-head.html %}
+</head>
+
+<body class="noselect">
+
+    {% unless page.header == false %}
+        {% include body-header.html %}
+    {% endunless %}
+    {% include inline-styles.html %}
+
+    {% if page.top-arrow == true %}
+    <a href="#" class="top hide-xs ivy-text"><i class="fa fa-chevron-up"></i></a>
+    {% endif %}
+    {{content}}
+
+    {% unless page.footer == false %}
+    {% include body-footer.html %}
+    {% endunless %}
+    {% include site-scripts.html %}
+</body>
+
+</html>

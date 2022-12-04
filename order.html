@@ -1,0 +1,244 @@
+---
+layout: default
+title: Order
+
+occasion:
+  - option: Wedding
+  - option: Engagement
+  - option: Anniversary
+  - option: Birthday
+  - option: Baby
+  - option: Graduation
+  - option: Condolences
+budget:
+  - option: $80
+  - option: $100
+  - option: $120
+  - option: $150
+  - option: $200
+  - option: $300
+  - option: $500
+colour-scheme:
+  - option: Pink & White
+  - option: Pastels
+  - option: Green & White
+  - option: Punchy
+blooms:
+  - option: Seasonal
+  - option: Native
+  - option: Seasonal/Native Mix
+  - option: Dried/Preserved
+vases:
+  - option: Glass
+  - option: White Ceramic
+  - option: Pink Ceramic
+  - option: Hat Box White
+  - option: Hat Box Pale Pink
+  - option: Hat Box Neutral
+  - option: Hat Box Sage
+  - option: Cylinder Box White
+  - option: Cylinder Box Pale Pink
+  - option: Cylinder Box Pale Blue
+  - option: Cylinder Box Black
+our-creations:
+  - option: one
+  - option: two
+  - option: three
+  - option: four
+  - option: five
+  - option: six
+  - option: seven
+  - option: eight
+  - option: nine
+  - option: ten
+  - option: eleven
+  - option: twelve
+delivery:
+  - option: Collection
+  - option: Next Day Delivery
+  - option: Other
+---
+{% if site.data.contact-info.break-on == true %}
+{% include stock.html %}
+{% endif %}
+<!--Header 
+{% include header-section.html %} -->
+
+<!-- Contact -->
+<section class="dark-gold-text">
+    <div class="capped-width contact">
+        <div class=" grid padded padded-2-xs">
+        <!-- RIGHT COLUMN -->
+            <div class="col-12 padded-1 padded-0-xs grid" id="order-request">
+                <h2 class="editable">Order Request</h2>
+                <p class="editable subtle">Use this form to place an <strong>Order Request.</strong> Make your selections from the drop down options OR simply type your preference into the space provided.  Complete all details and submit your request.   I will review your request and respond to you with a Tax Invoice (Square POS) for payment prior to creation of your order.  Add ons such as Cards, Vase, Delivery, Chocolates, Wine etc will be added to your budget.  Delivery Fees are charged per suburb.  Once you have reviewed and paid your Tax Invoice, your order will be fulfilled. Orders will be accepted on a first in first served basis.</p>
+            <!-- FORM -->
+                <form class="col-12 " name="maud-and-ivy-order-request" data-netlify="true" action="/success.html" method="post">
+                    <input type="hidden" name="subject" value="Order Requests" />
+                <!-- YOUR DETAILS -->
+                    <div class="grid">    
+                        <!-- nAME eMAIL -->
+                        <div class="col-12 grid">
+                            <div class="col-12 padded-t-1">
+                                <h4 class="editable">Your Details.*</h4>
+                            </div>
+                           
+                            <div class="col-6_sm-12 padded-r-1 padded-0-sm">
+                                <input type="text" name="_name" id="_name" placeholder="Your Name*" required />
+                            </div>
+                            <div class="col-6_sm-12 padded-l-1 padded-0-sm">
+                                <input type="email" name="_replyto" id="_replyto" placeholder="Your Email*" required="" />                    
+                            </div>    
+                        </div>    
+                        <!-- oCCASION -->
+                        <div class="col-6_sm-12 padded-r-1 padded-0-sm">
+                            <label for="occasion">
+                                <h4 class="editable">Occasion</h4>
+                            </label>
+                            <input list="type-occasion" id="occasion" name="occasion" placeholder="Your Occasion" />
+                            <datalist id="type-occasion">
+                                {% for item in page.occasion %}
+                                <option>{{item.option}}</option> 
+                                {% endfor %}  
+                            </datalist>                            
+                        </div>
+                        <!-- BUDGET -->
+                        <div class="col-6_sm-12 padded-l-1 padded-0-sm">
+                            <label for="budget">
+                                <h4 class="editable">budget* (exclusive of add ons)</h4>
+                            </label>
+                            <input list="type-budget" name="budget" id="budget" placeholder="Your Budget" required />
+                            <datalist id="type-budget">                        
+                                {% for item in page.budget %}
+                                <option>{{item.option}}</option> 
+                                {% endfor %}  
+                            </datalist>                            
+                        </div>
+                        <!-- COLOURS -->
+                        <div class="col-6_sm-12 padded-r-1 padded-0-sm">
+                            <label for="colour-scheme">
+                                <h4 class="editable">Colour Scheme*</h4>
+                            </label>
+                            <input list="type-colour-scheme" name="colour-scheme" id="colour-scheme" placeholder="Something else?" required />
+                            <datalist id="type-colour-scheme">                      
+                            {% for item in page.colour-scheme %}
+                                <option>{{item.option}}</option>
+                            {% endfor %} 
+                            </datalist> 
+                        </div>
+                        <!-- BLOOMS -->
+                        <div class="col-6_sm-12 padded-l-1 padded-0-sm">
+                            <label for="blooms">
+                                <h4 class="editable">Blooms</h4>
+                            </label>
+                            <select id="blooms">
+                            {% for item in page.blooms %}
+                                <option>{{item.option}}</option>
+                            {% endfor %}                                 
+                            </select>
+                        </div>
+                        <!-- No custom / VASES-->
+                        <div class="col-6_sm-12-bottom padded-r-1 padded-0-sm">
+                            <label for="vase">
+                                <h4 class="editable">Add Vase</h4>
+                                <p class="subtle"><span class="editable">Choose a vase</span></p>
+                            </label>
+                            <select id="vase">                            
+                            {% for item in page.vases %}
+                                <option>{{item.option}}</option>
+                            {% endfor %} 
+                            </select> 
+                        </div>
+                        <!-- OUR CREATIONS -->
+                        <div class="col-6_sm-12 padded-l-1 padded-0-sm dropdown">
+                            <label for="our-creations">
+                                <h4 class="editable">Inspiration provided by Our Creations</h4>
+                                <p class="subtle"><span class="editable">Choose a number</span></p>
+                            </label>
+                            <select id="our-creations">
+                            {% for item in page.our-creations %}
+                                <option>{{item.option}}</option> 
+                            {% endfor %}                             
+                            </select> 
+                        </div>
+                        <!-- MESSAGE -->
+                        <div class="col-12 padded-b-2">
+                            <label for="message">
+                                <h4>Message</h4>                            
+                                <textarea class="input-text"></textarea>
+                            </label> 
+                        </div>
+
+                        <!-- rECIPIENT DETAILS -->
+                        <div class="col-12 grid padded-t-2">
+                            <div class="col-12">
+                                <h4 class="editable">Recipient Details.*</h4>          
+                            </div>  
+                            <div class="col-6_sm-12 padded-r-1 padded-0-sm">
+                                <input type="text" name="_name" placeholder="Recipient Name*" required />
+                            </div>
+                            <div class="col-6_sm-12 padded-l-1 padded-0-sm">
+                                <input type="tel" name="phone-no" id="phone-no" placeholder="Recipient Number*" required />                        
+                            </div>                            
+                            <div class="col-12 padded-b-1">
+                                <input placeholder="Recipient Address*"  />
+                            </div>
+                            <!-- delivery -->
+                            <div class="col-12">
+                                <h4 class="editable">Next Day Delivery or Collect* </h4> 
+                                <p class="subtle"><span class="editable">We delivery Monday to Friday, Saturday by special request.</span></p> 
+                            </div>
+                            <div class="col-6_sm-12-bottom padded-r-1 padded-t-1-2 padded-0-sm ">                        
+                                <select required>
+                                    {% for item in page.delivery %}
+                                    <option>{{item.option}}</option>  
+                                    {% endfor %}                  
+                                </select> 
+                            </div>
+                            <div class="col-6_sm-12-bottom padded-l-1 padded-0-sm">
+                                <label>
+                                    <h4 class="editable">Other date</h4> 
+                                    <input type="date" />
+                                </label>      
+                            </div>   
+                            <!-- FIX -->
+                            <div class="col-6_sm-12 padded-1 padded-l-0 padded-r-0-sm">
+                                <label class="container padded-l-0"> 
+                                    <h4 class="editable">REQUEST TAX INVOICE NOW</h4>
+                                    <input type="checkbox" name="invoice" checked />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div> 
+                            <div class="col-6_sm-12 padded-1 padded-r-0 padded-l-0-sm ">                                
+                                <label class="container padded-l-0"> 
+                                    <h4 class="editable">Add me to mailing list</h4>
+                                    <input type="checkbox" name="mail-list" checked/>
+                                    <span class="checkmark" ></span>
+                                </label>
+                            </div> 
+                            <!-- Special Requests or Delivery Instructions -->
+                            <div class="col-12 padded-t-1">
+                                <label for="special-request">
+                                    <h4 class="editable">Special Requests or Delivery Instructions</h4>                            
+                                    <p class="subtle"><span class="editable">Example: you may like to add a card, chocolates or wine to your order.  </span></p>
+                                    <p class="subtle"><span class="editable">I can supply any of <a class="subtle" href="https://www.instagram.com/littlecocoa_au/"  target="_blank">@littlecocoa_au</a>’s range. View their site<a href="https://littlecocoa.com.au/shop/" class="subtle"  target="_blank"> here.</a> </span></p>
+                                    <textarea class="input-text"></textarea>
+                                </label> 
+                            </div>
+                        </div>   
+                        <!-- SUBMIT -->
+                        <div class="col-12 padded-tb">                            
+                            <button type="submit"  value="special-request"> Send your request</button>   
+                        </div>
+                    </div>         
+                </form>
+            </div>
+            <div class="col-12 padded-1 padded-0-xs padded-t-2-xs">
+                <h4 class="margin-b-0 editable">Payment Options:</h4>
+                <p class="subtle editable">Bank Transfer or Credit Card</p>
+                <p class="subtle editable"><strong>Please note:</strong> our courier makes one attempt to deliver your items to the address supplied.  Should the recipient not be available and a second attempt is required, you will be charged a second delivery fee.  See full <a class="subtle" href="/forms/terms-and-conditions_maud-and-ivy.pdf" download="terms-and-conditions_maud-and-ivy">Terms and Conditions</a>
+                </p>
+            </div>
+        </div>
+    </div> 
+</section>

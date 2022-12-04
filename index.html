@@ -1,0 +1,314 @@
+---
+layout: default
+title: Homepage
+header_image: /images/maud-and-ivy-colour.png
+header-logo: hide
+_slick-slider: true
+
+thoughtful_image: /images/event.jpg
+thoughtful-background-position: bg-pos-l
+
+enquiry: 
+  - enquiry_image: /images/maud-and-ivy-enquiry-1.jpg
+    bg-pos:  50% 50%
+  - enquiry_image: /images/maud-and-ivy-enquiry-2.jpg
+    bg-pos: 50% 75%
+  - enquiry_image: /images/maud-and-ivy-enquiry-3.jpg
+    bg-pos: 
+  - enquiry_image: /images/maud-and-ivy-enquiry-4.jpg
+    bg-pos: 50% 90%
+
+selling-points:
+  - selling-point: PERSONALISED 
+    selling-point-line2: SERVICE
+    icon_image: /images/icons-service.png
+    icon-alt: Maud and Ivy service icon
+  - selling-point: Premium 
+    selling-point-line2: Flowers
+    icon_image: /images/icons-flower-dark.png
+    icon-alt: Maud and Ivy flower icon
+  - selling-point: next day 
+    selling-point-line2: delivery
+    icon_image: /images/icons-delivery.png
+    icon-alt: Maud and Ivy delivery icon
+
+
+recommendations:
+  - heading: GC Breeze Radio
+    review:  Wow is exactly what I said, more than once when she (Monique) dropped her flowers to me. When I saw the flowers she created I was absolutely blown away. These would be gorgeous as a corporate gift, even just one of those just-because gifts. These flowers lived on my desk for weeks... 
+    audio: true
+    number: 1
+    source: /audio/breeze-radio.mp3
+    logo: true
+    logo_image: /images/breeze-radio.png   
+  - heading: Michael from The Mop King
+    review: A big thankyou to Monique who I think is the number one  boutique flower business on the Gold Coast. She's gone far and beyond what I need. My mum's the world and I want to say thankyou.
+    audio: true
+    number: 2
+    source: /audio/mop-king.mp3
+    logo: false
+    logo_image: 
+---
+
+<!-- HEADING BANNER IMAGE -->
+<section class="relative " style="top:-2px;">
+  <div class="grid-middle heading padded-b-2 tall-70 pink-color">
+    <div class="col-12 grid-center capped-width">
+      <div class="col-8_md-9_sm-12-middle text-center padded padded-t-0" >
+        <img src="{{page.header_image}}" alt="{{item.icon-alt}}" >
+        <div class="logo" >
+          <h1>Maud and Ivy<br><span>Flowers</span></h1>
+        </div>        
+      </div>            
+    </div>
+  </div>  
+</section>
+
+<!-- SELLING POINTS -->
+<section class=" dark-gold-text">
+   <div class="capped-width">
+    <div class="grid-middle tall-20 padded padded-2-xs padded-b-1 padded-b-1-xs">
+      {% for item in page.selling-points %}
+      <div class="col-4_xs-12 grid text-center padded-1">
+        <div class="col-12 selling-point padded-1">
+          <img src="{{item.icon_image}}" alt="{{item.icon-alt}}" >
+        </div>        
+        <div class="col-12 padded-t-1 padded-0-sm">
+            <h2 class="margin-b-0 text-little text-bold"><span class="break-md">{{item.selling-point}} </span><span>{{item.selling-point-line2}}</span></h2>
+        </div>
+      </div>
+      {% endfor %}      
+    </div>
+   </div>
+</section>
+
+<!--Moto  -->
+<section class="dark-gold-text capped-width-lg thoughtful-splatter bg-image-bg overflow">
+  <div class=" capped-width">
+    <div class="grid-right-middle padded padded-2-xs">
+      <div class="col-6_sm-12 grid-middle text-left padded-1 padded-0-xs " >
+        <div class="col-12"data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+<!--           <h3 >
+            <span class="editable">Taking</span>  
+            <br>
+            <em class="kontiki capitalise text-large"> <span class="editable">thoughtful</span> </em> 
+            <br> 
+            <span class="editable"  style="line-height: 1.6;">to the next level.</span>
+          </h3> -->
+          <h3 class="text-center-sm" >
+            <span class="editable">Bold</span>  
+            <br class="hide-sm">
+            <em class="kontiki capitalise text-large "> <span class="editable">Umistakable</span> </em> 
+            <br class="hide-sm"> 
+            <span class="editable"  style="line-height: 1.6;">Courageous</span>
+          </h3>
+          <p class="editable">Hello, my name is Monique Rameau,  owner of Maud and Ivy Flowers. I am a unique  retail and event florist with devotion to detail that doesn't disappoint. My clients come to me because they trust I will create something special to share with the important people in their lives. My focus is on personalising every order and exploring all textures to perfectly convey your thoughts and themes. My customers feel confident with my process and return time and time again. Go ahead and make a no obligation enquiry or browse my beautiful gallery of work.
+          </p>
+          <p class="margin-b-0"><a href="/about.html">Our Foundations.</a> </p>
+        </div>
+      </div>
+      <div class="col-6_sm-12 grid-middle padded-1 padded-0-xs padded-t-2-xs">
+          <div class="col-12 bg-image {{page.thoughtful-background-position}} square portrait-tall-md square-sm" style="background-image: url('{{page.thoughtful_image}}');"></div>      
+      </div>       
+    </div>
+  </div>   
+</section>  
+
+<!-- Moving text -->
+{% unless site.data.contact-info.scroll-text-off == true %}
+<section class="pink-color padded-t-2 padded-b-2 dark-gold-text">
+  <div class="grid uppercase">
+    <div class="col-12 text-scroll ">
+      <div class="marquee enable-animation marquee--hover-pause">
+          {% if site.data.contact-info.break-on == true %}
+          <div class="marquee__content break">
+            <p> 
+              <span class="editable">{{site.data.contact-info.break.description}}</span> 
+              {{site.data.contact-info.break.date}}. 
+              <span class="editable">{{site.data.contact-info.break.emergency-description}}</span> 
+              <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block border-none"  target="_blank">{{site.data.contact-info.contact_number}}</a>                   
+            </p> 
+          </div>
+          <div class="marquee__content break" aria-hidden="true">
+            <p> 
+              <span class="editable">{{site.data.contact-info.break.description}}</span> 
+              {{site.data.contact-info.break.date}}. 
+              <span class="editable">{{site.data.contact-info.break.emergency-description}}</span> 
+              <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block border-none"  target="_blank">{{site.data.contact-info.contact_number}}</a>.                   
+            </p> 
+          </div>
+          {% elsif site.data.contact-info.message-on == true %}
+          <div class="marquee__content msg">
+            <p><span class="editable">{{site.data.contact-info.message.description}}</span> </p>
+          </div>
+          <div class="marquee__content msg" aria-hidden="true">
+            <p><span class="editable">{{site.data.contact-info.message.description}}</span> </p>
+          </div>
+          {% else %}    
+          {% assign featured_post = site.seasons | where: 'display', 'true' %}
+          {% for season in featured_post %}
+          <div class="marquee__content event">
+            <p><span class="editable">Have you thought about</span>  {{season.title | capitalize}} <span class="editable">florals? </span> </p>
+          </div>
+          <div class="marquee__content event" aria-hidden="true">
+            <p><span class="editable">Have you thought about</span>  {{season.title | capitalize}} <span class="editable">florals? </span> </p>
+          </div>
+          {% endfor %}
+          {% endif %}         
+        </div>        
+    </div>
+  </div>
+</section>
+{% endunless %} 
+
+<!-- seasonal calender -->
+{% assign featured_post = site.seasons | where: 'display', 'true' %}
+{% for season in featured_post %}
+<section class="seasonal dark-gold-text">
+  <div class="capped-width grid">
+    <div class="grid col-12 padded padded-2-xs">
+      <div class="col-12 grid padded-05 padded-0-xs padded-1-sm" >        
+        <div class="col-12-middle text-center-sm padded-l-05 padded-0-sm padded-b-1 padded-b-1-sm">
+          <h3>{{season.title}}</h3>
+        </div>
+        <div class="col-12 grid">
+          <a class="col-12 grid-center seasonal-gallery gallery-seaction dark-gold-text" href="/gallery/#{{season.title | slugify }}">    
+            {% for item in season.gallery limit: 4 %}
+            <div class="gallery-item col-3_sm-6 relative">
+              <div class="bg-image square" style="background-image: url('/images/{{season.title | truncatewords: 1 | slugify}}/{{item.background_image}}'); background-position: '{{item.bg-pos}}';"></div>
+            </div>
+            {% endfor %}
+          </a>
+          <div class="col-12 text-center padded-t-2 padded-b-1-xs">
+            <a class="button" href="/gallery/#events-gallery"><span class="editable">View Events Catalogue</span></a>
+          </div>
+        </div>      
+    </div>
+
+    </div>
+  </div>
+</section>
+{% endfor %} 
+
+<!-- RECOMMNENDATIONS -->
+<section class="stone-color dark-gold-text padded-b-1-sm padded-t-1-sm">
+  <div class="capped-width">    
+    <div class="grid-center padded padded-2-xs">
+      <h2 class="kontiki">Reviews</h2>
+      <div class="col-12 slider-container padded-1 padded-0-xs"> 
+        
+        {% for item in page.recommendations %}     
+        <div class="slider-item grid-middle">
+          <div class="grid-center-middle col-12 tall-30">
+            <!-- QUOTE -->
+              <div class="col-1-top quote hide-sm">
+                <i class="fa-sharp fa-solid fa-quote-left"></i>
+              </div>
+              <!-- TEXT -->
+              <div class="col-10 grid-center padded-t-1">          
+                <div class="col-12">
+                  <h3 class="text-center-xs">{{item.heading}}</h3>
+                  <p >{{item.review}}</p>            
+                </div>
+              </div>       
+              <!-- QUOTE -->
+              <div class="col-1-bottom text-right quote hide-sm">
+                <i class="fa-sharp fa-solid fa-quote-right"></i>
+              </div>   
+              <!-- add if statement audio -->
+              {% if item.audio == true %}
+              <div class="col-10 grid-center-top ">
+                {% unless item.logo != true %}
+                <div class="col-6_sm-12-middle text-right text-center-sm">
+                {% include audio-player.html %}   
+                </div>  
+                <div class="col-6_sm-12 padded-l-2 text-center-sm padded-0-sm">
+                  <img src="{{item.logo_image}}" width="180px" class="reccomended-logo ">
+                </div>            
+                {% else %} 
+                <div class="col-8_sm-12-middle text-right text-center-sm padded-t-1">
+                  {% include audio-player.html %}
+                </div>    
+                {% endunless %} 
+              </div>     
+              {% endif %}
+            </div>                 
+          </div> 
+          {% endfor %}  
+      </div>          
+    </div>
+   
+  </div>
+</section>
+<!-- Socials-->
+<section class="ivy-text dark-gold-text padded-t-2 padded-b-2">
+  <div class="capped-width">
+    <div class="grid-middle padded padded-2-xs">
+      <div class="col-12 text-center padded-1 padded-l-0-sm padded-r-0-sm">
+        <h3 class="editable">Visit us on socials</h3>
+        <div class="col-12-center">
+          <a href="{{site.data.contact-info.facebook_href}}" target="_blank" class="button  ">
+            Facebook
+          </a>
+          <a href="{{site.data.contact-info.instagram_href}}" target="_blank" class="button  ">
+            Instagram
+          </a>
+        </div>         
+      </div>      
+    </div>
+
+  </div>
+</section> 
+
+
+ <!-- Contact -->
+<section class="dark-gold-text capped-width-lg enquire-index bg-image-bg">
+  <div class="capped-width contact">
+    <div class="padded padded-t-0 padded-2-xs padded-t-0-xs grid ">
+      <!-- RIGHT COLUMN -->
+      <div class="grid-middle col-6_md-12 padded-1 padded-t-0-sm padded-0-xs" id="enquiry">
+        <div class="col-12 padded-05">
+          <h2 class="editable">Enquiry</h2>
+          <p class="subtle"><span class="editable">Use this no obligation enquiry form to share some preliminary information about your upcoming floral needs.</span></p>
+          <!-- FORM -->
+          <form name="maud-and-ivy" data-netlify="true" action="/success.html" method="post">
+          <!-- YOUR DETAILS -->
+              <div class="grid">    
+                  <div class="col-12 padded-t-1">
+                      <h4 class="">Your Details.*</h4>
+                      <input type="text" name="_name" id="_name" placeholder="Your Name*" required>
+                      <input type="email" name="_replyto" id="_replyto" placeholder="Your Email*" required="">                           
+                  </div>                        
+                  <div class="col-12">
+                      <label for="message">
+                          <h4>Message</h4>
+                      </label>
+                      <textarea name="message" class="input-text"></textarea>   
+                  </div>  
+                  <div class="col-12">                                
+                      <label class="container padded-l-0" > 
+                          <h4 class="editable"> Add me to mailing list</h4>
+                          <input type="checkbox" name="mail-list" checked />
+                          <span class="checkmark" ></span>
+                      </label>
+                  </div> 
+                  <div class="col-12 padded-tb">                            
+                      <button type="submit"  value="Send Request"> Enquire </button>   
+                  </div>
+              </div>              
+          </form>
+        </div>  
+      </div>            
+      <!-- Left column -->
+      <div class="col-6_md-12 grid-middle padded-1 padded-t-1-sm padded-0-xs padded-t-1-xs  ">
+        <div class="col-12 grid gallery">   
+          {% for item in page.enquiry %}
+          <div class="col-6 ">
+            <div class="bg-image square" style="background-image: url('{{item.enquiry_image}}'); background-position: {{item.bg-pos}};"></div>
+          </div>  
+          {% endfor %}
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>

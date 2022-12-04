@@ -1,0 +1,34 @@
+contact_number: 0468 329 998
+contact_email: contact@maudandivyflowers.com.au
+instagram: true
+instagram_href: https://www.instagram.com/maudandivyflowers/
+facebook: true
+facebook_href: https://m.facebook.com/maudandivyflowers/
+twitter:
+twitter_number: 0468 329 998
+whatsapp:
+whatsapp_href:
+tiktok:
+tiktok_href:
+youtube:
+youtube_href:
+pinterest:
+pinterest_href: 
+google-map_href: https://www.google.com/maps
+scroll-text-off: 
+message-on: 
+message-speed: 20s
+message:
+  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, laborum? Libero officiis quia nam distinctio necessitatibus consectetur, repellat alias
+break-on: 
+break-speed: 20s
+break:
+  title: Notice
+  date: (date to be entered)
+  description: We are currently working on a project and will be available for regular orders again on
+  emergency-description: For emergency requests please contact
+  images: 
+    - break_image: 
+    - break_image:
+    - break_image:
+    - break_image:

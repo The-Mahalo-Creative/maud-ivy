@@ -1,0 +1,36 @@
+seo:
+  site_name: Maud and Ivy Flowers
+  hide-from-google: true
+  title: Maud and Ivy Flowers
+  seo-description: Gold Coast Florist
+  social-description: 
+  social_image: /images/maud-and-ivy-logo-fb.jpg
+  social-image-alt:
+  twitter_card:
+  twitter_description:
+  author:
+  favicon_image:
+_comments:
+  title:
+  social_image:
+social:
+  instagram_username:
+  facebook_url:
+  twitter_username:
+footer:
+  footer-logo-img: true
+  font_color: dark-gold-text
+  footer-logo_image: /images/maud-and-ivy-colour.png
+  footer-logo-alt:
+
+design:
+  dark-text_color: '#453540'
+  bg-color_color: '#ffffff'
+  light-text_color: '#ffffff'
+  text-gold_color: '#A5946E'
+  text-dark-gold_color: '#99875E'
+  text-hover_color: '#d09797'
+  light-text-hover_color: '#f0dcb2'
+  pink_color: '#f4c6c6'
+  stone_color: '#ded0b8'
+  ivy_color: '#c6c19e'
