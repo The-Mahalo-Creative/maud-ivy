@@ -653,6 +653,7 @@ a.button:hover {
 /* Enquiry ---------------------------------------------*/
 .bubbles-enquiry { top: -5vw;}
 form input, form textarea {
+  /* REMOVE IOS STYLES */
   -moz-appearance: none; 
 	-webkit-appearance: none; 
 	appearance: none;
@@ -675,6 +676,7 @@ form input, form textarea {
   margin:1rem 0 2rem 0;
   background-color: rgba(0,0,0,0);  
 }
+/* Removie arrows */
 input::-webkit-calendar-picker-indicator, 
 input::-webkit-list-button {
   display: none !important;
@@ -787,6 +789,7 @@ select:focus  { border-bottom-color: var(--text-hover);}
   transform: rotate(45deg);
 } 
 select {
+  /* REMOVE IOS STYLES ADD AGAIN IN SM!!!!*/
   -moz-appearance: none; 
 	-webkit-appearance: none; 
 	appearance: none;
