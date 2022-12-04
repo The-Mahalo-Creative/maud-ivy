@@ -675,6 +675,10 @@ form input, form textarea {
   margin:1rem 0 2rem 0;
   background-color: rgba(0,0,0,0);  
 }
+input::-webkit-calendar-picker-indicator, 
+input::-webkit-list-button {
+  display: none !important;
+}
 ::-webkit-input-placeholder { color:inherit;}
 ::-moz-placeholder          { color:inherit;}
 ::-ms-placeholder           { color:inherit;}
