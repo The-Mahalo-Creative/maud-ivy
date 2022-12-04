@@ -798,7 +798,14 @@ select {
   background-size: 15px;
 }
 option          { background-color: var(--bg-color);}
-
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+-webkit-appearance: none;
+} 
 /* SLIDER */
 .slick-dots li button::before {
 	font-family: 'raleway', sans-serif;
