@@ -15,7 +15,13 @@ youtube_href:
 pinterest:
 pinterest_href: 
 google-map_href: https://www.google.com/maps
-break-on:  
+scroll-text-off: 
+message-on: 
+message-speed: 20s
+message:
+  description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, laborum? Libero officiis quia nam distinctio necessitatibus consectetur, repellat alias
+break-on: 
+break-speed: 20s
 break:
   title: Notice
   date: (date to be entered)

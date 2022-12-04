@@ -118,13 +118,22 @@ recommendations:
     </div>
   </div>   
 </section>  
-
+<!-- Moving text -->
+{% unless site.data.contact-info.scroll-text-off == true %}
 <section class="pink-color padded-t-2 padded-b-2 dark-gold-text">
   <div class="grid uppercase">
-    <div class="col-12  text-scroll ">
+    <div class="col-12 text-scroll ">
       <div class="marquee enable-animation marquee--hover-pause">
-        {% if site.data.contact-info.break-on == true %}
-          <div class="marquee__content">
+          {% if site.data.contact-info.break-on == true %}
+          <div class="marquee__content break">
+            <p> 
+              <span class="editable">{{site.data.contact-info.break.description}}</span> 
+              {{site.data.contact-info.break.date}}. 
+              <span class="editable">{{site.data.contact-info.break.emergency-description}}</span> 
+              <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block border-none"  target="_blank">{{site.data.contact-info.contact_number}}</a>                   
+            </p> 
+          </div>
+          <div class="marquee__content break" aria-hidden="true">
             <p> 
               <span class="editable">{{site.data.contact-info.break.description}}</span> 
               {{site.data.contact-info.break.date}}. 
@@ -132,30 +141,29 @@ recommendations:
               <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block border-none"  target="_blank">{{site.data.contact-info.contact_number}}</a>.                   
             </p> 
           </div>
-          <div class="marquee__content" aria-hidden="true">
-            <p> 
-              <span class="editable">{{site.data.contact-info.break.description}}</span> 
-              {{site.data.contact-info.break.date}}. 
-              <span class="editable">{{site.data.contact-info.break.emergency-description}}</span> 
-              <a href="tel:{{site.data.contact-info.contact_number}}" class="inline-block border-none"  target="_blank">{{site.data.contact-info.contact_number}}</a>.                   
-            </p> 
+          {% elsif site.data.contact-info.message-on == true %}
+          <div class="marquee__content msg">
+            <p><span class="editable">{{site.data.contact-info.message.description}}</span> </p>
           </div>
-          {% else %}
+          <div class="marquee__content msg" aria-hidden="true">
+            <p><span class="editable">{{site.data.contact-info.message.description}}</span> </p>
+          </div>
+          {% else %}    
           {% assign featured_post = site.seasons | where: 'display', 'true' %}
           {% for season in featured_post %}
-          <div class="marquee__content">
-            <p ><span class="editable">Have you thought about</span>  {{season.title | capitalize}} <span class="editable">florals? </span> </p>
+          <div class="marquee__content event">
+            <p><span class="editable">Have you thought about</span>  {{season.title | capitalize}} <span class="editable">florals? </span> </p>
           </div>
-          <div class="marquee__content" aria-hidden="true">
+          <div class="marquee__content event" aria-hidden="true">
             <p><span class="editable">Have you thought about</span>  {{season.title | capitalize}} <span class="editable">florals? </span> </p>
           </div>
           {% endfor %}
-          {% endif %}           
+          {% endif %}         
         </div>        
     </div>
   </div>
 </section>
-
+{% endunless %} 
 <!-- seasonal calender -->
 {% assign featured_post = site.seasons | where: 'display', 'true' %}
 {% for season in featured_post %}
