@@ -676,9 +676,9 @@ form input, form textarea {
   margin:1rem 0 2rem 0;
   background-color: rgba(0,0,0,0);  
 }
-/* Removie arrows */
+/* Removie arrows but not type:date */
 [list]::-webkit-calendar-picker-indicator, 
-input::-webkit-list-button {
+[list]::-webkit-list-button {
   display: none !important;
 }
 ::-webkit-input-placeholder { color:inherit;}
